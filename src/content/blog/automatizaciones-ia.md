@@ -193,17 +193,9 @@ Todo lo que has leído aquí se puede hacer por tu cuenta, desde casa, con pacie
 
 Pero hay una diferencia entre montar una automatización siguiendo un tutorial y montar tu sistema completo de automatizaciones con alguien al lado que te guía, te resuelve los bloqueos en tiempo real y te ayuda a decidir qué tiene sentido automatizar en tu caso concreto.
 
-En el [retiro Rural IA en Galicia](/retiro-ia-galicia/), el **Día 2 está dedicado íntegramente a automatizaciones con IA**. Durante toda la jornada, en grupos de 12 personas máximo, montamos flujos reales como los que has visto en este artículo — pero adaptados al negocio de cada asistente.
+En el [retiro Rural IA en Galicia](/retiro-ia-galicia/) dedicamos 4 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, desarrollo con IA y creación de tu stack personalizado. Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
 
-Esto es lo que hacemos ese día:
-
-- **Mañana:** Clase práctica de Make y n8n. Desde cero para quien no los haya tocado, avanzado para quien ya los conozca. Montamos juntos los 3-4 flujos más relevantes para cada persona.
-- **Tarde:** Taller de automatización personalizada. Cada asistente trabaja en su propio sistema de flujos con apoyo directo. Resolvemos bloqueos, optimizamos prompts, conectamos APIs reales.
-- **Final del día:** Cada persona tiene al menos 3 automatizaciones funcionando con sus propias cuentas y herramientas.
-
-No es teoría. No es una demo. Te vas con flujos funcionando en producción.
-
-El retiro incluye alojamiento, comidas y 4 días completos de formación práctica (no solo automatizaciones — también prompting avanzado, desarrollo con IA y creación de tu stack personalizado). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
+El retiro incluye alojamiento, comidas y grupos de 12 personas máximo. No es teoría. Te vas con herramientas funcionando en tu trabajo.
 
 Si te interesa saber si es para ti, mira la página de [perfiles y requisitos](/para-quien/). Y si ya lo tienes claro, los detalles completos del programa están en la [página del retiro](/retiro-ia-galicia/).
 

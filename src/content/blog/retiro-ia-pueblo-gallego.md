@@ -43,7 +43,7 @@ Pero también por razones prácticas:
 No vas a escuchar charlas. Vas a construir cosas.
 
 - **Día 1:** Prompting avanzado y elegir la herramienta correcta (ChatGPT, Claude, Gemini) para cada tarea real.
-- **Día 2:** Automatización con Make y n8n conectados a APIs de IA. Flujos automáticos para tu trabajo.
+- **Día 2:** Asistentes y herramientas de IA: GPTs custom, Claude Projects, Claude Code, Cursor. Configura IAs que trabajan para ti.
 - **Día 3:** Construir con IA usando Cursor, Bolt y v0. De idea a prototipo en una tarde.
 - **Día 4:** Montar tu stack personalizado de IA. Lo que vas a usar el lunes cuando vuelvas a casa.
 

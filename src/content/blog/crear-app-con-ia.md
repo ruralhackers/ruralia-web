@@ -372,7 +372,7 @@ Pero no es un tutorial que sigues solo delante de la pantalla. Es construcción 
 - Cuando te atascas, hay alguien que sabe resolver el problema sentado a tu lado
 - Al final del día tienes algo funcional y desplegado
 
-Los otros tres días del retiro cubren el resto del stack de IA que necesitas como profesional: [prompting avanzado](/blog/curso-chatgpt/), automatización con Make y n8n, y diseño de tu stack personalizado de herramientas de IA.
+Los otros tres días del retiro cubren el resto del stack de IA que necesitas como profesional: [prompting avanzado](/blog/curso-chatgpt/), asistentes personalizados (GPTs, Claude Projects, Claude Code), y diseño de tu stack personalizado de herramientas de IA.
 
 Y todo esto pasa en un pueblo gallego con 1 Gbps de fibra, comida casera incluida y cero distracciones. Porque resulta que desconectar del entorno habitual es una de las mejores formas de aprender algo nuevo a fondo.
 

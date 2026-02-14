@@ -6,8 +6,8 @@ const schema = {
   '@type': 'Event',
   name: 'Rural IA — Retiro de IA aplicada en Galicia',
   description: 'Curso intensivo de IA aplicada en Anceu Coliving. 4 días de formación práctica + alojamiento + comidas.',
-  startDate: '2026-05-25',
-  endDate: '2026-05-28',
+  startDate: '2026-06',
+  endDate: '2026-06',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   eventStatus: 'https://schema.org/EventScheduled',
   location: {
@@ -57,7 +57,7 @@ const schema = {
       <div class="key-facts">
         <div class="fact">
           <strong>Cuándo</strong>
-          <span>Mayo 2026 (fecha exacta pronto)</span>
+          <span>Junio 2026 (fechas exactas pronto)</span>
         </div>
         <div class="fact">
           <strong>Dónde</strong>
@@ -71,7 +71,7 @@ const schema = {
           <strong>Plazas</strong>
           <span>12 personas</span>
         </div>
-        <div class="fact">
+        <div class="fact fact-full">
           <strong>Precio</strong>
           <span>Desde 697 EUR, todo incluido</span>
         </div>
@@ -90,8 +90,8 @@ const schema = {
       </div>
 
       <div class="day-detail">
-        <h3>Día 2 — Automatización con IA</h3>
-        <p>Make y n8n conectados a APIs de IA. Montar flujos automáticos: generación de contenido, procesamiento de emails, atención al cliente, extracción de datos. Integración con WordPress, Notion, Google Sheets y las herramientas que ya usas.</p>
+        <h3>Día 2 — Asistentes y herramientas de IA</h3>
+        <p>Crea asistentes personalizados para tu negocio con GPTs, Claude Projects y Gems. Usa herramientas como Claude Code o Cursor para resolver tareas reales sin ser developer. NotebookLM para research, Perplexity para análisis: configura un equipo de IAs que trabajan para ti.</p>
       </div>
 
       <div class="day-detail">
@@ -182,7 +182,7 @@ const schema = {
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#" class="btn">Reservar early bird</a>
+          <a href="#reservar" class="btn">Reservar early bird</a>
         </div>
         <div class="price-card">
           <span class="price-badge">Normal</span>
@@ -196,19 +196,58 @@ const schema = {
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#" class="btn">Reservar plaza</a>
+          <a href="#reservar" class="btn">Reservar plaza</a>
         </div>
       </div>
       <p class="pricing-note">Son ~225 EUR/día con alojamiento, comida y formación. Un bootcamp de IA en Madrid cuesta 2.450-7.000 EUR. <a href="/faq/">¿Más preguntas?</a></p>
     </div>
   </section>
 
-  <!-- CTA final -->
-  <section class="section cta-section">
-    <div class="section-inner cta-block">
-      <h2>Solo 12 plazas</h2>
-      <p>Primera edición: mayo 2026. No habrá otra igual hasta otoño.</p>
-      <a href="#pricing" class="btn btn-lg">Reserva tu plaza</a>
+  <!-- Formulario lista de espera -->
+  <section class="section" id="reservar">
+    <div class="section-inner form-section">
+      <h2>Reserva tu plaza</h2>
+      <p class="form-subtitle">Plazas limitadas. Déjanos tus datos y te avisamos cuando abramos inscripciones.</p>
+
+      <form
+        name="waitlist"
+        method="POST"
+        action="/gracias/"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="waitlist-form"
+      >
+        <input type="hidden" name="form-name" value="waitlist" />
+        <p class="hidden-field">
+          <label>No rellenar: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="perfil">Perfil</label>
+          <select id="perfil" name="perfil" required>
+            <option value="" disabled selected>¿A qué te dedicas?</option>
+            <option value="freelancer">Freelancer</option>
+            <option value="indie-hacker">Indie hacker</option>
+            <option value="consultor">Consultor/a</option>
+            <option value="profesional-tech">Profesional tech</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Quiero reservar plaza</button>
+      </form>
+
+      <p class="form-note">Solo 12 plazas por edición. Primera edición: junio 2026.</p>
     </div>
   </section>
 </Base>
@@ -220,13 +259,17 @@ const schema = {
   }
   .key-facts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+  .fact-full {
+    grid-column: 1 / -1;
   }
   .fact {
     background: #f8f9fa;
     padding: 1rem;
     border-radius: 8px;
+    text-align: center;
   }
   .fact strong {
     display: block;
@@ -350,9 +393,61 @@ const schema = {
     color: #888;
   }
 
-  .cta-section { text-align: center; }
-  .cta-block h2 { font-size: 2rem; }
-  .cta-block p { color: #555; margin-bottom: 1.5rem; }
+  /* ===== Waitlist form ===== */
+  .form-section {
+    text-align: center;
+    max-width: 480px;
+  }
+  .form-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  .waitlist-form {
+    text-align: left;
+  }
+  .hidden-field {
+    display: none;
+  }
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--marron-tierra);
+    margin-bottom: 0.4rem;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--marron-tierra);
+    transition: border-color 0.15s ease;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--verde-musgo);
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+  }
+  .form-group input::placeholder {
+    color: #9ca3af;
+  }
+  .waitlist-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .form-note {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 1.5rem;
+  }
 
   @media (max-width: 600px) {
     h1 { font-size: 2rem; }

@@ -222,7 +222,7 @@ El primer día del retiro lo dedicamos precisamente a esto: entender las fortale
 Pero no nos quedamos en la teoría. Los cuatro días incluyen:
 
 - **Configurar Custom GPTs y Claude Projects** para tus tareas recurrentes.
-- **Crear automatizaciones reales** con n8n y Make que conectan las tres IAs con tus herramientas de trabajo.
+- **Configurar asistentes y herramientas de IA** como Claude Code o Cursor para resolver tareas reales en tu trabajo.
 - **Practicar con tus propios proyectos** — vienes con tu trabajo real, te vas con soluciones funcionando.
 - **Aprender de otros profesionales** — 12 personas máximo, todos con el mismo objetivo.
 

@@ -12,6 +12,11 @@ const schema = {
     { '@type': 'Organization', name: 'Rural Hackers', url: 'https://ruralhackers.com' },
     { '@type': 'Organization', name: 'Anceu Coliving', url: 'https://anceu.com' },
   ],
+  founder: [
+    { '@type': 'Person', name: 'Agustín Jamardo', jobTitle: 'Fundador de Anceu Coliving, Desarrollador', url: 'https://linkedin.com/in/ajamardo' },
+    { '@type': 'Person', name: 'África Rodríguez', jobTitle: 'Cofundadora de Rural Hackers, Facilitadora', url: 'https://linkedin.com/in/rodriguezafricaruralhacker' },
+    { '@type': 'Person', name: 'Nacho Márquez', jobTitle: 'Cofundador de Rural Hackers, Director', url: 'https://linkedin.com/in/ignacio-mrqz' },
+  ],
 };
 ---
 
@@ -37,8 +42,27 @@ const schema = {
       <p><a href="https://anceu.com" target="_blank" rel="noopener">anceu.com</a></p>
 
       <h2>El equipo</h2>
-      <p><!-- TODO: añadir fotos y bios del equipo --></p>
       <p>Los instructores de Rural IA son profesionales que usan IA en su trabajo a diario. No académicos, no evangelistas: gente que construye cosas con IA y quiere enseñarte a hacer lo mismo.</p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <h3>Agustín Jamardo</h3>
+          <p class="team-role">Fundador de Anceu Coliving · Desarrollador</p>
+          <p>Ingeniero de software especializado en back-end. Vivió y trabajó en China antes de volver a Galicia para fundar Anceu Coliving en 2020 — un pueblo de 98 habitantes con 1 Gbps de fibra. Cofundador de Rural Hackers. Lleva 12+ años trabajando en remoto y construyendo herramientas con IA.</p>
+        </div>
+
+        <div class="team-member">
+          <h3>África Rodríguez</h3>
+          <p class="team-role">Cofundadora de Rural Hackers · Facilitadora</p>
+          <p>Activista de cultura colaborativa y gestora de Anceu Coliving. Después de explorar capitales europeas, volvió a lo pequeño. Cofundó Espacio Arroelo (coworking en Pontevedra) y lleva desde 2018 formándose en educación no formal para facilitar proyectos europeos como Erasmus+ y The Break Fellowship.</p>
+        </div>
+
+        <div class="team-member">
+          <h3>Nacho Márquez</h3>
+          <p class="team-role">Cofundador de Rural Hackers · Director</p>
+          <p>Experiencia internacional en proyectos entre Marruecos, Estonia y Singapur. Ha participado en más de 20 proyectos Erasmus+ y trabajó con la Unión Europea. Director de Noites Abertas, programa juvenil de Pontevedra. Cree en los talentos híbridos y en que la tecnología funciona mejor fuera de la ciudad.</p>
+        </div>
+      </div>
 
       <div class="cta-block">
         <p>¿Quieres conocernos en persona?</p>
@@ -72,5 +96,29 @@ const schema = {
   .cta-block p {
     color: #888;
     margin-bottom: 1rem;
+  }
+  .team-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .team-member {
+    padding: 1.5rem;
+    background: var(--blanco-niebla);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.25rem;
+  }
+  .team-role {
+    font-size: 0.9rem !important;
+    color: var(--verde-musgo) !important;
+    font-weight: 500;
+    margin-bottom: 0.75rem !important;
+  }
+  .team-member p:last-child {
+    margin-bottom: 0;
   }
 </style>

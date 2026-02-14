@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Página no encontrada | Rural IA"
+  description="La página que buscas no existe. Vuelve al inicio de Rural IA."
+>
+  <section class="section">
+    <div class="section-inner error-page">
+      <p class="error-code">404</p>
+      <h1>Página no encontrada</h1>
+      <p class="error-text">La página que buscas no existe o ha sido movida.</p>
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .error-page {
+    text-align: center;
+    max-width: 560px;
+    padding: 4rem 0;
+  }
+  .error-code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--verde-hoja);
+    margin: 0 0 0.5rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    opacity: 0.4;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .error-text {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+</style>

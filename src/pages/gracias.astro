@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Te hemos apuntado | Rural IA"
+  description="Gracias por tu interés en Rural IA. Te avisaremos cuando abramos inscripciones."
+>
+  <section class="section">
+    <div class="section-inner thanks-page">
+      <p class="check-icon">&#10003;</p>
+      <h1>Te hemos apuntado</h1>
+      <p class="thanks-text">Te escribiremos cuando abramos inscripciones para la primera edición del retiro.</p>
+
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .thanks-page {
+    text-align: center;
+    max-width: 520px;
+    padding: 4rem 0;
+  }
+  .check-icon {
+    font-size: 3rem;
+    color: var(--verde-musgo);
+    margin: 0 0 1rem;
+    line-height: 1;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .thanks-text {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .social-links a {
+    font-weight: 500;
+  }
+</style>

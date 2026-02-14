@@ -2,7 +2,6 @@
 const currentPath = Astro.url.pathname;
 
 const nav = [
-  { href: '/', label: 'Inicio' },
   { href: '/retiro-ia-galicia/', label: 'El retiro' },
   { href: '/para-quien/', label: 'Para quién' },
   { href: '/blog/', label: 'Blog' },
@@ -19,7 +18,7 @@ const nav = [
       {nav.map(({ href, label }) => (
         <a href={href} class:list={[{ active: currentPath === href }]}>{label}</a>
       ))}
-      <a href="/retiro-ia-galicia/#pricing" class="cta-nav">Reservar</a>
+      <a href="/retiro-ia-galicia/#reservar" class="cta-nav">Reservar</a>
     </nav>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
