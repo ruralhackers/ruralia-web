@@ -12,7 +12,9 @@ const nav = [
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="logo">Rural <strong>IA</strong></a>
+    <a href="/" class="logo">
+      <img src="/images/rural-ia-logo-crop-removebg.png" alt="Rural IA" />
+    </a>
     <nav>
       {nav.map(({ href, label }) => (
         <a href={href} class:list={[{ active: currentPath === href }]}>{label}</a>
@@ -40,15 +42,13 @@ const nav = [
     justify-content: space-between;
   }
   .logo {
-    font-family: var(--font-heading, 'Inter', sans-serif);
-    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: var(--verde-bosque, #2D5A3D);
-    letter-spacing: -0.04em;
-    font-weight: 500;
   }
-  .logo strong {
-    font-weight: 700;
+  .logo img {
+    height: 32px;
+    width: auto;
   }
   nav {
     display: flex;
