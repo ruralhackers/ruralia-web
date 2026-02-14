@@ -1,101 +1,136 @@
 ---
 const year = new Date().getFullYear();
+
+const links = [
+  { href: '/', label: 'Inicio' },
+  { href: '/retiro-ia-galicia/', label: 'El retiro' },
+  { href: '/para-quien/', label: 'Para quién' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/sobre-nosotros/', label: 'Sobre nosotros' },
+];
+
+const legalLinks = [
+  { href: '/legal/', label: 'Aviso legal' },
+  { href: '/legal/#privacidad', label: 'Privacidad' },
+];
 ---
 
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="logo">Rural <strong>IA</strong></p>
-      <p class="tagline">Retiro inmersivo de IA aplicada en Galicia.</p>
-      <p class="collab">Una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>.</p>
+    <p class="footer-brand">
+      <span class="footer-logo">Rural <strong>IA</strong></span>
+      <span class="footer-sep">—</span>
+      Retiro inmersivo de IA en Galicia.
+    </p>
+
+    <nav class="footer-nav" aria-label="Footer">
+      {links.map(({ href, label }) => (
+        <a href={href}>{label}</a>
+      ))}
+    </nav>
+
+    <nav class="footer-legal" aria-label="Legal">
+      {legalLinks.map(({ href, label }) => (
+        <a href={href}>{label}</a>
+      ))}
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://instagram.com/ruralia.ai" target="_blank" rel="noopener">Instagram</a>
+      <span class="dot">&middot;</span>
+      <a href="https://twitter.com/ruralia_ai" target="_blank" rel="noopener">Twitter</a>
+      <span class="dot">&middot;</span>
+      <a href="mailto:hola@ruralia.ai">hola@ruralia.ai</a>
     </div>
-    <div class="footer-links">
-      <div>
-        <h4>Retiro</h4>
-        <a href="/retiro-ia-galicia/">Programa y precio</a>
-        <a href="/para-quien/">Para quién es</a>
-        <a href="/faq/">Preguntas frecuentes</a>
-      </div>
-      <div>
-        <h4>Contenido</h4>
-        <a href="/blog/">Blog</a>
-        <a href="/sobre-nosotros/">Sobre nosotros</a>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <a href="/legal/">Aviso legal y privacidad</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; {year} Rural IA. Todos los derechos reservados.</p>
+
+    <p class="footer-copy">&copy; {year} Rural IA</p>
   </div>
 </footer>
 
 <style>
   .footer {
-    background: #111;
-    color: #ccc;
-    padding: 3rem 1.5rem 1.5rem;
-    margin-top: 4rem;
+    background: var(--verde-oscuro-noche, #1A3A2A);
+    color: rgba(245, 240, 232, 0.7);
+    padding: 4rem 1.5rem 2.5rem;
+    text-align: center;
+    margin-top: 0;
   }
   .footer-inner {
-    max-width: 1100px;
+    max-width: var(--content-width, 800px);
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
   }
   .footer-brand {
-    max-width: 320px;
+    font-size: 1rem;
+    margin: 0 0 2rem;
+    color: rgba(245, 240, 232, 0.7);
   }
-  .logo {
-    font-size: 1.25rem;
+  .footer-logo {
+    font-family: var(--font-heading, 'Inter', sans-serif);
     color: #fff;
-    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    letter-spacing: -0.04em;
+    font-weight: 600;
   }
-  .tagline {
-    margin: 0 0 0.5rem;
-    font-size: 0.9rem;
+  .footer-sep {
+    margin: 0 0.5rem;
+    opacity: 0.4;
   }
-  .collab {
-    font-size: 0.85rem;
-  }
-  .collab a {
-    color: #aaa;
-  }
-  .footer-links {
+  .footer-nav {
     display: flex;
-    gap: 3rem;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.25rem;
   }
-  .footer-links h4 {
-    color: #fff;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 0 0 0.75rem;
-  }
-  .footer-links div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .footer-links a {
-    color: #aaa;
+  .footer-nav a {
+    color: rgba(245, 240, 232, 0.6);
     text-decoration: none;
     font-size: 0.9rem;
+    transition: color 0.15s;
   }
-  .footer-links a:hover {
+  .footer-nav a:hover {
     color: #fff;
   }
-  .footer-bottom {
-    max-width: 1100px;
-    margin: 2rem auto 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid #333;
+  .footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-legal a {
+    color: rgba(245, 240, 232, 0.4);
+    text-decoration: none;
     font-size: 0.8rem;
-    color: #777;
+    transition: color 0.15s;
+  }
+  .footer-legal a:hover {
+    color: rgba(245, 240, 232, 0.7);
+  }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+  }
+  .footer-social a {
+    color: rgba(245, 240, 232, 0.5);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-social a:hover {
+    color: #fff;
+  }
+  .dot {
+    color: rgba(245, 240, 232, 0.25);
+  }
+  .footer-copy {
+    font-size: 0.8rem;
+    color: rgba(245, 240, 232, 0.3);
+    margin: 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(245, 240, 232, 0.1);
   }
 </style>

@@ -1,0 +1,201 @@
+{
+  "title": "Rural IA — Retiro inmersivo de IA aplicada en Galicia",
+  "bodyHeight": 4624,
+  "sections": [
+    {
+      "index": 0,
+      "tagName": "HEADER",
+      "className": "header",
+      "id": "",
+      "position": {
+        "top": 0,
+        "height": 80.484375,
+        "width": 1920
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": "  Rural IA  InicioEl retiroPara quiénBlogFAQ Reservar        ..."
+    },
+    {
+      "index": 1,
+      "tagName": "SECTION",
+      "className": "hero bg-crema",
+      "id": "",
+      "position": {
+        "top": 80.484375,
+        "height": 741.203125,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(245, 240, 232)",
+      "textContent": "  Mayo 2026 · Anceu Coliving, Pontevedra Rural IA 4 días en Galicia para transformar tu forma de tra..."
+    },
+    {
+      "index": 2,
+      "tagName": "SECTION",
+      "className": "fullwidth-photo",
+      "id": "",
+      "position": {
+        "top": 821.6875,
+        "height": 520,
+        "width": 1920
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": "  ..."
+    },
+    {
+      "index": 3,
+      "tagName": "SECTION",
+      "className": "section bg-niebla",
+      "id": "",
+      "position": {
+        "top": 1341.6875,
+        "height": 512.875,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(250, 250, 247)",
+      "textContent": "  Sabes que la IA va a cambiarlo todo \nPero no encuentras el momento. Los cursos online se abandonan..."
+    },
+    {
+      "index": 4,
+      "tagName": "DIV",
+      "className": "section-inner text-center",
+      "id": "",
+      "position": {
+        "top": 1474.875,
+        "height": 279.6875,
+        "width": 800
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": " Sabes que la IA va a cambiarlo todo \nPero no encuentras el momento. Los cursos online se abandonan...."
+    },
+    {
+      "index": 5,
+      "tagName": "SECTION",
+      "className": "section bg-crema",
+      "id": "",
+      "position": {
+        "top": 1854.5625,
+        "height": 468.09375,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(245, 240, 232)",
+      "textContent": "  Un retiro inmersivo de IA, en un pueblo gallego \n4 días de formación práctica en Anceu Coliving.\n ..."
+    },
+    {
+      "index": 6,
+      "tagName": "DIV",
+      "className": "section-inner text-center",
+      "id": "",
+      "position": {
+        "top": 1987.75,
+        "height": 218.90625,
+        "width": 800
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": " Un retiro inmersivo de IA, en un pueblo gallego \n4 días de formación práctica en Anceu Coliving.\n  ..."
+    },
+    {
+      "index": 7,
+      "tagName": "SECTION",
+      "className": "section bg-niebla",
+      "id": "",
+      "position": {
+        "top": 2322.65625,
+        "height": 764.375,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(250, 250, 247)",
+      "textContent": "  4 días, 4 bloques    Día 01 Fundamentos IA aplicada Prompting avanzado, elegir la herramienta corr..."
+    },
+    {
+      "index": 8,
+      "tagName": "DIV",
+      "className": "section-inner text-center",
+      "id": "",
+      "position": {
+        "top": 2455.84375,
+        "height": 48,
+        "width": 800
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": " 4 días, 4 bloques ..."
+    },
+    {
+      "index": 9,
+      "tagName": "DIV",
+      "className": "section-inner text-center",
+      "id": "",
+      "position": {
+        "top": 2957.125,
+        "height": 29.90625,
+        "width": 800
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": "  Ver programa completo →  ..."
+    },
+    {
+      "index": 10,
+      "tagName": "SECTION",
+      "className": "section bg-crema",
+      "id": "",
+      "position": {
+        "top": 3087.03125,
+        "height": 312.8125,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(245, 240, 232)",
+      "textContent": "   600K profesionales tech en España sin formación en IA  +56% prima salarial para quienes dominan I..."
+    },
+    {
+      "index": 11,
+      "tagName": "SECTION",
+      "className": "section bg-niebla",
+      "id": "",
+      "position": {
+        "top": 3399.84375,
+        "height": 484.09375,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(250, 250, 247)",
+      "textContent": "  Para freelancers, indie hackers y profesionales tech \nSi te buscas la vida con tecnología y quiere..."
+    },
+    {
+      "index": 12,
+      "tagName": "DIV",
+      "className": "section-inner text-center",
+      "id": "",
+      "position": {
+        "top": 3533.03125,
+        "height": 234.90625,
+        "width": 800
+      },
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "textContent": " Para freelancers, indie hackers y profesionales tech \nSi te buscas la vida con tecnología y quieres..."
+    },
+    {
+      "index": 13,
+      "tagName": "SECTION",
+      "className": "cta-final bg-dark",
+      "id": "",
+      "position": {
+        "top": 3883.9375,
+        "height": 384.609375,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(26, 58, 42)",
+      "textContent": "  Solo 12 plazas por edición Primera edición: mayo 2026 en Anceu Coliving, Pontevedra. Reserva tu pl..."
+    },
+    {
+      "index": 14,
+      "tagName": "FOOTER",
+      "className": "footer",
+      "id": "",
+      "position": {
+        "top": 4268.546875,
+        "height": 355.375,
+        "width": 1920
+      },
+      "backgroundColor": "rgb(26, 58, 42)",
+      "textContent": "   Rural IA —\nRetiro inmersivo de IA en Galicia.\n  InicioEl retiroPara quiénBlogFAQSobre nosotros   ..."
+    }
+  ]
+}

@@ -21,6 +21,15 @@ const props = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Font: Inter — geometric, linear, Vercel/Apple style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <SEO {...props} />
   </head>
   <body>
@@ -33,17 +42,54 @@ const props = Astro.props;
 </html>
 
 <style is:global>
+  /* ===== Reset ===== */
   *, *::before, *::after {
     box-sizing: border-box;
   }
 
+  /* ===== Design tokens ===== */
+  :root {
+    /* Palette */
+    --verde-bosque: #2D5A3D;
+    --verde-musgo: #4A7C59;
+    --verde-hoja: #6B9B7A;
+    --crema-calido: #F5F0E8;
+    --blanco-niebla: #FAFAF7;
+    --marron-tierra: #5C4A3A;
+    --marron-claro: #8B7355;
+    --dorado-sol: #D4A843;
+    --gris-lluvia: #9CA3AF;
+    --verde-oscuro-noche: #1A3A2A;
+
+    /* Semantic */
+    --color-text: var(--marron-tierra);
+    --color-text-secondary: var(--marron-claro);
+    --color-text-tertiary: var(--gris-lluvia);
+    --color-heading: var(--verde-bosque);
+    --color-bg-primary: var(--crema-calido);
+    --color-bg-alt: var(--blanco-niebla);
+    --color-accent: var(--dorado-sol);
+    --color-link: var(--verde-bosque);
+
+    /* Typography — single geometric sans, like Vercel/Apple */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Spacing */
+    --section-gap: 100px;
+    --content-width: 800px;
+    --wide-width: 1100px;
+  }
+
+  /* ===== Base ===== */
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    color: #111;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    line-height: 1.7;
+    background: var(--color-bg-primary);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   main {
@@ -53,51 +99,127 @@ const props = Astro.props;
   img {
     max-width: 100%;
     height: auto;
+    display: block;
   }
 
+  /* ===== Typography — tight, geometric, linear ===== */
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+  }
+
+  /* ===== Links ===== */
   a {
-    color: #2563eb;
+    color: var(--color-link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
   }
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  a:hover {
+    color: var(--verde-musgo);
   }
 
+  /* ===== Sections ===== */
   .section {
-    padding: 4rem 1.5rem;
+    padding: var(--section-gap) 1.5rem;
   }
 
   .section-inner {
-    max-width: 1100px;
+    max-width: var(--content-width);
     margin: 0 auto;
   }
 
-  h1, h2, h3 {
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+  .section-wide {
+    max-width: var(--wide-width);
+    margin: 0 auto;
   }
 
+  /* Background variants */
+  .bg-crema { background: var(--crema-calido); }
+  .bg-niebla { background: var(--blanco-niebla); }
+  .bg-dark {
+    background: var(--verde-oscuro-noche);
+    color: var(--crema-calido);
+  }
+  .bg-dark h2, .bg-dark h3 {
+    color: #fff;
+  }
+  .bg-dark p {
+    color: rgba(245, 240, 232, 0.85);
+  }
+
+  /* ===== Buttons ===== */
   .btn {
     display: inline-block;
-    background: #111;
-    color: #fff;
-    padding: 0.75rem 1.75rem;
+    padding: 0.875rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: background 0.15s;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
   }
 
-  .btn:hover {
-    background: #333;
+  .btn-primary {
+    background: var(--verde-bosque);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--verde-musgo);
     color: #fff;
   }
 
+  .btn-gold {
+    background: var(--dorado-sol);
+    color: var(--verde-oscuro-noche);
+  }
+  .btn-gold:hover {
+    background: #c49a38;
+    color: var(--verde-oscuro-noche);
+  }
+
   .btn-lg {
-    padding: 1rem 2.25rem;
+    padding: 1rem 2.5rem;
     font-size: 1.1rem;
+  }
+
+  /* ===== Utility ===== */
+  .text-center { text-align: center; }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-small { font-size: 0.9rem; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    :root {
+      --section-gap: 64px;
+    }
   }
 </style>
