@@ -1,0 +1,108 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  keywords?: string[];
+  ogImage?: string;
+}
+
+const { title, description, date, author, keywords, ogImage } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: date,
+  author: { '@type': 'Person', name: author },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Rural IA',
+    url: 'https://ruralia.ai',
+  },
+};
+
+const formattedDate = new Date(date).toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Base title={`${title} | Rural IA`} description={description} ogImage={ogImage} ogType="article" schema={schema}>
+  <article class="section">
+    <div class="article-inner">
+      <header class="article-header">
+        <p class="article-meta">{formattedDate} &middot; {author}</p>
+        <h1>{title}</h1>
+        <p class="article-desc">{description}</p>
+      </header>
+      <div class="article-body">
+        <slot />
+      </div>
+      <footer class="article-footer">
+        <hr />
+        <p>¿Te ha gustado este artículo? <a href="/retiro-ia-galicia/">Conoce nuestro retiro de IA en Galicia</a> — 4 días de formación práctica, todo incluido.</p>
+      </footer>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .article-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .article-header {
+    margin-bottom: 2rem;
+  }
+  .article-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+  }
+  .article-header h1 {
+    font-size: 2.25rem;
+    margin: 0 0 0.75rem;
+  }
+  .article-desc {
+    font-size: 1.15rem;
+    color: #555;
+    margin: 0;
+  }
+  .article-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  .article-body :global(h2) {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .article-body :global(h3) {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  .article-body :global(pre) {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  .article-body :global(img) {
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+  .article-footer {
+    margin-top: 3rem;
+    color: #555;
+  }
+  .article-footer hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+  }
+</style>

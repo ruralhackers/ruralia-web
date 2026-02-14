@@ -1,0 +1,361 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Rural IA — Retiro de IA aplicada en Galicia',
+  description: 'Curso intensivo de IA aplicada en Anceu Coliving. 4 días de formación práctica + alojamiento + comidas.',
+  startDate: '2026-05-25',
+  endDate: '2026-05-28',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: 'Anceu Coliving',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Ponte Caldelas',
+      addressRegion: 'Pontevedra',
+      addressCountry: 'ES',
+    },
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Rural IA',
+    url: 'https://ruralia.ai',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Early bird',
+      price: '697',
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/LimitedAvailability',
+      validFrom: '2026-04-01',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Normal',
+      price: '897',
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+    },
+  ],
+};
+---
+
+<Base
+  title="Retiro de IA en Galicia — 4 días, todo incluido | Rural IA"
+  description="Curso intensivo de IA aplicada en Anceu Coliving, Pontevedra. 4 días de formación práctica + alojamiento + comidas. 12 plazas. Desde 697 EUR."
+  schema={schema}
+>
+  <!-- Header datos clave -->
+  <section class="section">
+    <div class="section-inner">
+      <h1>Retiro de IA aplicada en Galicia</h1>
+      <div class="key-facts">
+        <div class="fact">
+          <strong>Cuándo</strong>
+          <span>Mayo 2026 (fecha exacta pronto)</span>
+        </div>
+        <div class="fact">
+          <strong>Dónde</strong>
+          <span>Anceu Coliving, Ponte Caldelas (Pontevedra)</span>
+        </div>
+        <div class="fact">
+          <strong>Duración</strong>
+          <span>4 días / 3 noches</span>
+        </div>
+        <div class="fact">
+          <strong>Plazas</strong>
+          <span>12 personas</span>
+        </div>
+        <div class="fact">
+          <strong>Precio</strong>
+          <span>Desde 697 EUR, todo incluido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programa detallado -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>Programa</h2>
+
+      <div class="day-detail">
+        <h3>Día 1 — Fundamentos de IA aplicada</h3>
+        <p>Prompting avanzado, elegir la herramienta correcta para cada tarea (ChatGPT, Claude, Gemini), casos de uso reales. Salir del "háblame como si fueras un experto en..." y empezar a usar IA de verdad.</p>
+      </div>
+
+      <div class="day-detail">
+        <h3>Día 2 — Automatización con IA</h3>
+        <p>Make y n8n conectados a APIs de IA. Montar flujos automáticos: generación de contenido, procesamiento de emails, atención al cliente, extracción de datos. Integración con WordPress, Notion, Google Sheets y las herramientas que ya usas.</p>
+      </div>
+
+      <div class="day-detail">
+        <h3>Día 3 — Construir con IA (sin código)</h3>
+        <p>Cursor, Bolt, v0: crear apps, landing pages, herramientas internas con IA como copiloto. De idea a prototipo funcional en una tarde.</p>
+      </div>
+
+      <div class="day-detail">
+        <h3>Día 4 — Tu stack de IA personalizado</h3>
+        <p>Cada asistente monta su propio setup: qué herramientas usa, qué automatiza, qué construye. Sesión de trabajo guiado + demo final al grupo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Día típico -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Un día típico</h2>
+      <div class="schedule">
+        <div class="schedule-row"><span class="time">9:00</span><span>Desayuno juntos</span></div>
+        <div class="schedule-row"><span class="time">10:00 – 13:30</span><span>Taller práctico (hands-on con herramientas)</span></div>
+        <div class="schedule-row"><span class="time">13:30</span><span>Comida</span></div>
+        <div class="schedule-row"><span class="time">15:30 – 18:00</span><span>Aplicar lo aprendido a tu propio proyecto</span></div>
+        <div class="schedule-row"><span class="time">18:00 – 19:30</span><span>Tiempo libre, paseo, descanso</span></div>
+        <div class="schedule-row"><span class="time">20:00</span><span>Cena</span></div>
+        <div class="schedule-row"><span class="time">21:30</span><span>Sesión nocturna opcional — demos, preguntas, charla</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué incluye -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>Qué incluye</h2>
+      <div class="includes-grid">
+        <div class="include-item">
+          <strong>Formación</strong>
+          <p>4 días de talleres prácticos con herramientas de IA</p>
+        </div>
+        <div class="include-item">
+          <strong>Alojamiento</strong>
+          <p>3 noches en Anceu Coliving</p>
+        </div>
+        <div class="include-item">
+          <strong>Comidas</strong>
+          <p>Desayuno, comida y cena los 4 días. Gastronomía gallega.</p>
+        </div>
+        <div class="include-item">
+          <strong>Materiales</strong>
+          <p>Acceso a todas las herramientas, licencias y materiales del curso</p>
+        </div>
+        <div class="include-item">
+          <strong>Comunidad alumni</strong>
+          <p>Acceso al grupo privado de alumni después del retiro</p>
+        </div>
+        <div class="include-item">
+          <strong>Follow-up</strong>
+          <p>Sesión online grupal de seguimiento a las 2-3 semanas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- El lugar -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>El lugar: Anceu Coliving</h2>
+      <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra), con 1 Gbps de fibra óptica, espacio de trabajo equipado, y rodeado de naturaleza. El 55% de los colivers repiten.</p>
+      <p>A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO).</p>
+      <p><a href="/sobre-nosotros/">Conoce al equipo detrás de Rural IA</a></p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section alt" id="pricing">
+    <div class="section-inner pricing-section">
+      <h2>Precio</h2>
+      <div class="pricing-grid">
+        <div class="price-card featured">
+          <span class="price-badge">Early bird</span>
+          <span class="price-amount">697 EUR</span>
+          <span class="price-note">Primeras 5 plazas</span>
+          <ul>
+            <li>4 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Materiales y licencias</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <a href="#" class="btn">Reservar early bird</a>
+        </div>
+        <div class="price-card">
+          <span class="price-badge">Normal</span>
+          <span class="price-amount">897 EUR</span>
+          <span class="price-note">Todo incluido</span>
+          <ul>
+            <li>4 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Materiales y licencias</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <a href="#" class="btn">Reservar plaza</a>
+        </div>
+      </div>
+      <p class="pricing-note">Son ~225 EUR/día con alojamiento, comida y formación. Un bootcamp de IA en Madrid cuesta 2.450-7.000 EUR. <a href="/faq/">¿Más preguntas?</a></p>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="section cta-section">
+    <div class="section-inner cta-block">
+      <h2>Solo 12 plazas</h2>
+      <p>Primera edición: mayo 2026. No habrá otra igual hasta otoño.</p>
+      <a href="#pricing" class="btn btn-lg">Reserva tu plaza</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .key-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .fact {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .fact strong {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.25rem;
+  }
+
+  .alt { background: #f8f9fa; }
+
+  .day-detail {
+    margin-bottom: 2rem;
+  }
+  .day-detail h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .day-detail p {
+    color: #555;
+  }
+
+  .schedule {
+    max-width: 600px;
+  }
+  .schedule-row {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .time {
+    font-weight: 600;
+    min-width: 130px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .include-item {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+  .include-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .include-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .pricing-section { text-align: center; }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 650px;
+    margin: 2rem auto;
+  }
+  .price-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .price-card.featured {
+    border-color: #111;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .price-badge {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+  .price-amount {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.25rem;
+  }
+  .price-note {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .price-card ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+  }
+  .price-card li {
+    padding: 0.3rem 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  .price-card li::before {
+    content: '✓ ';
+    color: #22c55e;
+    font-weight: 600;
+  }
+  .pricing-note {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .cta-section { text-align: center; }
+  .cta-block h2 { font-size: 2rem; }
+  .cta-block p { color: #555; margin-bottom: 1.5rem; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .price-amount { font-size: 2rem; }
+  }
+</style>

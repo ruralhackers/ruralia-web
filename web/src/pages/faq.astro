@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqs = [
+  {
+    q: '¿Necesito saber programar?',
+    a: 'No. El retiro está diseñado para profesionales tech que usan herramientas digitales pero no necesariamente programan. Aprenderemos a usar IA como herramienta, no a entrenar modelos.',
+  },
+  {
+    q: '¿Cómo llego a Anceu?',
+    a: 'Anceu está a 30 min de Pontevedra y 45 min de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO). Podemos coordinar transporte desde Pontevedra o Vigo.',
+  },
+  {
+    q: '¿Qué tengo que llevar?',
+    a: 'Tu portátil y ganas de aprender. Todo lo demás (alojamiento, comidas, materiales, software) está incluido.',
+  },
+  {
+    q: '¿Puedo deducirme el coste?',
+    a: 'Si eres autónomo o empresa, sí. Es un gasto de formación profesional deducible en tu IRPF o Impuesto de Sociedades. Con un tipo marginal del 30%, una formación de 800 EUR te cuesta realmente 560 EUR.',
+  },
+  {
+    q: '¿Cuál es la política de cancelación?',
+    a: 'Cancelación gratuita hasta 15 días antes. Entre 15 y 7 días, devolvemos el 50%. Menos de 7 días, no hay devolución (pero puedes transferir tu plaza a otra persona).',
+  },
+  {
+    q: '¿Qué pasa si llueve?',
+    a: 'Estamos en Galicia, así que es probable. Toda la formación es en interior (el espacio de Anceu tiene salón equipado con proyector y 1 Gbps de fibra). La lluvia es parte del encanto.',
+  },
+  {
+    q: '¿Hay wifi bueno?',
+    a: '1 Gbps de fibra óptica. Anceu es un coliving tech, la conectividad es prioridad.',
+  },
+  {
+    q: '¿Cuántas personas hay por edición?',
+    a: 'Máximo 12. Grupos pequeños para atención personalizada.',
+  },
+  {
+    q: '¿Habrá más ediciones?',
+    a: 'Sí. Planeamos ediciones regulares. Pero cada edición tiene solo 12 plazas, así que si te interesa una fecha concreta, no esperes.',
+  },
+  {
+    q: '¿Qué me llevo al terminar?',
+    a: 'Herramientas de IA configuradas, flujos de automatización funcionando, un prototipo propio, acceso a la comunidad alumni, materiales y una sesión de follow-up online a las 2-3 semanas.',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
+---
+
+<Base
+  title="Preguntas frecuentes — Retiro de IA Rural IA"
+  description="Todo lo que necesitas saber sobre el retiro de IA en Galicia: cómo llegar, qué llevar, nivel necesario, política de cancelación y más."
+  schema={schema}
+>
+  <section class="section">
+    <div class="section-inner content">
+      <h1>Preguntas frecuentes</h1>
+
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <details class="faq-item">
+            <summary>{faq.q}</summary>
+            <p>{faq.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="cta-block">
+        <p>¿Tienes otra pregunta? Escríbenos a <strong>hola@ruralia.ai</strong></p>
+        <a href="/retiro-ia-galicia/" class="btn">Ver el retiro</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .content {
+    max-width: 720px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  .faq-list {
+    margin-top: 1rem;
+  }
+  .faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.25rem 0;
+  }
+  .faq-item summary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #999;
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item p {
+    margin: 0.75rem 0 0;
+    color: #555;
+    line-height: 1.7;
+  }
+  .cta-block {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .cta-block p {
+    color: #888;
+    margin-bottom: 1rem;
+  }
+</style>

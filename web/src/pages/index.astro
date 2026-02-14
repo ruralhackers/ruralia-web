@@ -1,0 +1,257 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Rural IA',
+  url: 'https://ruralia.ai',
+  description: 'Retiro inmersivo de IA aplicada en el rural gallego.',
+  foundingDate: '2026',
+  sameAs: [
+    'https://instagram.com/ruralia.ai',
+    'https://twitter.com/ruralia_ai',
+  ],
+};
+---
+
+<Base
+  title="Rural IA — Retiro inmersivo de IA aplicada en Galicia"
+  description="4 días en el rural gallego para transformar tu forma de trabajar con IA. Formación práctica, alojamiento y comidas incluidas. 12 plazas por edición."
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="/logo.svg" alt="Rural IA" class="hero-logo" width="180" height="60" />
+      <p class="hero-badge">Mayo 2026 &middot; Anceu Coliving, Pontevedra</p>
+      <h1>4 días en Galicia para transformar tu forma de trabajar con IA</h1>
+      <p class="hero-sub">Retiro inmersivo para freelancers y profesionales tech en el rural gallego.</p>
+      <div class="hero-cta">
+        <a href="/retiro-ia-galicia/" class="btn btn-lg">Reserva tu plaza</a>
+        <span class="hero-price">Desde 697 EUR todo incluido</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section class="section">
+    <div class="section-inner problem">
+      <h2>Sabes que la IA va a cambiarlo todo</h2>
+      <p>Pero no encuentras el momento. Los cursos online se abandonan. Los bootcamps duran meses y cuestan miles de euros. Y cada semana salen 3 herramientas nuevas que no sabes si probar o ignorar.</p>
+      <p><strong>Lo que necesitas no es más teoría. Es sentarte 4 días a construir cosas reales con IA.</strong></p>
+    </div>
+  </section>
+
+  <!-- Solución -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>Un retiro inmersivo de IA, en un pueblo gallego</h2>
+      <p>4 días de formación práctica en Anceu Coliving. Vienes con tu portátil, te vas con herramientas de IA configuradas y funcionando en tu trabajo. Sin humo, sin teoría innecesaria. Rodeado de naturaleza, buena comida y gente como tú.</p>
+    </div>
+  </section>
+
+  <!-- Programa resumido -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>4 días, 4 bloques</h2>
+      <div class="program-grid">
+        <div class="program-day">
+          <span class="day-num">01</span>
+          <h3>Fundamentos IA aplicada</h3>
+          <p>Prompting avanzado, elegir la herramienta correcta, casos de uso reales.</p>
+        </div>
+        <div class="program-day">
+          <span class="day-num">02</span>
+          <h3>Automatización con IA</h3>
+          <p>Make y n8n conectados a APIs de IA. Flujos automáticos para tu trabajo.</p>
+        </div>
+        <div class="program-day">
+          <span class="day-num">03</span>
+          <h3>Construir con IA</h3>
+          <p>Cursor, Bolt, v0: de idea a prototipo funcional en una tarde.</p>
+        </div>
+        <div class="program-day">
+          <span class="day-num">04</span>
+          <h3>Tu stack personalizado</h3>
+          <p>Monta tu propio setup de IA. Sesión guiada + demo final al grupo.</p>
+        </div>
+      </div>
+      <p class="program-link"><a href="/retiro-ia-galicia/">Ver programa completo</a></p>
+    </div>
+  </section>
+
+  <!-- Social proof / datos -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>La oportunidad es ahora</h2>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-num">600K</span>
+          <span class="stat-label">profesionales tech en España sin formación en IA</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">+56%</span>
+          <span class="stat-label">prima salarial para quienes dominan IA</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">0</span>
+          <span class="stat-label">retiros inmersivos de IA para techies en España</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para quién -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Para freelancers, indie hackers y profesionales tech</h2>
+      <p>Si te buscas la vida con tecnología y quieres integrar IA en tu trabajo, esto es para ti. No hace falta saber programar. Sí hace falta tener ganas de cacharrear.</p>
+      <p><a href="/para-quien/">Mira si encajas</a></p>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="section cta-section">
+    <div class="section-inner cta-block">
+      <h2>Solo 12 plazas por edición</h2>
+      <p>Primera edición: mayo 2026 en Anceu Coliving, Pontevedra.</p>
+      <a href="/retiro-ia-galicia/" class="btn btn-lg">Reserva tu plaza</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding: 5rem 1.5rem 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #f8faf8 0%, #fff 100%);
+  }
+  .hero-inner {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .hero-logo {
+    display: block;
+    margin: 0 auto 1.5rem;
+    max-width: 180px;
+    height: auto;
+  }
+  .hero-badge {
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+  }
+  .hero h1 {
+    font-size: 2.75rem;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.03em;
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: #555;
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .hero-price {
+    color: #888;
+    font-size: 0.95rem;
+  }
+
+  .problem {
+    max-width: 680px;
+  }
+  .problem h2 {
+    font-size: 1.75rem;
+  }
+  .problem p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  .alt {
+    background: #f8f9fa;
+  }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .program-day {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .day-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ddd;
+    line-height: 1;
+  }
+  .program-day h3 {
+    font-size: 1.1rem;
+    margin: 0.75rem 0 0.5rem;
+  }
+  .program-day p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+  .program-link {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .stat-num {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+  .cta-block h2 {
+    font-size: 2rem;
+  }
+  .cta-block p {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero-cta {
+      flex-direction: column;
+    }
+    .stat-num {
+      font-size: 2rem;
+    }
+  }
+</style>

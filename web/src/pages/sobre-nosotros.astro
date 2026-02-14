@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Rural IA',
+  url: 'https://ruralia.ai',
+  description: 'Retiro inmersivo de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving.',
+  foundingDate: '2026',
+  member: [
+    { '@type': 'Organization', name: 'Rural Hackers', url: 'https://ruralhackers.com' },
+    { '@type': 'Organization', name: 'Anceu Coliving', url: 'https://anceu.com' },
+  ],
+};
+---
+
+<Base
+  title="Sobre nosotros — Rural Hackers x Anceu Coliving | Rural IA"
+  description="Rural IA es una iniciativa de Rural Hackers y Anceu Coliving. Formación tech inmersiva en el rural gallego."
+  schema={schema}
+>
+  <section class="section">
+    <div class="section-inner content">
+      <h1>Sobre nosotros</h1>
+
+      <h2>La historia</h2>
+      <p>Rural IA nace de una idea simple: la mejor forma de aprender IA no es un vídeo de YouTube ni un máster de 8 meses. Es sentarte 4 días con gente como tú, en un sitio sin distracciones, y construir cosas reales.</p>
+      <p>Llevamos años organizando eventos tech en el rural gallego con Rural Hackers. Hemos visto que cuando juntas profesionales tech motivados, buena conexión a internet y un entorno que invite a concentrarse, pasan cosas buenas. Rural IA es la versión intensiva y enfocada en IA de esa experiencia.</p>
+
+      <h2>Rural Hackers</h2>
+      <p>Comunidad de tecnólogos que exploran la intersección entre tecnología y mundo rural. Organizadores de los Hacker Days en Anceu y de eventos tech en pueblos de Galicia. Creen que la tecnología puede (y debe) funcionar fuera de las grandes ciudades.</p>
+      <p><a href="https://ruralhackers.com" target="_blank" rel="noopener">ruralhackers.com</a></p>
+
+      <h2>Anceu Coliving</h2>
+      <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra) con 1 Gbps de fibra, espacio de trabajo y una comunidad internacional de profesionales remotos. El 55% de los colivers repiten.</p>
+      <p><a href="https://anceu.com" target="_blank" rel="noopener">anceu.com</a></p>
+
+      <h2>El equipo</h2>
+      <p><!-- TODO: añadir fotos y bios del equipo --></p>
+      <p>Los instructores de Rural IA son profesionales que usan IA en su trabajo a diario. No académicos, no evangelistas: gente que construye cosas con IA y quiere enseñarte a hacer lo mismo.</p>
+
+      <div class="cta-block">
+        <p>¿Quieres conocernos en persona?</p>
+        <a href="/retiro-ia-galicia/" class="btn">Ven al retiro</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .content {
+    max-width: 720px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+  }
+  p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+  }
+  .cta-block {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .cta-block p {
+    color: #888;
+    margin-bottom: 1rem;
+  }
+</style>

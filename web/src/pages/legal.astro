@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Aviso legal y política de privacidad | Rural IA"
+  description="Aviso legal, política de privacidad, política de cookies y condiciones de contratación de Rural IA."
+>
+  <section class="section">
+    <div class="section-inner content">
+      <h1>Aviso legal y privacidad</h1>
+
+      <h2>Aviso legal</h2>
+      <p><!-- TODO: datos del titular (nombre, NIF/CIF, domicilio, email, registro mercantil si aplica) --></p>
+
+      <h2>Política de privacidad</h2>
+      <p>En cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos (LOPDGDD), te informamos de que los datos personales recogidos a través de este sitio web serán tratados con la finalidad de gestionar tu inscripción al retiro y mantenerte informado sobre futuras ediciones.</p>
+      <p><!-- TODO: completar con datos del responsable, base legal, destinatarios, plazos y derechos ARCO --></p>
+
+      <h2>Política de cookies</h2>
+      <p>Este sitio web utiliza únicamente cookies técnicas necesarias para su funcionamiento. No utilizamos cookies de seguimiento ni publicitarias.</p>
+      <p><!-- TODO: actualizar si se añaden analytics o pixel de Meta --></p>
+
+      <h2>Condiciones de contratación</h2>
+      <p>La compra de una plaza en el retiro Rural IA se realiza a través de Stripe. Al realizar el pago, aceptas las siguientes condiciones:</p>
+      <ul>
+        <li>Cancelación gratuita hasta 15 días antes del inicio del retiro.</li>
+        <li>Entre 15 y 7 días antes: devolución del 50%.</li>
+        <li>Menos de 7 días: sin devolución, pero la plaza es transferible a otra persona.</li>
+      </ul>
+      <p><!-- TODO: completar con condiciones legales detalladas --></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .content {
+    max-width: 720px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+  }
+  p, li {
+    color: #555;
+    line-height: 1.7;
+  }
+</style>

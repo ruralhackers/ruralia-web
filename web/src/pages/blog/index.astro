@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Base
+  title="Blog — IA aplicada para freelancers y profesionales tech | Rural IA"
+  description="Tips, herramientas y guías prácticas de IA para freelancers, webmasters e indie hackers. Por el equipo de Rural IA."
+>
+  <section class="section">
+    <div class="section-inner">
+      <h1>Blog</h1>
+      <p class="intro">Tips, herramientas y guías prácticas de IA aplicada para profesionales tech.</p>
+
+      {posts.length === 0 && (
+        <p class="empty">Próximamente. Estamos preparando contenido. Síguenos en redes para no perderte nada.</p>
+      )}
+
+      <div class="post-list">
+        {posts.map((post) => (
+          <article class="post-card">
+            <a href={`/blog/${post.id}/`}>
+              <time>{new Date(post.data.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <h2>{post.data.title}</h2>
+              <p>{post.data.description}</p>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  .empty {
+    color: #888;
+    font-style: italic;
+  }
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .post-card a {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .post-card a:hover {
+    border-color: #111;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .post-card time {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  .post-card h2 {
+    font-size: 1.25rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+  .post-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>

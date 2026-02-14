@@ -1,0 +1,1078 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "ikKaE",
+      "x": 0,
+      "y": 0,
+      "name": "Rural IA — Homepage",
+      "width": 1440,
+      "fill": "$crema-calido",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Hvc3V",
+          "name": "Header",
+          "width": "fill_container",
+          "fill": "$crema-calido",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            32,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "C4d0w",
+              "name": "Logo",
+              "fill": "$verde-bosque",
+              "content": "Rural IA",
+              "fontFamily": "DM Sans",
+              "fontSize": 28,
+              "fontWeight": "600",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "frame",
+              "id": "7zj9Y",
+              "name": "Nav",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "1vRgB",
+                  "name": "navLink1",
+                  "fill": "$marron-claro",
+                  "content": "Inicio",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "q7g9W",
+                  "name": "navLink2",
+                  "fill": "$marron-claro",
+                  "content": "El retiro",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "FIXka",
+                  "name": "navLink3",
+                  "fill": "$marron-claro",
+                  "content": "Para quién",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "UbrFt",
+                  "name": "navLink4",
+                  "fill": "$marron-claro",
+                  "content": "Blog",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "EHy82",
+                  "name": "navLink5",
+                  "fill": "$marron-claro",
+                  "content": "FAQ",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "JqlCO",
+                  "name": "Nav CTA",
+                  "fill": "$verde-bosque",
+                  "cornerRadius": 24,
+                  "padding": [
+                    10,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ejvFu",
+                      "name": "navCtaText",
+                      "fill": "$blanco",
+                      "content": "Reservar",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DZ6FE",
+          "name": "Hero",
+          "width": "fill_container",
+          "fill": "$crema-calido",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            80,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "SPdze",
+              "name": "Badge",
+              "fill": "#EBF5EE",
+              "cornerRadius": 20,
+              "gap": 8,
+              "padding": [
+                8,
+                20
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "q9CHD",
+                  "name": "badgeText",
+                  "fill": "$verde-bosque",
+                  "content": "MAYO 2026 · ANCEU COLIVING, PONTEVEDRA",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Ubn4l",
+              "name": "H1",
+              "fill": "$marron-tierra",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "4 días en Galicia para transformar tu forma de trabajar con IA",
+              "lineHeight": 1.1,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 52,
+              "fontWeight": "600",
+              "letterSpacing": -1.5
+            },
+            {
+              "type": "text",
+              "id": "wMM6A",
+              "name": "Subtitle",
+              "fill": "$marron-claro",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Retiro inmersivo para freelancers y profesionales tech. Formación práctica de IA aplicada, alojamiento y comidas incluidas. 12 plazas.",
+              "lineHeight": 1.7,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 18
+            },
+            {
+              "type": "frame",
+              "id": "orbBM",
+              "name": "CTA Button",
+              "fill": "$verde-bosque",
+              "cornerRadius": 28,
+              "padding": [
+                18,
+                40
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aFORg",
+                  "name": "ctaText",
+                  "fill": "$blanco",
+                  "content": "Reserva tu plaza",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "eSN2W",
+              "name": "Price",
+              "fill": "$marron-claro",
+              "content": "Desde 697 EUR todo incluido",
+              "fontFamily": "DM Sans",
+              "fontSize": 14
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HRBX0",
+          "name": "Full-width Photo",
+          "clip": true,
+          "width": "fill_container",
+          "height": 500,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1771064365816.png",
+            "mode": "fill"
+          },
+          "layout": "none"
+        },
+        {
+          "type": "frame",
+          "id": "TMrOJ",
+          "name": "Problema",
+          "width": "fill_container",
+          "fill": "$blanco-niebla",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            96,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "mv43R",
+              "name": "Problema H2",
+              "fill": "$marron-tierra",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "Sabes que la IA va a cambiarlo todo",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 40,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "yIDmm",
+              "name": "Problema Copy",
+              "fill": "$marron-claro",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "Pero no encuentras el momento. Los cursos online se abandonan. Los bootcamps duran meses y cuestan miles de euros. Y cada semana salen 3 herramientas nuevas que no sabes si probar o ignorar.",
+              "lineHeight": 1.7,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 18
+            },
+            {
+              "type": "text",
+              "id": "gknq0",
+              "name": "Problema Quote",
+              "fill": "$verde-bosque",
+              "textGrowth": "fixed-width",
+              "width": 680,
+              "content": "Lo que necesitas no es más teoría. Es sentarte 4 días a construir cosas reales con IA.",
+              "lineHeight": 1.35,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 28,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0sBBE",
+          "name": "Solucion",
+          "width": "fill_container",
+          "fill": "$crema-calido",
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            96,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "GAVAb",
+              "name": "Solucion H2",
+              "fill": "$marron-tierra",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "Un retiro inmersivo de IA, en un pueblo gallego",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 40,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "KQV4K",
+              "name": "Solucion Copy",
+              "fill": "$marron-claro",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "4 días de formación práctica en Anceu Coliving. Vienes con tu portátil, te vas con herramientas de IA configuradas y funcionando en tu trabajo. Sin humo, sin teoría innecesaria. Rodeado de naturaleza, buena comida y gente como tú.",
+              "lineHeight": 1.7,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 18
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kR2hP",
+          "name": "Programa",
+          "width": "fill_container",
+          "fill": "$blanco-niebla",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            96,
+            200
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "AFQoP",
+              "name": "Programa H2",
+              "fill": "$marron-tierra",
+              "content": "Qué vas a aprender",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 40,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "gY7kf",
+              "name": "Program Grid",
+              "width": 800,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SJ8ZS",
+                  "name": "Row 1",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fIwTK",
+                      "name": "Day 01",
+                      "width": "fill_container",
+                      "fill": "$blanco-niebla",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$verde-hoja"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QQCTe",
+                          "name": "card1day",
+                          "fill": "$verde-hoja",
+                          "content": "Día 01",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "MrPB2",
+                          "name": "card1title",
+                          "fill": "$marron-tierra",
+                          "content": "Fundamentos IA aplicada",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 22,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "4XvOp",
+                          "name": "card1desc",
+                          "fill": "$marron-claro",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Prompting avanzado, elegir la herramienta correcta, casos de uso reales.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 15
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SjxKf",
+                      "name": "Day 02",
+                      "width": "fill_container",
+                      "fill": "$blanco-niebla",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$verde-hoja"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "drQyC",
+                          "name": "card2day",
+                          "fill": "$verde-hoja",
+                          "content": "Día 02",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "F567L",
+                          "name": "card2title",
+                          "fill": "$marron-tierra",
+                          "content": "Automatización con IA",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 22,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "QdCyV",
+                          "name": "card2desc",
+                          "fill": "$marron-claro",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Make y n8n conectados a APIs de IA. Flujos automáticos para tu trabajo.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "snEXe",
+                  "name": "Row 2",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GDVDQ",
+                      "name": "Day 03",
+                      "width": "fill_container",
+                      "fill": "$blanco-niebla",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$verde-hoja"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "T4Ykj",
+                          "name": "card3day",
+                          "fill": "$verde-hoja",
+                          "content": "Día 03",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "IpQDO",
+                          "name": "card3title",
+                          "fill": "$marron-tierra",
+                          "content": "Construir con IA",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 22,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "SZd1W",
+                          "name": "card3desc",
+                          "fill": "$marron-claro",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Cursor, Bolt, v0: de idea a prototipo funcional en una tarde.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 15
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZQqtr",
+                      "name": "Day 04",
+                      "width": "fill_container",
+                      "fill": "$blanco-niebla",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "$verde-hoja"
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JFL1z",
+                          "name": "card4day",
+                          "fill": "$verde-hoja",
+                          "content": "Día 04",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 13,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "GIY5P",
+                          "name": "card4title",
+                          "fill": "$marron-tierra",
+                          "content": "Tu stack personalizado",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 22,
+                          "fontWeight": "600",
+                          "letterSpacing": -0.5
+                        },
+                        {
+                          "type": "text",
+                          "id": "KLWm5",
+                          "name": "card4desc",
+                          "fill": "$marron-claro",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Monta tu propio setup de IA. Sesión guiada + demo final al grupo.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 15
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cvfaJ",
+          "name": "Stats",
+          "width": "fill_container",
+          "fill": "$crema-calido",
+          "gap": 80,
+          "padding": [
+            96,
+            200
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "cZk95",
+              "name": "Stat 1",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dlDTN",
+                  "name": "stat1num",
+                  "fill": "$verde-bosque",
+                  "content": "600K",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 56,
+                  "fontWeight": "600",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "PKbNq",
+                  "name": "stat1text",
+                  "fill": "$marron-claro",
+                  "textGrowth": "fixed-width",
+                  "width": 200,
+                  "content": "profesionales tech en España\nsin formación en IA",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xCeOW",
+              "name": "Stat 2",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vBRqb",
+                  "name": "stat2num",
+                  "fill": "$dorado-sol",
+                  "content": "+56%",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 56,
+                  "fontWeight": "600",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "I7dw8",
+                  "name": "stat2text",
+                  "fill": "$marron-claro",
+                  "textGrowth": "fixed-width",
+                  "width": 200,
+                  "content": "prima salarial para\nquienes dominan IA",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hmqz0",
+              "name": "Stat 3",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PluA3",
+                  "name": "stat3num",
+                  "fill": "$verde-bosque",
+                  "content": "0",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 56,
+                  "fontWeight": "600",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "vbit4",
+                  "name": "stat3text",
+                  "fill": "$marron-claro",
+                  "textGrowth": "fixed-width",
+                  "width": 200,
+                  "content": "retiros inmersivos de IA\npara techies en España",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HNiyf",
+          "name": "Para Quien Preview",
+          "width": "fill_container",
+          "fill": "$blanco-niebla",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            96,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "6X3vt",
+              "name": "PQ H2",
+              "fill": "$marron-tierra",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "Para freelancers, indie hackers y profesionales tech",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 40,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "eCxzi",
+              "name": "PQ Copy",
+              "fill": "$marron-claro",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "Si te buscas la vida con tecnología y quieres integrar IA en tu trabajo, esto es para ti. No hace falta saber programar. Sí hace falta tener ganas de cacharrear.",
+              "lineHeight": 1.7,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 18
+            },
+            {
+              "type": "text",
+              "id": "wrfg0",
+              "name": "PQ Link",
+              "fill": "$verde-bosque",
+              "content": "Descubre si es para ti →",
+              "fontFamily": "DM Sans",
+              "fontSize": 16,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Rye3M",
+          "name": "CTA Final",
+          "width": "fill_container",
+          "fill": "$verde-oscuro-noche",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            96,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "ofBW2",
+              "name": "CTA H2",
+              "fill": "$crema-texto",
+              "content": "Solo 12 plazas por edición",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 40,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "msp4N",
+              "name": "CTA Copy",
+              "fill": "#B8C4BB",
+              "content": "Primera edición: mayo 2026 en Anceu Coliving, Pontevedra.",
+              "lineHeight": 1.7,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 18
+            },
+            {
+              "type": "frame",
+              "id": "Lu7ik",
+              "name": "CTA Button Gold",
+              "fill": "$dorado-sol",
+              "cornerRadius": 28,
+              "padding": [
+                18,
+                40
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LMGu2",
+                  "name": "ctaBtnText",
+                  "fill": "$verde-oscuro-noche",
+                  "content": "Reserva tu plaza",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ftQxG",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$verde-oscuro-noche",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            320
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "XJlix",
+              "name": "Divider",
+              "width": 80,
+              "height": 1,
+              "fill": "#2D5A3D"
+            },
+            {
+              "type": "text",
+              "id": "EPNIj",
+              "name": "footerBrand",
+              "fill": "$crema-texto",
+              "content": "Rural IA",
+              "fontFamily": "DM Sans",
+              "fontSize": 20,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "QDyHC",
+              "name": "footerTagline",
+              "fill": "#8A9B8E",
+              "content": "Retiro inmersivo de IA en Galicia.",
+              "fontFamily": "DM Sans",
+              "fontSize": 14
+            },
+            {
+              "type": "frame",
+              "id": "40zXV",
+              "name": "Footer Nav",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "1I7Yg",
+                  "name": "fn1",
+                  "fill": "#8A9B8E",
+                  "content": "Inicio",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "UHfti",
+                  "name": "fn2",
+                  "fill": "#8A9B8E",
+                  "content": "El retiro",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "wGBDQ",
+                  "name": "fn3",
+                  "fill": "#8A9B8E",
+                  "content": "Para quién",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "dmmpu",
+                  "name": "fn4",
+                  "fill": "#8A9B8E",
+                  "content": "Blog",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "xNV5d",
+                  "name": "fn5",
+                  "fill": "#8A9B8E",
+                  "content": "FAQ",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                },
+                {
+                  "type": "text",
+                  "id": "klzmx",
+                  "name": "fn6",
+                  "fill": "#8A9B8E",
+                  "content": "Sobre nosotros",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eJiIC",
+              "name": "Footer Legal",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "n7n43",
+                  "name": "fl1",
+                  "fill": "#6B7D70",
+                  "content": "Aviso legal",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "8YG7c",
+                  "name": "fl2",
+                  "fill": "#6B7D70",
+                  "content": "Privacidad",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "2yRHW",
+                  "name": "fl3",
+                  "fill": "#6B7D70",
+                  "content": "Cookies",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fT4ok",
+              "name": "Footer Social",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zxgfl",
+                  "name": "fs1",
+                  "fill": "#6B7D70",
+                  "content": "Instagram",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "EOqEw",
+                  "name": "fs2",
+                  "fill": "#6B7D70",
+                  "content": "Twitter",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "z8f6F",
+                  "name": "fs3",
+                  "fill": "#6B7D70",
+                  "content": "hola@ruralia.ai",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "rcWMw",
+              "name": "footerCopy",
+              "fill": "#5A6B5E",
+              "content": "© 2026 Rural IA",
+              "fontFamily": "DM Sans",
+              "fontSize": 12
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "blanco": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "blanco-niebla": {
+      "type": "color",
+      "value": "#FAFAF7"
+    },
+    "crema-calido": {
+      "type": "color",
+      "value": "#F5F0E8"
+    },
+    "crema-texto": {
+      "type": "color",
+      "value": "#E8E0D0"
+    },
+    "dorado-sol": {
+      "type": "color",
+      "value": "#D4A843"
+    },
+    "gris-lluvia": {
+      "type": "color",
+      "value": "#9CA3AF"
+    },
+    "marron-claro": {
+      "type": "color",
+      "value": "#8B7355"
+    },
+    "marron-tierra": {
+      "type": "color",
+      "value": "#5C4A3A"
+    },
+    "verde-bosque": {
+      "type": "color",
+      "value": "#2D5A3D"
+    },
+    "verde-hoja": {
+      "type": "color",
+      "value": "#6B9B7A"
+    },
+    "verde-musgo": {
+      "type": "color",
+      "value": "#4A7C59"
+    },
+    "verde-oscuro-noche": {
+      "type": "color",
+      "value": "#1A3A2A"
+    }
+  }
+}

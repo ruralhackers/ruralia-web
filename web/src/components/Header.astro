@@ -1,0 +1,73 @@
+---
+const currentPath = Astro.url.pathname;
+
+const nav = [
+  { href: '/', label: 'Inicio' },
+  { href: '/retiro-ia-galicia/', label: 'El retiro' },
+  { href: '/para-quien/', label: 'Para quién' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/faq/', label: 'FAQ' },
+];
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">Rural <strong>IA</strong></a>
+    <nav>
+      {nav.map(({ href, label }) => (
+        <a href={href} class:list={[{ active: currentPath === href }]}>{label}</a>
+      ))}
+      <a href="/retiro-ia-galicia/#pricing" class="cta-nav">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 100;
+    padding: 0 1.5rem;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #111;
+    letter-spacing: -0.02em;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    transition: color 0.15s;
+  }
+  nav a:hover, nav a.active {
+    color: #111;
+  }
+  .cta-nav {
+    background: #111;
+    color: #fff !important;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .cta-nav:hover {
+    background: #333;
+  }
+</style>
