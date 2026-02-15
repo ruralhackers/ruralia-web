@@ -50,10 +50,19 @@ const schema = {
   description="Curso intensivo de IA aplicada en Anceu Coliving, Pontevedra. 4 días de formación práctica + alojamiento + comidas. 12 plazas. Desde 697 EUR."
   schema={schema}
 >
-  <!-- Header datos clave -->
-  <section class="section">
+  <!-- Hero con propuesta de valor -->
+  <section class="section hero-retiro">
+    <div class="section-inner text-center">
+      <h1>4 días para dominar la IA aplicada a tu trabajo</h1>
+      <p class="hero-sub">Retiro inmersivo en Galicia. Formación práctica, alojamiento y comidas incluidas. 12 plazas por edición.</p>
+      <a href="#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
+      <p class="hero-price">Desde 697 EUR todo incluido · Junio 2026</p>
+    </div>
+  </section>
+
+  <!-- Datos clave -->
+  <section class="section alt">
     <div class="section-inner">
-      <h1>Retiro de IA aplicada en Galicia</h1>
       <div class="key-facts">
         <div class="fact">
           <strong>Cuándo</strong>
@@ -71,16 +80,54 @@ const schema = {
           <strong>Plazas</strong>
           <span>12 personas</span>
         </div>
-        <div class="fact fact-full">
-          <strong>Precio</strong>
-          <span>Desde 697 EUR, todo incluido</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema / Solución -->
+  <section class="section">
+    <div class="section-inner text-center">
+      <h2>Sabes que la IA va a cambiarlo todo</h2>
+      <p>Pero no encuentras el momento. Los cursos online se abandonan. Los bootcamps duran meses y cuestan miles de euros. Y cada semana salen 3 herramientas nuevas que no sabes si probar o ignorar.</p>
+      <p class="highlight-text">Lo que necesitas no es más teoría. Es sentarte 4 días a construir cosas reales con IA — rodeado de naturaleza, buena comida y gente como tú.</p>
+    </div>
+  </section>
+
+  <!-- Qué incluye (resumen rápido) -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>Qué incluye</h2>
+      <div class="includes-grid">
+        <div class="include-item">
+          <strong>Formación</strong>
+          <p>4 días de talleres prácticos con herramientas de IA</p>
+        </div>
+        <div class="include-item">
+          <strong>Alojamiento</strong>
+          <p>3 noches en Anceu Coliving</p>
+        </div>
+        <div class="include-item">
+          <strong>Comidas</strong>
+          <p>Desayuno, comida y cena los 4 días. Gastronomía gallega.</p>
+        </div>
+        <div class="include-item">
+          <strong>Materiales</strong>
+          <p>Acceso a todas las herramientas, licencias y materiales del curso</p>
+        </div>
+        <div class="include-item">
+          <strong>Comunidad alumni</strong>
+          <p>Acceso al grupo privado de alumni después del retiro</p>
+        </div>
+        <div class="include-item">
+          <strong>Follow-up</strong>
+          <p>Sesión online grupal de seguimiento a las 2-3 semanas</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Programa detallado -->
-  <section class="section alt">
+  <section class="section">
     <div class="section-inner">
       <h2>Programa</h2>
 
@@ -122,46 +169,20 @@ const schema = {
     </div>
   </section>
 
-  <!-- Qué incluye -->
+  <!-- El lugar + credibilidad -->
   <section class="section alt">
-    <div class="section-inner">
-      <h2>Qué incluye</h2>
-      <div class="includes-grid">
-        <div class="include-item">
-          <strong>Formación</strong>
-          <p>4 días de talleres prácticos con herramientas de IA</p>
-        </div>
-        <div class="include-item">
-          <strong>Alojamiento</strong>
-          <p>3 noches en Anceu Coliving</p>
-        </div>
-        <div class="include-item">
-          <strong>Comidas</strong>
-          <p>Desayuno, comida y cena los 4 días. Gastronomía gallega.</p>
-        </div>
-        <div class="include-item">
-          <strong>Materiales</strong>
-          <p>Acceso a todas las herramientas, licencias y materiales del curso</p>
-        </div>
-        <div class="include-item">
-          <strong>Comunidad alumni</strong>
-          <p>Acceso al grupo privado de alumni después del retiro</p>
-        </div>
-        <div class="include-item">
-          <strong>Follow-up</strong>
-          <p>Sesión online grupal de seguimiento a las 2-3 semanas</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- El lugar -->
-  <section class="section">
     <div class="section-inner">
       <h2>El lugar: Anceu Coliving</h2>
       <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra), con 1 Gbps de fibra óptica, espacio de trabajo equipado, y rodeado de naturaleza. El 55% de los colivers repiten.</p>
       <p>A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO).</p>
-      <p><a href="/sobre-nosotros/">Conoce al equipo detrás de Rural IA</a></p>
+
+      <h2>Quién lo organiza</h2>
+      <p>Rural IA es una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Llevamos años organizando eventos tech en el rural gallego — Hacker Days, residencias creativas, hackathones con participantes de toda Europa.</p>
+      <div class="team-inline">
+        <p><strong>Agustín Jamardo</strong> — Fundador de Anceu Coliving. Desarrollador, 12+ años en remoto.</p>
+        <p><strong>África Rodríguez</strong> — Cofundadora de Rural Hackers. Facilitadora de proyectos europeos (Erasmus+).</p>
+        <p><strong>Nacho Márquez</strong> — Cofundador de Rural Hackers. Director de Noites Abertas. 20+ proyectos internacionales.</p>
+      </div>
     </div>
   </section>
 
@@ -203,8 +224,34 @@ const schema = {
     </div>
   </section>
 
+  <!-- FAQ inline -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Preguntas rápidas</h2>
+      <div class="faq-inline">
+        <details>
+          <summary>¿Necesito saber programar?</summary>
+          <p>No. El retiro está diseñado para profesionales que usan tecnología, no para programadores. Si sabes usar herramientas digitales en tu trabajo, vas a sacar partido.</p>
+        </details>
+        <details>
+          <summary>¿Qué me llevo al terminar?</summary>
+          <p>Herramientas de IA configuradas y funcionando en tu trabajo real. Asistentes personalizados, flujos de trabajo, y un stack de IA adaptado a lo que tú haces. Más acceso a la comunidad alumni y una sesión de seguimiento.</p>
+        </details>
+        <details>
+          <summary>¿Puedo cancelar?</summary>
+          <p>Cancelación gratuita hasta 15 días antes. Entre 15 y 7 días, devolución del 50%. Menos de 7 días no hay devolución, pero la plaza es transferible.</p>
+        </details>
+        <details>
+          <summary>¿En qué se diferencia de un bootcamp online?</summary>
+          <p>Un bootcamp son meses de vídeos. Esto son 4 días presenciales, en grupo de 12, con instructores al lado. Vienes con tu portátil, te vas con herramientas funcionando. Incluye alojamiento y comidas — solo tienes que llegar.</p>
+        </details>
+      </div>
+      <p class="faq-more"><a href="/faq/">Ver todas las preguntas frecuentes</a></p>
+    </div>
+  </section>
+
   <!-- Formulario lista de espera -->
-  <section class="section" id="reservar">
+  <section class="section alt" id="reservar">
     <div class="section-inner form-section">
       <h2>Reserva tu plaza</h2>
       <p class="form-subtitle">Plazas limitadas. Déjanos tus datos y te avisamos cuando abramos inscripciones.</p>
@@ -253,10 +300,41 @@ const schema = {
 </Base>
 
 <style>
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  /* ===== Hero retiro ===== */
+  .hero-retiro {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
   }
+  .hero-retiro h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    max-width: 580px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+  .hero-price {
+    color: var(--marron-claro);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  /* ===== Problema/solución ===== */
+  .highlight-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--verde-bosque);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.4;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
   .key-facts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -391,6 +469,60 @@ const schema = {
     margin: 1rem auto 0;
     font-size: 0.9rem;
     color: #888;
+  }
+
+  /* ===== Team inline ===== */
+  .team-inline {
+    margin-top: 1.5rem;
+  }
+  .team-inline p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ===== FAQ inline ===== */
+  .faq-inline {
+    max-width: 650px;
+  }
+  .faq-inline details {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 0;
+  }
+  .faq-inline summary {
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    color: var(--color-heading);
+    list-style: none;
+  }
+  .faq-inline summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-inline summary::before {
+    content: '+ ';
+    color: var(--verde-musgo);
+    font-weight: 700;
+  }
+  .faq-inline details[open] summary::before {
+    content: '− ';
+  }
+  .faq-inline p {
+    margin: 0.75rem 0 0;
+    color: #555;
+    font-size: 0.95rem;
+    padding-left: 1.1rem;
+  }
+  .faq-more {
+    margin-top: 1rem;
+  }
+  .faq-more a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .faq-more a:hover {
+    text-decoration: underline;
   }
 
   /* ===== Waitlist form ===== */
