@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://ruralia.ai/sitemap-index.xml
+Sitemap: https://ruralia.gal/sitemap-index.xml
