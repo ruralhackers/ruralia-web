@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/rural-ia-logo-crop-removebg.png';
+
 const currentPath = Astro.url.pathname;
 
 const nav = [
@@ -12,7 +15,7 @@ const nav = [
 <header class="header">
   <div class="header-inner">
     <a href="/" class="logo">
-      <img src="/images/rural-ia-logo-crop-removebg.png" alt="Rural IA" />
+      <Image src={logo} alt="Rural IA" height={32} />
     </a>
     <nav>
       {nav.map(({ href, label }) => (

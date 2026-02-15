@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../assets/images/rural-ia-logo-crop-removebg.png';
+import heroPhoto from '../assets/images/ruralia-1.jpg';
 import Base from '../layouts/Base.astro';
 
 const schema = {
@@ -50,7 +53,7 @@ const stats = [
   <section class="hero bg-crema">
     <div class="hero-inner">
       <p class="hero-badge">Junio 2026 · Anceu Coliving, Pontevedra</p>
-      <img src="/images/rural-ia-logo-crop-removebg.png" alt="Rural IA" class="hero-logo" />
+      <Image src={logo} alt="Rural IA" class="hero-logo" height={48} />
       <h1>4 días en Galicia para transformar tu forma de trabajar con IA</h1>
       <p class="hero-sub">
         Retiro inmersivo para freelancers y profesionales tech.
@@ -65,9 +68,11 @@ const stats = [
 
   <!-- ==================== S2: Foto ancho completo ==================== -->
   <section class="fullwidth-photo">
-    <img
-      src="/images/ruralia-1.jpg"
+    <Image
+      src={heroPhoto}
       alt="Anceu Coliving entre árboles con niebla matutina en Galicia"
+      widths={[640, 960, 1280, 1920]}
+      sizes="100vw"
       loading="lazy"
     />
   </section>
