@@ -193,7 +193,7 @@ Todo lo que has leído aquí se puede hacer por tu cuenta, desde casa, con pacie
 
 Pero hay una diferencia entre montar una automatización siguiendo un tutorial y montar tu sistema completo de automatizaciones con alguien al lado que te guía, te resuelve los bloqueos en tiempo real y te ayuda a decidir qué tiene sentido automatizar en tu caso concreto.
 
-En el [retiro Rural IA en Galicia](/retiro-ia-galicia/) dedicamos 4 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, desarrollo con IA y creación de tu stack personalizado. Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
+En el [retiro Rural IA en Galicia](/retiro-ia-galicia/) dedicamos 4 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/blog/herramientas-ia-freelancers/). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
 
 El retiro incluye alojamiento, comidas y grupos de 12 personas máximo. No es teoría. Te vas con herramientas funcionando en tu trabajo.
 

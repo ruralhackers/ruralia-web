@@ -34,7 +34,7 @@ Esto es especialmente útil para:
 
 La ventaja de Gemini sobre ChatGPT para búsqueda es que Gemini siempre tiene acceso a internet y siempre cita fuentes. ChatGPT puede buscar en la web, pero no es su modo por defecto y a veces se inventa cosas. Gemini rara vez fabula cuando busca — si no encuentra algo, te lo dice.
 
-**Truco profesional:** usa Gemini para la investigación inicial y luego pasa a ChatGPT o Claude para el trabajo de producción (redacción, análisis, código). Cada herramienta tiene su momento.
+**Truco profesional:** usa Gemini para la investigación inicial y luego pasa a [ChatGPT](/blog/curso-chatgpt/) o Claude para el trabajo de producción (redacción, análisis, código). Cada herramienta tiene su momento.
 
 ## Gemini en Google Workspace: lo que cambia todo
 

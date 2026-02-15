@@ -76,7 +76,7 @@ Google ofrece Gemini gratis con capacidades bastante decentes, y Gemini Advanced
 
 ### Mejor para
 
-Investigación y fact-checking (busca en tiempo real), usuarios de Google Workspace, análisis de documentos largos, y cualquier tarea donde necesites procesar mucha información de golpe.
+Investigación y fact-checking (busca en tiempo real), usuarios de Google Workspace, análisis de documentos largos, y cualquier tarea donde necesites procesar mucha información de golpe. Tenemos una [guía práctica de Gemini](/blog/ia-de-google-guia-gemini/) con casos de uso detallados.
 
 ## Claude (Anthropic): el más preciso
 

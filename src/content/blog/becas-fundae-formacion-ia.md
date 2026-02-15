@@ -175,7 +175,7 @@ Nuestro [retiro de IA en Galicia](/retiro-ia-galicia/) no es bonificable vía FU
 
 Preferimos diseñar la mejor formación posible — actualizada al día, 100% práctica, en grupos de 12 personas, con herramientas que vas a usar el lunes siguiente — en lugar de adaptar el programa a los requisitos burocráticos de la formación bonificada.
 
-En 4 días en [Anceu Coliving](/retiro-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/curso-chatgpt/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
+En 4 días en [Anceu Coliving](/retiro-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
 El precio (desde 697 euros) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 

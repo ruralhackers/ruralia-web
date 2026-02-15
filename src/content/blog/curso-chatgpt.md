@@ -328,7 +328,7 @@ Gemini tiene la ventaja de estar integrado con el ecosistema de Google. Destaca 
 - **Búsqueda web:** al estar conectado a Google Search, sus respuestas sobre información actual son más fiables
 - **Multimodalidad:** su capacidad para analizar video (a través de YouTube) es superior
 
-**Cuándo usar Gemini en vez de ChatGPT:** cuando necesitas información actualizada, cuando tu workflow está en Google Workspace, o cuando trabajas con contenido en video.
+**Cuándo usar Gemini en vez de ChatGPT:** cuando necesitas información actualizada, cuando tu workflow está en Google Workspace, o cuando trabajas con contenido en video. Tenemos una [guía práctica de Gemini](/blog/ia-de-google-guia-gemini/) con más detalle.
 
 ### Cuál elegir
 
@@ -346,9 +346,9 @@ Es exactamente lo que hacemos en el **[retiro de IA de Rural IA](/retiro-ia-gali
 
 Lo que cubrimos en el retiro va mucho más allá de lo que puede cubrir un artículo:
 
-- **Automatizaciones con IA** que conectan ChatGPT con tus herramientas reales (email, CRM, facturación)
+- **[Automatizaciones con IA](/blog/automatizaciones-ia/)** que conectan ChatGPT con tus herramientas reales (email, CRM, facturación)
 - **Agentes de IA** que ejecutan tareas complejas de forma autónoma
-- **Stacks personalizados** donde combinas ChatGPT, Claude, herramientas de imagen y automatización en workflows completos
+- **Stacks personalizados** donde combinas ChatGPT, Claude, [herramientas de IA](/blog/herramientas-ia-freelancers/) y automatización en workflows completos
 - **Práctica intensiva** sobre tus propios proyectos, con mentores que te dan feedback inmediato
 
 Todo incluido: formación, alojamiento en Anceu Coliving (un espacio increíble en el rural de Pontevedra con fibra óptica de 1 Gbps), gastronomía gallega y un grupo de profesionales con los que compartes 4 días intensos.
