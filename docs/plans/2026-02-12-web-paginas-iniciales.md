@@ -1,7 +1,7 @@
 # Web Rural IA: Paginas Iniciales
 
 **Stack:** Astro + Netlify
-**Dominio:** ruralia.ai (o alternativa)
+**Dominio:** ruralia.gal (o alternativa)
 **Objetivo:** Tener la web publicada para finales de marzo 2026
 
 ---
@@ -284,11 +284,11 @@ Cada pagina debe incluir:
 ```html
 <title>[Titulo unico, <60 caracteres, keyword al principio]</title>
 <meta name="description" content="[150-160 chars, compelling, con keyword]">
-<link rel="canonical" href="https://ruralia.ai/[url]/">
+<link rel="canonical" href="https://ruralia.gal/[url]/">
 <meta property="og:title" content="[Titulo]">
 <meta property="og:description" content="[Descripcion]">
 <meta property="og:image" content="[Imagen 1200x630]">
-<meta property="og:url" content="https://ruralia.ai/[url]/">
+<meta property="og:url" content="https://ruralia.gal/[url]/">
 <meta name="twitter:card" content="summary_large_image">
 ```
 

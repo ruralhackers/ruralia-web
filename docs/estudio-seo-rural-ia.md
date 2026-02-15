@@ -1,7 +1,7 @@
-# Estudio SEO — Rural IA (ruralia.ai)
+# Estudio SEO — Rural IA (ruralia.gal)
 
 **Fecha:** 13 de febrero de 2026
-**Dominio:** ruralia.ai
+**Dominio:** ruralia.gal
 **Mercado:** Espana (es_ES)
 **Sector:** Formacion IA / Retiros tech / Coliving profesional
 
@@ -154,7 +154,7 @@ Title: Rural IA — Retiro inmersivo de IA aplicada en Galicia
 Meta: 4 dias en el rural gallego para transformar tu forma de trabajar con IA.
       Formacion practica para freelancers y profesionales tech. 12 plazas por edicion.
 H1: 4 dias en Galicia para transformar tu forma de trabajar con IA
-URL: ruralia.ai/
+URL: ruralia.gal/
 Schema: Organization + WebSite + Event (upcoming)
 ```
 
@@ -165,7 +165,7 @@ Title: Retiro de IA en Galicia — 4 dias todo incluido | Rural IA
 Meta: Curso intensivo de IA aplicada en Anceu, Pontevedra. 4 dias de formacion
       practica + alojamiento + comidas. Para freelancers y profesionales tech. Desde 697 EUR.
 H1: Retiro de Inteligencia Artificial en Galicia
-URL: ruralia.ai/retiro-ia-galicia/
+URL: ruralia.gal/retiro-ia-galicia/
 Schema: Event + Offer + AggregateRating (cuando haya resenas)
 ```
 
@@ -185,7 +185,7 @@ Title: Formacion IA para freelancers y profesionales tech | Rural IA
 Meta: Retiro de IA disenado para freelancers, webmasters, indie hackers y consultores
       tech. Aprende IA aplicada sin necesidad de saber programar.
 H1: Para quien es el retiro de IA
-URL: ruralia.ai/para-quien/
+URL: ruralia.gal/para-quien/
 Schema: WebPage
 ```
 
@@ -196,7 +196,7 @@ Title: Preguntas frecuentes sobre el retiro de IA | Rural IA
 Meta: Resolvemos tus dudas sobre el retiro de IA en Galicia: precio, requisitos,
       que incluye, como llegar y mas. Todo lo que necesitas saber.
 H1: Preguntas frecuentes
-URL: ruralia.ai/faq/
+URL: ruralia.gal/faq/
 Schema: FAQPage (CRITICO para rich snippets)
 ```
 
@@ -219,7 +219,7 @@ Schema: FAQPage (CRITICO para rich snippets)
 Title: Curso de ChatGPT gratis: guia practica para profesionales (2026)
 Meta: Aprende a usar ChatGPT como un profesional. Guia practica con prompts avanzados,
       casos de uso reales y trucos que no encontraras en otros cursos. Actualizada 2026.
-URL: ruralia.ai/blog/curso-chatgpt/
+URL: ruralia.gal/blog/curso-chatgpt/
 Schema: Article + HowTo
 Target: 2,500+ palabras
 Keywords: curso chatgpt (500/mes), curso chat gpt (200/mes)
@@ -230,7 +230,7 @@ Keywords: curso chatgpt (500/mes), curso chat gpt (200/mes)
 Title: Como crear una app con IA sin saber programar: guia paso a paso
 Meta: Crea tu primera aplicacion usando IA con Cursor, Bolt y v0. Sin experiencia
       en programacion. De la idea al prototipo funcional en una tarde.
-URL: ruralia.ai/blog/crear-app-con-ia/
+URL: ruralia.gal/blog/crear-app-con-ia/
 Schema: Article + HowTo
 Target: 2,000+ palabras
 Keywords: crear app con ia (300/mes)
@@ -241,7 +241,7 @@ Keywords: crear app con ia (300/mes)
 Title: Automatizaciones con IA: 10 flujos que todo freelancer necesita
 Meta: Configura automatizaciones con IA usando Make y n8n. 10 flujos de trabajo
       listos para copiar: email, contenido, datos, facturacion y mas.
-URL: ruralia.ai/blog/automatizaciones-ia/
+URL: ruralia.gal/blog/automatizaciones-ia/
 Schema: Article + HowTo
 Target: 2,000+ palabras
 Keywords: automatizaciones (250/mes, KD 0)
@@ -252,7 +252,7 @@ Keywords: automatizaciones (250/mes, KD 0)
 Title: ChatGPT vs Gemini vs Claude: cual usar en 2026 (comparativa real)
 Meta: Comparativa honesta entre ChatGPT, Gemini y Claude. Cual es mejor para
       cada tarea: redaccion, codigo, analisis, automatizacion. Con ejemplos reales.
-URL: ruralia.ai/blog/chatgpt-vs-gemini-vs-claude/
+URL: ruralia.gal/blog/chatgpt-vs-gemini-vs-claude/
 Schema: Article
 Target: 2,000+ palabras
 Keywords: chat gpt gemini (600/mes, KD 12)
@@ -263,7 +263,7 @@ Keywords: chat gpt gemini (600/mes, KD 12)
 Title: Becas FUNDAE 2026: como financiar tu formacion en IA
 Meta: Guia completa sobre las bonificaciones FUNDAE para formacion en inteligencia
       artificial. Quien puede acceder, cuanto cubren y como solicitarlas.
-URL: ruralia.ai/blog/becas-fundae-formacion-ia/
+URL: ruralia.gal/blog/becas-fundae-formacion-ia/
 Schema: Article + HowTo
 Target: 1,500+ palabras
 Keywords: becas fundae (200/mes, KD 15)
@@ -274,7 +274,7 @@ Keywords: becas fundae (200/mes, KD 15)
 Title: Un retiro de IA en un pueblo gallego: la experiencia Rural IA
 Meta: Como es pasar 4 dias aprendiendo IA en el rural de Galicia. Cronica del
       primer retiro de Rural IA en Anceu, Pontevedra.
-URL: ruralia.ai/blog/retiro-ia-pueblo-gallego/
+URL: ruralia.gal/blog/retiro-ia-pueblo-gallego/
 Schema: Article
 Target: 1,500+ palabras
 ```
@@ -306,7 +306,7 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://ruralia.ai/sitemap-index.xml
+Sitemap: https://ruralia.gal/sitemap-index.xml
 ```
 
 ### 5.3 Schema markup por pagina
@@ -387,7 +387,7 @@ Astro genera HTML estatico con zero JS por defecto. Esto da ventaja enorme:
 ### 7.1 Estrategia de backlinks (primeros 6 meses)
 
 **Tier 1 — Faciles (mes 1-2):**
-- Perfil en anceu.com con enlace a ruralia.ai
+- Perfil en anceu.com con enlace a ruralia.gal
 - Perfil en ruralhackers.com/es con enlace
 - Directorios de coliving: coliving.com, colivingcompass.com, nomadico.io
 - Directorios de formacion tech: domestika, coursera directorio
@@ -445,7 +445,7 @@ Crear perfil de Google Business para:
   "@type": "EducationalOrganization",
   "name": "Rural IA",
   "description": "Retiro inmersivo de IA aplicada en Galicia",
-  "url": "https://ruralia.ai",
+  "url": "https://ruralia.gal",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Anceu, Ponte Caldelas",
@@ -526,7 +526,7 @@ Crear perfil de Google Business para:
 ## 11. Quick wins (acciones inmediatas)
 
 ### Prioridad CRITICA (esta semana)
-1. Verificar dominio ruralia.ai en Google Search Console
+1. Verificar dominio ruralia.gal en Google Search Console
 2. Crear `/public/robots.txt` con sitemap reference
 3. Implementar FAQPage schema en `/faq/` (rich snippets = CTR x2-3)
 4. Asegurar que cada pagina tiene title, meta description y canonical unicos
@@ -552,7 +552,7 @@ Crear perfil de Google Business para:
 ### Fortalezas SEO del proyecto
 - Astro SSG garantiza rendimiento tecnico excelente (Lighthouse 100)
 - Nicho sin competencia directa = posicionamiento rapido
-- Dominio ruralia.ai es memorable y brandeable
+- Dominio ruralia.gal es memorable y brandeable
 - Contenido rico y diferenciado (experiencia unica)
 
 ### Riesgos SEO a mitigar

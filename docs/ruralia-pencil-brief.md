@@ -364,7 +364,7 @@ Sí. Planeamos ediciones regulares. Solo 12 plazas por edición.
 **¿Qué me llevo al terminar?**
 Herramientas de IA configuradas, flujos de automatización funcionando, un prototipo propio, acceso a comunidad alumni, materiales y sesión follow-up online.
 
-**Contacto:** hola@ruralia.ai
+**Contacto:** hola@ruralia.gal
 
 ---
 
@@ -377,7 +377,7 @@ Inicio · El retiro · Para quién · Blog · FAQ · Sobre nosotros
 
 Aviso legal · Privacidad · Cookies
 
-Instagram · Twitter · hola@ruralia.ai
+Instagram · Twitter · hola@ruralia.gal
 
 (c) 2026 Rural IA
 

@@ -21,7 +21,7 @@ A medida que Rural IA crece, se va independizando naturalmente.
 
 | Canal | Handle | Rol |
 |---|---|---|
-| **Instagram** | @ruralia.ai | Canal principal. Contenido de valor IA + experiencia del retiro |
+| **Instagram** | @ruralia.gal | Canal principal. Contenido de valor IA + experiencia del retiro |
 | **X/Twitter** | @ruralia_ai | Hilos tecnicos sobre IA aplicada. Contenido mas techie |
 | **LinkedIn** | Rural IA | Angulo profesional/ROI. Brecha de skills, oportunidad laboral |
 | **Pagina Facebook** | Rural IA | Necesaria para correr ads. Poco contenido organico |
@@ -180,7 +180,7 @@ Post en primera persona. Que cosas funcionan de verdad (automatizar tareas repet
 
 Ejemplo concreto: "Cada vez que un cliente me rellena un formulario, Make coge los datos, ChatGPT genera una propuesta personalizada y me la manda por email. Automatico." Mostrar el flujo visualmente (captura de Make o diagrama simple).
 
-> **Anceu** comparte en stories la foto de behind the scenes del miercoles, etiquetando a @ruralia.ai
+> **Anceu** comparte en stories la foto de behind the scenes del miercoles, etiquetando a @ruralia.gal
 
 ### Resumen semanas 1-2
 
@@ -203,7 +203,7 @@ Ejemplo concreto: "Cada vez que un cliente me rellena un formulario, Make coge l
 - **Framework:** Astro (genera HTML estatico, zero JS por defecto, Lighthouse 100/100)
 - **Blog:** Posts escritos en Markdown (.md), Astro los convierte a HTML
 - **Hosting:** Netlify (tier gratis, deploy automatico con git push)
-- **Dominio:** ruralia.ai (o alternativa disponible)
+- **Dominio:** ruralia.gal (o alternativa disponible)
 - **Analytics:** Google Search Console + Plausible/Umami (privacy-first)
 
 ### Investigacion de keywords
@@ -221,7 +221,7 @@ Ejemplo concreto: "Cada vez que un cliente me rellena un formulario, Make coge l
 ### Mapa de paginas
 
 ```
-ruralia.ai/
+ruralia.gal/
 ├── /                              → Home
 ├── /retiro-ia-galicia/            → Pagina del retiro (programa, precio, CTA)
 ├── /para-quien/                   → Perfil del asistente ideal
