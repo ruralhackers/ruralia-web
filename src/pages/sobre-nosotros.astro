@@ -1,23 +1,33 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Rural IA',
-  url: 'https://ruralia.gal',
-  description: 'Retiro inmersivo de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving.',
-  foundingDate: '2026',
-  member: [
-    { '@type': 'Organization', name: 'Rural Hackers', url: 'https://ruralhackers.com' },
-    { '@type': 'Organization', name: 'Anceu Coliving', url: 'https://anceu.com' },
-  ],
-  founder: [
-    { '@type': 'Person', name: 'Agustín Jamardo', jobTitle: 'Fundador de Anceu Coliving, Desarrollador', url: 'https://linkedin.com/in/ajamardo' },
-    { '@type': 'Person', name: 'África Rodríguez', jobTitle: 'Cofundadora de Rural Hackers, Facilitadora', url: 'https://linkedin.com/in/rodriguezafricaruralhacker' },
-    { '@type': 'Person', name: 'Nacho Márquez', jobTitle: 'Cofundador de Rural Hackers, Director', url: 'https://linkedin.com/in/ignacio-mrqz' },
-  ],
-};
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Rural IA',
+    url: 'https://ruralia.gal',
+    description: 'Retiro inmersivo de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving.',
+    foundingDate: '2026',
+    member: [
+      { '@type': 'Organization', name: 'Rural Hackers', url: 'https://ruralhackers.com' },
+      { '@type': 'Organization', name: 'Anceu Coliving', url: 'https://anceu.com' },
+    ],
+    founder: [
+      { '@type': 'Person', name: 'Agustín Jamardo', jobTitle: 'Fundador de Anceu Coliving, Desarrollador', url: 'https://linkedin.com/in/ajamardo' },
+      { '@type': 'Person', name: 'África Rodríguez', jobTitle: 'Cofundadora de Rural Hackers, Facilitadora', url: 'https://linkedin.com/in/rodriguezafricaruralhacker' },
+      { '@type': 'Person', name: 'Nacho Márquez', jobTitle: 'Cofundador de Rural Hackers, Director', url: 'https://linkedin.com/in/ignacio-mrqz' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralia.gal/' },
+      { '@type': 'ListItem', position: 2, name: 'Sobre nosotros', item: 'https://ruralia.gal/sobre-nosotros/' },
+    ],
+  },
+];
 ---
 
 <Base

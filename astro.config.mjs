@@ -9,6 +9,11 @@ export default defineConfig({
       serialize(item) {
         const url = item.url.replace('https://ruralia.gal', '');
 
+        // Exclude utility pages from sitemap
+        if (url === '/gracias/' || url === '/404/') {
+          return undefined;
+        }
+
         // Home
         if (url === '/') {
           item.priority = 1.0;

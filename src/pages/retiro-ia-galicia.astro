@@ -1,48 +1,58 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: 'Rural IA — Retiro de IA aplicada en Galicia',
-  description: 'Curso intensivo de IA aplicada en Anceu Coliving. 4 días de formación práctica + alojamiento + comidas.',
-  startDate: '2026-06',
-  endDate: '2026-06',
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  eventStatus: 'https://schema.org/EventScheduled',
-  location: {
-    '@type': 'Place',
-    name: 'Anceu Coliving',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Ponte Caldelas',
-      addressRegion: 'Pontevedra',
-      addressCountry: 'ES',
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: 'Rural IA — Retiro de IA aplicada en Galicia',
+    description: 'Curso intensivo de IA aplicada en Anceu Coliving. 4 días de formación práctica + alojamiento + comidas.',
+    startDate: '2026-06',
+    endDate: '2026-06',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: {
+      '@type': 'Place',
+      name: 'Anceu Coliving',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Ponte Caldelas',
+        addressRegion: 'Pontevedra',
+        addressCountry: 'ES',
+      },
     },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Rural IA',
+      url: 'https://ruralia.gal',
+    },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Early bird',
+        price: '697',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/LimitedAvailability',
+        validFrom: '2026-04-01',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Normal',
+        price: '897',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      },
+    ],
   },
-  organizer: {
-    '@type': 'Organization',
-    name: 'Rural IA',
-    url: 'https://ruralia.gal',
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralia.gal/' },
+      { '@type': 'ListItem', position: 2, name: 'Retiro de IA en Galicia', item: 'https://ruralia.gal/retiro-ia-galicia/' },
+    ],
   },
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Early bird',
-      price: '697',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/LimitedAvailability',
-      validFrom: '2026-04-01',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Normal',
-      price: '897',
-      priceCurrency: 'EUR',
-      availability: 'https://schema.org/InStock',
-    },
-  ],
-};
+];
 ---
 
 <Base
