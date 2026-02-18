@@ -50,6 +50,15 @@ const props = Astro.props;
       <img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1599523674653502&ev=PageView&noscript=1"/>
     </noscript>
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FZED0YM25"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6FZED0YM25');
+    </script>
   </head>
   <body>
     <Header />
