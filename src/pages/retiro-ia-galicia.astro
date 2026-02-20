@@ -55,18 +55,18 @@ const schema = [
 ];
 
 const tools = [
-  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación' },
-  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos' },
-  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema' },
-  { name: 'Kimi 2.5', desc: 'Modelo open source para tareas avanzadas' },
-  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto' },
-  { name: 'Pencil', desc: 'Diseña interfaces con IA sin tocar código' },
-  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos' },
-  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar' },
-  { name: 'v0', desc: 'Genera componentes UI con una descripción' },
-  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones' },
-  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas' },
-  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo' },
+  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación', url: 'https://chatgpt.com' },
+  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos', url: 'https://claude.ai' },
+  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema', url: 'https://gemini.google.com' },
+  { name: 'Kimi', desc: 'Modelo open source para tareas avanzadas', url: 'https://kimi.ai' },
+  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto', url: 'https://cursor.com' },
+  { name: 'Pencil', desc: 'Diseña interfaces con IA sin tocar código', url: 'https://pencil.dev' },
+  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos', url: 'https://bolt.new' },
+  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar', url: 'https://lovable.dev' },
+  { name: 'v0', desc: 'Genera componentes UI con una descripción', url: 'https://v0.dev' },
+  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones', url: 'https://make.com' },
+  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas', url: 'https://perplexity.ai' },
+  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo', url: 'https://notebooklm.google.com' },
 ];
 ---
 
@@ -159,10 +159,11 @@ const tools = [
       <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
       <div class="tools-grid">
         {tools.map((tool) => (
-          <div class="tool-card">
+          <a href={tool.url} target="_blank" rel="noopener" class="tool-card">
+            <img src={`https://www.google.com/s2/favicons?domain=${new URL(tool.url).hostname}&sz=32`} alt={tool.name} class="tool-icon" width="32" height="32" loading="lazy" />
             <h3>{tool.name}</h3>
             <p>{tool.desc}</p>
-          </div>
+          </a>
         ))}
       </div>
     </div>
@@ -658,11 +659,24 @@ const tools = [
     margin-top: 1.5rem;
   }
   .tool-card {
+    display: block;
     background: #fff;
     border: 1px solid var(--verde-hoja);
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .tool-card:hover {
+    border-color: var(--verde-bosque);
+    box-shadow: 0 2px 12px rgba(45, 90, 61, 0.1);
+  }
+  .tool-icon {
+    display: block;
+    margin: 0 auto 0.75rem;
+    border-radius: 4px;
   }
   .tool-card h3 {
     font-size: 1rem;
