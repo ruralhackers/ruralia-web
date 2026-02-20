@@ -6,7 +6,7 @@ const schema = [
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: 'Rural IA — Retiro de IA aplicada en Galicia',
-    description: 'Curso intensivo de IA aplicada en Anceu Coliving. 4 días de formación práctica + alojamiento + comidas.',
+    description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.',
     startDate: '2026-06',
     endDate: '2026-06',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -53,19 +53,34 @@ const schema = [
     ],
   },
 ];
+
+const tools = [
+  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación' },
+  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos' },
+  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema' },
+  { name: 'Kimi 2.5', desc: 'Modelo open source para tareas avanzadas' },
+  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto' },
+  { name: 'Pencil', desc: 'Diseña interfaces con IA sin tocar código' },
+  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos' },
+  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar' },
+  { name: 'v0', desc: 'Genera componentes UI con una descripción' },
+  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones' },
+  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas' },
+  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo' },
+];
 ---
 
 <Base
   title="Retiro de IA en Galicia — 4 días, todo incluido | Rural IA"
-  description="Curso intensivo de IA aplicada en Anceu Coliving, Pontevedra. 4 días de formación práctica + alojamiento + comidas. 12 plazas. Desde 697 EUR."
-  keywords={['retiro IA Galicia', 'curso intensivo IA presencial', 'bootcamp IA todo incluido', 'formación IA Pontevedra', 'curso IA Anceu Coliving']}
+  description="Ponte al día con IA en 4 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 697 EUR."
+  keywords={['retiro IA Galicia', 'curso intensivo IA presencial', 'ponerse al día con IA', 'formación IA todo incluido', 'curso IA Anceu Coliving']}
   schema={schema}
 >
-  <!-- Hero con propuesta de valor -->
+  <!-- Hero -->
   <section class="section hero-retiro">
     <div class="section-inner text-center">
-      <h1>4 días para dominar la IA aplicada a tu trabajo</h1>
-      <p class="hero-sub">Retiro inmersivo en Galicia. Formación práctica, alojamiento y comidas incluidas. 12 plazas por edición.</p>
+      <h1>Ponte al día con IA en 4 días. Todo incluido.</h1>
+      <p class="hero-sub">Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú vienes 4 días a Galicia y te vas con las herramientas de IA configuradas para tu trabajo.</p>
       <a href="#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
       <p class="hero-price">Desde 697 EUR todo incluido · Junio 2026</p>
     </div>
@@ -98,9 +113,9 @@ const schema = [
   <!-- Problema / Solución -->
   <section class="section">
     <div class="section-inner text-center">
-      <h2>Sabes que la IA va a cambiarlo todo</h2>
-      <p>Pero no encuentras el momento. Los cursos online se abandonan. Los bootcamps duran meses y cuestan miles de euros. Y cada semana salen 3 herramientas nuevas que no sabes si probar o ignorar.</p>
-      <p class="highlight-text">Lo que necesitas no es más teoría. Es sentarte 4 días a construir cosas reales con IA — rodeado de naturaleza, buena comida y gente como tú.</p>
+      <h2>El Rincón del Vago de la IA — pero da igual que te pillen</h2>
+      <p>¿Te acuerdas del Rincón del Vago? Alguien hacía el trabajo y tú llegabas al examen sabiendo lo justo. Esto es parecido, pero mejor: nuestro equipo investiga, prueba y descarta herramientas de IA cada semana. Separamos lo que funciona de lo que es humo.</p>
+      <p class="highlight-text">En 4 días te transferimos todo ese conocimiento. Tu clientela va a notar la diferencia.</p>
     </div>
   </section>
 
@@ -137,29 +152,45 @@ const schema = [
     </div>
   </section>
 
+  <!-- Herramientas -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Herramientas que aprenderás a usar</h2>
+      <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
+      <div class="tools-grid">
+        {tools.map((tool) => (
+          <div class="tool-card">
+            <h3>{tool.name}</h3>
+            <p>{tool.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- Programa detallado -->
   <section class="section">
     <div class="section-inner">
-      <h2>Programa</h2>
+      <h2>4 días. De "no me entero" a "ya lo tengo claro".</h2>
 
       <div class="day-detail">
-        <h3>Día 1 — Fundamentos de IA aplicada</h3>
-        <p>Prompting avanzado, elegir la herramienta correcta para cada tarea (ChatGPT, Claude, Gemini), casos de uso reales. Salir del "háblame como si fueras un experto en..." y empezar a usar IA de verdad.</p>
+        <h3>Día 1 — "¿Dónde estoy?" — Mapa del terreno</h3>
+        <p>Te situamos. Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo. Sales del día 1 entendiendo el paisaje completo de la IA aplicada a trabajo real.</p>
       </div>
 
       <div class="day-detail">
-        <h3>Día 2 — Asistentes y herramientas de IA</h3>
-        <p>Crea asistentes personalizados para tu negocio con GPTs, Claude Projects y Gems. Usa herramientas como Claude Code o Cursor para resolver tareas reales sin ser developer. NotebookLM para research, Perplexity para análisis: configura un equipo de IAs que trabajan para ti.</p>
+        <h3>Día 2 — "¿Qué puedo automatizar?" — Tu trabajo bajo la lupa</h3>
+        <p>Analizamos tu flujo de trabajo real. Identificamos qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo. Aprendes a usar las herramientas clave: ChatGPT, Claude, Gemini, Make.</p>
       </div>
 
       <div class="day-detail">
-        <h3>Día 3 — Construir con IA (sin código)</h3>
-        <p>Cursor, Bolt, v0: crear apps, landing pages, herramientas internas con IA como copiloto. De idea a prototipo funcional en una tarde.</p>
+        <h3>Día 3 — "¿Puedo construir cosas?" — De idea a prototipo</h3>
+        <p>Sí, puedes. Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado (y pagado). Una web, una app interna, un automatismo.</p>
       </div>
 
       <div class="day-detail">
-        <h3>Día 4 — Tu stack de IA personalizado</h3>
-        <p>Cada asistente monta su propio setup: qué herramientas usa, qué automatiza, qué construye. Sesión de trabajo guiado + demo final al grupo.</p>
+        <h3>Día 4 — "¿Con qué me quedo?" — Tu stack personalizado</h3>
+        <p>Montas tu kit definitivo. Las herramientas concretas que vas a usar cada día. Sesión guiada para dejarlo todo configurado. Sales con todo listo para el día 5: tu primer día de vuelta al trabajo, pero con IA.</p>
       </div>
     </div>
   </section>
@@ -242,19 +273,19 @@ const schema = [
       <div class="faq-inline">
         <details>
           <summary>¿Necesito saber programar?</summary>
-          <p>No. El retiro está diseñado para profesionales que usan tecnología, no para programadores. Si sabes usar herramientas digitales en tu trabajo, vas a sacar partido.</p>
+          <p>No. Si sabes usar un navegador, puedes seguir el programa.</p>
         </details>
         <details>
-          <summary>¿Qué me llevo al terminar?</summary>
-          <p>Herramientas de IA configuradas y funcionando en tu trabajo real. Asistentes personalizados, flujos de trabajo, y un stack de IA adaptado a lo que tú haces. Más acceso a la comunidad alumni y una sesión de seguimiento.</p>
+          <summary>¿Es solo para gente de tecnología?</summary>
+          <p>No. Es para cualquier profesional que quiera integrar IA en su trabajo: diseño, administración, marketing, consultoría, servicios...</p>
         </details>
         <details>
-          <summary>¿Puedo cancelar?</summary>
-          <p>Cancelación gratuita hasta 15 días antes. Entre 15 y 7 días, devolución del 50%. Menos de 7 días no hay devolución, pero la plaza es transferible.</p>
+          <summary>¿Y si ya uso ChatGPT?</summary>
+          <p>Perfecto, pero probablemente lo uses al 10% de su capacidad. Aquí vas mucho más allá.</p>
         </details>
         <details>
-          <summary>¿En qué se diferencia de un bootcamp online?</summary>
-          <p>Un bootcamp son meses de vídeos. Esto son 4 días presenciales, en grupo de 12, con instructores al lado. Vienes con tu portátil, te vas con herramientas funcionando. Incluye alojamiento y comidas — solo tienes que llegar.</p>
+          <summary>¿Qué pasa si la IA que aprendo se queda obsoleta?</summary>
+          <p>Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar y elegir. Y la comunidad alumni sigue activa con actualizaciones.</p>
         </details>
       </div>
       <p class="faq-more"><a href="/faq/">Ver todas las preguntas frecuentes</a></p>
@@ -291,15 +322,23 @@ const schema = [
         </div>
 
         <div class="form-group">
-          <label for="perfil">Perfil</label>
-          <select id="perfil" name="perfil" required>
-            <option value="" disabled selected>¿A qué te dedicas?</option>
-            <option value="freelancer">Freelancer</option>
-            <option value="indie-hacker">Indie hacker</option>
-            <option value="consultor">Consultor/a</option>
-            <option value="profesional-tech">Profesional tech</option>
+          <label for="sector">Sector</label>
+          <select id="sector" name="sector" required>
+            <option value="" disabled selected>¿En qué sector trabajas?</option>
+            <option value="diseno">Diseño</option>
+            <option value="desarrollo">Desarrollo / Programación</option>
+            <option value="servicios">Servicios profesionales</option>
+            <option value="administracion">Administración / Gestoría</option>
+            <option value="marketing">Marketing / Publicidad</option>
+            <option value="agencia">Agencia</option>
+            <option value="consultoria">Consultoría</option>
             <option value="otro">Otro</option>
           </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sobre-ti">Cuéntanos más sobre ti</label>
+          <textarea id="sobre-ti" name="sobre-ti" rows="3" placeholder="¿A qué te dedicas? ¿Qué esperas del retiro?"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg">Quiero reservar plaza</button>
@@ -582,6 +621,26 @@ const schema = [
   .form-group input::placeholder {
     color: #9ca3af;
   }
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--marron-tierra);
+    transition: border-color 0.15s ease;
+    resize: vertical;
+  }
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--verde-musgo);
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+  }
+  .form-group textarea::placeholder {
+    color: #9ca3af;
+  }
   .waitlist-form .btn {
     width: 100%;
     margin-top: 0.5rem;
@@ -590,6 +649,31 @@ const schema = [
     font-size: 0.85rem;
     color: #888;
     margin-top: 1.5rem;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .tool-card {
+    background: #fff;
+    border: 1px solid var(--verde-hoja);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .tool-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.35rem;
+    color: var(--verde-bosque);
+  }
+  .tool-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
   }
 
   @media (max-width: 600px) {
