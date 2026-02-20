@@ -9,7 +9,7 @@ const schema = {
   '@type': 'Organization',
   name: 'Rural IA',
   url: 'https://ruralia.gal',
-  description: 'Retiro inmersivo de IA aplicada en el rural gallego.',
+  description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia.',
   foundingDate: '2026',
   sameAs: [],
 };
@@ -17,37 +17,52 @@ const schema = {
 const days = [
   {
     num: '01',
-    title: 'Fundamentos IA aplicada',
-    desc: 'Prompting avanzado, elegir la herramienta correcta, casos de uso reales.',
+    title: '¿Dónde estoy? — Mapa del terreno',
+    desc: 'Te situamos. Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo.',
   },
   {
     num: '02',
-    title: 'Asistentes y herramientas de IA',
-    desc: 'GPTs, Claude Projects, Claude Code, Cursor. Configura IAs que trabajan para ti.',
+    title: '¿Qué puedo automatizar? — Tu trabajo bajo la lupa',
+    desc: 'Analizamos tu flujo de trabajo real. Identificamos qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo.',
   },
   {
     num: '03',
-    title: 'Construir con IA',
-    desc: 'Cursor, Bolt, v0: de idea a prototipo funcional en una tarde.',
+    title: '¿Puedo construir cosas? — De idea a prototipo',
+    desc: 'Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado.',
   },
   {
     num: '04',
-    title: 'Tu stack personalizado',
-    desc: 'Monta tu propio setup de IA. Sesión guiada + demo final al grupo.',
+    title: '¿Con qué me quedo? — Tu stack personalizado',
+    desc: 'Montas tu kit definitivo. Sesión guiada para dejarlo todo configurado. Sales con todo listo para volver al trabajo con IA.',
   },
 ];
 
 const stats = [
-  { num: '600K', label: 'profesionales tech en España sin formación en IA' },
-  { num: '+56%', label: 'prima salarial para quienes dominan IA' },
-  { num: '0', label: 'retiros inmersivos de IA para techies en España' },
+  { num: '600K', label: 'profesionales en España sin formación en IA' },
+  { num: '+56%', label: 'de productividad con herramientas de IA integradas' },
+  { num: '0', label: 'retiros inmersivos de IA en España' },
+];
+
+const tools = [
+  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación' },
+  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos' },
+  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema' },
+  { name: 'Kimi 2.5', desc: 'Modelo open source para tareas avanzadas' },
+  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto' },
+  { name: 'Pencil', desc: 'Diseña interfaces con IA sin tocar código' },
+  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos' },
+  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar' },
+  { name: 'v0', desc: 'Genera componentes UI con una descripción' },
+  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones' },
+  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas' },
+  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo' },
 ];
 ---
 
 <Base
   title="Rural IA — Retiro inmersivo de IA aplicada en Galicia"
-  description="4 días en el rural gallego para transformar tu forma de trabajar con IA. Formación práctica, alojamiento y comidas incluidas. 12 plazas por edición."
-  keywords={['retiro IA España', 'curso IA inmersivo', 'formación IA Galicia', 'retiro inteligencia artificial', 'curso IA aplicada presencial']}
+  description="4 días en Galicia para ponerte al día con IA. Sin investigar. Sin perder más tiempo. Formación práctica, alojamiento y comidas incluidas. 12 plazas."
+  keywords={['retiro IA España', 'curso IA inmersivo', 'formación IA Galicia', 'retiro inteligencia artificial', 'curso IA aplicada presencial', 'ponerse al día con IA']}
   schema={schema}
 >
   <!-- ==================== S1: Hero ==================== -->
@@ -55,10 +70,11 @@ const stats = [
     <div class="hero-inner">
       <p class="hero-badge">Junio 2026 · Anceu Coliving, Pontevedra</p>
       <Image src={logo} alt="Rural IA" class="hero-logo" height={48} />
-      <h1>4 días en Galicia para transformar tu forma de trabajar con IA</h1>
+      <h1>Ponte al día con IA en 4 días. Sin investigar. Sin perder más tiempo.</h1>
       <p class="hero-sub">
-        Retiro inmersivo para freelancers y profesionales tech.
-        Formación práctica de IA aplicada, alojamiento y comidas incluidas. 12 plazas.
+        Retiro inmersivo en Galicia para profesionales que no tienen tiempo de estar al día.
+        Nosotros investigamos por ti — y lo seguimos haciendo cada semana.
+        Vienes 4 días y te vas con todo montado.
       </p>
       <div class="hero-cta">
         <a href="/retiro-ia-galicia/#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
@@ -79,39 +95,68 @@ const stats = [
     />
   </section>
 
-  <!-- ==================== S3: Problema ==================== -->
+  <!-- ==================== S3: El Problema ==================== -->
   <section class="section bg-niebla">
     <div class="section-inner text-center">
-      <h2>Sabes que la IA va a cambiarlo todo</h2>
+      <h2>Eras quien siempre sabía qué herramienta usar</h2>
       <p>
-        Pero no encuentras el momento. Los cursos online se abandonan.
-        Los bootcamps duran meses y cuestan miles de euros.
-        Y cada semana salen 3 herramientas nuevas que no sabes si probar o ignorar.
+        Llevas años siendo la persona de referencia en tu entorno.
+        Quien montaba las webs, quien dominaba Figma antes que nadie,
+        quien configuraba servidores cuando el resto ni sabía qué era un hosting.
+      </p>
+      <p>
+        Pero la IA avanzó demasiado rápido. Cada semana salen 3 herramientas nuevas.
+        No tienes tiempo de probarlas todas. Tu trabajo real te come el día.
+        Y la brecha entre lo que sabes y lo que deberías saber crece cada semana.
       </p>
       <p class="highlight-quote">
-        Lo que necesitas no es más teoría.<br />
-        Es sentarte 4 días a construir cosas reales con IA.
+        No es que seas menos capaz.<br />
+        Es que no tienes horas.
       </p>
     </div>
   </section>
 
-  <!-- ==================== S4: Solución ==================== -->
+  <!-- ==================== S4: La Solución ==================== -->
   <section class="section bg-crema">
     <div class="section-inner text-center">
-      <h2>Un retiro inmersivo de IA, en un pueblo gallego</h2>
+      <h2>El Rincón del Vago de la IA — pero da igual que te pillen</h2>
       <p>
-        4 días de formación práctica en Anceu Coliving.
-        Vienes con tu portátil, te vas con herramientas de IA configuradas y funcionando en tu trabajo.
-        Sin humo, sin teoría innecesaria.
-        Rodeado de naturaleza, buena comida y gente como tú.
+        ¿Te acuerdas del Rincón del Vago? Alguien hacía el trabajo y tú
+        llegabas al examen sabiendo lo justo.
       </p>
+      <p>
+        Esto es parecido, pero mejor: nuestro equipo investiga, prueba y descarta
+        herramientas de IA cada semana. Separamos lo que funciona de lo que es humo.
+        Y en 4 días te transferimos todo ese conocimiento para que lo apliques
+        directamente a tu trabajo.
+      </p>
+      <p class="highlight-quote">
+        La diferencia: aquí da igual que te pillen.<br />
+        De hecho, tu clientela va a notar la diferencia.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== S4b: Herramientas ==================== -->
+  <section class="section bg-niebla">
+    <div class="section-inner text-center">
+      <h2>Herramientas que aprenderás a usar</h2>
+      <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
+    </div>
+    <div class="tools-grid">
+      {tools.map((tool) => (
+        <div class="tool-card">
+          <h3>{tool.name}</h3>
+          <p>{tool.desc}</p>
+        </div>
+      ))}
     </div>
   </section>
 
   <!-- ==================== S5: Programa ==================== -->
   <section class="section bg-niebla">
     <div class="section-inner text-center">
-      <h2>4 días, 4 bloques</h2>
+      <h2>4 días. De "no me entero" a "ya lo tengo claro".</h2>
     </div>
     <div class="program-grid">
       {days.map((day) => (
@@ -144,10 +189,10 @@ const stats = [
   <!-- ==================== S7: Para quién (preview) ==================== -->
   <section class="section bg-niebla">
     <div class="section-inner text-center">
-      <h2>Para freelancers, indie hackers y profesionales tech</h2>
+      <h2>Para profesionales que no tienen tiempo de investigar IA</h2>
       <p>
-        Si te buscas la vida con tecnología y quieres integrar IA en tu trabajo, esto es para ti.
-        No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
+        Si trabajas con tecnología y sabes que deberías estar usando IA pero no encuentras el momento,
+        esto es para ti. No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
       </p>
       <p class="discover-link">
         <a href="/para-quien/">Descubre si es para ti →</a>
@@ -158,8 +203,8 @@ const stats = [
   <!-- ==================== S8: CTA Final ==================== -->
   <section class="cta-final bg-dark">
     <div class="cta-final-inner">
-      <h2>Solo 12 plazas por edición</h2>
-      <p>Primera edición: junio 2026 en Anceu Coliving, Pontevedra.</p>
+      <h2>El día 5 vuelves a tu trabajo. Pero diferente.</h2>
+      <p>Mismo escritorio. Mismos clientes. Pero con IA integrada en tu flujo de trabajo. 12 plazas. Junio 2026.</p>
       <a href="/retiro-ia-galicia/#reservar" class="btn btn-gold btn-lg">Reserva tu plaza</a>
     </div>
   </section>
@@ -282,6 +327,34 @@ const stats = [
   }
   .program-link a:hover {
     text-decoration: underline;
+  }
+
+  /* ===== Tools Grid ===== */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 820px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+  }
+  .tool-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--verde-hoja);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+  }
+  .tool-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.35rem;
+    color: var(--verde-bosque);
+  }
+  .tool-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
   }
 
   /* ===== Stats ===== */
