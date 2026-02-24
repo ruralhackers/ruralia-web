@@ -16,9 +16,10 @@ interface Props {
   author?: string;
   robots?: string;
   ogImageAlt?: string;
+  hideHeader?: boolean;
 }
 
-const props = Astro.props;
+const { hideHeader, ...props } = Astro.props;
 ---
 
 <!doctype html>
@@ -37,7 +38,7 @@ const props = Astro.props;
     <!-- Tracking (GA4 + Meta Pixel) loaded conditionally via CookieBanner -->
   </head>
   <body>
-    <Header />
+    {!hideHeader && <Header />}
     <main>
       <slot />
     </main>
