@@ -1,7 +1,7 @@
 ---
 title: "Por qué hemos montado un retiro de IA en un pueblo gallego"
 description: "La historia de cómo nació Rural IA: un retiro inmersivo de IA aplicada en Anceu Coliving, en el rural de Galicia. Por qué este formato, por qué aquí, y por qué ahora."
-date: "2026-03-15"
+date: "2026-01-07"
 author: "Rural IA"
 keywords: ["retiro IA rural", "formación IA Galicia", "Rural IA"]
 ---

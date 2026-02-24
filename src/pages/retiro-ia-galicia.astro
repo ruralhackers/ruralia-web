@@ -7,8 +7,8 @@ const schema = [
     '@type': 'Event',
     name: 'Rural IA — Retiro de IA aplicada en Galicia',
     description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.',
-    startDate: '2026-06',
-    endDate: '2026-06',
+    startDate: '2026-06-03',
+    endDate: '2026-06-07',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
     location: {
@@ -29,16 +29,33 @@ const schema = [
     offers: [
       {
         '@type': 'Offer',
-        name: 'Early bird',
-        price: '697',
+        name: 'Early bird — Habitación compartida',
+        price: '442',
         priceCurrency: 'EUR',
         availability: 'https://schema.org/LimitedAvailability',
-        validFrom: '2026-04-01',
+        validFrom: '2025-01-01',
+        validThrough: '2026-03-15',
       },
       {
         '@type': 'Offer',
-        name: 'Normal',
-        price: '897',
+        name: 'Early bird — Habitación individual',
+        price: '558',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/LimitedAvailability',
+        validFrom: '2025-01-01',
+        validThrough: '2026-03-15',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Habitación compartida',
+        price: '632',
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Habitación individual',
+        price: '797',
         priceCurrency: 'EUR',
         availability: 'https://schema.org/InStock',
       },
@@ -55,24 +72,24 @@ const schema = [
 ];
 
 const tools = [
-  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación', url: 'https://chatgpt.com' },
-  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos', url: 'https://claude.ai' },
-  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema', url: 'https://gemini.google.com' },
-  { name: 'Kimi', desc: 'Modelo open source para tareas avanzadas', url: 'https://kimi.ai' },
-  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto', url: 'https://cursor.com' },
-  { name: 'Pencil', desc: 'Diseña interfaces con IA sin tocar código', url: 'https://pencil.dev' },
-  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos', url: 'https://bolt.new' },
-  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar', url: 'https://lovable.dev' },
-  { name: 'v0', desc: 'Genera componentes UI con una descripción', url: 'https://v0.dev' },
-  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones', url: 'https://make.com' },
-  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas', url: 'https://perplexity.ai' },
-  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo', url: 'https://notebooklm.google.com' },
+  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación', logo: '/logos/openai.svg', href: 'https://chatgpt.com' },
+  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos', logo: '/logos/anthropic.svg', href: 'https://claude.ai' },
+  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema', logo: '/logos/googlegemini.svg', href: 'https://gemini.google.com' },
+  { name: 'Kimi', desc: 'Modelo de razonamiento avanzado open source', logo: '/logos/kimi.svg', href: 'https://kimi.ai' },
+  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto', logo: '/logos/cursor.svg', href: 'https://cursor.com' },
+  { name: 'Runway', desc: 'Genera vídeo e imágenes con IA profesional', logo: '/logos/runway.svg', href: 'https://runwayml.com' },
+  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos', logo: '/logos/bolt.svg', href: 'https://bolt.new' },
+  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar', logo: '/logos/lovable.svg', href: 'https://lovable.dev' },
+  { name: 'v0', desc: 'Genera componentes UI con una descripción', logo: '/logos/vercel.svg', href: 'https://v0.dev' },
+  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones', logo: '/logos/make.svg', href: 'https://make.com' },
+  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas', logo: '/logos/perplexity.svg', href: 'https://perplexity.ai' },
+  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo', logo: '/logos/notebooklm.svg', href: 'https://notebooklm.google.com' },
 ];
 ---
 
 <Base
   title="Retiro de IA en Galicia — 4 días, todo incluido | Rural IA"
-  description="Ponte al día con IA en 4 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 697 EUR."
+  description="Ponte al día con IA en 4 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 442 EUR."
   keywords={['retiro IA Galicia', 'curso intensivo IA presencial', 'ponerse al día con IA', 'formación IA todo incluido', 'curso IA Anceu Coliving']}
   schema={schema}
 >
@@ -82,7 +99,7 @@ const tools = [
       <h1>Ponte al día con IA en 4 días. Todo incluido.</h1>
       <p class="hero-sub">Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú vienes 4 días a Galicia y te vas con las herramientas de IA configuradas para tu trabajo.</p>
       <a href="#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
-      <p class="hero-price">Desde 697 EUR todo incluido · Junio 2026</p>
+      <p class="hero-price">Desde <span id="hero-price-from">442</span> EUR todo incluido · 3–7 junio 2026</p>
     </div>
   </section>
 
@@ -92,7 +109,7 @@ const tools = [
       <div class="key-facts">
         <div class="fact">
           <strong>Cuándo</strong>
-          <span>Junio 2026 (fechas exactas pronto)</span>
+          <span>3–7 junio 2026</span>
         </div>
         <div class="fact">
           <strong>Dónde</strong>
@@ -159,10 +176,13 @@ const tools = [
       <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
       <div class="tools-grid">
         {tools.map((tool) => (
-          <a href={tool.url} target="_blank" rel="noopener" class="tool-card">
-            <img src={`https://www.google.com/s2/favicons?domain=${new URL(tool.url).hostname}&sz=32`} alt={tool.name} class="tool-icon" width="32" height="32" loading="lazy" />
-            <h3>{tool.name}</h3>
-            <p>{tool.desc}</p>
+          <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
+            <div class="tool-top">
+              <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" />
+              <span class="tool-arrow">↗</span>
+            </div>
+            <p class="tool-name">{tool.name}</p>
+            <p class="tool-desc">{tool.desc}</p>
           </a>
         ))}
       </div>
@@ -233,11 +253,21 @@ const tools = [
   <section class="section alt" id="pricing">
     <div class="section-inner pricing-section">
       <h2>Precio</h2>
-      <div class="pricing-grid">
-        <div class="price-card featured">
-          <span class="price-badge">Early bird</span>
-          <span class="price-amount">697 EUR</span>
-          <span class="price-note">Primeras 5 plazas</span>
+      <p class="pricing-intro">Todo incluido: formación, alojamiento, comidas, materiales y comunidad alumni.</p>
+      <div
+        class="pricing-grid"
+        data-prices='[
+          {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
+          {"until":"2026-04-16","label":"Segunda tanda","until_text":"hasta el 15 de abril","discount":"15% de descuento","compartida":537,"individual":677},
+          {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
+        ]'
+      >
+        <div class="price-card" id="card-compartida">
+          <div class="room-title">Habitación compartida</div>
+          <div class="room-subtitle">Compartida con otra persona</div>
+          <span class="price-amount" id="price-compartida">442 EUR</span>
+          <span class="price-tier" id="tier-compartida">Early bird — hasta el 15 de marzo</span>
+          <span class="price-discount" id="discount-compartida">30% de descuento</span>
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -246,12 +276,14 @@ const tools = [
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#reservar" class="btn">Reservar early bird</a>
+          <a href="#reservar" class="btn btn-primary">Reservar plaza</a>
         </div>
-        <div class="price-card">
-          <span class="price-badge">Normal</span>
-          <span class="price-amount">897 EUR</span>
-          <span class="price-note">Todo incluido</span>
+        <div class="price-card featured" id="card-individual">
+          <div class="room-title">Habitación individual</div>
+          <div class="room-subtitle">Habitación para ti solo</div>
+          <span class="price-amount" id="price-individual">558 EUR</span>
+          <span class="price-tier" id="tier-individual">Early bird — hasta el 15 de marzo</span>
+          <span class="price-discount" id="discount-individual">30% de descuento</span>
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -260,10 +292,10 @@ const tools = [
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#reservar" class="btn">Reservar plaza</a>
+          <a href="#reservar" class="btn btn-gold">Reservar plaza</a>
         </div>
       </div>
-      <p class="pricing-note">Son ~225 EUR/día con alojamiento, comida y formación. Un bootcamp de IA en Madrid cuesta 2.450-7.000 EUR. <a href="/faq/">¿Más preguntas?</a></p>
+      <p class="pricing-note">Un bootcamp de IA en Madrid cuesta 2.450–7.000 EUR sin alojamiento ni comidas. <a href="/faq/">¿Más preguntas?</a></p>
     </div>
   </section>
 
@@ -345,7 +377,7 @@ const tools = [
         <button type="submit" class="btn btn-primary btn-lg">Quiero reservar plaza</button>
       </form>
 
-      <p class="form-note">Solo 12 plazas por edición. Primera edición: junio 2026.</p>
+      <p class="form-note">Solo 12 plazas por edición. Primera edición: 3–7 junio 2026.</p>
     </div>
   </section>
 </Base>
@@ -355,6 +387,10 @@ const tools = [
   .hero-retiro {
     padding-top: 5rem;
     padding-bottom: 4rem;
+  }
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
   }
   .hero-retiro h1 {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -395,7 +431,7 @@ const tools = [
     grid-column: 1 / -1;
   }
   .fact {
-    background: #f8f9fa;
+    background: #f5f5f5;
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
@@ -409,7 +445,7 @@ const tools = [
     margin-bottom: 0.25rem;
   }
 
-  .alt { background: #f8f9fa; }
+  .alt { background: #f5f5f5; }
 
   .day-detail {
     margin-bottom: 2rem;
@@ -429,7 +465,7 @@ const tools = [
     display: flex;
     gap: 1.5rem;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e0e0e0;
   }
   .time {
     font-weight: 600;
@@ -460,66 +496,116 @@ const tools = [
   }
 
   .pricing-section { text-align: center; }
+  .pricing-intro {
+    color: #666;
+    margin-bottom: 0;
+  }
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    max-width: 650px;
+    max-width: 680px;
     margin: 2rem auto;
   }
   .price-card {
     background: #fff;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e0e0e0;
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   .price-card.featured {
-    border-color: #111;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    background: #000;
+    border-color: #000;
+    color: #fff;
   }
-  .price-badge {
-    display: block;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  .room-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+  }
+  .room-subtitle {
+    font-size: 0.85rem;
     color: #888;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .price-card.featured .room-subtitle {
+    color: rgba(255,255,255,0.55);
   }
   .price-amount {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: -0.03em;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
   }
-  .price-note {
+  .price-tier {
     display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #888;
-    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    min-height: 1em;
+  }
+  .price-card.featured .price-tier {
+    color: rgba(255,255,255,0.5);
+  }
+  .price-discount {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
     margin-bottom: 1.5rem;
+    min-height: 1.2em;
+  }
+  .price-card.featured .price-discount {
+    color: rgba(255,255,255,0.7);
   }
   .price-card ul {
     text-align: left;
     list-style: none;
     padding: 0;
     margin: 0 0 1.5rem;
+    flex: 1;
   }
   .price-card li {
     padding: 0.3rem 0;
     color: #555;
     font-size: 0.9rem;
   }
+  .price-card.featured li {
+    color: rgba(255,255,255,0.8);
+  }
   .price-card li::before {
     content: '✓ ';
-    color: #22c55e;
+    color: #000;
     font-weight: 600;
   }
+  .price-card.featured li::before {
+    color: #fff;
+  }
   .pricing-note {
-    max-width: 600px;
+    max-width: 560px;
     margin: 1rem auto 0;
     font-size: 0.9rem;
     color: #888;
+  }
+  .price-card.featured .btn {
+    background: #fff;
+    color: #000;
+  }
+  .price-card.featured .btn:hover {
+    background: #f0f0f0;
+  }
+  @media (max-width: 600px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 380px;
+    }
   }
 
   /* ===== Team inline ===== */
@@ -537,7 +623,7 @@ const tools = [
     max-width: 650px;
   }
   .faq-inline details {
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e0e0e0;
     padding: 1rem 0;
   }
   .faq-inline summary {
@@ -616,8 +702,8 @@ const tools = [
   .form-group input:focus,
   .form-group select:focus {
     outline: none;
-    border-color: var(--verde-musgo);
-    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
   }
   .form-group input::placeholder {
     color: #9ca3af;
@@ -636,8 +722,8 @@ const tools = [
   }
   .form-group textarea:focus {
     outline: none;
-    border-color: var(--verde-musgo);
-    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
   }
   .form-group textarea::placeholder {
     color: #9ca3af;
@@ -654,44 +740,88 @@ const tools = [
 
   .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
   }
   .tool-card {
     display: block;
-    background: #fff;
-    border: 1px solid var(--verde-hoja);
-    border-radius: 8px;
-    padding: 1.25rem;
-    text-align: center;
+    padding: 1.5rem;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    transition: background 0.15s ease;
   }
   .tool-card:hover {
-    border-color: var(--verde-bosque);
-    box-shadow: 0 2px 12px rgba(45, 90, 61, 0.1);
+    background: #f5f5f5;
   }
-  .tool-icon {
+  .tool-card:hover .tool-arrow {
+    opacity: 1;
+  }
+  .tool-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .tool-logo {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%);
     display: block;
-    margin: 0 auto 0.75rem;
-    border-radius: 4px;
   }
-  .tool-card h3 {
+  .tool-arrow {
     font-size: 1rem;
-    margin: 0 0 0.35rem;
-    color: var(--verde-bosque);
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.15s ease;
   }
-  .tool-card p {
+  .tool-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 0.3rem;
+  }
+  .tool-desc {
     font-size: 0.85rem;
     color: #666;
     margin: 0;
     line-height: 1.5;
   }
+  @media (max-width: 768px) {
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-  @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
+  @media (max-width: 480px) {
     .price-amount { font-size: 2rem; }
   }
 </style>
+
+<script>
+  (function () {
+    const schedule = [
+      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
+      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
+      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
+    ];
+
+    const now = new Date();
+    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
+
+    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
+
+    const set = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+
+    set('price-compartida', tier.compartida + ' EUR');
+    set('price-individual', tier.individual + ' EUR');
+    set('tier-compartida', tierText);
+    set('tier-individual', tierText);
+    set('discount-compartida', tier.discount);
+    set('discount-individual', tier.discount);
+    set('hero-price-from', String(tier.compartida));
+  })();
+</script>

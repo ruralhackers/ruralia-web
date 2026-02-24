@@ -55,10 +55,20 @@ const inclusions = [
   'Sesión de seguimiento online',
 ];
 
-const pricing = [
-  { window: 'Antes del 15 de marzo', price: '628', discount: '30% de descuento', featured: false },
-  { window: '16 marzo – 15 abril', price: '762', discount: '15% de descuento', featured: true },
-  { window: 'Precio normal', price: '897', discount: '', featured: false },
+
+const tools = [
+  { name: 'ChatGPT', desc: 'Probablemente ya la uses. Aquí vas mucho más allá del 10% de su capacidad.', logo: '/logos/openai.svg', href: 'https://chatgpt.com' },
+  { name: 'Claude', desc: 'Para razonamiento y documentos largos. Mejor que ChatGPT para ciertas tareas.', logo: '/logos/anthropic.svg', href: 'https://claude.ai' },
+  { name: 'Gemini', desc: 'La IA de Google. Integrada con Gmail, Docs y Drive.', logo: '/logos/googlegemini.svg', href: 'https://gemini.google.com' },
+  { name: 'Cursor', desc: 'Escribe código con IA como copiloto. Aunque no sepas programar.', logo: '/logos/cursor.svg', href: 'https://cursor.com' },
+  { name: 'Bolt', desc: 'De idea a prototipo en minutos. Para validar antes de invertir tiempo.', logo: '/logos/bolt.svg', href: 'https://bolt.new' },
+  { name: 'Lovable', desc: 'Crea aplicaciones web completas describiendo lo que necesitas.', logo: '/logos/lovable.svg', href: 'https://lovable.dev' },
+  { name: 'v0', desc: 'Genera componentes de interfaz con una descripción. Para diseñadores y devs.', logo: '/logos/vercel.svg', href: 'https://v0.dev' },
+  { name: 'Make', desc: 'Automatiza flujos entre aplicaciones. Sin programar.', logo: '/logos/make.svg', href: 'https://make.com' },
+  { name: 'Perplexity', desc: 'Búsqueda con IA que cita las fuentes. Para investigar sin perderse.', logo: '/logos/perplexity.svg', href: 'https://perplexity.ai' },
+  { name: 'NotebookLM', desc: 'Convierte documentos en una base de conocimiento interactiva.', logo: '/logos/notebooklm.svg', href: 'https://notebooklm.google.com' },
+  { name: 'Runway', desc: 'Genera y edita vídeo con IA. Para los que trabajan con contenido.', logo: '/logos/runway.svg', href: 'https://runwayml.com' },
+  { name: 'Kimi 2.5', desc: 'Modelo open source potente de Moonshot AI. Para tareas avanzadas.', logo: '/logos/kimi.svg', href: 'https://kimi.ai' },
 ];
 ---
 
@@ -86,11 +96,13 @@ const pricing = [
   <section class="hero">
     <div class="hero-top">
       <h1 class="hero-headline">¿TE ACUERDAS DEL RINCÓN DEL VAGO?</h1>
-      <div class="hero-meta">
+    </div>
+    <div class="hero-sub">
+      <div class="hero-sub-text">
         <p>Un retiro inmersivo de IA aplicada en Galicia. 4 días, 12 plazas, todo incluido.</p>
         <p class="hero-date">3 – 7 junio 2026 · Anceu Coliving, Pontevedra</p>
-        <a href="/retiro-ia-galicia/#reservar" class="btn-dark">Reserva tu plaza</a>
       </div>
+      <a href="/retiro-ia-galicia/#reservar" class="btn-dark">Reserva tu plaza</a>
     </div>
     <div class="hero-photo">
       <Image
@@ -123,7 +135,7 @@ const pricing = [
 
   <!-- ===== PROTOCOLO 4 DÍAS ===== -->
   <section class="section protocol">
-    <p class="tag">El protocolo de 4 días</p>
+    <h2 class="protocol-h">El protocolo de 4 días</h2>
     <div class="protocol-grid">
       {days.map((day) => (
         <div class="protocol-card">
@@ -135,6 +147,23 @@ const pricing = [
           </div>
           <span class="protocol-plus">+</span>
         </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== HERRAMIENTAS ===== -->
+  <section class="section tools">
+    <p class="tag">Herramientas que aprenderás a usar</p>
+    <div class="tools-grid">
+      {tools.map((tool) => (
+        <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
+          <div class="tool-top">
+            <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" loading="lazy" />
+            <span class="tool-arrow">↗</span>
+          </div>
+          <p class="tool-name">{tool.name}</p>
+          <p class="tool-desc">{tool.desc}</p>
+        </a>
       ))}
     </div>
   </section>
@@ -151,7 +180,6 @@ const pricing = [
           sizes="(max-width: 768px) 100vw, 60vw"
           loading="lazy"
         />
-        <span class="arch-label">Gastronomía gallega</span>
       </div>
       <div class="arch-side">
         <div class="arch-card">
@@ -168,27 +196,35 @@ const pricing = [
 
   <!-- ===== ADMISIÓN ===== -->
   <section class="section admission">
-    <p class="tag">Admisión</p>
-    <div class="admission-grid">
-      {pricing.map((tier) => (
-        <div class:list={['admission-card', { 'admission-featured': tier.featured }]}>
-          <p class="admission-window">{tier.window}</p>
-          <p class="admission-price">{tier.price} EUR</p>
-          {tier.discount && <p class="admission-discount">{tier.discount}</p>}
-          {!tier.discount && <p class="admission-discount">&nbsp;</p>}
-          <ul class="admission-list">
-            {inclusions.map((item) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-          <a
-            href="/retiro-ia-galicia/#reservar"
-            class:list={[tier.featured ? 'btn-white' : 'btn-outline']}
-          >
-            Reservar plaza
-          </a>
-        </div>
-      ))}
+    <h2 class="admission-h">Admisión</h2>
+    <div
+      class="admission-grid"
+      data-prices='[
+        {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
+        {"until":"2026-04-16","label":"Segunda tanda","until_text":"hasta el 15 de abril","discount":"15% de descuento","compartida":537,"individual":677},
+        {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
+      ]'
+    >
+      <div class="admission-card">
+        <p class="admission-room">Habitación compartida</p>
+        <p class="admission-window" id="home-tier-compartida">Early bird — hasta el 15 de marzo</p>
+        <p class="admission-price" id="home-price-compartida">442 EUR</p>
+        <p class="admission-discount" id="home-discount-compartida">30% de descuento</p>
+        <ul class="admission-list">
+          {inclusions.map((item) => <li>{item}</li>)}
+        </ul>
+        <a href="/retiro-ia-galicia/#reservar" class="btn-outline">Reservar plaza</a>
+      </div>
+      <div class="admission-card admission-featured">
+        <p class="admission-room">Habitación individual</p>
+        <p class="admission-window" id="home-tier-individual">Early bird — hasta el 15 de marzo</p>
+        <p class="admission-price" id="home-price-individual">558 EUR</p>
+        <p class="admission-discount" id="home-discount-individual">30% de descuento</p>
+        <ul class="admission-list">
+          {inclusions.map((item) => <li>{item}</li>)}
+        </ul>
+        <a href="/retiro-ia-galicia/#reservar" class="btn-white">Reservar plaza</a>
+      </div>
     </div>
   </section>
 
@@ -203,6 +239,13 @@ const pricing = [
         </div>
       ))}
     </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-final">
+    <h2 class="cta-headline">El día 5 vuelves<br/>a tu trabajo.<br/>Pero diferente.</h2>
+    <p class="cta-sub">Mismo escritorio. Mismos clientes. Pero con IA integrada en tu flujo de trabajo. 12 plazas. Junio 2026.</p>
+    <a href="/retiro-ia-galicia/#reservar" class="btn-cta-final">Reserva tu plaza</a>
   </section>
 
 </Base>
@@ -229,12 +272,15 @@ const pricing = [
      NAV
   ============================================================ */
   .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
     padding: 1.25rem var(--pad);
-    max-width: var(--max);
-    margin: 0 auto;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-mid);
   }
   .nav-logo {
     font-family: var(--font-display);
@@ -242,6 +288,7 @@ const pricing = [
     color: var(--black);
     text-decoration: none;
     letter-spacing: 0.02em;
+    margin-right: auto;
   }
   .nav-links {
     display: flex;
@@ -268,7 +315,7 @@ const pricing = [
     text-decoration: none;
     transition: opacity 0.15s;
   }
-  .nav-cta:hover { opacity: 0.75; }
+  .nav-cta:hover { opacity: 0.75; color: var(--white); }
 
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -278,18 +325,10 @@ const pricing = [
      HERO
   ============================================================ */
   .hero {
-    padding: 0 var(--pad);
-    max-width: var(--max);
-    margin: 0 auto 0;
+    /* full width — no max-width, padding applied to sub-elements */
   }
   .hero-top {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--gray-mid);
-    margin-bottom: 0;
+    padding: 2.5rem var(--pad) 2rem;
   }
   .hero-headline {
     font-family: var(--font-display);
@@ -299,26 +338,30 @@ const pricing = [
     color: var(--black);
     margin: 0;
   }
-  .hero-meta {
-    max-width: 280px;
-    flex-shrink: 0;
+  .hero-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.25rem var(--pad) 1.75rem;
+    border-bottom: 1px solid var(--gray-mid);
+  }
+  .hero-sub-text {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding-bottom: 0.25rem;
+    gap: 0.2rem;
   }
-  .hero-meta p {
-    font-size: 0.85rem;
+  .hero-sub p {
+    font-size: 0.875rem;
     color: var(--gray-text);
-    line-height: 1.5;
     margin: 0;
+    line-height: 1.5;
   }
   .hero-date {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--gray-text) !important;
-    margin-bottom: 0.5rem !important;
+    color: var(--gray-text);
   }
   .hero-photo {
     width: 100%;
@@ -334,10 +377,10 @@ const pricing = [
   }
 
   @media (max-width: 640px) {
-    .hero-top {
-      grid-template-columns: 1fr;
+    .hero-sub {
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .hero-meta { max-width: 100%; }
   }
 
   /* ============================================================
@@ -345,8 +388,6 @@ const pricing = [
   ============================================================ */
   .section {
     padding: 5rem var(--pad);
-    max-width: var(--max);
-    margin: 0 auto;
     border-top: 1px solid var(--gray-mid);
   }
 
@@ -375,7 +416,7 @@ const pricing = [
     gap: 4rem;
   }
   .noise-left p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--gray-text);
     line-height: 1.75;
     margin: 0;
@@ -383,13 +424,13 @@ const pricing = [
   .noise-right {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
   .noise-stmt {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     font-weight: 500;
     color: var(--black);
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
   }
   .noise-rule {
@@ -405,6 +446,15 @@ const pricing = [
   /* ============================================================
      PROTOCOLO 4 DÍAS
   ============================================================ */
+  .protocol-h {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    color: var(--black);
+    margin: 0 0 3rem;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    font-weight: 400;
+  }
   .protocol-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -412,43 +462,43 @@ const pricing = [
   }
   .protocol-card {
     border-right: 1px solid var(--gray-mid);
-    padding: 1.75rem 1.5rem;
+    padding: 2rem 1.75rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    min-height: 280px;
+    gap: 1.5rem;
+    min-height: 300px;
   }
   .protocol-num {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: var(--gray-mid);
     line-height: 1;
   }
   .protocol-body { flex: 1; }
   .protocol-title {
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--black);
-    margin: 0 0 0.2rem;
+    margin: 0 0 0.3rem;
     letter-spacing: 0;
     line-height: 1.3;
   }
   .protocol-sub {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--gray-text);
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.85rem;
   }
   .protocol-desc {
-    font-size: 0.82rem;
+    font-size: 0.92rem;
     color: var(--gray-text);
-    line-height: 1.6;
+    line-height: 1.65;
     margin: 0;
   }
   .protocol-plus {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--gray-mid);
     font-weight: 300;
     line-height: 1;
@@ -540,9 +590,20 @@ const pricing = [
   /* ============================================================
      ADMISIÓN
   ============================================================ */
+  .admission {
+    background: var(--gray-light);
+  }
+  .admission-h {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    text-align: center;
+    margin: 0 0 3rem;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+  }
   .admission-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1px;
     background: var(--gray-mid);
     border: 1px solid var(--gray-mid);
@@ -556,6 +617,16 @@ const pricing = [
   }
   .admission-featured {
     background: var(--black);
+  }
+  .admission-room {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin: 0 0 0.5rem;
+  }
+  .admission-featured .admission-room {
+    color: var(--white);
   }
   .admission-window {
     font-size: 0.72rem;
@@ -708,4 +779,134 @@ const pricing = [
   @media (max-width: 640px) {
     .team-grid { grid-template-columns: 1fr; gap: 2rem; }
   }
+
+  /* ============================================================
+     HERRAMIENTAS
+  ============================================================ */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--gray-mid);
+    border-left: 1px solid var(--gray-mid);
+  }
+  .tool-card {
+    border-right: 1px solid var(--gray-mid);
+    border-bottom: 1px solid var(--gray-mid);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .tool-card:hover {
+    background: var(--gray-light);
+  }
+  .tool-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .tool-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    display: block;
+  }
+  .tool-arrow {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    line-height: 1;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  .tool-card:hover .tool-arrow {
+    opacity: 1;
+  }
+  .tool-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  .tool-desc {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .tools-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     CTA FINAL
+  ============================================================ */
+  .cta-final {
+    background: var(--black);
+    padding: 8rem var(--pad);
+    text-align: center;
+    border-top: 1px solid var(--gray-mid);
+  }
+  .cta-headline {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    color: var(--white);
+    margin: 0 0 1.75rem;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    font-weight: 400;
+  }
+  .cta-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 3rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .btn-cta-final {
+    display: inline-block;
+    background: var(--white);
+    color: var(--black);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.5rem;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .btn-cta-final:hover { opacity: 0.85; color: var(--black); }
 </style>
+
+<script>
+  (function () {
+    const schedule = [
+      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
+      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
+      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
+    ];
+
+    const now = new Date();
+    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
+    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
+
+    const set = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+
+    set('home-price-compartida', tier.compartida + ' EUR');
+    set('home-price-individual', tier.individual + ' EUR');
+    set('home-tier-compartida', tierText);
+    set('home-tier-individual', tierText);
+    set('home-discount-compartida', tier.discount);
+    set('home-discount-individual', tier.discount);
+  })();
+</script>

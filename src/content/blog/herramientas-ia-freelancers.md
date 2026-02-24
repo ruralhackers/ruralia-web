@@ -1,7 +1,7 @@
 ---
 title: "Herramientas de IA para freelancers: las 15 que uso a diario (2026)"
 description: "Las 15 mejores herramientas de IA para freelancers y profesionales independientes. Probadas en trabajo real: redacción, código, automatización, diseño y productividad."
-date: "2026-04-03"
+date: "2026-02-11"
 author: "Rural IA"
 keywords: ["herramientas ia", "herramientas inteligencia artificial", "ia para freelancers", "mejores herramientas ia 2026", "herramientas ia trabajo"]
 ---

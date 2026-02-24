@@ -1,7 +1,7 @@
 ---
 title: "Automatizaciones con IA: 10 flujos que todo freelancer necesita"
 description: "Configura automatizaciones con IA usando Make y n8n. 10 flujos de trabajo listos para copiar: email, contenido, datos, facturación y más."
-date: "2026-03-06"
+date: "2026-02-04"
 author: "Rural IA"
 keywords: ["automatizaciones", "automatizaciones con ia", "automatizar con ia", "make automatización", "n8n automatización", "flujos de trabajo ia"]
 ---

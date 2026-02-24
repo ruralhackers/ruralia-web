@@ -1,7 +1,7 @@
 ---
 title: "IA de Google: guía práctica de Gemini para tu trabajo (2026)"
 description: "Aprende a usar Gemini, la IA de Google, para tu trabajo diario. Guía práctica con Gems, integración con Google Workspace, búsqueda avanzada y casos de uso reales."
-date: "2026-03-27"
+date: "2026-01-28"
 author: "Rural IA"
 keywords: ["ia de google", "gemini ia", "gemini google", "inteligencia artificial google", "gemini para trabajar", "gems gemini"]
 ---

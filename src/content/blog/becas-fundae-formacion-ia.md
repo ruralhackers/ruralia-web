@@ -1,7 +1,7 @@
 ---
 title: "Becas FUNDAE 2026: cómo financiar tu formación en IA"
 description: "Guía completa sobre las bonificaciones FUNDAE para formación en inteligencia artificial. Quién puede acceder, cuánto cubren, y por qué no siempre son la mejor opción."
-date: "2026-03-20"
+date: "2026-01-14"
 author: "Rural IA"
 keywords: ["becas fundae", "fundae formación", "bonificación fundae", "formación bonificada ia", "crédito formación empresas"]
 ---
@@ -143,7 +143,7 @@ El programa **Kit Digital** del Gobierno de España incluye partidas para digita
 
 Y aquí viene la reflexión real. Un profesional tech que gana 40.000 euros al año podría ganar 60.000+ con skills de IA (la prima salarial documentada es del 56% según PwC). La diferencia es de **20.000 euros al año**.
 
-Una formación de 697-897 euros que te da esas habilidades no es un gasto. Es una inversión con un retorno potencial de 20x en el primer año. Ningún crédito FUNDAE, ninguna subvención, ningún descuento tiene un ROI comparable a simplemente hacer la formación correcta en el momento correcto.
+Una formación de 442-797 euros que te da esas habilidades no es un gasto. Es una inversión con un retorno potencial de 20x en el primer año. Ningún crédito FUNDAE, ninguna subvención, ningún descuento tiene un ROI comparable a simplemente hacer la formación correcta en el momento correcto.
 
 La pregunta no es "¿cómo consigo que alguien me pague la formación?". La pregunta es "¿cuál es la formación que va a tener más impacto en mi trabajo y mis ingresos?".
 
@@ -164,7 +164,7 @@ Hay un motivo por el que los formatos inmersivos funcionan mejor que los cursos 
 - Formato: 100% hands-on con herramientas reales
 - Aplicación práctica: trabajas en tu propio proyecto
 - Networking: 12 profesionales como tú durante 4 días
-- Coste neto: 697-897 euros (deducible)
+- Coste neto: 442-797 euros (deducible)
 - Impacto real: alto
 
 Lo que cuesta 0 euros pero no cambias nada es más caro que lo que cuesta 800 euros y transforma tu forma de trabajar. El coste de oportunidad de NO formarte en IA es mucho mayor que el precio de cualquier curso.
@@ -177,7 +177,7 @@ Preferimos diseñar la mejor formación posible — actualizada al día, 100% pr
 
 En 4 días en [Anceu Coliving](/retiro-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
-El precio (desde 697 euros) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
+El precio (desde 628 euros) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 
 Si tu empresa tiene crédito FUNDAE, úsalo. Hay formaciones bonificables que merecen la pena. Pero si lo que buscas es el mayor impacto posible en el menor tiempo, a veces la mejor inversión es la que haces directamente, sin intermediarios ni burocracia.
 

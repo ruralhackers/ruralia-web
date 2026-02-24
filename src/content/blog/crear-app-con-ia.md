@@ -1,7 +1,7 @@
 ---
 title: "Cómo crear una app con IA sin saber programar: guía paso a paso"
 description: "Crea tu primera aplicación usando IA con Cursor, Bolt y v0. Sin experiencia en programación. De la idea al prototipo funcional en una tarde."
-date: "2026-02-27"
+date: "2026-02-18"
 author: "Rural IA"
 keywords: ["crear app con ia", "crear aplicación inteligencia artificial", "app sin programar", "cursor ai", "bolt ai", "v0 vercel"]
 ---

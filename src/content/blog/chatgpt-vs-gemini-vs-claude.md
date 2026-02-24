@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT vs Gemini vs Claude: cuál usar en 2026 (comparativa real)"
 description: "Comparativa honesta entre ChatGPT, Gemini y Claude. Cuál es mejor para cada tarea: redacción, código, análisis, automatización. Con ejemplos reales."
-date: "2026-03-13"
+date: "2026-01-21"
 author: "Rural IA"
 keywords: ["chatgpt vs gemini", "chat gpt gemini", "chatgpt vs claude", "gemini vs claude", "mejor ia 2026", "comparativa ia"]
 ---

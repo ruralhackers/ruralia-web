@@ -1,7 +1,7 @@
 ---
 title: "Curso de ChatGPT gratis: guía práctica para profesionales (2026)"
 description: "Aprende a usar ChatGPT como un profesional. Guía práctica con prompts avanzados, casos de uso reales y trucos que no encontrarás en otros cursos. Actualizada 2026."
-date: "2026-02-20"
+date: "2025-12-16"
 author: "Rural IA"
 keywords: ["curso chatgpt", "curso chat gpt", "aprender chatgpt", "chatgpt para profesionales", "prompts chatgpt"]
 ---

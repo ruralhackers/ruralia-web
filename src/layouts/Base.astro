@@ -30,7 +30,10 @@ const { hideHeader, ...props } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#2D5A3D" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 
     <SEO {...props} />
     <link rel="alternate" type="application/rss+xml" title="Rural IA — Blog" href="/rss.xml" />
@@ -73,17 +76,17 @@ const { hideHeader, ...props } = Astro.props;
 
   /* ===== Design tokens ===== */
   :root {
-    /* Palette */
-    --verde-bosque: #2D5A3D;
-    --verde-musgo: #4A7C59;
-    --verde-hoja: #6B9B7A;
-    --crema-calido: #F5F0E8;
-    --blanco-niebla: #FAFAF7;
-    --marron-tierra: #5C4A3A;
-    --marron-claro: #8B7355;
-    --dorado-sol: #D4A843;
+    /* Palette — B&W editorial */
+    --verde-bosque: #000000;
+    --verde-musgo: #333333;
+    --verde-hoja: #cccccc;
+    --crema-calido: #f5f5f5;
+    --blanco-niebla: #ffffff;
+    --marron-tierra: #333333;
+    --marron-claro: #888888;
+    --dorado-sol: #000000;
     --gris-lluvia: #9CA3AF;
-    --verde-oscuro-noche: #1A3A2A;
+    --verde-oscuro-noche: #000000;
 
     /* Semantic */
     --color-text: #333333;
@@ -92,8 +95,8 @@ const { hideHeader, ...props } = Astro.props;
     --color-heading: #111111;
     --color-bg-primary: #ffffff;
     --color-bg-alt: #f5f5f5;
-    --color-accent: var(--dorado-sol);
-    --color-link: var(--verde-bosque);
+    --color-accent: #000000;
+    --color-link: #000000;
 
     /* Typography — single geometric sans, like Vercel/Apple */
     --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -171,17 +174,17 @@ const { hideHeader, ...props } = Astro.props;
 
   /* ===== Sections ===== */
   .section {
-    padding: var(--section-gap) 1.5rem;
+    padding: var(--section-gap) clamp(1.5rem, 5vw, 4rem);
   }
 
+  /* section-inner and section-wide no longer constrain width globally;
+     pages control their own readable text widths via scoped styles */
   .section-inner {
-    max-width: var(--content-width);
-    margin: 0 auto;
+    width: 100%;
   }
 
   .section-wide {
-    max-width: var(--wide-width);
-    margin: 0 auto;
+    width: 100%;
   }
 
   /* Background variants */
@@ -222,12 +225,12 @@ const { hideHeader, ...props } = Astro.props;
   }
 
   .btn-gold {
-    background: var(--dorado-sol);
-    color: var(--verde-oscuro-noche);
+    background: #000000;
+    color: #ffffff;
   }
   .btn-gold:hover {
-    background: #c49a38;
-    color: var(--verde-oscuro-noche);
+    background: #333333;
+    color: #ffffff;
   }
 
   .btn-lg {
