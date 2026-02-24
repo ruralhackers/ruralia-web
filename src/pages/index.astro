@@ -112,7 +112,7 @@ const tools = [
   </section>
 
   <!-- ==================== S3: Qué incluye ==================== -->
-  <section class="section bg-crema">
+  <section class="section bg-white">
     <div class="section-inner">
       <h2>Ponte al día con IA en 4 días. Todo incluido.</h2>
     </div>
@@ -151,7 +151,7 @@ const tools = [
   </section>
 
   <!-- ==================== S4: Quiénes somos ==================== -->
-  <section class="section bg-niebla">
+  <section class="section bg-gray">
     <div class="section-inner text-center">
       <h2>¿Quiénes somos?</h2>
       <p class="equipo-intro">
@@ -186,7 +186,7 @@ const tools = [
   </section>
 
   <!-- ==================== S4b: Herramientas ==================== -->
-  <section class="section bg-niebla">
+  <section class="section bg-gray">
     <div class="section-inner text-center">
       <h2>Herramientas que aprenderás a usar</h2>
       <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
@@ -203,7 +203,7 @@ const tools = [
   </section>
 
   <!-- ==================== S5: Programa ==================== -->
-  <section class="section bg-niebla">
+  <section class="section bg-white">
     <div class="section-inner text-center">
       <p class="section-label">Programa</p>
       <h2>4 días. De "no me entero" a "ya lo tengo claro".</h2>
@@ -229,7 +229,7 @@ const tools = [
   </section>
 
   <!-- ==================== S7: Precio ==================== -->
-  <section class="section bg-niebla">
+  <section class="section bg-gray">
     <div class="section-inner text-center">
       <p class="section-label">Precio</p>
       <h2>Sin letra pequeña.</h2>
@@ -417,6 +417,10 @@ const tools = [
     .hero-response-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
   }
 
+  /* ===== Section backgrounds ===== */
+  .bg-white { background: #ffffff; }
+  .bg-gray  { background: #f5f5f5; }
+
   /* ===== Full-width Photo ===== */
   .fullwidth-photo {
     width: 100%;
@@ -438,33 +442,33 @@ const tools = [
     max-width: 900px;
     margin: 3rem auto 0;
     padding: 0 1.5rem;
-    background: rgba(107,155,122,0.15);
-    border: 1px solid rgba(107,155,122,0.15);
+    background: #e5e5e5;
+    border: 1px solid #e5e5e5;
     border-radius: 12px;
     overflow: hidden;
   }
   .incluye-card {
-    background: var(--crema-calido);
+    background: #ffffff;
     padding: 2rem 1.75rem;
     transition: background 0.15s ease;
   }
   .incluye-card:hover {
-    background: #EDE8DF;
+    background: #fafafa;
   }
   .incluye-icon {
     width: 28px;
     height: 28px;
-    color: var(--verde-bosque);
+    color: #111;
     margin-bottom: 1rem;
   }
   .incluye-card h3 {
     font-size: 1rem;
     margin: 0 0 0.4rem;
-    color: var(--verde-bosque);
+    color: #111;
   }
   .incluye-card p {
     font-size: 0.9rem;
-    color: var(--color-text-secondary);
+    color: #666;
     margin: 0;
     line-height: 1.5;
   }
@@ -510,7 +514,7 @@ const tools = [
   .equipo-info h3 {
     font-size: 1.05rem;
     margin: 0 0 0.35rem;
-    color: var(--verde-bosque);
+    color: #111;
   }
   .equipo-info p {
     font-size: 0.9rem;
@@ -533,21 +537,22 @@ const tools = [
     padding: 0 1.5rem;
   }
   .program-day {
-    border: 1px solid var(--verde-hoja);
+    border: 1px solid #e5e5e5;
     border-radius: 8px;
     padding: 1.75rem;
-    background: rgba(255, 255, 255, 0.6);
+    background: #ffffff;
   }
   .day-label {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--verde-hoja);
+    color: var(--verde-bosque);
     font-weight: 600;
   }
   .program-day h3 {
     margin: 0.5rem 0 0.5rem;
     font-size: 1.15rem;
+    color: #111;
   }
   .program-day p {
     font-size: 0.95rem;
@@ -595,8 +600,8 @@ const tools = [
   }
   .tool-card {
     display: block;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--verde-hoja);
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -605,8 +610,8 @@ const tools = [
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .tool-card:hover {
-    border-color: var(--verde-bosque);
-    box-shadow: 0 2px 12px rgba(45, 90, 61, 0.1);
+    border-color: #999;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
   .tool-icon {
     display: block;
@@ -616,11 +621,11 @@ const tools = [
   .tool-card h3 {
     font-size: 1rem;
     margin: 0 0 0.35rem;
-    color: var(--verde-bosque);
+    color: #111;
   }
   .tool-card p {
     font-size: 0.85rem;
-    color: var(--color-text-secondary);
+    color: #666;
     margin: 0;
     line-height: 1.5;
   }
@@ -663,7 +668,7 @@ const tools = [
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--verde-bosque);
+    color: #111;
     letter-spacing: -0.05em;
     margin: 0 0 0.25rem;
     line-height: 1;
