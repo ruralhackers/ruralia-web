@@ -233,32 +233,6 @@ const tools = [
     </div>
   </section>
 
-  <!-- ==================== S6: Stats ==================== -->
-  <section class="section bg-crema">
-    <div class="stats-row">
-      {stats.map((stat) => (
-        <div class="stat">
-          <span class="stat-num">{stat.num}</span>
-          <span class="stat-label">{stat.label}</span>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <!-- ==================== S7: Para quién (preview) ==================== -->
-  <section class="section bg-niebla">
-    <div class="section-inner text-center">
-      <h2>Para profesionales que no tienen tiempo de investigar IA</h2>
-      <p>
-        Si trabajas con tecnología y sabes que deberías estar usando IA pero no encuentras el momento,
-        esto es para ti. No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
-      </p>
-      <p class="discover-link">
-        <a href="/para-quien/">Descubre si es para ti →</a>
-      </p>
-    </div>
-  </section>
-
   <!-- ==================== S7: Precio ==================== -->
   <section class="section bg-niebla">
     <div class="section-inner text-center">
@@ -656,48 +630,6 @@ const tools = [
     line-height: 1.5;
   }
 
-  /* ===== Stats ===== */
-  .stats-row {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .stat {
-    flex: 1;
-  }
-  .stat-num {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 800;
-    color: var(--verde-bosque);
-    letter-spacing: -0.05em;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-  .stat-label {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    line-height: 1.5;
-  }
-
-  /* ===== For Whom Preview ===== */
-  .discover-link {
-    margin-top: 0.5rem;
-  }
-  .discover-link a {
-    font-weight: 500;
-    font-size: 1.05rem;
-    text-decoration: none;
-  }
-  .discover-link a:hover {
-    text-decoration: underline;
-  }
-
   /* ===== Precio ===== */
   .precio-sub {
     font-size: 0.95rem;
@@ -795,11 +727,6 @@ const tools = [
   @media (max-width: 768px) {
     .program-grid {
       grid-template-columns: 1fr;
-    }
-    .stats-row {
-      flex-direction: column;
-      gap: 2.5rem;
-      padding: 0 1.5rem;
     }
     .cta-final {
       padding: 4rem 1.5rem;
