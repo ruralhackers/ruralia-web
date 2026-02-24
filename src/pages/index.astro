@@ -64,22 +64,43 @@ const tools = [
   description="4 días en Galicia para ponerte al día con IA. Sin investigar. Sin perder más tiempo. Formación práctica, alojamiento y comidas incluidas. 12 plazas."
   keywords={['retiro IA España', 'curso IA inmersivo', 'formación IA Galicia', 'retiro inteligencia artificial', 'curso IA aplicada presencial', 'ponerse al día con IA']}
   schema={schema}
+  hideHeader={true}
 >
-  <!-- ==================== S1: Hero ==================== -->
-  <section class="hero bg-crema">
-    <div class="hero-inner">
-      <p class="hero-badge">Junio 2026 · Anceu Coliving, Pontevedra</p>
-      <Image src={logo} alt="Rural IA" class="hero-logo" height={48} />
-      <h1>Ponte al día con IA en 4 días. Sin investigar. Sin perder más tiempo.</h1>
-      <p class="hero-sub">
-        Retiro inmersivo en Galicia para profesionales que no tienen tiempo de estar al día.
-        Nosotros investigamos por ti — y lo seguimos haciendo cada semana.
-        Vienes 4 días y te vas con todo montado.
-      </p>
-      <div class="hero-cta">
-        <a href="/retiro-ia-galicia/#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
+  <!-- ==================== S1: Hero oscuro (chat AI) ==================== -->
+  <section class="hero-chat">
+    <!-- Nav integrada -->
+    <nav class="hero-nav">
+      <a href="/" class="hero-nav-logo">Rural IA</a>
+      <div class="hero-nav-links">
+        <a href="/retiro-ia-galicia/">El retiro</a>
+        <a href="/para-quien/">Para quién</a>
+        <a href="/blog/">Blog</a>
+        <a href="/faq/">FAQ</a>
       </div>
-      <p class="hero-price">Desde 697 EUR todo incluido</p>
+      <a href="/retiro-ia-galicia/#reservar" class="hero-nav-cta">Reservar</a>
+    </nav>
+
+    <!-- Bloque central: chat -->
+    <div class="hero-chat-inner">
+      <p class="hero-prompt">
+        <span class="hero-prompt-icon">✦</span>
+        ¿Te acuerdas del Rincón del Vago?
+      </p>
+      <div class="hero-response">
+        <p>
+          Todos los que lo usamos recordamos esa sensación de alivio al encontrar
+          el camino corto. Nuestra propuesta te hará sentir lo mismo, pero sin el
+          miedo a que te pillen.
+        </p>
+        <p>
+          En 4 días eliminarás la fatiga por herramientas: separar lo que funciona
+          de lo que es humo.
+        </p>
+        <div class="hero-response-cta">
+          <a href="/retiro-ia-galicia/#reservar" class="btn btn-hero">Reserva tu plaza</a>
+          <span class="hero-response-price">Desde 697 EUR todo incluido · Junio 2026</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -212,52 +233,143 @@ const tools = [
 </Base>
 
 <style>
-  /* ===== Hero ===== */
-  .hero {
-    padding: 5rem 1.5rem 6rem;
-    text-align: center;
+  /* ===== Hero Chat ===== */
+  .hero-chat {
+    min-height: 100vh;
+    background: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
   }
-  .hero-inner {
-    max-width: 780px;
+
+  /* Nav integrada */
+  .hero-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    max-width: var(--wide-width);
     margin: 0 auto;
+    width: 100%;
   }
-  .hero-badge {
-    display: inline-block;
-    font-size: 0.8rem;
-    color: var(--verde-hoja);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-    margin: 0 0 2rem;
-    padding: 0.4rem 1rem;
-    border: 1px solid var(--verde-hoja);
-    border-radius: 100px;
-  }
-  .hero-logo {
-    height: 48px;
-    width: auto;
-    margin: 0 auto 1.5rem;
-  }
-  .hero h1 {
-    margin: 0 0 1.5rem;
-    color: var(--verde-bosque);
-  }
-  .hero-sub {
+  .hero-nav-logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
     font-size: 1.15rem;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    margin: 0 0 2.5rem;
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.04em;
   }
-  .hero-cta {
-    margin-bottom: 1rem;
+  .hero-nav-links {
+    display: flex;
+    gap: 2rem;
   }
-  .hero-price {
-    color: var(--marron-claro);
-    font-size: 0.95rem;
+  .hero-nav-links a {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .hero-nav-links a:hover {
+    color: #fff;
+  }
+  .hero-nav-cta {
+    background: var(--verde-bosque);
+    color: #fff !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+  .hero-nav-cta:hover {
+    background: var(--verde-musgo);
+  }
+
+  /* Chat bloque central */
+  .hero-chat-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1.5rem 6rem;
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  /* Prompt (pregunta del usuario) */
+  .hero-prompt {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.04em;
     margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    line-height: 1.2;
+    align-self: flex-start;
+  }
+  .hero-prompt-icon {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8em;
+  }
+
+  /* Respuesta (burbuja IA) */
+  .hero-response {
+    background: #1A1A1A;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 2rem 2.25rem;
+    width: 100%;
+  }
+  .hero-response p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin: 0 0 1rem;
+  }
+  .hero-response p:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .hero-response-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .btn-hero {
+    background: var(--verde-bosque);
+    color: #fff;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.15s ease;
+    display: inline-block;
+  }
+  .btn-hero:hover {
+    background: var(--verde-musgo);
+    color: #fff;
+  }
+  .hero-response-price {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.9rem;
+  }
+
+  /* Hero mobile */
+  @media (max-width: 768px) {
+    .hero-nav-links { display: none; }
+    .hero-chat-inner { padding: 3rem 1.25rem 4rem; }
+    .hero-response { padding: 1.5rem; }
+    .hero-response-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
   }
 
   /* ===== Full-width Photo ===== */
@@ -433,12 +545,6 @@ const tools = [
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
-    .hero {
-      padding: 3.5rem 1.5rem 4rem;
-    }
-    .hero-sub {
-      font-size: 1.05rem;
-    }
     .program-grid {
       grid-template-columns: 1fr;
     }
@@ -453,8 +559,5 @@ const tools = [
   }
 
   @media (max-width: 480px) {
-    .hero-badge {
-      font-size: 0.7rem;
-    }
   }
 </style>
