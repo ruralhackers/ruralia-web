@@ -492,6 +492,22 @@ const tools = [
     </p>
     <a href="/#pricing" class="btn-cta-final">Reserva tu plaza</a>
   </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section contact-section" id="contacto">
+    <div class="section-inner contact-inner">
+      <h2>¿Tienes dudas? Escríbenos</h2>
+      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contacto" />
+        <div class="contact-row">
+          <input type="text" name="nombre" placeholder="Tu nombre" required class="contact-input" />
+          <input type="email" name="email" placeholder="tu@email.com" required class="contact-input" />
+        </div>
+        <textarea name="mensaje" placeholder="Cuéntanos tu duda o situación..." rows="4" required class="contact-input contact-textarea"></textarea>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
 </Base>
 
 <style>
@@ -1316,6 +1332,26 @@ const tools = [
       gap: 2.5rem;
     }
   }
+
+  /* ============================================================
+     CONTACTO
+  ============================================================ */
+  .contact-inner { max-width: 640px; margin: 0 auto; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-input:focus { border-color: #00a66b; }
+  .contact-textarea { resize: vertical; }
+  @media (max-width: 540px) { .contact-row { grid-template-columns: 1fr; } }
 </style>
 
 <script>
