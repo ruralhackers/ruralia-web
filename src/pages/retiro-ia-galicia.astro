@@ -8,7 +8,7 @@ const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Event',
-    name: 'Rural IA — Retiro de IA aplicada en Galicia',
+    name: 'Rural GPT — Retiro de IA aplicada en Galicia',
     description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.',
     startDate: '2026-06-03',
     endDate: '2026-06-07',
@@ -26,8 +26,8 @@ const schema = [
     },
     organizer: {
       '@type': 'Organization',
-      name: 'Rural IA',
-      url: 'https://ruralia.gal',
+      name: 'Rural GPT',
+      url: 'https://ruralgpt.gal',
     },
     offers: [
       {
@@ -68,8 +68,8 @@ const schema = [
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralia.gal/' },
-      { '@type': 'ListItem', position: 2, name: 'Retiro de IA en Galicia', item: 'https://ruralia.gal/retiro-ia-galicia/' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralgpt.gal/' },
+      { '@type': 'ListItem', position: 2, name: 'Retiro de IA en Galicia', item: 'https://ruralgpt.gal/retiro-ia-galicia/' },
     ],
   },
 ];
@@ -91,7 +91,7 @@ const tools = [
 ---
 
 <Base
-  title="Retiro de IA en Galicia — 4 días, todo incluido | Rural IA"
+  title="Retiro de IA en Galicia — 4 días, todo incluido | Rural GPT"
   description="Ponte al día con IA en 4 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 442 EUR."
   keywords={['retiro IA Galicia', 'curso intensivo IA presencial', 'ponerse al día con IA', 'formación IA todo incluido', 'curso IA Anceu Coliving']}
   schema={schema}
@@ -101,7 +101,7 @@ const tools = [
     <div class="section-inner text-center">
       <h1>Ponte al día con IA en 4 días. Todo incluido.</h1>
       <p class="hero-sub">Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú vienes 4 días a Galicia y te vas con las herramientas de IA configuradas para tu trabajo.</p>
-      <a href="#reservar" class="btn btn-primary btn-lg">Reserva tu plaza</a>
+      <a href="/#pricing" class="btn btn-primary btn-lg">Reserva tu plaza</a>
       <p class="hero-price">Desde <span id="hero-price-from">442</span> EUR todo incluido · 3–7 junio 2026</p>
     </div>
   </section>
@@ -243,7 +243,7 @@ const tools = [
       <p>A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO).</p>
 
       <h2>Quién lo organiza</h2>
-      <p>Rural IA es una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Llevamos años organizando eventos tech en el rural gallego — Hacker Days, residencias creativas, hackathones con participantes de toda Europa.</p>
+      <p>Rural GPT es una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Llevamos años organizando eventos tech en el rural gallego — Hacker Days, residencias creativas, hackathones con participantes de toda Europa.</p>
       <div class="team-inline">
         <p><strong>Agustín Jamardo</strong> — Fundador de Anceu Coliving. Desarrollador, 12+ años en remoto.</p>
         <p><strong>África Rodríguez</strong> — Cofundadora de Rural Hackers. Facilitadora de proyectos europeos (Erasmus+).</p>
@@ -275,7 +275,6 @@ const tools = [
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
             <li>Todas las comidas</li>
-            <li>Materiales y licencias</li>
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
@@ -292,7 +291,6 @@ const tools = [
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
             <li>Todas las comidas</li>
-            <li>Materiales y licencias</li>
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
@@ -330,21 +328,21 @@ const tools = [
     </div>
   </section>
 
-  <!-- Formulario lista de espera -->
+  <!-- Contacto -->
   <section class="section alt" id="reservar">
     <div class="section-inner form-section">
-      <h2>Reserva tu plaza</h2>
-      <p class="form-subtitle">Plazas limitadas. Déjanos tus datos y te avisamos cuando abramos inscripciones.</p>
+      <h2>¿Tienes dudas? Escríbenos</h2>
+      <p class="form-subtitle">¿Tienes alguna pregunta antes de reservar? Te respondemos en menos de 24h.</p>
 
       <form
-        name="waitlist"
+        name="contacto-retiro"
         method="POST"
         action="/gracias/"
         data-netlify="true"
         netlify-honeypot="bot-field"
         class="waitlist-form"
       >
-        <input type="hidden" name="form-name" value="waitlist" />
+        <input type="hidden" name="form-name" value="contacto-retiro" />
         <p class="hidden-field">
           <label>No rellenar: <input name="bot-field" /></label>
         </p>
@@ -360,29 +358,12 @@ const tools = [
         </div>
 
         <div class="form-group">
-          <label for="sector">Sector</label>
-          <select id="sector" name="sector" required>
-            <option value="" disabled selected>¿En qué sector trabajas?</option>
-            <option value="diseno">Diseño</option>
-            <option value="desarrollo">Desarrollo / Programación</option>
-            <option value="servicios">Servicios profesionales</option>
-            <option value="administracion">Administración / Gestoría</option>
-            <option value="marketing">Marketing / Publicidad</option>
-            <option value="agencia">Agencia</option>
-            <option value="consultoria">Consultoría</option>
-            <option value="otro">Otro</option>
-          </select>
+          <label for="mensaje">¿Qué quieres saber?</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
         </div>
 
-        <div class="form-group">
-          <label for="sobre-ti">Cuéntanos más sobre ti</label>
-          <textarea id="sobre-ti" name="sobre-ti" rows="3" placeholder="¿A qué te dedicas? ¿Qué esperas del retiro?"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-lg">Quiero reservar plaza</button>
+        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
       </form>
-
-      <p class="form-note">Solo 12 plazas por edición. Primera edición: 3–7 junio 2026.</p>
     </div>
   </section>
 </Base>

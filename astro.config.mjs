@@ -3,11 +3,11 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ruralia.gal',
+  site: 'https://ruralgpt.gal',
   integrations: [
     sitemap({
       serialize(item) {
-        const url = item.url.replace('https://ruralia.gal', '');
+        const url = item.url.replace('https://ruralgpt.gal', '');
 
         // Exclude utility pages from sitemap
         if (url === '/gracias/' || url === '/404/') {

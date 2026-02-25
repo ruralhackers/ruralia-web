@@ -3,12 +3,14 @@ import { Image } from 'astro:assets';
 import heroPhoto from '../assets/images/ruralia-1.jpg';
 import Base from '../layouts/Base.astro';
 
+const linkCompartida = import.meta.env.PUBLIC_STRIPE_LINK_COMPARTIDA;
+const linkIndividual  = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'ruralGPT',
-  url: 'https://ruralia.gal',
+  url: 'https://ruralgpt.gal',
   description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia.',
   foundingDate: '2026',
   sameAs: [],
@@ -84,13 +86,17 @@ const tools = [
   <!-- ===== NAV ===== -->
   <header class="nav">
     <a href="/" class="nav-logo">ruralGPT</a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="home-nav">
       <a href="/retiro-ia-galicia/">El retiro</a>
       <a href="/para-quien/">Para quién</a>
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
     </nav>
-    <a href="/#reservar" class="nav-cta">Reservar</a>
+    <a href="/#pricing" class="nav-cta">Reservar</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="home-nav">
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <!-- ===== HERO ===== -->
@@ -103,7 +109,7 @@ const tools = [
         <p>Un retiro inmersivo de IA aplicada en Galicia. 4 días, 12 plazas, todo incluido.</p>
         <p class="hero-date">3 – 7 junio 2026 · Anceu Coliving, Pontevedra</p>
       </div>
-      <a href="/#reservar" class="btn-dark">Reserva tu plaza</a>
+      <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
     </div>
     <div class="hero-photo">
       <Image
@@ -195,34 +201,53 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== CONTACTO ===== -->
-  <section class="section contact-section" id="reservar">
-    <h2 class="contact-h">Contacta para más info</h2>
-    <p class="contact-sub">¿Tienes dudas? Escríbenos y te contamos todo.</p>
-    <form
-      name="contacto"
-      method="POST"
-      action="/gracias/"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      class="contact-form"
-    >
-      <input type="hidden" name="form-name" value="contacto" />
-      <p style="display:none"><label>No rellenar: <input name="bot-field" /></label></p>
-      <div class="cf-group">
-        <label for="cf-nombre">Nombre</label>
-        <input type="text" id="cf-nombre" name="nombre" required placeholder="Tu nombre" />
+  <!-- ===== PRICING ===== -->
+  <section class="section" id="pricing">
+    <div class="section-inner pricing-section">
+      <h2>Precio</h2>
+      <p class="pricing-intro">Todo incluido: formación, alojamiento, comidas y comunidad alumni.</p>
+      <div
+        class="pricing-grid"
+        data-prices='[
+          {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
+          {"until":"2026-04-16","label":"Segunda tanda","until_text":"hasta el 15 de abril","discount":"15% de descuento","compartida":537,"individual":677},
+          {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
+        ]'
+      >
+        <div class="price-card" id="card-compartida">
+          <div class="room-title">Habitación compartida</div>
+          <div class="room-subtitle">Compartida con otra persona</div>
+          <span class="price-amount" id="price-compartida">442 EUR</span>
+          <span class="price-tier" id="tier-compartida">Early bird — hasta el 15 de marzo</span>
+          <span class="price-discount" id="discount-compartida">30% de descuento</span>
+          <ul>
+            <li>4 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
+          <a href={linkCompartida} class="btn btn-primary" target="_blank" rel="noopener">Reserva por 100 €</a>
+        </div>
+        <div class="price-card featured" id="card-individual">
+          <div class="room-title">Habitación individual</div>
+          <div class="room-subtitle">Habitación para ti solo</div>
+          <span class="price-amount" id="price-individual">558 EUR</span>
+          <span class="price-tier" id="tier-individual">Early bird — hasta el 15 de marzo</span>
+          <span class="price-discount" id="discount-individual">30% de descuento</span>
+          <ul>
+            <li>4 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
+          <a href={linkIndividual} class="btn btn-gold" target="_blank" rel="noopener">Reserva por 150 €</a>
+        </div>
       </div>
-      <div class="cf-group">
-        <label for="cf-email">Email</label>
-        <input type="email" id="cf-email" name="email" required placeholder="tu@email.com" />
-      </div>
-      <div class="cf-group">
-        <label for="cf-mensaje">¿Qué quieres saber?</label>
-        <textarea id="cf-mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
-      </div>
-      <button type="submit" class="btn-dark">Enviar</button>
-    </form>
+    </div>
   </section>
 
   <!-- ===== EQUIPO ===== -->
@@ -242,7 +267,7 @@ const tools = [
   <section class="cta-final">
     <h2 class="cta-headline">El día 5 vuelves<br/>a tu trabajo.<br/>Pero diferente.</h2>
     <p class="cta-sub">Mismo escritorio. Mismos clientes. Pero con IA integrada en tu flujo de trabajo. 12 plazas. Junio 2026.</p>
-    <a href="/#reservar" class="btn-cta-final">Reserva tu plaza</a>
+    <a href="/#pricing" class="btn-cta-final">Reserva tu plaza</a>
   </section>
 
 </Base>
@@ -314,8 +339,48 @@ const tools = [
   }
   .nav-cta:hover { opacity: 0.75; color: var(--white); }
 
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--black);
+  }
+
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-cta { display: none; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid #e0e0e0;
+      flex-direction: column;
+      padding: 1rem clamp(1.5rem, 5vw, 4rem);
+      gap: 0;
+      z-index: 99;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .nav-links a:last-child { border-bottom: none; }
   }
 
   /* ============================================================
@@ -585,60 +650,47 @@ const tools = [
   }
 
   /* ============================================================
-  /* ============================================================
-     CONTACTO
+     PRICING
   ============================================================ */
-  .contact-section {
+  .pricing-section { text-align: center; }
+  .pricing-intro { color: #666; margin-bottom: 0; }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 680px;
+    margin: 2rem auto;
+  }
+  .price-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
-  .contact-h {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    margin: 0 0 0.5rem;
-    letter-spacing: 0.04em;
-    font-weight: 400;
+  .price-card.featured { background: #000; border-color: #000; color: #fff; }
+  .room-title { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.2rem; }
+  .room-subtitle { font-size: 0.85rem; color: #888; margin-bottom: 1.25rem; }
+  .price-card.featured .room-subtitle { color: rgba(255,255,255,0.55); }
+  .price-amount { display: block; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.2rem; }
+  .price-tier { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; min-height: 1em; }
+  .price-card.featured .price-tier { color: rgba(255,255,255,0.5); }
+  .price-discount { display: block; font-size: 0.85rem; color: #555; font-weight: 500; margin-bottom: 1.5rem; min-height: 1.2em; }
+  .price-card.featured .price-discount { color: rgba(255,255,255,0.7); }
+  .price-card ul { text-align: left; list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
+  .price-card li { padding: 0.3rem 0; color: #555; font-size: 0.9rem; }
+  .price-card.featured li { color: rgba(255,255,255,0.8); }
+  .price-card li::before { content: '✓ '; color: #000; font-weight: 600; }
+  .price-card.featured li::before { color: #fff; }
+  .deposit-note { font-size: 0.8rem; color: #888; margin: 0 0 0.6rem; }
+  .price-card.featured .deposit-note { color: rgba(255,255,255,0.5); }
+  .price-card.featured .btn { background: #fff; color: #000; }
+  .price-card.featured .btn:hover { background: #f0f0f0; }
+  @media (max-width: 600px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
   }
-  .contact-sub {
-    color: var(--gray-text);
-    margin: 0 0 2rem;
-    font-size: 1rem;
-  }
-  .contact-form {
-    max-width: 480px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  .cf-group {
-    margin-bottom: 1.25rem;
-  }
-  .cf-group label {
-    display: block;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--gray-text);
-    margin-bottom: 0.4rem;
-  }
-  .cf-group input,
-  .cf-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 0.95rem;
-    font-family: var(--font-body);
-    border: 1px solid #d1d5db;
-    border-radius: 4px;
-    background: var(--white);
-    color: var(--black);
-    transition: border-color 0.15s;
-    box-sizing: border-box;
-  }
-  .cf-group input:focus,
-  .cf-group textarea:focus {
-    outline: none;
-    border-color: var(--black);
-  }
-  .cf-group textarea { resize: vertical; }
-  .contact-form .btn-dark { width: 100%; text-align: center; margin-top: 0.5rem; }
 
   /* ============================================================
      BUTTONS
@@ -806,4 +858,40 @@ const tools = [
   }
   .btn-cta-final:hover { opacity: 0.85; color: var(--black); }
 </style>
+
+<script>
+  (function () {
+    const schedule = [
+      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
+      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
+      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
+    ];
+    const now = new Date();
+    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
+    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set('price-compartida', tier.compartida + ' EUR');
+    set('price-individual', tier.individual + ' EUR');
+    set('tier-compartida', tierText);
+    set('tier-individual', tierText);
+    set('discount-compartida', tier.discount);
+    set('discount-individual', tier.discount);
+  })();
+
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('home-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target as Node) && !nav.contains(e.target as Node)) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
 
