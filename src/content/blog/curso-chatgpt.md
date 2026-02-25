@@ -2,7 +2,7 @@
 title: "Curso de ChatGPT gratis: guía práctica para profesionales (2026)"
 description: "Aprende a usar ChatGPT como un profesional. Guía práctica con prompts avanzados, casos de uso reales y trucos que no encontrarás en otros cursos. Actualizada 2026."
 date: "2025-12-16"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["curso chatgpt", "curso chat gpt", "aprender chatgpt", "chatgpt para profesionales", "prompts chatgpt"]
 ---
 
@@ -342,7 +342,7 @@ Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesiona
 
 La realidad es que leer un curso de ChatGPT (por muy bueno que sea) no es lo mismo que practicar durante horas con feedback en tiempo real. Los artículos como este te dan la teoría y algunos prompts útiles, pero la verdadera transformación ocurre cuando te sientas, abres tu portátil y trabajas en tus proyectos reales con alguien al lado que te corrige y te enseña la siguiente técnica.
 
-Es exactamente lo que hacemos en el **[retiro de IA de Rural IA](/retiro-ia-galicia/)**: 4 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
+Es exactamente lo que hacemos en el **[retiro de IA de Rural GPT](/retiro-ia-galicia/)**: 4 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
 
 Lo que cubrimos en el retiro va mucho más allá de lo que puede cubrir un artículo:
 

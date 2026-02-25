@@ -1,9 +1,9 @@
 ---
 title: "Por qué hemos montado un retiro de IA en un pueblo gallego"
-description: "La historia de cómo nació Rural IA: un retiro inmersivo de IA aplicada en Anceu Coliving, en el rural de Galicia. Por qué este formato, por qué aquí, y por qué ahora."
+description: "La historia de cómo nació Rural GPT: un retiro inmersivo de IA aplicada en Anceu Coliving, en el rural de Galicia. Por qué este formato, por qué aquí, y por qué ahora."
 date: "2026-01-07"
-author: "Rural IA"
-keywords: ["retiro IA rural", "formación IA Galicia", "Rural IA"]
+author: "Rural GPT"
+keywords: ["retiro IA rural", "formación IA Galicia", "Rural GPT"]
 ---
 
 ## La IA está en todas partes. La formación, no.

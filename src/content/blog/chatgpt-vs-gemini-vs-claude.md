@@ -2,7 +2,7 @@
 title: "ChatGPT vs Gemini vs Claude: cuál usar en 2026 (comparativa real)"
 description: "Comparativa honesta entre ChatGPT, Gemini y Claude. Cuál es mejor para cada tarea: redacción, código, análisis, automatización. Con ejemplos reales."
 date: "2026-01-21"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["chatgpt vs gemini", "chat gpt gemini", "chatgpt vs claude", "gemini vs claude", "mejor ia 2026", "comparativa ia"]
 ---
 
@@ -215,7 +215,7 @@ Con la IA pasa lo mismo. Y la diferencia en productividad entre alguien que usa 
 
 Una cosa es leer un artículo comparativo. Otra muy diferente es sentarte delante de tu portátil, con un grupo reducido de profesionales, y dedicar cuatro días completos a aprender a usar ChatGPT, Gemini y Claude de forma práctica.
 
-Eso es exactamente lo que hacemos en el **[retiro Rural IA en Galicia](/retiro-ia-galicia/)**.
+Eso es exactamente lo que hacemos en el **[retiro Rural GPT en Galicia](/retiro-ia-galicia/)**.
 
 El primer día del retiro lo dedicamos precisamente a esto: entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
 

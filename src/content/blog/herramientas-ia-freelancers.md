@@ -2,7 +2,7 @@
 title: "Herramientas de IA para freelancers: las 15 que uso a diario (2026)"
 description: "Las 15 mejores herramientas de IA para freelancers y profesionales independientes. Probadas en trabajo real: redacción, código, automatización, diseño y productividad."
 date: "2026-02-11"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["herramientas ia", "herramientas inteligencia artificial", "ia para freelancers", "mejores herramientas ia 2026", "herramientas ia trabajo"]
 ---
 
@@ -182,6 +182,6 @@ Lo que marca la diferencia es:
 2. **Saber escribir buenos prompts.** La diferencia entre un resultado mediocre y uno excelente está en cómo le pides las cosas a la IA.
 3. **Integrar la IA en tu flujo real.** No como experimento, sino como parte de tu proceso de trabajo diario.
 
-Esas tres cosas son exactamente lo que hacemos en el [retiro Rural IA en Galicia](/retiro-ia-galicia/). En 4 días, configuras tu stack de herramientas de IA, aprendes a usarlas de verdad con tu propio trabajo, y te vas con un sistema funcionando. 12 plazas por edición, todo incluido.
+Esas tres cosas son exactamente lo que hacemos en el [retiro Rural GPT en Galicia](/retiro-ia-galicia/). En 4 días, configuras tu stack de herramientas de IA, aprendes a usarlas de verdad con tu propio trabajo, y te vas con un sistema funcionando. 12 plazas por edición, todo incluido.
 
 [Mira el programa completo](/retiro-ia-galicia/) o [descubre si es para ti](/para-quien/).

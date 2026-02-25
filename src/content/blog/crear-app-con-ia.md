@@ -2,7 +2,7 @@
 title: "Cómo crear una app con IA sin saber programar: guía paso a paso"
 description: "Crea tu primera aplicación usando IA con Cursor, Bolt y v0. Sin experiencia en programación. De la idea al prototipo funcional en una tarde."
 date: "2026-02-18"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["crear app con ia", "crear aplicación inteligencia artificial", "app sin programar", "cursor ai", "bolt ai", "v0 vercel"]
 ---
 
@@ -56,7 +56,7 @@ No genera aplicaciones completas. Genera piezas que puedes ensamblar. Piensa en 
 
 Si es tu primera vez, empieza por **Bolt**. Es la curva de aprendizaje más suave y los resultados son inmediatos. Cuando quieras más control, pasa a **Cursor**. Y usa **v0** como complemento para componentes puntuales.
 
-Si quieres aprender las tres en profundidad con alguien guiándote, el [Día 3 del retiro Rural IA](/retiro-ia-galicia/) está dedicado exactamente a esto.
+Si quieres aprender las tres en profundidad con alguien guiándote, el [Día 3 del retiro Rural GPT](/retiro-ia-galicia/) está dedicado exactamente a esto.
 
 ## Tutorial: tu primera app con Cursor AI
 
@@ -363,7 +363,7 @@ Esto es normal. La ventaja de construir con IA es que iterar es rápido y barato
 
 Si has llegado hasta aquí y has probado las herramientas, probablemente has experimentado dos cosas: la emoción de ver tu idea tomar forma y la frustración de no saber cómo resolver ciertos problemas.
 
-Esa es exactamente la experiencia que nos llevó a diseñar el [retiro Rural IA en Galicia](/retiro-ia-galicia/). El **Día 3 del retiro está dedicado íntegramente a construir con IA**: Cursor, Bolt y v0, las tres herramientas que has visto en este artículo.
+Esa es exactamente la experiencia que nos llevó a diseñar el [retiro Rural GPT en Galicia](/retiro-ia-galicia/). El **Día 3 del retiro está dedicado íntegramente a construir con IA**: Cursor, Bolt y v0, las tres herramientas que has visto en este artículo.
 
 Pero no es un tutorial que sigues solo delante de la pantalla. Es construcción guiada con soporte en tiempo real:
 

@@ -2,7 +2,7 @@
 title: "Becas FUNDAE 2026: cómo financiar tu formación en IA"
 description: "Guía completa sobre las bonificaciones FUNDAE para formación en inteligencia artificial. Quién puede acceder, cuánto cubren, y por qué no siempre son la mejor opción."
 date: "2026-01-14"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["becas fundae", "fundae formación", "bonificación fundae", "formación bonificada ia", "crédito formación empresas"]
 ---
 
@@ -169,7 +169,7 @@ Hay un motivo por el que los formatos inmersivos funcionan mejor que los cursos 
 
 Lo que cuesta 0 euros pero no cambias nada es más caro que lo que cuesta 800 euros y transforma tu forma de trabajar. El coste de oportunidad de NO formarte en IA es mucho mayor que el precio de cualquier curso.
 
-## Lo que hacemos en Rural IA
+## Lo que hacemos en Rural GPT
 
 Nuestro [retiro de IA en Galicia](/retiro-ia-galicia/) no es bonificable vía FUNDAE. Y es una decisión consciente.
 

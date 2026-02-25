@@ -2,7 +2,7 @@
 title: "Automatizaciones con IA: 10 flujos que todo freelancer necesita"
 description: "Configura automatizaciones con IA usando Make y n8n. 10 flujos de trabajo listos para copiar: email, contenido, datos, facturación y más."
 date: "2026-02-04"
-author: "Rural IA"
+author: "Rural GPT"
 keywords: ["automatizaciones", "automatizaciones con ia", "automatizar con ia", "make automatización", "n8n automatización", "flujos de trabajo ia"]
 ---
 
@@ -187,13 +187,13 @@ Antes de que te lances a automatizar todo lo que se mueva, un par de avisos basa
 
 **Documenta tus flujos.** Ponles nombres descriptivos a los escenarios. Añade notas en los módulos que expliquen qué hace cada uno y por qué. Dentro de tres meses no vas a recordar por qué pusiste ese filtro o ese condicional. Y si algún día otra persona tiene que mantener tus automatizaciones, te lo va a agradecer.
 
-## El día 2 del retiro Rural IA es solo automatización
+## El día 2 del retiro Rural GPT es solo automatización
 
 Todo lo que has leído aquí se puede hacer por tu cuenta, desde casa, con paciencia y tutoriales. Lo hemos escrito para que sea así de accionable.
 
 Pero hay una diferencia entre montar una automatización siguiendo un tutorial y montar tu sistema completo de automatizaciones con alguien al lado que te guía, te resuelve los bloqueos en tiempo real y te ayuda a decidir qué tiene sentido automatizar en tu caso concreto.
 
-En el [retiro Rural IA en Galicia](/retiro-ia-galicia/) dedicamos 4 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/blog/herramientas-ia-freelancers/). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
+En el [retiro Rural GPT en Galicia](/retiro-ia-galicia/) dedicamos 4 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/blog/herramientas-ia-freelancers/). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
 
 El retiro incluye alojamiento, comidas y grupos de 12 personas máximo. No es teoría. Te vas con herramientas funcionando en tu trabajo.
 
