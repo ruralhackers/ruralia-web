@@ -105,12 +105,15 @@ const tools = [
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-top">
-      <h1 class="hero-headline">LA IA AVANZA.<br/><span class="hero-headline-q">¿TU TRABAJO TAMBIÉN?</span></h1>
+      <h1 class="hero-headline">
+        <span id="hero-line1"></span><br/>
+        <span class="hero-headline-q" id="hero-line2"></span>
+      </h1>
     </div>
     <div class="hero-sub">
       <div class="hero-sub-text">
-        <p>4 días en Galicia para integrar IA en tu flujo de trabajo real. 12 plazas. Todo incluido.</p>
-        <p class="hero-date">3 – 7 junio 2026 · <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>, Pontevedra</p>
+        <p>La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Por eso esta residencia es un sprint para integrar IA en tu flujo de trabajo real. Sólo 12 profesionales podrán participar y la experiencia es un todo incluido desde la formación hasta el alojamiento, comida y ocio.</p>
+        <p class="hero-date">3–7 de junio 2026 · <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a></p>
       </div>
       <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
     </div>
@@ -1095,6 +1098,43 @@ const tools = [
         setInterval(tick, 1000);
       }
     }
+  })();
+
+  // Typing animation hero headline
+  (function() {
+    const line1El = document.getElementById('hero-line1');
+    const line2El = document.getElementById('hero-line2');
+    if (!line1El || !line2El) return;
+
+    function typeText(el, text, speed, done) {
+      el.textContent = '';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent += text[i++];
+        if (i >= text.length) { clearInterval(iv); if (done) done(); }
+      }, speed);
+    }
+
+    function eraseText(el, speed, done) {
+      const iv = setInterval(() => {
+        el.textContent = el.textContent.slice(0, -1);
+        if (!el.textContent) { clearInterval(iv); if (done) done(); }
+      }, speed);
+    }
+
+    typeText(line1El, '¿LA IA AVANZA', 55, () => {
+      typeText(line2El, '¿Y TU TRABAJO TAMBIÉN?', 55, () => {
+        setTimeout(() => {
+          eraseText(line2El, 30, () => {
+            eraseText(line1El, 30, () => {
+              typeText(line1El, 'LA IA AVANZA.', 55, () => {
+                typeText(line2El, 'TU TRABAJO TAMBIÉN.', 55, null);
+              });
+            });
+          });
+        }, 1800);
+      });
+    });
   })();
 
   const toggle = document.querySelector('.nav-toggle');
