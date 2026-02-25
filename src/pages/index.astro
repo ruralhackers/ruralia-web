@@ -44,9 +44,9 @@ const days = [
 ];
 
 const team = [
-  { name: 'Agustín Jamardo', bio: 'Fundador de Anceu Coliving. Desarrollador, 12+ años en remoto.' },
-  { name: 'África Rodríguez', bio: 'Cofundadora de Rural Hackers. Facilitadora de proyectos europeos (Erasmus+).' },
-  { name: 'Nacho Márquez', bio: 'Cofundador de Rural Hackers. Director de Noites Abertas. 20+ proyectos internacionales.' },
+  { name: 'Agustín Jamardo', bio: 'Fundador de <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Desarrollador, 12+ años en remoto.' },
+  { name: 'África Rodríguez', bio: 'Cofundadora de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Facilitadora de proyectos europeos (Erasmus+).' },
+  { name: 'Nacho Márquez', bio: 'Cofundador de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Director de Noites Abertas. 20+ proyectos internacionales.' },
 ];
 
 const inclusions = [
@@ -107,7 +107,7 @@ const tools = [
     <div class="hero-sub">
       <div class="hero-sub-text">
         <p>4 días en Galicia para integrar IA en tu flujo de trabajo real. 12 plazas. Todo incluido.</p>
-        <p class="hero-date">3 – 7 junio 2026 · Anceu Coliving, Pontevedra</p>
+        <p class="hero-date">3 – 7 junio 2026 · <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>, Pontevedra</p>
       </div>
       <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
     </div>
@@ -204,21 +204,25 @@ const tools = [
     <p class="tag tag-italic">La arquitectura del retiro</p>
     <div class="arch-grid">
       <div class="arch-main">
-        <Image
-          src={heroPhoto}
-          alt="Gastronomía gallega en Anceu"
-          widths={[800, 1200]}
-          sizes="(max-width: 768px) 100vw, 60vw"
+        <img
+          src="/images/room-102.webp"
+          alt="Habitación 102 en Anceu Coliving"
+          width="800"
+          height="600"
           loading="lazy"
         />
       </div>
       <div class="arch-side">
         <div class="arch-card">
-          <p class="arch-card-title">Alojamiento</p>
-          <p class="arch-card-desc">3 noches en Anceu Coliving. Habitación privada incluida.</p>
+          <p class="arch-card-title">Habitación individual</p>
+          <p class="arch-card-desc">Para ti solo. 3 noches incluidas en el precio.</p>
+        </div>
+        <div class="arch-card">
+          <p class="arch-card-title">Habitación compartida</p>
+          <p class="arch-card-desc">Máx. 2 personas. Opción más económica.</p>
         </div>
         <div class="arch-card arch-card-dark">
-          <p class="arch-card-title">Anceu Coliving</p>
+          <a class="arch-card-title arch-card-link" href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving ↗</a>
           <p class="arch-card-desc">Pontevedra, Galicia. 1 Gbps. A 30 min de la ciudad.</p>
         </div>
       </div>
@@ -306,7 +310,7 @@ const tools = [
         <div class="team-card">
           <div class="team-photo"></div>
           <p class="team-name">{person.name}</p>
-          <p class="team-bio">{person.bio}</p>
+          <p class="team-bio" set:html={person.bio} />
         </div>
       ))}
     </div>
@@ -660,7 +664,7 @@ const tools = [
   }
   .arch-side {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1px;
     background: var(--gray-mid);
   }
@@ -682,6 +686,13 @@ const tools = [
     color: var(--gray-text);
     font-weight: 600;
   }
+  .arch-card-link {
+    text-decoration: none;
+    display: block;
+  }
+  .arch-card-link:hover {
+    text-decoration: underline;
+  }
   .arch-card-dark .arch-card-title {
     color: rgba(255,255,255,0.5);
   }
@@ -698,7 +709,7 @@ const tools = [
   @media (max-width: 768px) {
     .arch-grid { grid-template-columns: 1fr; }
     .arch-main img { height: 260px; }
-    .arch-side { grid-template-rows: auto auto; }
+    .arch-side { grid-template-rows: auto auto auto; }
   }
 
   /* ============================================================
