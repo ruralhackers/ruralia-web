@@ -10,7 +10,9 @@ const nav = [
 ---
 
 <header class="header">
-  <a href="/" class="header-logo">ruralGPT</a>
+  <a href="/" class="header-logo">
+    <img src="/images/logo-ruralgpt.png" alt="ruralGPT" class="header-logo-img" />
+  </a>
   <nav class="header-nav" id="header-nav">
     {nav.map(({ href, label }) => (
       <a href={href} class:list={[{ active: currentPath === href }]}>{label}</a>
@@ -36,14 +38,16 @@ const nav = [
     border-bottom: 1px solid #e0e0e0;
   }
   .header-logo {
-    font-family: 'Bebas Neue', 'Inter', sans-serif;
-    font-size: 1.4rem;
-    color: #000000;
     text-decoration: none;
-    letter-spacing: 0.02em;
-    line-height: 1;
     margin-right: auto;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .header-logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
   }
   .header-nav {
     display: flex;

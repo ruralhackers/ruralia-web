@@ -85,7 +85,9 @@ const tools = [
 
   <!-- ===== NAV ===== -->
   <header class="nav">
-    <a href="/" class="nav-logo">ruralGPT</a>
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-ruralgpt.png" alt="ruralGPT" style="height:32px;width:auto;display:block;" />
+    </a>
     <nav class="nav-links" id="home-nav">
       <a href="/retiro-ia-galicia/">El retiro</a>
       <a href="/para-quien/">Para quién</a>
@@ -282,6 +284,11 @@ const tools = [
           <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
           <a href={linkIndividual} class="btn btn-gold" target="_blank" rel="noopener">Reserva por 150 €</a>
         </div>
+      </div>
+      <div id="pricing-countdown" style="display:none;" class="countdown-banner">
+        <span class="countdown-label" id="countdown-label"></span>
+        <span class="countdown-timer" id="countdown-timer"></span>
+        <span class="countdown-next" id="countdown-next"></span>
       </div>
     </div>
   </section>
@@ -754,6 +761,26 @@ const tools = [
   @media (max-width: 600px) {
     .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
   }
+  .countdown-banner {
+    max-width: 680px;
+    margin: 1rem auto 0;
+    padding: 1rem 1.5rem;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  .countdown-label { color: #555; }
+  .countdown-timer { font-weight: 700; font-size: 1.05rem; color: #000; font-variant-numeric: tabular-nums; }
+  .countdown-next { color: #555; }
+  @media (max-width: 600px) {
+    .countdown-banner { flex-direction: column; text-align: center; gap: 0.3rem; }
+  }
 
   /* ============================================================
      BUTTONS
@@ -1034,6 +1061,39 @@ const tools = [
     set('tier-individual', tierText);
     set('discount-compartida', tier.discount);
     set('discount-individual', tier.discount);
+
+    // Countdown
+    const countdownPhases = [
+      { deadline: new Date('2026-03-16T00:00:00'), next: { compartida: 537, individual: 677 } },
+      { deadline: new Date('2026-04-16T00:00:00'), next: { compartida: 632, individual: 797 } },
+    ];
+    const phase = countdownPhases.find((p) => now < p.deadline);
+    if (phase) {
+      const banner = document.getElementById('pricing-countdown');
+      const labelEl = document.getElementById('countdown-label');
+      const timerEl = document.getElementById('countdown-timer');
+      const nextEl = document.getElementById('countdown-next');
+      if (banner && labelEl && timerEl && nextEl) {
+        banner.style.display = 'flex';
+        const deadlineDate = phase.deadline;
+        const deadlineDay = deadlineDate.getDate() - 1;
+        const deadlineMonth = deadlineDate.toLocaleString('es', { month: 'long' });
+        labelEl.textContent = `⏳ El precio sube el ${deadlineDay} de ${deadlineMonth} —`;
+        nextEl.textContent = `Próximo precio: ${phase.next.compartida} € / ${phase.next.individual} €`;
+        function pad(n: number) { return String(n).padStart(2, '0'); }
+        function tick() {
+          const diff = deadlineDate.getTime() - Date.now();
+          if (diff <= 0) { banner.style.display = 'none'; return; }
+          const d = Math.floor(diff / 86400000);
+          const h = Math.floor((diff % 86400000) / 3600000);
+          const m = Math.floor((diff % 3600000) / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          timerEl.textContent = d > 0 ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s` : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+        }
+        tick();
+        setInterval(tick, 1000);
+      }
+    }
   })();
 
   const toggle = document.querySelector('.nav-toggle');
