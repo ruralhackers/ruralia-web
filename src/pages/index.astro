@@ -102,11 +102,11 @@ const tools = [
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-top">
-      <h1 class="hero-headline">¿TE ACUERDAS DEL RINCÓN DEL VAGO?</h1>
+      <h1 class="hero-headline">LA IA AVANZA.<br/><span class="hero-headline-q">¿TU TRABAJO, TAMBIÉN?</span></h1>
     </div>
     <div class="hero-sub">
       <div class="hero-sub-text">
-        <p>Un retiro inmersivo de IA aplicada en Galicia. 4 días, 12 plazas, todo incluido.</p>
+        <p>4 días en Galicia para integrar IA en tu flujo de trabajo real. 12 plazas. Todo incluido.</p>
         <p class="hero-date">3 – 7 junio 2026 · Anceu Coliving, Pontevedra</p>
       </div>
       <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
@@ -127,15 +127,15 @@ const tools = [
   <section class="section noise">
     <div class="noise-grid">
       <div class="noise-left">
-        <p class="tag">El ruido</p>
-        <p>Cada semana salen 3 herramientas de IA nuevas. Los profesionales no tienen tiempo de probarlas. La brecha entre lo que saben y lo que deberían saber crece. No es falta de capacidad — es falta de horas.</p>
+        <p class="tag">Qué es ruralGPT</p>
+        <p>Un retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos de 12 personas.</p>
       </div>
       <div class="noise-right">
-        <p class="noise-stmt">Todos los que usamos el Rincón del Vago recordamos esa sensación de alivio al encontrar el camino corto.</p>
+        <p class="noise-stmt">No es un curso online. No es teoría. No es un máster de meses.</p>
         <hr class="noise-rule" />
-        <p class="noise-stmt">Nuestra propuesta te hará sentir lo mismo, pero sin el miedo a que te pillen.</p>
+        <p class="noise-stmt">Es trabajo real con herramientas reales aplicadas a tu trabajo.</p>
         <hr class="noise-rule" />
-        <p class="noise-stmt">En 4 días eliminarás la fatiga por herramientas: separar lo que funciona de lo que es humo.</p>
+        <p class="noise-stmt">Llegas con dudas. Sales con tu stack configurado.</p>
       </div>
     </div>
   </section>
@@ -221,6 +221,31 @@ const tools = [
           <p class="arch-card-title">Anceu Coliving</p>
           <p class="arch-card-desc">Pontevedra, Galicia. 1 Gbps. A 30 min de la ciudad.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <p class="tag">Lo que dicen los participantes</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">"Llegué sin saber por dónde empezar y salí con mi stack configurado y funcionando. En cuatro días hice más que en meses intentando aprender por mi cuenta."</p>
+        <p class="testi-name">Laura M.</p>
+        <p class="testi-role">Diseñadora gráfica freelance</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">"No esperaba que fuera tan práctico. Cada ejercicio lo aplicaba directamente a mis proyectos reales. Volvería sin dudarlo."</p>
+        <p class="testi-name">Carlos P.</p>
+        <p class="testi-role">Consultor de marketing digital</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">"El entorno lo cambia todo. Sin distracciones, con gente con las mismas dudas que tú. En cuatro días entiendes la IA de otra forma."</p>
+        <p class="testi-name">Ana R.</p>
+        <p class="testi-role">Gestora administrativa</p>
       </div>
     </div>
   </section>
@@ -423,6 +448,9 @@ const tools = [
     letter-spacing: 0.01em;
     color: var(--black);
     margin: 0;
+  }
+  .hero-headline-q {
+    color: var(--gray-text);
   }
   .hero-sub {
     display: flex;
@@ -839,6 +867,49 @@ const tools = [
   }
   @media (max-width: 480px) {
     .tools-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     TESTIMONIALS
+  ============================================================ */
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  .testi-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .testi-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    border: 1px solid var(--gray-mid);
+    flex-shrink: 0;
+  }
+  .testi-quote {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    line-height: 1.7;
+    margin: 0;
+    font-style: italic;
+  }
+  .testi-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .testi-role {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    .testi-grid { grid-template-columns: 1fr; }
   }
 
   /* ============================================================
