@@ -3,6 +3,7 @@ import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
 
 interface Props {
   title: string;
@@ -47,6 +48,7 @@ const { hideHeader, ...props } = Astro.props;
     </main>
     <Footer />
     <CookieBanner />
+    <NewsletterPopup />
   </body>
 </html>
 
