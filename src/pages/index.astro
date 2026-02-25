@@ -137,7 +137,7 @@ const tools = [
     <div class="noise-grid">
       <div class="noise-left">
         <p class="tag">Qué es ruralGPT</p>
-        <p>Un retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos de 12 personas.</p>
+        <p>Una experiencia inmersiva de IA aplicada para profesionales. 4 días en Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos de 12 personas.</p>
       </div>
       <div class="noise-right">
         <p class="noise-stmt">No es un curso online. No es teoría. No es un máster de meses.</p>
@@ -151,7 +151,8 @@ const tools = [
 
   <!-- ===== PROTOCOLO 4 DÍAS ===== -->
   <section class="section protocol">
-    <h2 class="protocol-h">El protocolo de 4 días</h2>
+    <h2 class="protocol-h">No dejes que el ritmo de la tecnología te deje fuera del mercado.</h2>
+    <p class="protocol-intro">Esto es lo que haremos en 4 días para que actualices tu stack profesional y recuperes el control de tu carrera con IA aplicada de verdad.</p>
     <div class="protocol-grid">
       {days.map((day) => (
         <div class="protocol-card">
@@ -193,7 +194,7 @@ const tools = [
 
   <!-- ===== ARQUITECTURA DEL RETIRO ===== -->
   <section class="section arch">
-    <p class="tag tag-italic">La arquitectura del retiro</p>
+    <p class="tag tag-italic">Dónde vivirás esta experiencia</p>
     <div class="arch-grid">
       <div class="arch-main">
         <img
@@ -223,7 +224,7 @@ const tools = [
 
   <!-- ===== TESTIMONIALS ===== -->
   <section class="section testimonials">
-    <p class="tag">Lo que dicen los participantes</p>
+    <p class="tag">Lo que dicen quienes vivieron la experiencia Rural GPT</p>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-photo"></div>
@@ -646,6 +647,13 @@ const tools = [
     color: var(--gray-mid);
     font-weight: 300;
     line-height: 1;
+  }
+  .protocol-intro {
+    text-align: center;
+    color: #666;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
