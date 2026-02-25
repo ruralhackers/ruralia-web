@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import heroPhoto from '../assets/images/ruralia-1.jpg';
 import Base from '../layouts/Base.astro';
 
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -89,7 +90,7 @@ const tools = [
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
     </nav>
-    <a href="/retiro-ia-galicia/#reservar" class="nav-cta">Reservar</a>
+    <a href="/#reservar" class="nav-cta">Reservar</a>
   </header>
 
   <!-- ===== HERO ===== -->
@@ -102,7 +103,7 @@ const tools = [
         <p>Un retiro inmersivo de IA aplicada en Galicia. 4 días, 12 plazas, todo incluido.</p>
         <p class="hero-date">3 – 7 junio 2026 · Anceu Coliving, Pontevedra</p>
       </div>
-      <a href="/retiro-ia-galicia/#reservar" class="btn-dark">Reserva tu plaza</a>
+      <a href="/#reservar" class="btn-dark">Reserva tu plaza</a>
     </div>
     <div class="hero-photo">
       <Image
@@ -194,38 +195,34 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== ADMISIÓN ===== -->
-  <section class="section admission">
-    <h2 class="admission-h">Admisión</h2>
-    <div
-      class="admission-grid"
-      data-prices='[
-        {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
-        {"until":"2026-04-16","label":"Segunda tanda","until_text":"hasta el 15 de abril","discount":"15% de descuento","compartida":537,"individual":677},
-        {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
-      ]'
+  <!-- ===== CONTACTO ===== -->
+  <section class="section contact-section" id="reservar">
+    <h2 class="contact-h">Contacta para más info</h2>
+    <p class="contact-sub">¿Tienes dudas? Escríbenos y te contamos todo.</p>
+    <form
+      name="contacto"
+      method="POST"
+      action="/gracias/"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="contact-form"
     >
-      <div class="admission-card">
-        <p class="admission-room">Habitación compartida</p>
-        <p class="admission-window" id="home-tier-compartida">Early bird — hasta el 15 de marzo</p>
-        <p class="admission-price" id="home-price-compartida">442 EUR</p>
-        <p class="admission-discount" id="home-discount-compartida">30% de descuento</p>
-        <ul class="admission-list">
-          {inclusions.map((item) => <li>{item}</li>)}
-        </ul>
-        <a href="/retiro-ia-galicia/#reservar" class="btn-outline">Reservar plaza</a>
+      <input type="hidden" name="form-name" value="contacto" />
+      <p style="display:none"><label>No rellenar: <input name="bot-field" /></label></p>
+      <div class="cf-group">
+        <label for="cf-nombre">Nombre</label>
+        <input type="text" id="cf-nombre" name="nombre" required placeholder="Tu nombre" />
       </div>
-      <div class="admission-card admission-featured">
-        <p class="admission-room">Habitación individual</p>
-        <p class="admission-window" id="home-tier-individual">Early bird — hasta el 15 de marzo</p>
-        <p class="admission-price" id="home-price-individual">558 EUR</p>
-        <p class="admission-discount" id="home-discount-individual">30% de descuento</p>
-        <ul class="admission-list">
-          {inclusions.map((item) => <li>{item}</li>)}
-        </ul>
-        <a href="/retiro-ia-galicia/#reservar" class="btn-white">Reservar plaza</a>
+      <div class="cf-group">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" required placeholder="tu@email.com" />
       </div>
-    </div>
+      <div class="cf-group">
+        <label for="cf-mensaje">¿Qué quieres saber?</label>
+        <textarea id="cf-mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
+      </div>
+      <button type="submit" class="btn-dark">Enviar</button>
+    </form>
   </section>
 
   <!-- ===== EQUIPO ===== -->
@@ -245,7 +242,7 @@ const tools = [
   <section class="cta-final">
     <h2 class="cta-headline">El día 5 vuelves<br/>a tu trabajo.<br/>Pero diferente.</h2>
     <p class="cta-sub">Mismo escritorio. Mismos clientes. Pero con IA integrada en tu flujo de trabajo. 12 plazas. Junio 2026.</p>
-    <a href="/retiro-ia-galicia/#reservar" class="btn-cta-final">Reserva tu plaza</a>
+    <a href="/#reservar" class="btn-cta-final">Reserva tu plaza</a>
   </section>
 
 </Base>
@@ -588,108 +585,60 @@ const tools = [
   }
 
   /* ============================================================
-     ADMISIÓN
+  /* ============================================================
+     CONTACTO
   ============================================================ */
-  .admission {
-    background: var(--gray-light);
-  }
-  .admission-h {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3.25rem);
+  .contact-section {
     text-align: center;
-    margin: 0 0 3rem;
+  }
+  .contact-h {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0 0.5rem;
     letter-spacing: 0.04em;
     font-weight: 400;
   }
-  .admission-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--gray-mid);
-    border: 1px solid var(--gray-mid);
-  }
-  .admission-card {
-    background: var(--white);
-    padding: 2.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .admission-featured {
-    background: var(--black);
-  }
-  .admission-room {
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--black);
-    margin: 0 0 0.5rem;
-  }
-  .admission-featured .admission-room {
-    color: var(--white);
-  }
-  .admission-window {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  .contact-sub {
     color: var(--gray-text);
-    margin: 0 0 1rem;
-  }
-  .admission-featured .admission-window {
-    color: rgba(255,255,255,0.5);
-  }
-  .admission-price {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    color: var(--black);
-    line-height: 1;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-  }
-  .admission-featured .admission-price {
-    color: var(--white);
-  }
-  .admission-discount {
-    font-size: 0.75rem;
-    color: var(--gray-text);
-    margin: 0 0 1.75rem;
-    min-height: 1rem;
-  }
-  .admission-featured .admission-discount {
-    color: rgba(255,255,255,0.5);
-  }
-  .admission-list {
-    list-style: none;
-    padding: 0;
     margin: 0 0 2rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    font-size: 1rem;
   }
-  .admission-list li {
+  .contact-form {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .cf-group {
+    margin-bottom: 1.25rem;
+  }
+  .cf-group label {
+    display: block;
     font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--gray-text);
-    padding-left: 1rem;
-    position: relative;
-    line-height: 1.4;
+    margin-bottom: 0.4rem;
   }
-  .admission-list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--gray-mid);
+  .cf-group input,
+  .cf-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--black);
+    transition: border-color 0.15s;
+    box-sizing: border-box;
   }
-  .admission-featured .admission-list li {
-    color: rgba(255,255,255,0.65);
+  .cf-group input:focus,
+  .cf-group textarea:focus {
+    outline: none;
+    border-color: var(--black);
   }
-  .admission-featured .admission-list li::before {
-    color: rgba(255,255,255,0.25);
-  }
-
-  @media (max-width: 768px) {
-    .admission-grid { grid-template-columns: 1fr; }
-  }
+  .cf-group textarea { resize: vertical; }
+  .contact-form .btn-dark { width: 100%; text-align: center; margin-top: 0.5rem; }
 
   /* ============================================================
      BUTTONS
@@ -710,36 +659,6 @@ const tools = [
     margin-top: 0.5rem;
   }
   .btn-dark:hover { opacity: 0.75; color: var(--white); }
-
-  .btn-outline {
-    display: block;
-    border: 1px solid var(--gray-mid);
-    color: var(--black);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 0.7rem 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: border-color 0.15s, color 0.15s;
-  }
-  .btn-outline:hover { border-color: var(--black); color: var(--black); }
-
-  .btn-white {
-    display: block;
-    background: var(--white);
-    color: var(--black);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 0.7rem 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: opacity 0.15s;
-  }
-  .btn-white:hover { opacity: 0.85; color: var(--black); }
 
   /* ============================================================
      EQUIPO
@@ -888,25 +807,3 @@ const tools = [
   .btn-cta-final:hover { opacity: 0.85; color: var(--black); }
 </style>
 
-<script>
-  (function () {
-    const schedule = [
-      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
-      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
-      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
-    ];
-
-    const now = new Date();
-    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
-    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
-
-    const set = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
-
-    set('home-price-compartida', tier.compartida + ' EUR');
-    set('home-price-individual', tier.individual + ' EUR');
-    set('home-tier-compartida', tierText);
-    set('home-tier-individual', tierText);
-    set('home-discount-compartida', tier.discount);
-    set('home-discount-individual', tier.discount);
-  })();
-</script>

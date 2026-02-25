@@ -1,6 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 
+const linkCompartida = import.meta.env.PUBLIC_STRIPE_LINK_COMPARTIDA;
+const linkIndividual  = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
+
 const schema = [
   {
     '@context': 'https://schema.org',
@@ -276,7 +279,8 @@ const tools = [
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#reservar" class="btn btn-primary">Reservar plaza</a>
+          <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
+          <a href={linkCompartida} class="btn btn-primary" target="_blank" rel="noopener">Reserva por 100 €</a>
         </div>
         <div class="price-card featured" id="card-individual">
           <div class="room-title">Habitación individual</div>
@@ -292,7 +296,8 @@ const tools = [
             <li>Comunidad alumni</li>
             <li>Sesión follow-up</li>
           </ul>
-          <a href="#reservar" class="btn btn-gold">Reservar plaza</a>
+          <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
+          <a href={linkIndividual} class="btn btn-gold" target="_blank" rel="noopener">Reserva por 150 €</a>
         </div>
       </div>
       <p class="pricing-note">Un bootcamp de IA en Madrid cuesta 2.450–7.000 EUR sin alojamiento ni comidas. <a href="/faq/">¿Más preguntas?</a></p>
@@ -601,6 +606,14 @@ const tools = [
   .price-card.featured .btn:hover {
     background: #f0f0f0;
   }
+  .deposit-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0 0 0.6rem;
+  }
+  .price-card.featured .deposit-note {
+    color: rgba(255,255,255,0.5);
+  }
   @media (max-width: 600px) {
     .pricing-grid {
       grid-template-columns: 1fr;
@@ -802,6 +815,7 @@ const tools = [
 </style>
 
 <script>
+  // ── Precios dinámicos por fecha ────────────────────────────────────────────
   (function () {
     const schedule = [
       { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
@@ -811,9 +825,7 @@ const tools = [
 
     const now = new Date();
     const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
-
     const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
-
     const set = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
 
     set('price-compartida', tier.compartida + ' EUR');
@@ -824,4 +836,5 @@ const tools = [
     set('discount-individual', tier.discount);
     set('hero-price-from', String(tier.compartida));
   })();
+
 </script>

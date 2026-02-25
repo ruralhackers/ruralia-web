@@ -177,7 +177,7 @@ Preferimos diseñar la mejor formación posible — actualizada al día, 100% pr
 
 En 4 días en [Anceu Coliving](/retiro-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
-El precio (desde 628 euros) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
+El precio (desde 442 euros en early bird) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 
 Si tu empresa tiene crédito FUNDAE, úsalo. Hay formaciones bonificables que merecen la pena. Pero si lo que buscas es el mayor impacto posible en el menor tiempo, a veces la mejor inversión es la que haces directamente, sin intermediarios ni burocracia.
 

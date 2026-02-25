@@ -13,6 +13,7 @@ npm-debug.log*
 # Environment
 .env
 .env.*
+!.env.example
 
 # OS
 .DS_Store
@@ -23,3 +24,9 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Local Netlify folder
+.netlify
+
+# Personal notes
+notes.txt
