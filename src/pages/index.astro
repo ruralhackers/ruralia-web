@@ -44,9 +44,9 @@ const days = [
 ];
 
 const team = [
-  { name: 'Agustín Jamardo', bio: 'Fundador de <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Desarrollador, 12+ años en remoto.' },
-  { name: 'África Rodríguez', bio: 'Cofundadora de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Facilitadora de proyectos europeos (Erasmus+).' },
-  { name: 'Nacho Márquez', bio: 'Cofundador de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Director de Noites Abertas. 20+ proyectos internacionales.' },
+  { name: 'Agustín Jamardo', bio: 'Fundador de <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Desarrollador, 12+ años en remoto.', photo: '/images/agus.png' },
+  { name: 'África Rodríguez', bio: 'Cofundadora de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Facilitadora de proyectos europeos (Erasmus+).', photo: '/images/africa.png' },
+  { name: 'Nacho Márquez', bio: 'Cofundador de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a>. Director de Noites Abertas. 20+ proyectos internacionales.', photo: '/images/nacho.png' },
 ];
 
 const inclusions = [
@@ -298,7 +298,7 @@ const tools = [
     <div class="team-grid">
       {team.map((person) => (
         <div class="team-card">
-          <div class="team-photo"></div>
+          <img src={person.photo} alt={person.name} class="team-photo" />
           <p class="team-name">{person.name}</p>
           <p class="team-bio" set:html={person.bio} />
         </div>
@@ -820,8 +820,8 @@ const tools = [
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: var(--gray-light);
-    border: 1px solid var(--gray-mid);
+    object-fit: cover;
+    filter: grayscale(100%);
   }
   .team-name {
     font-size: 0.92rem;

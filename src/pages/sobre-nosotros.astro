@@ -57,18 +57,21 @@ const schema = [
 
       <div class="team-grid">
         <div class="team-member">
+          <img src="/images/agus.png" alt="Agustín Jamardo" class="team-photo" />
           <h3>Agustín Jamardo</h3>
           <p class="team-role">Fundador de Anceu Coliving · Desarrollador</p>
           <p>Ingeniero de software especializado en back-end. Vivió y trabajó en China antes de volver a Galicia para fundar Anceu Coliving en 2020 — un pueblo de 98 habitantes con 1 Gbps de fibra. Cofundador de Rural Hackers. Lleva 12+ años trabajando en remoto y construyendo herramientas con IA.</p>
         </div>
 
         <div class="team-member">
+          <img src="/images/africa.png" alt="África Rodríguez" class="team-photo" />
           <h3>África Rodríguez</h3>
           <p class="team-role">Cofundadora de Rural Hackers · Facilitadora</p>
           <p>Activista de cultura colaborativa y gestora de Anceu Coliving. Después de explorar capitales europeas, volvió a lo pequeño. Cofundó Espacio Arroelo (coworking en Pontevedra) y lleva desde 2018 formándose en educación no formal para facilitar proyectos europeos como Erasmus+ y The Break Fellowship.</p>
         </div>
 
         <div class="team-member">
+          <img src="/images/nacho.png" alt="Nacho Márquez" class="team-photo" />
           <h3>Nacho Márquez</h3>
           <p class="team-role">Cofundador de Rural Hackers · Director</p>
           <p>Experiencia internacional en proyectos entre Marruecos, Estonia y Singapur. Ha participado en más de 20 proyectos Erasmus+ y trabajó con la Unión Europea. Director de Noites Abertas, programa juvenil de Pontevedra. Cree en los talentos híbridos y en que la tecnología funciona mejor fuera de la ciudad.</p>
@@ -119,6 +122,14 @@ const schema = [
     background: var(--blanco-niebla);
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .team-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    margin-bottom: 0.75rem;
   }
   .team-member h3 {
     font-size: 1.2rem;
