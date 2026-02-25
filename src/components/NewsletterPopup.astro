@@ -98,8 +98,7 @@
           body: JSON.stringify({ email }),
         });
         if (res.ok) {
-          if (successEl) successEl.style.display = 'block';
-          setTimeout(dismiss, 2500);
+          dismiss();
         } else {
           throw new Error('Error');
         }

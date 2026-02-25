@@ -264,39 +264,34 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== GPT ===== -->
-  <section class="section gpt-section">
-    <div class="gpt-intro-wrap">
-      <p class="gpt-intro">
-        Millones de personas usan ChatGPT cada día. Tú le vas a dar un nuevo
-        significado a estas letras.
-      </p>
-    </div>
-    <div class="gpt-grid">
-      <div class="gpt-col">
-        <span class="gpt-letter">G</span>
-        <h3>Generativo</h3>
-        <p>
-          No recupera información: la crea. Aprenderás a generar textos, ideas,
-          código y prototipos que antes tardabas horas.
-        </p>
-      </div>
-      <div class="gpt-col">
-        <span class="gpt-letter">P</span>
-        <h3>Preentrenado</h3>
-        <p>
-          Ha procesado más conocimiento del que podrás leer en tu vida.
-          Aprenderás a aprovechar todo ese contexto para tu trabajo específico.
-        </p>
-      </div>
-      <div class="gpt-col">
-        <span class="gpt-letter">T</span>
-        <h3>Transformador</h3>
-        <p>
-          El modelo transforma el lenguaje. El retiro te transforma a ti. Sales
-          con una forma distinta de trabajar.
-        </p>
-      </div>
+  <!-- ===== HERRAMIENTAS ===== -->
+  <section class="section tools">
+    <p class="tag">Herramientas que aprenderás a usar</p>
+    <div class="tools-grid">
+      {
+        tools.map((tool) => (
+          <a
+            class="tool-card"
+            href={tool.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="tool-top">
+              <img
+                class="tool-logo"
+                src={tool.logo}
+                alt={tool.name}
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+              <span class="tool-arrow">↗</span>
+            </div>
+            <p class="tool-name">{tool.name}</p>
+            <p class="tool-desc">{tool.desc}</p>
+          </a>
+        ))
+      }
     </div>
   </section>
 
@@ -335,41 +330,6 @@ const tools = [
             Pontevedra, Galicia. 1 Gbps. A 30 min de la ciudad.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="section testimonials">
-    <p class="tag">Lo que dicen quienes vivieron la experiencia Rural GPT</p>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-photo"></div>
-        <p class="testi-quote">
-          "Llegué sin saber por dónde empezar y salí con mi stack configurado y
-          funcionando. En cuatro días hice más que en meses intentando aprender
-          por mi cuenta."
-        </p>
-        <p class="testi-name">Laura M.</p>
-        <p class="testi-role">Diseñadora gráfica freelance</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-photo"></div>
-        <p class="testi-quote">
-          "No esperaba que fuera tan práctico. Cada ejercicio lo aplicaba
-          directamente a mis proyectos reales. Volvería sin dudarlo."
-        </p>
-        <p class="testi-name">Carlos P.</p>
-        <p class="testi-role">Consultor de marketing digital</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-photo"></div>
-        <p class="testi-quote">
-          "El entorno lo cambia todo. Sin distracciones, con gente con las
-          mismas dudas que tú. En cuatro días entiendes la IA de otra forma."
-        </p>
-        <p class="testi-name">Ana R.</p>
-        <p class="testi-role">Gestora administrativa</p>
       </div>
     </div>
   </section>
@@ -452,34 +412,74 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== HERRAMIENTAS ===== -->
-  <section class="section tools">
-    <p class="tag">Herramientas que aprenderás a usar</p>
-    <div class="tools-grid">
-      {
-        tools.map((tool) => (
-          <a
-            class="tool-card"
-            href={tool.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="tool-top">
-              <img
-                class="tool-logo"
-                src={tool.logo}
-                alt={tool.name}
-                width="28"
-                height="28"
-                loading="lazy"
-              />
-              <span class="tool-arrow">↗</span>
-            </div>
-            <p class="tool-name">{tool.name}</p>
-            <p class="tool-desc">{tool.desc}</p>
-          </a>
-        ))
-      }
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <p class="tag">Lo que dicen quienes vivieron la experiencia Rural GPT</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">
+          "Llegué sin saber por dónde empezar y salí con mi stack configurado y
+          funcionando. En cuatro días hice más que en meses intentando aprender
+          por mi cuenta."
+        </p>
+        <p class="testi-name">Laura M.</p>
+        <p class="testi-role">Diseñadora gráfica freelance</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">
+          "No esperaba que fuera tan práctico. Cada ejercicio lo aplicaba
+          directamente a mis proyectos reales. Volvería sin dudarlo."
+        </p>
+        <p class="testi-name">Carlos P.</p>
+        <p class="testi-role">Consultor de marketing digital</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-photo"></div>
+        <p class="testi-quote">
+          "El entorno lo cambia todo. Sin distracciones, con gente con las
+          mismas dudas que tú. En cuatro días entiendes la IA de otra forma."
+        </p>
+        <p class="testi-name">Ana R.</p>
+        <p class="testi-role">Gestora administrativa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GPT ===== -->
+  <section class="section gpt-section">
+    <div class="gpt-intro-wrap">
+      <p class="gpt-intro">
+        Millones de personas usan ChatGPT cada día. Tú le vas a dar un nuevo
+        significado a estas letras.
+      </p>
+    </div>
+    <div class="gpt-grid">
+      <div class="gpt-col">
+        <span class="gpt-letter">G</span>
+        <h3>Generativo</h3>
+        <p>
+          No recupera información: la crea. Aprenderás a generar textos, ideas,
+          código y prototipos que antes tardabas horas.
+        </p>
+      </div>
+      <div class="gpt-col">
+        <span class="gpt-letter">P</span>
+        <h3>Preentrenado</h3>
+        <p>
+          Ha procesado más conocimiento del que podrás leer en tu vida.
+          Aprenderás a aprovechar todo ese contexto para tu trabajo específico.
+        </p>
+      </div>
+      <div class="gpt-col">
+        <span class="gpt-letter">T</span>
+        <h3>Transformador</h3>
+        <p>
+          El modelo transforma el lenguaje. El retiro te transforma a ti. Sales
+          con una forma distinta de trabajar.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -566,7 +566,7 @@ const tools = [
     color: var(--black);
   }
   .nav-cta {
-    background: #00a66b;
+    background: #000;
     color: var(--white);
     font-size: 0.82rem;
     font-weight: 600;
@@ -575,10 +575,14 @@ const tools = [
     padding: 0.55rem 1.25rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: opacity 0.15s;
+    transition: background 0.15s;
   }
   .nav-cta:hover {
-    opacity: 0.85;
+    background: #222;
+    color: #ffffff;
+  }
+  .nav-cta:active {
+    background: #00a66b;
     color: #ffffff;
   }
 
@@ -650,6 +654,7 @@ const tools = [
     letter-spacing: 0.01em;
     color: var(--black);
     margin: 0;
+    min-height: calc(2 * clamp(3.5rem, 9vw, 8rem) * 0.95);
   }
   .hero-headline-q {
     color: var(--gray-text);
@@ -1059,6 +1064,10 @@ const tools = [
   .price-card.featured .btn:hover {
     background: #f0f0f0;
   }
+  .price-card.featured .btn:active {
+    background: #00a66b;
+    color: #fff;
+  }
   @media (max-width: 600px) {
     .pricing-grid {
       grid-template-columns: 1fr;
@@ -1069,8 +1078,8 @@ const tools = [
     max-width: 680px;
     margin: 1rem auto 0;
     padding: 1rem 1.5rem;
-    background: #00a66b;
-    border: 1px solid #009060;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1080,16 +1089,16 @@ const tools = [
     font-size: 0.9rem;
   }
   .countdown-label {
-    color: rgba(255,255,255,0.85);
+    color: #666;
   }
   .countdown-timer {
     font-weight: 700;
     font-size: 1.05rem;
-    color: #fff;
+    color: #000;
     font-variant-numeric: tabular-nums;
   }
   .countdown-next {
-    color: rgba(255,255,255,0.85);
+    color: #666;
   }
   @media (max-width: 600px) {
     .countdown-banner {
@@ -1104,7 +1113,7 @@ const tools = [
   ============================================================ */
   .btn-dark {
     display: inline-block;
-    background: #00a66b;
+    background: #000;
     color: #fff;
     font-size: 0.82rem;
     font-weight: 600;
@@ -1113,12 +1122,17 @@ const tools = [
     padding: 0.7rem 1.5rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: opacity 0.15s;
+    transition: background 0.15s;
     align-self: flex-start;
     margin-top: 0.5rem;
+    white-space: nowrap;
   }
   .btn-dark:hover {
-    background: #009060;
+    background: #222;
+    color: #fff;
+  }
+  .btn-dark:active {
+    background: #00a66b;
     color: #fff;
   }
 
