@@ -7,7 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.string(),
-    author: z.string().default('Rural IA'),
+    author: z.string().default('Rural GPT'),
     keywords: z.array(z.string()).optional(),
     ogImage: z.string().optional(),
   }),

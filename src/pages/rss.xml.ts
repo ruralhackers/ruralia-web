@@ -8,7 +8,7 @@ export async function GET(context: APIContext) {
   );
 
   return rss({
-    title: 'Rural IA — Blog',
+    title: 'Rural GPT — Blog',
     description: 'Artículos sobre IA aplicada, herramientas y formación para profesionales tech.',
     site: context.site!,
     items: posts.map((post) => ({
