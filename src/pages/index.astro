@@ -182,23 +182,6 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== HERRAMIENTAS ===== -->
-  <section class="section tools">
-    <p class="tag">Herramientas que aprenderás a usar</p>
-    <div class="tools-grid">
-      {tools.map((tool) => (
-        <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
-          <div class="tool-top">
-            <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" loading="lazy" />
-            <span class="tool-arrow">↗</span>
-          </div>
-          <p class="tool-name">{tool.name}</p>
-          <p class="tool-desc">{tool.desc}</p>
-        </a>
-      ))}
-    </div>
-  </section>
-
   <!-- ===== ARQUITECTURA DEL RETIRO ===== -->
   <section class="section arch">
     <p class="tag tag-italic">La arquitectura del retiro</p>
@@ -312,6 +295,23 @@ const tools = [
           <p class="team-name">{person.name}</p>
           <p class="team-bio" set:html={person.bio} />
         </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== HERRAMIENTAS ===== -->
+  <section class="section tools">
+    <p class="tag">Herramientas que aprenderás a usar</p>
+    <div class="tools-grid">
+      {tools.map((tool) => (
+        <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
+          <div class="tool-top">
+            <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" loading="lazy" />
+            <span class="tool-arrow">↗</span>
+          </div>
+          <p class="tool-name">{tool.name}</p>
+          <p class="tool-desc">{tool.desc}</p>
+        </a>
       ))}
     </div>
   </section>
