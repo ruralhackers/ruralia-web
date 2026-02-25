@@ -1,86 +1,154 @@
 ---
-import { Image } from 'astro:assets';
-import heroPhoto from '../assets/images/ruralia-1.jpg';
-import Base from '../layouts/Base.astro';
+import { Image } from "astro:assets";
+import heroPhoto from "../assets/images/ruralia-1.jpg";
+import Base from "../layouts/Base.astro";
 
 const linkCompartida = import.meta.env.PUBLIC_STRIPE_LINK_COMPARTIDA;
-const linkIndividual  = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
+const linkIndividual = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
 
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'ruralGPT',
-  url: 'https://ruralgpt.gal',
-  description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia.',
-  foundingDate: '2026',
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "ruralGPT",
+  url: "https://ruralgpt.gal",
+  description:
+    "Retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia.",
+  foundingDate: "2026",
   sameAs: [],
 };
 
 const days = [
   {
-    num: '01',
-    title: '¿Dónde estoy?',
-    subtitle: 'Mapa del terreno',
-    desc: 'Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo.',
+    num: "01",
+    title: "¿Dónde estoy?",
+    subtitle: "Mapa del terreno",
+    desc: "Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo.",
   },
   {
-    num: '02',
-    title: '¿Qué puedo automatizar?',
-    subtitle: 'Tu trabajo bajo la lupa',
-    desc: 'Analizamos tu flujo de trabajo real. Qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo.',
+    num: "02",
+    title: "¿Qué puedo automatizar?",
+    subtitle: "Tu trabajo bajo la lupa",
+    desc: "Analizamos tu flujo de trabajo real. Qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo.",
   },
   {
-    num: '03',
-    title: '¿Puedo construir cosas?',
-    subtitle: 'De idea a prototipo',
-    desc: 'Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado.',
+    num: "03",
+    title: "¿Puedo construir cosas?",
+    subtitle: "De idea a prototipo",
+    desc: "Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado.",
   },
   {
-    num: '04',
-    title: '¿Con qué me quedo?',
-    subtitle: 'Tu stack personalizado',
-    desc: 'Montas tu kit definitivo. Sales con todo configurado y listo para volver al trabajo con IA.',
+    num: "04",
+    title: "¿Con qué me quedo?",
+    subtitle: "Tu stack personalizado",
+    desc: "Montas tu kit definitivo. Sales con todo configurado y listo para volver al trabajo con IA.",
   },
 ];
 
 const inclusions = [
-  '4 días de formación práctica',
-  '3 noches de alojamiento',
-  'Todas las comidas incluidas',
-  'Materiales y licencias',
-  'Comunidad alumni',
-  'Sesión de seguimiento online',
+  "4 días de formación práctica",
+  "3 noches de alojamiento",
+  "Todas las comidas incluidas",
+  "Materiales y licencias",
+  "Comunidad alumni",
+  "Sesión de seguimiento online",
 ];
 
-
 const tools = [
-  { name: 'ChatGPT', desc: 'Probablemente ya la uses. Aquí vas mucho más allá del 10% de su capacidad.', logo: '/logos/openai.svg', href: 'https://chatgpt.com' },
-  { name: 'Claude', desc: 'Para razonamiento y documentos largos. Mejor que ChatGPT para ciertas tareas.', logo: '/logos/anthropic.svg', href: 'https://claude.ai' },
-  { name: 'Gemini', desc: 'La IA de Google. Integrada con Gmail, Docs y Drive.', logo: '/logos/googlegemini.svg', href: 'https://gemini.google.com' },
-  { name: 'Cursor', desc: 'Escribe código con IA como copiloto. Aunque no sepas programar.', logo: '/logos/cursor.svg', href: 'https://cursor.com' },
-  { name: 'Bolt', desc: 'De idea a prototipo en minutos. Para validar antes de invertir tiempo.', logo: '/logos/bolt.svg', href: 'https://bolt.new' },
-  { name: 'Lovable', desc: 'Crea aplicaciones web completas describiendo lo que necesitas.', logo: '/logos/lovable.svg', href: 'https://lovable.dev' },
-  { name: 'v0', desc: 'Genera componentes de interfaz con una descripción. Para diseñadores y devs.', logo: '/logos/vercel.svg', href: 'https://v0.dev' },
-  { name: 'Make', desc: 'Automatiza flujos entre aplicaciones. Sin programar.', logo: '/logos/make.svg', href: 'https://make.com' },
-  { name: 'Perplexity', desc: 'Búsqueda con IA que cita las fuentes. Para investigar sin perderse.', logo: '/logos/perplexity.svg', href: 'https://perplexity.ai' },
-  { name: 'NotebookLM', desc: 'Convierte documentos en una base de conocimiento interactiva.', logo: '/logos/notebooklm.svg', href: 'https://notebooklm.google.com' },
-  { name: 'Runway', desc: 'Genera y edita vídeo con IA. Para los que trabajan con contenido.', logo: '/logos/runway.svg', href: 'https://runwayml.com' },
-  { name: 'Kimi 2.5', desc: 'Modelo open source potente de Moonshot AI. Para tareas avanzadas.', logo: '/logos/kimi.svg', href: 'https://kimi.ai' },
+  {
+    name: "ChatGPT",
+    desc: "Probablemente ya la uses. Aquí vas mucho más allá del 10% de su capacidad.",
+    logo: "/logos/openai.svg",
+    href: "https://chatgpt.com",
+  },
+  {
+    name: "Claude",
+    desc: "Para razonamiento y documentos largos. Mejor que ChatGPT para ciertas tareas.",
+    logo: "/logos/anthropic.svg",
+    href: "https://claude.ai",
+  },
+  {
+    name: "Gemini",
+    desc: "La IA de Google. Integrada con Gmail, Docs y Drive.",
+    logo: "/logos/googlegemini.svg",
+    href: "https://gemini.google.com",
+  },
+  {
+    name: "Cursor",
+    desc: "Escribe código con IA como copiloto. Aunque no sepas programar.",
+    logo: "/logos/cursor.svg",
+    href: "https://cursor.com",
+  },
+  {
+    name: "Bolt",
+    desc: "De idea a prototipo en minutos. Para validar antes de invertir tiempo.",
+    logo: "/logos/bolt.svg",
+    href: "https://bolt.new",
+  },
+  {
+    name: "Lovable",
+    desc: "Crea aplicaciones web completas describiendo lo que necesitas.",
+    logo: "/logos/lovable.svg",
+    href: "https://lovable.dev",
+  },
+  {
+    name: "v0",
+    desc: "Genera componentes de interfaz con una descripción. Para diseñadores y devs.",
+    logo: "/logos/vercel.svg",
+    href: "https://v0.dev",
+  },
+  {
+    name: "Make",
+    desc: "Automatiza flujos entre aplicaciones. Sin programar.",
+    logo: "/logos/make.svg",
+    href: "https://make.com",
+  },
+  {
+    name: "Perplexity",
+    desc: "Búsqueda con IA que cita las fuentes. Para investigar sin perderse.",
+    logo: "/logos/perplexity.svg",
+    href: "https://perplexity.ai",
+  },
+  {
+    name: "NotebookLM",
+    desc: "Convierte documentos en una base de conocimiento interactiva.",
+    logo: "/logos/notebooklm.svg",
+    href: "https://notebooklm.google.com",
+  },
+  {
+    name: "Runway",
+    desc: "Genera y edita vídeo con IA. Para los que trabajan con contenido.",
+    logo: "/logos/runway.svg",
+    href: "https://runwayml.com",
+  },
+  {
+    name: "Kimi 2.5",
+    desc: "Modelo open source potente de Moonshot AI. Para tareas avanzadas.",
+    logo: "/logos/kimi.svg",
+    href: "https://kimi.ai",
+  },
 ];
 ---
 
 <Base
   title="ruralGPT — Retiro inmersivo de IA aplicada en Galicia"
   description="4 días en Galicia para ponerte al día con IA. Formación práctica, alojamiento y comidas incluidas. 12 plazas. 3–7 junio 2026."
-  keywords={['retiro IA España', 'curso IA inmersivo', 'formación IA Galicia', 'retiro inteligencia artificial']}
+  keywords={[
+    "retiro IA España",
+    "curso IA inmersivo",
+    "formación IA Galicia",
+    "retiro inteligencia artificial",
+  ]}
   schema={schema}
   hideHeader={true}
 >
-
   <!-- ===== NAV ===== -->
   <header class="nav">
     <a href="/" class="nav-logo">
-      <img src="/images/logo-ruralgpt.png" alt="ruralGPT" style="height:32px;width:auto;display:block;" />
+      <img
+        src="/images/logo-ruralgpt.png"
+        alt="ruralGPT"
+        style="height:32px;width:auto;display:block;"
+      />
     </a>
     <nav class="nav-links" id="home-nav">
       <a href="/retiro-ia-galicia/">Residencia IA</a>
@@ -90,7 +158,12 @@ const tools = [
       <a href="/sobre-nosotros/">Quiénes somos</a>
     </nav>
     <a href="/#pricing" class="nav-cta">Reservar</a>
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="home-nav">
+    <button
+      class="nav-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="home-nav"
+    >
       <span></span>
       <span></span>
     </button>
@@ -100,14 +173,26 @@ const tools = [
   <section class="hero">
     <div class="hero-top">
       <h1 class="hero-headline">
-        <span id="hero-line1"></span><br/>
+        <span id="hero-line1"></span><br />
         <span class="hero-headline-q" id="hero-line2"></span>
       </h1>
     </div>
     <div class="hero-sub">
       <div class="hero-sub-text">
-        <p>La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Por eso esta residencia es un sprint para integrar IA en tu flujo de trabajo real. Sólo 12 profesionales podrán participar y la experiencia es un todo incluido desde la formación hasta el alojamiento, comida y ocio.</p>
-        <p class="hero-date">3–7 de junio 2026 · <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a></p>
+        <p>
+          La IA no te va a quitar el trabajo, pero un profesional que sabe
+          usarla sí. Por eso esta residencia es un sprint para integrar IA en tu
+          flujo de trabajo real. Sólo 12 profesionales podrán participar y la
+          experiencia es un todo incluido desde la formación hasta el
+          alojamiento, comida y ocio.
+        </p>
+        <p class="hero-date">
+          3–7 de junio 2026 · <a
+            href="https://anceu.com"
+            target="_blank"
+            rel="noopener">Anceu Coliving</a
+          >
+        </p>
       </div>
       <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
     </div>
@@ -131,57 +216,86 @@ const tools = [
     <div class="noise-grid">
       <div class="noise-left">
         <p class="tag">Qué es ruralGPT</p>
-        <p>Una experiencia inmersiva de IA aplicada para profesionales. 4 días en Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos de 12 personas.</p>
+        <p>
+          Una experiencia inmersiva de IA aplicada para profesionales. 4 días en
+          Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos
+          de 12 personas.
+        </p>
       </div>
       <div class="noise-right">
-        <p class="noise-stmt">No es un curso online. No es teoría. No es un máster de meses.</p>
+        <p class="noise-stmt">
+          No es un curso online. No es teoría. No es un máster de meses.
+        </p>
         <hr class="noise-rule" />
-        <p class="noise-stmt">Es trabajo real con herramientas reales aplicadas a tu trabajo.</p>
+        <p class="noise-stmt">
+          Es trabajo real con herramientas reales aplicadas a tu trabajo.
+        </p>
         <hr class="noise-rule" />
-        <p class="noise-stmt">Llegas con dudas. Sales con tu stack configurado.</p>
+        <p class="noise-stmt">
+          Llegas con dudas. Sales con tu stack configurado.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- ===== PROTOCOLO 4 DÍAS ===== -->
   <section class="section protocol">
-    <h2 class="protocol-h">No dejes que el ritmo de la tecnología te deje fuera del mercado.</h2>
-    <p class="protocol-intro">Esto es lo que haremos en 4 días para que actualices tu stack profesional y recuperes el control de tu carrera con IA aplicada de verdad.</p>
+    <h2 class="protocol-h">
+      No dejes que el ritmo de la tecnología te deje fuera del mercado.
+    </h2>
+    <p class="protocol-intro">
+      Esto es lo que haremos en 4 días para que actualices tu stack profesional
+      y recuperes el control de tu carrera con IA aplicada de verdad.
+    </p>
     <div class="protocol-grid">
-      {days.map((day) => (
-        <div class="protocol-card">
-          <span class="protocol-num">{day.num}</span>
-          <div class="protocol-body">
-            <h3 class="protocol-title">{day.title}</h3>
-            <p class="protocol-sub">{day.subtitle}</p>
-            <p class="protocol-desc">{day.desc}</p>
+      {
+        days.map((day) => (
+          <div class="protocol-card">
+            <span class="protocol-num">{day.num}</span>
+            <div class="protocol-body">
+              <h3 class="protocol-title">{day.title}</h3>
+              <p class="protocol-sub">{day.subtitle}</p>
+              <p class="protocol-desc">{day.desc}</p>
+            </div>
+            <span class="protocol-plus">+</span>
           </div>
-          <span class="protocol-plus">+</span>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
   <!-- ===== GPT ===== -->
   <section class="section gpt-section">
     <div class="gpt-intro-wrap">
-      <p class="gpt-intro">Millones de personas usan ChatGPT cada día. Tú le vas a dar un nuevo significado a estas letras.</p>
+      <p class="gpt-intro">
+        Millones de personas usan ChatGPT cada día. Tú le vas a dar un nuevo
+        significado a estas letras.
+      </p>
     </div>
     <div class="gpt-grid">
       <div class="gpt-col">
         <span class="gpt-letter">G</span>
         <h3>Generativo</h3>
-        <p>No recupera información: la crea. Aprenderás a generar textos, ideas, código y prototipos que antes tardabas horas.</p>
+        <p>
+          No recupera información: la crea. Aprenderás a generar textos, ideas,
+          código y prototipos que antes tardabas horas.
+        </p>
       </div>
       <div class="gpt-col">
         <span class="gpt-letter">P</span>
         <h3>Preentrenado</h3>
-        <p>Ha procesado más conocimiento del que podrás leer en tu vida. Aprenderás a aprovechar todo ese contexto para tu trabajo específico.</p>
+        <p>
+          Ha procesado más conocimiento del que podrás leer en tu vida.
+          Aprenderás a aprovechar todo ese contexto para tu trabajo específico.
+        </p>
       </div>
       <div class="gpt-col">
         <span class="gpt-letter">T</span>
         <h3>Transformador</h3>
-        <p>El modelo transforma el lenguaje. El retiro te transforma a ti. Sales con una forma distinta de trabajar.</p>
+        <p>
+          El modelo transforma el lenguaje. El retiro te transforma a ti. Sales
+          con una forma distinta de trabajar.
+        </p>
       </div>
     </div>
   </section>
@@ -202,15 +316,24 @@ const tools = [
       <div class="arch-side">
         <div class="arch-card">
           <p class="arch-card-title">Habitación individual</p>
-          <p class="arch-card-desc">Para ti solo. 3 noches incluidas en el precio.</p>
+          <p class="arch-card-desc">
+            Para ti solo. 3 noches incluidas en el precio.
+          </p>
         </div>
         <div class="arch-card">
           <p class="arch-card-title">Habitación compartida</p>
           <p class="arch-card-desc">Máx. 2 personas. Opción más económica.</p>
         </div>
         <div class="arch-card arch-card-dark">
-          <a class="arch-card-title arch-card-link" href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving ↗</a>
-          <p class="arch-card-desc">Pontevedra, Galicia. 1 Gbps. A 30 min de la ciudad.</p>
+          <a
+            class="arch-card-title arch-card-link"
+            href="https://anceu.com"
+            target="_blank"
+            rel="noopener">Anceu Coliving ↗</a
+          >
+          <p class="arch-card-desc">
+            Pontevedra, Galicia. 1 Gbps. A 30 min de la ciudad.
+          </p>
         </div>
       </div>
     </div>
@@ -222,19 +345,29 @@ const tools = [
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-photo"></div>
-        <p class="testi-quote">"Llegué sin saber por dónde empezar y salí con mi stack configurado y funcionando. En cuatro días hice más que en meses intentando aprender por mi cuenta."</p>
+        <p class="testi-quote">
+          "Llegué sin saber por dónde empezar y salí con mi stack configurado y
+          funcionando. En cuatro días hice más que en meses intentando aprender
+          por mi cuenta."
+        </p>
         <p class="testi-name">Laura M.</p>
         <p class="testi-role">Diseñadora gráfica freelance</p>
       </div>
       <div class="testi-card">
         <div class="testi-photo"></div>
-        <p class="testi-quote">"No esperaba que fuera tan práctico. Cada ejercicio lo aplicaba directamente a mis proyectos reales. Volvería sin dudarlo."</p>
+        <p class="testi-quote">
+          "No esperaba que fuera tan práctico. Cada ejercicio lo aplicaba
+          directamente a mis proyectos reales. Volvería sin dudarlo."
+        </p>
         <p class="testi-name">Carlos P.</p>
         <p class="testi-role">Consultor de marketing digital</p>
       </div>
       <div class="testi-card">
         <div class="testi-photo"></div>
-        <p class="testi-quote">"El entorno lo cambia todo. Sin distracciones, con gente con las mismas dudas que tú. En cuatro días entiendes la IA de otra forma."</p>
+        <p class="testi-quote">
+          "El entorno lo cambia todo. Sin distracciones, con gente con las
+          mismas dudas que tú. En cuatro días entiendes la IA de otra forma."
+        </p>
         <p class="testi-name">Ana R.</p>
         <p class="testi-role">Gestora administrativa</p>
       </div>
@@ -245,7 +378,9 @@ const tools = [
   <section class="section" id="pricing">
     <div class="section-inner pricing-section">
       <h2>Precio</h2>
-      <p class="pricing-intro">Todo incluido: formación, alojamiento, comidas y comunidad alumni.</p>
+      <p class="pricing-intro">
+        Todo incluido: formación, alojamiento, comidas y comunidad alumni.
+      </p>
       <div
         class="pricing-grid"
         data-prices='[
@@ -258,8 +393,12 @@ const tools = [
           <div class="room-title">Habitación compartida</div>
           <div class="room-subtitle">Compartida con otra persona</div>
           <span class="price-amount" id="price-compartida">442 EUR</span>
-          <span class="price-tier" id="tier-compartida">Early bird — hasta el 15 de marzo</span>
-          <span class="price-discount" id="discount-compartida">30% de descuento</span>
+          <span class="price-tier" id="tier-compartida"
+            >Early bird — hasta el 15 de marzo</span
+          >
+          <span class="price-discount" id="discount-compartida"
+            >30% de descuento</span
+          >
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -268,14 +407,23 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
-          <a href={linkCompartida} class="btn btn-primary" target="_blank" rel="noopener">Reserva por 100 €</a>
+          <a
+            href={linkCompartida}
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener">Reserva por 100 €</a
+          >
         </div>
         <div class="price-card featured" id="card-individual">
           <div class="room-title">Habitación individual</div>
           <div class="room-subtitle">Habitación para ti solo</div>
           <span class="price-amount" id="price-individual">558 EUR</span>
-          <span class="price-tier" id="tier-individual">Early bird — hasta el 15 de marzo</span>
-          <span class="price-discount" id="discount-individual">30% de descuento</span>
+          <span class="price-tier" id="tier-individual"
+            >Early bird — hasta el 15 de marzo</span
+          >
+          <span class="price-discount" id="discount-individual"
+            >30% de descuento</span
+          >
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -284,10 +432,19 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
-          <a href={linkIndividual} class="btn btn-gold" target="_blank" rel="noopener">Reserva por 150 €</a>
+          <a
+            href={linkIndividual}
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener">Reserva por 150 €</a
+          >
         </div>
       </div>
-      <div id="pricing-countdown" style="display:none;" class="countdown-banner">
+      <div
+        id="pricing-countdown"
+        style="display:none;"
+        class="countdown-banner"
+      >
         <span class="countdown-label" id="countdown-label"></span>
         <span class="countdown-timer" id="countdown-timer"></span>
         <span class="countdown-next" id="countdown-next"></span>
@@ -299,30 +456,46 @@ const tools = [
   <section class="section tools">
     <p class="tag">Herramientas que aprenderás a usar</p>
     <div class="tools-grid">
-      {tools.map((tool) => (
-        <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
-          <div class="tool-top">
-            <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" loading="lazy" />
-            <span class="tool-arrow">↗</span>
-          </div>
-          <p class="tool-name">{tool.name}</p>
-          <p class="tool-desc">{tool.desc}</p>
-        </a>
-      ))}
+      {
+        tools.map((tool) => (
+          <a
+            class="tool-card"
+            href={tool.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="tool-top">
+              <img
+                class="tool-logo"
+                src={tool.logo}
+                alt={tool.name}
+                width="28"
+                height="28"
+                loading="lazy"
+              />
+              <span class="tool-arrow">↗</span>
+            </div>
+            <p class="tool-name">{tool.name}</p>
+            <p class="tool-desc">{tool.desc}</p>
+          </a>
+        ))
+      }
     </div>
   </section>
 
   <!-- ===== CTA FINAL ===== -->
   <section class="cta-final">
-    <h2 class="cta-headline">APRENDE IA.<br/>EN 4 DÍAS.<br/>EN GALICIA.</h2>
-    <p class="cta-sub">Formación práctica, alojamiento y comidas incluidas. 12 plazas. Junio 2026.</p>
+    <h2 class="cta-headline">APRENDE IA.<br />EN 4 DÍAS.<br />EN GALICIA.</h2>
+    <p class="cta-sub">
+      Formación práctica, alojamiento y comidas incluidas. 12 plazas. Junio
+      2026.
+    </p>
     <a href="/#pricing" class="btn-cta-final">Reserva tu plaza</a>
   </section>
-
 </Base>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
   /* ============================================================
      TOKENS
@@ -333,8 +506,8 @@ const tools = [
     --gray-light: #f2f2f2;
     --gray-mid: #e0e0e0;
     --gray-text: #555555;
-    --font-display: 'Bebas Neue', sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: "Bebas Neue", sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     --max: 1200px;
     --pad: clamp(1.5rem, 5vw, 4rem);
   }
@@ -373,7 +546,9 @@ const tools = [
     letter-spacing: 0.02em;
     transition: color 0.15s;
   }
-  .nav-links a:hover { color: var(--black); }
+  .nav-links a:hover {
+    color: var(--black);
+  }
   .nav-cta {
     background: var(--black);
     color: var(--white);
@@ -386,7 +561,10 @@ const tools = [
     text-decoration: none;
     transition: opacity 0.15s;
   }
-  .nav-cta:hover { opacity: 0.75; color: var(--white); }
+  .nav-cta:hover {
+    opacity: 0.75;
+    color: var(--white);
+  }
 
   .nav-toggle {
     display: none;
@@ -407,8 +585,12 @@ const tools = [
   }
 
   @media (max-width: 768px) {
-    .nav-toggle { display: flex; }
-    .nav-cta { display: none; }
+    .nav-toggle {
+      display: flex;
+    }
+    .nav-cta {
+      display: none;
+    }
     .nav-links {
       display: none;
       position: absolute;
@@ -422,14 +604,18 @@ const tools = [
       gap: 0;
       z-index: 99;
     }
-    .nav-links.open { display: flex; }
+    .nav-links.open {
+      display: flex;
+    }
     .nav-links a {
       padding: 0.75rem 0;
       border-bottom: 1px solid #f0f0f0;
       width: 100%;
       font-size: 1rem;
     }
-    .nav-links a:last-child { border-bottom: none; }
+    .nav-links a:last-child {
+      border-bottom: none;
+    }
   }
 
   /* ============================================================
@@ -500,7 +686,9 @@ const tools = [
     padding: 1rem 0 0.5rem;
     transition: color 0.15s;
   }
-  .hero-learn-link:hover { color: #000; }
+  .hero-learn-link:hover {
+    color: #000;
+  }
 
   @media (max-width: 640px) {
     .hero-sub {
@@ -566,7 +754,10 @@ const tools = [
   }
 
   @media (max-width: 768px) {
-    .noise-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .noise-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
   }
 
   /* ============================================================
@@ -600,7 +791,9 @@ const tools = [
     color: var(--gray-mid);
     line-height: 1;
   }
-  .protocol-body { flex: 1; }
+  .protocol-body {
+    flex: 1;
+  }
   .protocol-title {
     font-family: var(--font-body);
     font-size: 1.05rem;
@@ -638,10 +831,14 @@ const tools = [
   }
 
   @media (max-width: 768px) {
-    .protocol-grid { grid-template-columns: 1fr 1fr; }
+    .protocol-grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   @media (max-width: 480px) {
-    .protocol-grid { grid-template-columns: 1fr; }
+    .protocol-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ============================================================
@@ -674,7 +871,7 @@ const tools = [
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--white);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 0.3rem 0.6rem;
   }
   .arch-side {
@@ -709,7 +906,7 @@ const tools = [
     text-decoration: underline;
   }
   .arch-card-dark .arch-card-title {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
   .arch-card-desc {
     font-size: 0.88rem;
@@ -722,16 +919,27 @@ const tools = [
   }
 
   @media (max-width: 768px) {
-    .arch-grid { grid-template-columns: 1fr; }
-    .arch-main img { height: 260px; }
-    .arch-side { grid-template-rows: auto auto auto; }
+    .arch-grid {
+      grid-template-columns: 1fr;
+    }
+    .arch-main img {
+      height: 260px;
+    }
+    .arch-side {
+      grid-template-rows: auto auto auto;
+    }
   }
 
   /* ============================================================
      PRICING
   ============================================================ */
-  .pricing-section { text-align: center; }
-  .pricing-intro { color: #666; margin-bottom: 0; }
+  .pricing-section {
+    text-align: center;
+  }
+  .pricing-intro {
+    color: #666;
+    margin-bottom: 0;
+  }
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -748,33 +956,105 @@ const tools = [
     display: flex;
     flex-direction: column;
   }
-  .price-card.featured { background: #000; border-color: #000; color: #fff; }
-  .room-title { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.2rem; }
-  .room-subtitle { font-size: 0.85rem; color: #888; margin-bottom: 1.25rem; }
-  .price-card.featured .room-subtitle { color: rgba(255,255,255,0.55); }
-  .price-amount { display: block; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.2rem; }
-  .price-tier { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; min-height: 1em; }
-  .price-card.featured .price-tier { color: rgba(255,255,255,0.5); }
-  .price-discount { display: block; font-size: 0.85rem; color: #555; font-weight: 500; margin-bottom: 1.5rem; min-height: 1.2em; }
-  .price-card.featured .price-discount { color: rgba(255,255,255,0.7); }
-  .price-card ul { text-align: left; list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
-  .price-card li { padding: 0.3rem 0; color: #555; font-size: 0.9rem; }
-  .price-card.featured li { color: rgba(255,255,255,0.8); }
-  .price-card li::before { content: '✓ '; color: #000; font-weight: 600; }
-  .price-card.featured li::before { color: #fff; }
-  .deposit-note { font-size: 0.8rem; color: #888; margin: 0 0 0.6rem; }
-  .price-card.featured .deposit-note { color: rgba(255,255,255,0.5); }
-  .price-card.featured .btn { background: #fff; color: #000; }
-  .price-card.featured .btn:hover { background: #f0f0f0; }
+  .price-card.featured {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+  }
+  .room-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+  }
+  .room-subtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.25rem;
+  }
+  .price-card.featured .room-subtitle {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .price-amount {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.2rem;
+  }
+  .price-tier {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.2rem;
+    min-height: 1em;
+  }
+  .price-card.featured .price-tier {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .price-discount {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    min-height: 1.2em;
+  }
+  .price-card.featured .price-discount {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .price-card ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    flex: 1;
+  }
+  .price-card li {
+    padding: 0.3rem 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  .price-card.featured li {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .price-card li::before {
+    content: "✓ ";
+    color: #000;
+    font-weight: 600;
+  }
+  .price-card.featured li::before {
+    color: #fff;
+  }
+  .deposit-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0 0 0.6rem;
+  }
+  .price-card.featured .deposit-note {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .price-card.featured .btn {
+    background: #fff;
+    color: #000;
+  }
+  .price-card.featured .btn:hover {
+    background: #f0f0f0;
+  }
   @media (max-width: 600px) {
-    .pricing-grid { grid-template-columns: 1fr; max-width: 380px; }
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 380px;
+    }
   }
   .countdown-banner {
     max-width: 680px;
     margin: 1rem auto 0;
     padding: 1rem 1.5rem;
-    background: #f5f5f5;
-    border: 1px solid #e0e0e0;
+    background: #00a66b;
+    border: 1px solid #009060;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -783,11 +1063,24 @@ const tools = [
     flex-wrap: wrap;
     font-size: 0.9rem;
   }
-  .countdown-label { color: #555; }
-  .countdown-timer { font-weight: 700; font-size: 1.05rem; color: #000; font-variant-numeric: tabular-nums; }
-  .countdown-next { color: #555; }
+  .countdown-label {
+    color: rgba(255,255,255,0.85);
+  }
+  .countdown-timer {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown-next {
+    color: rgba(255,255,255,0.85);
+  }
   @media (max-width: 600px) {
-    .countdown-banner { flex-direction: column; text-align: center; gap: 0.3rem; }
+    .countdown-banner {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.3rem;
+    }
   }
 
   /* ============================================================
@@ -808,7 +1101,10 @@ const tools = [
     align-self: flex-start;
     margin-top: 0.5rem;
   }
-  .btn-dark:hover { opacity: 0.75; color: var(--white); }
+  .btn-dark:hover {
+    opacity: 0.75;
+    color: var(--white);
+  }
 
   /* ============================================================
      HERRAMIENTAS
@@ -870,10 +1166,14 @@ const tools = [
   }
 
   @media (max-width: 768px) {
-    .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   @media (max-width: 480px) {
-    .tools-grid { grid-template-columns: 1fr; }
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ============================================================
@@ -916,7 +1216,9 @@ const tools = [
     margin: 0;
   }
   @media (max-width: 768px) {
-    .testi-grid { grid-template-columns: 1fr; }
+    .testi-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ============================================================
@@ -958,7 +1260,10 @@ const tools = [
     text-decoration: none;
     transition: opacity 0.15s;
   }
-  .btn-cta-final:hover { opacity: 0.85; color: var(--black); }
+  .btn-cta-final:hover {
+    opacity: 0.85;
+    color: var(--black);
+  }
 
   /* ===== GPT Section ===== */
   .gpt-section {
@@ -1016,48 +1321,92 @@ const tools = [
 <script>
   (function () {
     const schedule = [
-      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
-      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
-      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
+      {
+        until: "2026-03-16",
+        label: "Early bird",
+        until_text: "hasta el 15 de marzo",
+        discount: "30% de descuento",
+        compartida: 442,
+        individual: 558,
+      },
+      {
+        until: "2026-04-16",
+        label: "Segunda tanda",
+        until_text: "hasta el 15 de abril",
+        discount: "15% de descuento",
+        compartida: 537,
+        individual: 677,
+      },
+      {
+        until: null,
+        label: "Precio normal",
+        until_text: "",
+        discount: "",
+        compartida: 632,
+        individual: 797,
+      },
     ];
     const now = new Date();
-    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
-    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
-    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-    set('price-compartida', tier.compartida + ' EUR');
-    set('price-individual', tier.individual + ' EUR');
-    set('tier-compartida', tierText);
-    set('tier-individual', tierText);
-    set('discount-compartida', tier.discount);
-    set('discount-individual', tier.discount);
+    const tier =
+      schedule.find((t) => !t.until || now < new Date(t.until)) ||
+      schedule[schedule.length - 1];
+    const tierText = tier.until_text
+      ? `${tier.label} — ${tier.until_text}`
+      : tier.label;
+    const set = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
+    set("price-compartida", tier.compartida + " EUR");
+    set("price-individual", tier.individual + " EUR");
+    set("tier-compartida", tierText);
+    set("tier-individual", tierText);
+    set("discount-compartida", tier.discount);
+    set("discount-individual", tier.discount);
 
     // Countdown
     const countdownPhases = [
-      { deadline: new Date('2026-03-16T00:00:00'), next: { compartida: 537, individual: 677 } },
-      { deadline: new Date('2026-04-16T00:00:00'), next: { compartida: 632, individual: 797 } },
+      {
+        deadline: new Date("2026-03-16T00:00:00"),
+        next: { compartida: 537, individual: 677 },
+      },
+      {
+        deadline: new Date("2026-04-16T00:00:00"),
+        next: { compartida: 632, individual: 797 },
+      },
     ];
     const phase = countdownPhases.find((p) => now < p.deadline);
     if (phase) {
-      const banner = document.getElementById('pricing-countdown');
-      const labelEl = document.getElementById('countdown-label');
-      const timerEl = document.getElementById('countdown-timer');
-      const nextEl = document.getElementById('countdown-next');
+      const banner = document.getElementById("pricing-countdown");
+      const labelEl = document.getElementById("countdown-label");
+      const timerEl = document.getElementById("countdown-timer");
+      const nextEl = document.getElementById("countdown-next");
       if (banner && labelEl && timerEl && nextEl) {
-        banner.style.display = 'flex';
+        banner.style.display = "flex";
         const deadlineDate = phase.deadline;
         const deadlineDay = deadlineDate.getDate() - 1;
-        const deadlineMonth = deadlineDate.toLocaleString('es', { month: 'long' });
+        const deadlineMonth = deadlineDate.toLocaleString("es", {
+          month: "long",
+        });
         labelEl.textContent = `⏳ El precio sube el ${deadlineDay} de ${deadlineMonth} —`;
         nextEl.textContent = `Próximo precio: ${phase.next.compartida} € / ${phase.next.individual} €`;
-        function pad(n: number) { return String(n).padStart(2, '0'); }
+        function pad(n: number) {
+          return String(n).padStart(2, "0");
+        }
         function tick() {
           const diff = deadlineDate.getTime() - Date.now();
-          if (diff <= 0) { banner.style.display = 'none'; return; }
+          if (diff <= 0) {
+            banner.style.display = "none";
+            return;
+          }
           const d = Math.floor(diff / 86400000);
           const h = Math.floor((diff % 86400000) / 3600000);
           const m = Math.floor((diff % 3600000) / 60000);
           const s = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent = d > 0 ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s` : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+          timerEl.textContent =
+            d > 0
+              ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`
+              : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
         }
         tick();
         setInterval(tick, 1000);
@@ -1066,34 +1415,40 @@ const tools = [
   })();
 
   // Typing animation hero headline
-  (function() {
-    const line1El = document.getElementById('hero-line1');
-    const line2El = document.getElementById('hero-line2');
+  (function () {
+    const line1El = document.getElementById("hero-line1");
+    const line2El = document.getElementById("hero-line2");
     if (!line1El || !line2El) return;
 
     function typeText(el, text, speed, done) {
-      el.textContent = '';
+      el.textContent = "";
       let i = 0;
       const iv = setInterval(() => {
         el.textContent += text[i++];
-        if (i >= text.length) { clearInterval(iv); if (done) done(); }
+        if (i >= text.length) {
+          clearInterval(iv);
+          if (done) done();
+        }
       }, speed);
     }
 
     function eraseText(el, speed, done) {
       const iv = setInterval(() => {
         el.textContent = el.textContent.slice(0, -1);
-        if (!el.textContent) { clearInterval(iv); if (done) done(); }
+        if (!el.textContent) {
+          clearInterval(iv);
+          if (done) done();
+        }
       }, speed);
     }
 
-    typeText(line1El, '¿LA IA AVANZA', 55, () => {
-      typeText(line2El, '¿Y TU TRABAJO TAMBIÉN?', 55, () => {
+    typeText(line1El, "LA IA AVANZA,", 55, () => {
+      typeText(line2El, "¿TU TRABAJO TAMBIÉN?", 55, () => {
         setTimeout(() => {
           eraseText(line2El, 30, () => {
             eraseText(line1El, 30, () => {
-              typeText(line1El, 'LA IA AVANZA.', 55, () => {
-                typeText(line2El, 'TU TRABAJO TAMBIÉN.', 55, null);
+              typeText(line1El, "LA IA AVANZA.", 55, () => {
+                typeText(line2El, "TU TRABAJO, TAMBIÉN.", 55, null);
               });
             });
           });
@@ -1102,20 +1457,22 @@ const tools = [
     });
   })();
 
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.getElementById('home-nav');
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("home-nav");
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('open');
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("open");
     });
-    document.addEventListener('click', (e) => {
-      if (!toggle.contains(e.target as Node) && !nav.contains(e.target as Node)) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener("click", (e) => {
+      if (
+        !toggle.contains(e.target as Node) &&
+        !nav.contains(e.target as Node)
+      ) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
       }
     });
   }
 </script>
-
