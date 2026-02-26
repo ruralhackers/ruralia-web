@@ -180,10 +180,10 @@ const tools = [
     <div class="hero-sub">
       <div class="hero-sub-text">
         <p>
-          La IA no te va a quitar el trabajo, pero un profesional que sabe
-          usarla sí. Por eso esta residencia es un sprint para integrar IA en tu
-          flujo de trabajo real. Sólo 12 profesionales podrán participar y la
-          experiencia es un todo incluido desde la formación hasta el
+          <strong>La IA no te va a quitar el trabajo, pero un profesional que sabe
+          usarla sí.</strong> Por eso esta residencia es un sprint para integrar IA en tu
+          flujo de trabajo real. Sólo 12 profesionales podrán participar y
+          <strong>la experiencia es un todo incluido</strong> desde la formación hasta el
           alojamiento, comida y ocio.
         </p>
         <p class="hero-date">
@@ -217,8 +217,8 @@ const tools = [
       <div class="noise-left">
         <p class="tag">Qué es ruralGPT</p>
         <p>
-          Una experiencia inmersiva de IA aplicada para profesionales. 4 días en
-          Galicia. Formación práctica, alojamiento y comidas incluidas. Grupos
+          Una experiencia inmersiva de IA aplicada para profesionales. <strong>4 días en
+          Galicia. Formación práctica, alojamiento y comidas incluidas.</strong> Grupos
           de 12 personas.
         </p>
       </div>
@@ -297,7 +297,7 @@ const tools = [
 
   <!-- ===== DONDE VIVIRÁS ESTA EXPERIENCIA ===== -->
   <section class="section arch">
-    <p class="tag tag-italic">Dónde vivirás esta experiencia</p>
+    <p class="tag">Dónde vivirás esta experiencia</p>
     <div class="arch-grid">
       <div class="arch-main">
         <img
@@ -1534,18 +1534,14 @@ const tools = [
       }, speed);
     }
 
-    typeText(line1El, "LA IA AVANZA,", 55, () => {
-      typeText(line2El, "¿TU TRABAJO TAMBIÉN?", 55, () => {
-        setTimeout(() => {
-          eraseText(line2El, 30, () => {
-            eraseText(line1El, 30, () => {
-              typeText(line1El, "LA IA AVANZA.", 55, () => {
-                typeText(line2El, "TU TRABAJO, TAMBIÉN.", 55, null);
-              });
-            });
-          });
-        }, 1800);
-      });
+    line1El.textContent = "LA IA AVANZA,";
+    typeText(line2El, "¿TU TRABAJO TAMBIÉN?", 55, () => {
+      setTimeout(() => {
+        eraseText(line2El, 30, () => {
+          line1El.textContent = "LA IA AVANZA.";
+          typeText(line2El, "TU TRABAJO, TAMBIÉN.", 55, null);
+        });
+      }, 1800);
     });
   })();
 
