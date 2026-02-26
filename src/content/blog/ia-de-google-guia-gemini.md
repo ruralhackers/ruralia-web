@@ -136,6 +136,6 @@ En 15 minutos vas a tener una idea clara de si la IA de Google encaja en tu fluj
 
 ---
 
-En el [retiro Rural GPT en Galicia](/retiro-ia-galicia/) trabajamos con Gemini, ChatGPT y Claude. El segundo día del retiro lo dedicamos a configurar asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM para que te vayas con un sistema de IAs funcionando para tu trabajo.
+En la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/) trabajamos con Gemini, ChatGPT y Claude. El segundo día de la Residencia IA lo dedicamos a configurar asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM para que te vayas con un sistema de IAs funcionando para tu trabajo.
 
-4 días, 12 plazas, todo incluido. [Consulta el programa](/retiro-ia-galicia/) o [descubre si es para ti](/para-quien/).
+4 días, 12 plazas, todo incluido. [Consulta el programa](/residencia-ia-galicia/) o [descubre si es para ti](/para-quien/).

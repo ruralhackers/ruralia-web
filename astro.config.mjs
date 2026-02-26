@@ -6,6 +6,10 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   site: 'https://ruralgpt.gal',
   adapter: netlify(),
+  redirects: {
+    '/retiro-ia-galicia/': { status: 301, destination: '/residencia-ia-galicia/' },
+    '/retiro-ia-galicia': { status: 301, destination: '/residencia-ia-galicia/' },
+  },
   integrations: [
     sitemap({
       serialize(item) {
@@ -22,7 +26,7 @@ export default defineConfig({
           item.changefreq = 'weekly';
         }
         // Landing pages principales
-        else if (['/retiro-ia-galicia/', '/para-quien/'].includes(url)) {
+        else if (['/residencia-ia-galicia/', '/para-quien/'].includes(url)) {
           item.priority = 0.8;
           item.changefreq = 'weekly';
         }

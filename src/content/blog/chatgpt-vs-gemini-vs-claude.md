@@ -215,9 +215,9 @@ Con la IA pasa lo mismo. Y la diferencia en productividad entre alguien que usa 
 
 Una cosa es leer un artículo comparativo. Otra muy diferente es sentarte delante de tu portátil, con un grupo reducido de profesionales, y dedicar cuatro días completos a aprender a usar ChatGPT, Gemini y Claude de forma práctica.
 
-Eso es exactamente lo que hacemos en el **[retiro Rural GPT en Galicia](/retiro-ia-galicia/)**.
+Eso es exactamente lo que hacemos en la **[Residencia Rural GPT en Galicia](/residencia-ia-galicia/)**.
 
-El primer día del retiro lo dedicamos precisamente a esto: entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
+El primer día de la Residencia IA lo dedicamos precisamente a esto: entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
 
 Pero no nos quedamos en la teoría. Los cuatro días incluyen:
 
@@ -228,6 +228,6 @@ Pero no nos quedamos en la teoría. Los cuatro días incluyen:
 
 Todo esto desde un coliving en el rural de Galicia, sin distracciones, con comidas incluidas y con un entorno que invita a la concentración y la desconexión del ruido habitual.
 
-Si después de leer esta comparativa te has dado cuenta de que podrías estar sacándole mucho más partido a la IA en tu trabajo diario, [echa un vistazo al programa completo del retiro](/retiro-ia-galicia/).
+Si después de leer esta comparativa te has dado cuenta de que podrías estar sacándole mucho más partido a la IA en tu trabajo diario, [echa un vistazo al programa completo de la Residencia IA](/residencia-ia-galicia/).
 
 Son 4 días que te cambian los próximos 4 años.

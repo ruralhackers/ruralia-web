@@ -2,25 +2,38 @@
 const currentPath = Astro.url.pathname;
 
 const nav = [
-  { href: '/retiro-ia-galicia/', label: 'Residencia IA' },
-  { href: '/para-quien/', label: 'Para quién' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/faq/', label: 'FAQ' },
-  { href: '/sobre-nosotros/', label: 'Quiénes somos' },
+  { href: "/residencia-ia-galicia/", label: "Residencia IA" },
+  { href: "/para-quien/", label: "Para quién" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/faq/", label: "FAQ" },
+  { href: "/sobre-nosotros/", label: "Quiénes somos" },
 ];
 ---
 
 <header class="header">
   <a href="/" class="header-logo">
-    <img src="/images/logo-ruralgpt.png" alt="ruralGPT" class="header-logo-img" />
+    <img
+      src="/images/logo-ruralgpt.png"
+      alt="ruralGPT"
+      class="header-logo-img"
+    />
   </a>
   <nav class="header-nav" id="header-nav">
-    {nav.map(({ href, label }) => (
-      <a href={href} class:list={[{ active: currentPath === href }]}>{label}</a>
-    ))}
+    {
+      nav.map(({ href, label }) => (
+        <a href={href} class:list={[{ active: currentPath === href }]}>
+          {label}
+        </a>
+      ))
+    }
   </nav>
   <a href="/#reservar" class="header-cta">Reservar</a>
-  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="header-nav">
+  <button
+    class="menu-toggle"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="header-nav"
+  >
     <span></span>
     <span></span>
   </button>
@@ -106,8 +119,12 @@ const nav = [
   }
 
   @media (max-width: 768px) {
-    .menu-toggle { display: flex; }
-    .header-cta { display: none; }
+    .menu-toggle {
+      display: flex;
+    }
+    .header-cta {
+      display: none;
+    }
     .header-nav {
       display: none;
       position: absolute;
@@ -122,32 +139,41 @@ const nav = [
       gap: 0;
       z-index: 99;
     }
-    .header-nav.open { display: flex; }
+    .header-nav.open {
+      display: flex;
+    }
     .header-nav a {
       padding: 0.75rem 0;
       border-bottom: 1px solid #f0f0f0;
       width: 100%;
       font-size: 1rem;
     }
-    .header-nav a:last-child { border-bottom: none; }
-    .header { position: relative; }
+    .header-nav a:last-child {
+      border-bottom: none;
+    }
+    .header {
+      position: relative;
+    }
   }
 </style>
 
 <script>
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('header-nav');
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("header-nav");
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('open');
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("open");
     });
     // Close on outside click
-    document.addEventListener('click', (e) => {
-      if (!toggle.contains(e.target as Node) && !nav.contains(e.target as Node)) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener("click", (e) => {
+      if (
+        !toggle.contains(e.target as Node) &&
+        !nav.contains(e.target as Node)
+      ) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
       }
     });
   }

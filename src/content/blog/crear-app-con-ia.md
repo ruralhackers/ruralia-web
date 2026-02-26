@@ -56,7 +56,7 @@ No genera aplicaciones completas. Genera piezas que puedes ensamblar. Piensa en 
 
 Si es tu primera vez, empieza por **Bolt**. Es la curva de aprendizaje más suave y los resultados son inmediatos. Cuando quieras más control, pasa a **Cursor**. Y usa **v0** como complemento para componentes puntuales.
 
-Si quieres aprender las tres en profundidad con alguien guiándote, el [Día 3 del retiro Rural GPT](/retiro-ia-galicia/) está dedicado exactamente a esto.
+Si quieres aprender las tres en profundidad con alguien guiándote, el [Día 3 de la Residencia Rural GPT](/residencia-ia-galicia/) está dedicado exactamente a esto.
 
 ## Tutorial: tu primera app con Cursor AI
 
@@ -363,7 +363,7 @@ Esto es normal. La ventaja de construir con IA es que iterar es rápido y barato
 
 Si has llegado hasta aquí y has probado las herramientas, probablemente has experimentado dos cosas: la emoción de ver tu idea tomar forma y la frustración de no saber cómo resolver ciertos problemas.
 
-Esa es exactamente la experiencia que nos llevó a diseñar el [retiro Rural GPT en Galicia](/retiro-ia-galicia/). El **Día 3 del retiro está dedicado íntegramente a construir con IA**: Cursor, Bolt y v0, las tres herramientas que has visto en este artículo.
+Esa es exactamente la experiencia que nos llevó a diseñar la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/). El **Día 3 de la Residencia IA está dedicado íntegramente a construir con IA**: Cursor, Bolt y v0, las tres herramientas que has visto en este artículo.
 
 Pero no es un tutorial que sigues solo delante de la pantalla. Es construcción guiada con soporte en tiempo real:
 
@@ -372,11 +372,11 @@ Pero no es un tutorial que sigues solo delante de la pantalla. Es construcción 
 - Cuando te atascas, hay alguien que sabe resolver el problema sentado a tu lado
 - Al final del día tienes algo funcional y desplegado
 
-Los otros tres días del retiro cubren el resto del stack de IA que necesitas como profesional: [prompting avanzado](/blog/curso-chatgpt/), asistentes personalizados (GPTs, Claude Projects, Claude Code), [automatizaciones](/blog/automatizaciones-ia/) y diseño de tu [stack personalizado de herramientas de IA](/blog/herramientas-ia-freelancers/).
+Los otros tres días de la Residencia IA cubren el resto del stack de IA que necesitas como profesional: [prompting avanzado](/blog/curso-chatgpt/), asistentes personalizados (GPTs, Claude Projects, Claude Code), [automatizaciones](/blog/automatizaciones-ia/) y diseño de tu [stack personalizado de herramientas de IA](/blog/herramientas-ia-freelancers/).
 
 Y todo esto pasa en un pueblo gallego con 1 Gbps de fibra, comida casera incluida y cero distracciones. Porque resulta que desconectar del entorno habitual es una de las mejores formas de aprender algo nuevo a fondo.
 
-Si te interesa, revisa [para quién está pensado el retiro](/para-quien/) y si tu perfil encaja. Los grupos son de 12 personas y las plazas se llenan rápido.
+Si te interesa, revisa [para quién está pensada la Residencia IA](/para-quien/) y si tu perfil encaja. Los grupos son de 12 personas y las plazas se llenan rápido.
 
 ### Lo que viene después
 

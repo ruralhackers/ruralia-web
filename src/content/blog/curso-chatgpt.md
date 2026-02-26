@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato inmersivo y presencial, echa un vistazo a nuestro [retiro de IA en Galicia](/retiro-ia-galicia/), donde trabajamos todo esto (y mucho más) durante 4 días. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato inmersivo y presencial, echa un vistazo a nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/), donde trabajamos todo esto (y mucho más) durante 4 días. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
@@ -269,7 +269,7 @@ No recomiendo ChatGPT Enterprise para la mayoría de pymes y freelancers: el cos
 
 ## Errores comunes al usar ChatGPT
 
-Después de haber formado a cientos de profesionales en nuestros [retiros de IA](/retiro-ia-galicia/), estos son los errores que vemos una y otra vez:
+Después de haber formado a cientos de profesionales en nuestras [formaciones de IA](/residencia-ia-galicia/), estos son los errores que vemos una y otra vez:
 
 ### 1. Prompts vagos
 
@@ -342,9 +342,9 @@ Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesiona
 
 La realidad es que leer un curso de ChatGPT (por muy bueno que sea) no es lo mismo que practicar durante horas con feedback en tiempo real. Los artículos como este te dan la teoría y algunos prompts útiles, pero la verdadera transformación ocurre cuando te sientas, abres tu portátil y trabajas en tus proyectos reales con alguien al lado que te corrige y te enseña la siguiente técnica.
 
-Es exactamente lo que hacemos en el **[retiro de IA de Rural GPT](/retiro-ia-galicia/)**: 4 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
+Es exactamente lo que hacemos en la **[Residencia de IA de Rural GPT](/residencia-ia-galicia/)**: 4 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
 
-Lo que cubrimos en el retiro va mucho más allá de lo que puede cubrir un artículo:
+Lo que cubrimos en la Residencia IA va mucho más allá de lo que puede cubrir un artículo:
 
 - **[Automatizaciones con IA](/blog/automatizaciones-ia/)** que conectan ChatGPT con tus herramientas reales (email, CRM, facturación)
 - **Agentes de IA** que ejecutan tareas complejas de forma autónoma
@@ -355,7 +355,7 @@ Todo incluido: formación, alojamiento en Anceu Coliving (un espacio increíble 
 
 El formato presencial e inmersivo tiene tasas de finalización del 95% frente al 15% de los cursos online. No es magia: es lo que pasa cuando eliminas las distracciones y te rodeas de gente que quiere lo mismo que tú.
 
-Si quieres saber si el retiro es para ti, mira [para quién está pensado](/para-quien/). Las plazas son limitadas a 12 personas por edición.
+Si quieres saber si la Residencia IA es para ti, mira [para quién está pensado](/para-quien/). Las plazas son limitadas a 12 personas por edición.
 
 ---
 

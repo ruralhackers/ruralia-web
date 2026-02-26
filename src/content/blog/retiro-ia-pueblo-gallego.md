@@ -1,9 +1,9 @@
 ---
-title: "Por qué hemos montado un retiro de IA en un pueblo gallego"
-description: "La historia de cómo nació Rural GPT: un retiro inmersivo de IA aplicada en Anceu Coliving, en el rural de Galicia. Por qué este formato, por qué aquí, y por qué ahora."
+title: "Por qué hemos montado una Residencia de IA en un pueblo gallego"
+description: "La historia de cómo nació Rural GPT: una Residencia inmersiva de IA aplicada en Anceu Coliving, en el rural de Galicia. Por qué este formato, por qué aquí, y por qué ahora."
 date: "2026-01-07"
 author: "Rural GPT"
-keywords: ["retiro IA rural", "formación IA Galicia", "Rural GPT"]
+keywords: ["residencia IA rural", "formación IA Galicia", "Rural GPT"]
 ---
 
 ## La IA está en todas partes. La formación, no.
@@ -53,4 +53,4 @@ Para gente que se busca la vida con tecnología: freelancers, webmasters, indie 
 
 No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
 
-[Mira si el retiro es para ti](/para-quien/) o [consulta el programa completo](/retiro-ia-galicia/).
+[Mira si la Residencia IA es para ti](/para-quien/) o [consulta el programa completo](/residencia-ia-galicia/).

@@ -119,7 +119,7 @@ Esto es lo más importante. El sistema FUNDAE incentiva un tipo de formación: l
 
 Pero la investigación sobre aprendizaje adulto dice que la formación más efectiva para profesionales es **intensiva, práctica y contextualizada**. Es decir: corta, hands-on, y aplicada directamente al trabajo real de cada participante.
 
-Un curso de 40 horas repartidas en 3 meses, bonificable al 100%, puede tener una tasa de finalización del 15% y un impacto real cercano a cero. Un retiro inmersivo de 4 días donde construyes cosas reales puede transformar tu forma de trabajar. Pero el segundo no siempre encaja en la casilla de FUNDAE.
+Un curso de 40 horas repartidas en 3 meses, bonificable al 100%, puede tener una tasa de finalización del 15% y un impacto real cercano a cero. Una experiencia inmersiva de 4 días donde construyes cosas reales puede transformar tu forma de trabajar. Pero el segundo no siempre encaja en la casilla de FUNDAE.
 
 ## Entonces, cómo financiar tu formación en IA si eres freelancer
 
@@ -159,7 +159,7 @@ Hay un motivo por el que los formatos inmersivos funcionan mejor que los cursos 
 - Coste neto: 0 euros (bonificado)
 - Impacto real: bajo
 
-**Retiro inmersivo de 4 días:**
+**Experiencia inmersiva de 4 días:**
 - Tasa de finalización: 100% (estás allí)
 - Formato: 100% hands-on con herramientas reales
 - Aplicación práctica: trabajas en tu propio proyecto
@@ -171,16 +171,16 @@ Lo que cuesta 0 euros pero no cambias nada es más caro que lo que cuesta 800 eu
 
 ## Lo que hacemos en Rural GPT
 
-Nuestro [retiro de IA en Galicia](/retiro-ia-galicia/) no es bonificable vía FUNDAE. Y es una decisión consciente.
+Nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/) no es bonificable vía FUNDAE. Y es una decisión consciente.
 
 Preferimos diseñar la mejor formación posible — actualizada al día, 100% práctica, en grupos de 12 personas, con herramientas que vas a usar el lunes siguiente — en lugar de adaptar el programa a los requisitos burocráticos de la formación bonificada.
 
-En 4 días en [Anceu Coliving](/retiro-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
+En 4 días en [Anceu Coliving](/residencia-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
 El precio (desde 442 euros en early bird) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 
 Si tu empresa tiene crédito FUNDAE, úsalo. Hay formaciones bonificables que merecen la pena. Pero si lo que buscas es el mayor impacto posible en el menor tiempo, a veces la mejor inversión es la que haces directamente, sin intermediarios ni burocracia.
 
-**[Consulta el programa y reserva tu plaza](/retiro-ia-galicia/).**
+**[Consulta el programa y reserva tu plaza](/residencia-ia-galicia/).**
 
-¿Tienes más preguntas sobre el retiro? Mira nuestra página de [preguntas frecuentes](/faq/) o [a quién va dirigido](/para-quien/).
+¿Tienes más preguntas sobre la Residencia IA? Mira nuestra página de [preguntas frecuentes](/faq/) o [a quién va dirigido](/para-quien/).

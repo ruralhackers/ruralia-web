@@ -1,109 +1,200 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 
 const linkCompartida = import.meta.env.PUBLIC_STRIPE_LINK_COMPARTIDA;
-const linkIndividual  = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
+const linkIndividual = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
 
 const schema = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: 'Rural GPT — Retiro de IA aplicada en Galicia',
-    description: 'Retiro inmersivo de IA aplicada para profesionales. 4 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.',
-    startDate: '2026-06-03',
-    endDate: '2026-06-07',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    eventStatus: 'https://schema.org/EventScheduled',
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Rural GPT — Residencia de IA aplicada en Galicia",
+    description:
+      "Residencia inmersiva de IA aplicada para profesionales. 4 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.",
+    startDate: "2026-06-03",
+    endDate: "2026-06-07",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
     location: {
-      '@type': 'Place',
-      name: 'Anceu Coliving',
+      "@type": "Place",
+      name: "Anceu Coliving",
       address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Ponte Caldelas',
-        addressRegion: 'Pontevedra',
-        addressCountry: 'ES',
+        "@type": "PostalAddress",
+        addressLocality: "Ponte Caldelas",
+        addressRegion: "Pontevedra",
+        addressCountry: "ES",
       },
     },
     organizer: {
-      '@type': 'Organization',
-      name: 'Rural GPT',
-      url: 'https://ruralgpt.gal',
+      "@type": "Organization",
+      name: "Rural GPT",
+      url: "https://ruralgpt.gal",
     },
     offers: [
       {
-        '@type': 'Offer',
-        name: 'Early bird — Habitación compartida',
-        price: '442',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/LimitedAvailability',
-        validFrom: '2025-01-01',
-        validThrough: '2026-03-15',
+        "@type": "Offer",
+        name: "Early bird — Habitación compartida",
+        price: "442",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/LimitedAvailability",
+        validFrom: "2025-01-01",
+        validThrough: "2026-03-15",
       },
       {
-        '@type': 'Offer',
-        name: 'Early bird — Habitación individual',
-        price: '558',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/LimitedAvailability',
-        validFrom: '2025-01-01',
-        validThrough: '2026-03-15',
+        "@type": "Offer",
+        name: "Early bird — Habitación individual",
+        price: "558",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/LimitedAvailability",
+        validFrom: "2025-01-01",
+        validThrough: "2026-03-15",
       },
       {
-        '@type': 'Offer',
-        name: 'Habitación compartida',
-        price: '632',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
+        "@type": "Offer",
+        name: "Habitación compartida",
+        price: "632",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/InStock",
       },
       {
-        '@type': 'Offer',
-        name: 'Habitación individual',
-        price: '797',
-        priceCurrency: 'EUR',
-        availability: 'https://schema.org/InStock',
+        "@type": "Offer",
+        name: "Habitación individual",
+        price: "797",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/InStock",
       },
     ],
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralgpt.gal/' },
-      { '@type': 'ListItem', position: 2, name: 'Retiro de IA en Galicia', item: 'https://ruralgpt.gal/retiro-ia-galicia/' },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://ruralgpt.gal/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Residencia de IA en Galicia",
+        item: "https://ruralgpt.gal/residencia-ia-galicia/",
+      },
     ],
   },
 ];
 
 const tools = [
-  { name: 'ChatGPT', desc: 'El asistente más versátil para texto, análisis y conversación', logo: '/logos/openai.svg', href: 'https://chatgpt.com' },
-  { name: 'Claude', desc: 'Razonamiento profundo y trabajo con documentos largos', logo: '/logos/anthropic.svg', href: 'https://claude.ai' },
-  { name: 'Gemini', desc: 'La IA de Google integrada con tu ecosistema', logo: '/logos/googlegemini.svg', href: 'https://gemini.google.com' },
-  { name: 'Kimi', desc: 'Modelo de razonamiento avanzado open source', logo: '/logos/kimi.svg', href: 'https://kimi.ai' },
-  { name: 'Cursor', desc: 'Programa y edita código con IA como copiloto', logo: '/logos/cursor.svg', href: 'https://cursor.com' },
-  { name: 'Runway', desc: 'Genera vídeo e imágenes con IA profesional', logo: '/logos/runway.svg', href: 'https://runwayml.com' },
-  { name: 'Bolt', desc: 'De idea a prototipo funcional en minutos', logo: '/logos/bolt.svg', href: 'https://bolt.new' },
-  { name: 'Lovable', desc: 'Crea aplicaciones web completas sin programar', logo: '/logos/lovable.svg', href: 'https://lovable.dev' },
-  { name: 'v0', desc: 'Genera componentes UI con una descripción', logo: '/logos/vercel.svg', href: 'https://v0.dev' },
-  { name: 'Make', desc: 'Automatiza flujos de trabajo entre aplicaciones', logo: '/logos/make.svg', href: 'https://make.com' },
-  { name: 'Perplexity', desc: 'Búsqueda inteligente con fuentes verificadas', logo: '/logos/perplexity.svg', href: 'https://perplexity.ai' },
-  { name: 'NotebookLM', desc: 'Convierte documentos en conocimiento interactivo', logo: '/logos/notebooklm.svg', href: 'https://notebooklm.google.com' },
+  {
+    name: "ChatGPT",
+    desc: "El asistente más versátil para texto, análisis y conversación",
+    logo: "/logos/openai.svg",
+    href: "https://chatgpt.com",
+  },
+  {
+    name: "Claude",
+    desc: "Razonamiento profundo y trabajo con documentos largos",
+    logo: "/logos/anthropic.svg",
+    href: "https://claude.ai",
+  },
+  {
+    name: "Gemini",
+    desc: "La IA de Google integrada con tu ecosistema",
+    logo: "/logos/googlegemini.svg",
+    href: "https://gemini.google.com",
+  },
+  {
+    name: "Kimi",
+    desc: "Modelo de razonamiento avanzado open source",
+    logo: "/logos/kimi.svg",
+    href: "https://kimi.ai",
+  },
+  {
+    name: "Cursor",
+    desc: "Programa y edita código con IA como copiloto",
+    logo: "/logos/cursor.svg",
+    href: "https://cursor.com",
+  },
+  {
+    name: "Runway",
+    desc: "Genera vídeo e imágenes con IA profesional",
+    logo: "/logos/runway.svg",
+    href: "https://runwayml.com",
+  },
+  {
+    name: "Bolt",
+    desc: "De idea a prototipo funcional en minutos",
+    logo: "/logos/bolt.svg",
+    href: "https://bolt.new",
+  },
+  {
+    name: "Lovable",
+    desc: "Crea aplicaciones web completas sin programar",
+    logo: "/logos/lovable.svg",
+    href: "https://lovable.dev",
+  },
+  {
+    name: "v0",
+    desc: "Genera componentes UI con una descripción",
+    logo: "/logos/vercel.svg",
+    href: "https://v0.dev",
+  },
+  {
+    name: "Make",
+    desc: "Automatiza flujos de trabajo entre aplicaciones",
+    logo: "/logos/make.svg",
+    href: "https://make.com",
+  },
+  {
+    name: "Perplexity",
+    desc: "Búsqueda inteligente con fuentes verificadas",
+    logo: "/logos/perplexity.svg",
+    href: "https://perplexity.ai",
+  },
+  {
+    name: "NotebookLM",
+    desc: "Convierte documentos en conocimiento interactivo",
+    logo: "/logos/notebooklm.svg",
+    href: "https://notebooklm.google.com",
+  },
 ];
 ---
 
 <Base
-  title="Retiro de IA en Galicia — 4 días, todo incluido | Rural GPT"
+  title="Residencia de IA en Galicia — 4 días, todo incluido | Rural GPT"
   description="Ponte al día con IA en 4 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 442 EUR."
-  keywords={['retiro IA Galicia', 'curso intensivo IA presencial', 'ponerse al día con IA', 'formación IA todo incluido', 'curso IA Anceu Coliving']}
+  keywords={[
+    "residencia IA Galicia",
+    "curso intensivo IA presencial",
+    "ponerse al día con IA",
+    "formación IA todo incluido",
+    "curso IA Anceu Coliving",
+  ]}
   schema={schema}
 >
   <!-- Hero -->
-  <section class="section hero-retiro">
+  <section class="section hero-residencia">
     <div class="section-inner text-center">
       <h1>Ponte al día con IA en 4 días. Todo incluido.</h1>
-      <p class="hero-sub">Esto es para ti si sientes que la IA va más rápido de lo que puedes procesar y quieres "un cortafuegos". En 4 días filtramos el ruido y te damos las herramientas exactas para que tu experiencia profesional se potencie, no se oxide.</p>
-      <p class="hero-sub">Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú vienes 4 días a Galicia y te vas con las herramientas de IA configuradas para tu trabajo.</p>
-      <a href="/#pricing" class="btn btn-primary btn-lg">Aprovechar la oferta lanzamiento</a>
-      <p class="hero-price">Desde <span id="hero-price-from">442</span> EUR todo incluido · 3–7 junio 2026</p>
+      <p class="hero-sub">
+        Esto es para ti si sientes que la IA va más rápido de lo que puedes
+        procesar y quieres "un cortafuegos". En 4 días filtramos el ruido y te
+        damos las herramientas exactas para que tu experiencia profesional se
+        potencie, no se oxide.
+      </p>
+      <p class="hero-sub">
+        Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú
+        vienes 4 días a Galicia y te vas con las herramientas de IA configuradas
+        para tu trabajo.
+      </p>
+      <a href="/#pricing" class="btn btn-primary btn-lg"
+        >Aprovechar la oferta lanzamiento</a
+      >
+      <p class="hero-price">
+        Desde <span id="hero-price-from">442</span> EUR todo incluido · 3–7 junio
+        2026
+      </p>
     </div>
   </section>
 
@@ -150,7 +241,9 @@ const tools = [
         </div>
         <div class="include-item">
           <strong>Materiales</strong>
-          <p>Acceso a todas las herramientas, licencias y materiales del curso</p>
+          <p>
+            Acceso a todas las herramientas, licencias y materiales del curso
+          </p>
         </div>
         <div class="include-item">
           <strong>Comunidad alumni</strong>
@@ -168,18 +261,34 @@ const tools = [
   <section class="section">
     <div class="section-inner">
       <h2>Herramientas que aprenderás a usar</h2>
-      <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
+      <p>
+        No todas las herramientas de IA sirven para lo mismo. Nosotros las
+        probamos, tú te llevas las que encajan con tu trabajo.
+      </p>
       <div class="tools-grid">
-        {tools.map((tool) => (
-          <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
-            <div class="tool-top">
-              <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" />
-              <span class="tool-arrow">↗</span>
-            </div>
-            <p class="tool-name">{tool.name}</p>
-            <p class="tool-desc">{tool.desc}</p>
-          </a>
-        ))}
+        {
+          tools.map((tool) => (
+            <a
+              class="tool-card"
+              href={tool.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="tool-top">
+                <img
+                  class="tool-logo"
+                  src={tool.logo}
+                  alt={tool.name}
+                  width="28"
+                  height="28"
+                />
+                <span class="tool-arrow">↗</span>
+              </div>
+              <p class="tool-name">{tool.name}</p>
+              <p class="tool-desc">{tool.desc}</p>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -191,22 +300,38 @@ const tools = [
 
       <div class="day-detail">
         <h3>Día 1 — "¿Dónde estoy?" — Mapa del terreno</h3>
-        <p>Te situamos. Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo. Sales del día 1 entendiendo el paisaje completo de la IA aplicada a trabajo real.</p>
+        <p>
+          Te situamos. Qué herramientas existen, para qué sirve cada una, cuáles
+          son humo y cuáles merecen tu tiempo. Sales del día 1 entendiendo el
+          paisaje completo de la IA aplicada a trabajo real.
+        </p>
       </div>
 
       <div class="day-detail">
         <h3>Día 2 — "¿Qué puedo automatizar?" — Tu trabajo bajo la lupa</h3>
-        <p>Analizamos tu flujo de trabajo real. Identificamos qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo. Aprendes a usar las herramientas clave: ChatGPT, Claude, Gemini, Make.</p>
+        <p>
+          Analizamos tu flujo de trabajo real. Identificamos qué tareas puedes
+          automatizar, delegar a IA o hacer en la mitad de tiempo. Aprendes a
+          usar las herramientas clave: ChatGPT, Claude, Gemini, Make.
+        </p>
       </div>
 
       <div class="day-detail">
         <h3>Día 3 — "¿Puedo construir cosas?" — De idea a prototipo</h3>
-        <p>Sí, puedes. Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado (y pagado). Una web, una app interna, un automatismo.</p>
+        <p>
+          Sí, puedes. Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0
+          construyes herramientas que antes habrías encargado (y pagado). Una
+          web, una app interna, un automatismo.
+        </p>
       </div>
 
       <div class="day-detail">
         <h3>Día 4 — "¿Con qué me quedo?" — Tu stack personalizado</h3>
-        <p>Montas tu kit definitivo. Las herramientas concretas que vas a usar cada día. Sesión guiada para dejarlo todo configurado. Sales con todo listo para el día 5: tu primer día de vuelta al trabajo, pero con IA.</p>
+        <p>
+          Montas tu kit definitivo. Las herramientas concretas que vas a usar
+          cada día. Sesión guiada para dejarlo todo configurado. Sales con todo
+          listo para el día 5: tu primer día de vuelta al trabajo, pero con IA.
+        </p>
       </div>
     </div>
   </section>
@@ -216,13 +341,31 @@ const tools = [
     <div class="section-inner">
       <h2>Un día típico</h2>
       <div class="schedule">
-        <div class="schedule-row"><span class="time">9:00</span><span>Desayuno juntos</span></div>
-        <div class="schedule-row"><span class="time">10:00 – 13:30</span><span>Taller práctico (hands-on con herramientas)</span></div>
-        <div class="schedule-row"><span class="time">13:30</span><span>Comida</span></div>
-        <div class="schedule-row"><span class="time">15:30 – 18:00</span><span>Aplicar lo aprendido a tu propio proyecto</span></div>
-        <div class="schedule-row"><span class="time">18:00 – 19:30</span><span>Tiempo libre, paseo, descanso</span></div>
-        <div class="schedule-row"><span class="time">20:00</span><span>Cena</span></div>
-        <div class="schedule-row"><span class="time">21:30</span><span>Sesión nocturna opcional — demos, preguntas, charla</span></div>
+        <div class="schedule-row">
+          <span class="time">9:00</span><span>Desayuno juntos</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">10:00 – 13:30</span><span
+            >Taller práctico (hands-on con herramientas)</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">13:30</span><span>Comida</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">15:30 – 18:00</span><span
+            >Aplicar lo aprendido a tu propio proyecto</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">18:00 – 19:30</span><span
+            >Tiempo libre, paseo, descanso</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">20:00</span><span>Cena</span>
+        </div>
+        <div class="schedule-row">
+          <span class="time">21:30</span><span
+            >Sesión nocturna opcional — demos, preguntas, charla</span>
+        </div>
       </div>
     </div>
   </section>
@@ -231,15 +374,42 @@ const tools = [
   <section class="section alt">
     <div class="section-inner">
       <h2>El lugar: Anceu Coliving</h2>
-      <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra), con 1 Gbps de fibra óptica, espacio de trabajo equipado, y rodeado de naturaleza. El 55% de los colivers repiten.</p>
-      <p>A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO).</p>
+      <p>
+        El primer coliving del noroeste de España. Un pueblo de menos de 100
+        habitantes en Ponte Caldelas (Pontevedra), con 1 Gbps de fibra óptica,
+        espacio de trabajo equipado, y rodeado de naturaleza. El 55% de los
+        colivers repiten.
+      </p>
+      <p>
+        A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el
+        aeropuerto más cercano es Vigo (VGO).
+      </p>
 
       <h2>Quién lo organiza</h2>
-      <p>Rural GPT es una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Llevamos años organizando eventos tech en el rural gallego — Hacker Days, residencias creativas, hackathones con participantes de toda Europa.</p>
+      <p>
+        Rural GPT es una iniciativa de <a
+          href="https://ruralhackers.com"
+          target="_blank"
+          rel="noopener">Rural Hackers</a
+        > y <a href="https://anceu.com" target="_blank" rel="noopener"
+          >Anceu Coliving</a
+        >. Llevamos años organizando eventos tech en el rural gallego — Hacker
+        Days, residencias creativas, hackathones con participantes de toda
+        Europa.
+      </p>
       <div class="team-inline">
-        <p><strong>Agustín Jamardo</strong> — Fundador de Anceu Coliving. Desarrollador, 12+ años en remoto.</p>
-        <p><strong>África Rodríguez</strong> — Cofundadora de Rural Hackers. Facilitadora de proyectos europeos (Erasmus+).</p>
-        <p><strong>Nacho Márquez</strong> — Cofundador de Rural Hackers. Director de Noites Abertas. 20+ proyectos internacionales.</p>
+        <p>
+          <strong>Agustín Jamardo</strong> — Fundador de Anceu Coliving. Desarrollador,
+          12+ años en remoto.
+        </p>
+        <p>
+          <strong>África Rodríguez</strong> — Cofundadora de Rural Hackers. Facilitadora
+          de proyectos europeos (Erasmus+).
+        </p>
+        <p>
+          <strong>Nacho Márquez</strong> — Cofundador de Rural Hackers. Director de
+          Noites Abertas. 20+ proyectos internacionales.
+        </p>
       </div>
     </div>
   </section>
@@ -248,7 +418,10 @@ const tools = [
   <section class="section alt" id="pricing">
     <div class="section-inner pricing-section">
       <h2>Precio</h2>
-      <p class="pricing-intro">Todo incluido: formación, alojamiento, comidas, materiales y comunidad alumni.</p>
+      <p class="pricing-intro">
+        Todo incluido: formación, alojamiento, comidas, materiales y comunidad
+        alumni.
+      </p>
       <div
         class="pricing-grid"
         data-prices='[
@@ -261,8 +434,12 @@ const tools = [
           <div class="room-title">Habitación compartida</div>
           <div class="room-subtitle">Compartida con otra persona</div>
           <span class="price-amount" id="price-compartida">442 EUR</span>
-          <span class="price-tier" id="tier-compartida">Early bird — hasta el 15 de marzo</span>
-          <span class="price-discount" id="discount-compartida">30% de descuento</span>
+          <span class="price-tier" id="tier-compartida"
+            >Early bird — hasta el 15 de marzo</span
+          >
+          <span class="price-discount" id="discount-compartida"
+            >30% de descuento</span
+          >
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -271,14 +448,23 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
-          <a href={linkCompartida} class="btn btn-primary" target="_blank" rel="noopener">Reserva por 100 €</a>
+          <a
+            href={linkCompartida}
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener">Reserva por 100 €</a
+          >
         </div>
         <div class="price-card featured" id="card-individual">
           <div class="room-title">Habitación individual</div>
           <div class="room-subtitle">Habitación para ti solo</div>
           <span class="price-amount" id="price-individual">558 EUR</span>
-          <span class="price-tier" id="tier-individual">Early bird — hasta el 15 de marzo</span>
-          <span class="price-discount" id="discount-individual">30% de descuento</span>
+          <span class="price-tier" id="tier-individual"
+            >Early bird — hasta el 15 de marzo</span
+          >
+          <span class="price-discount" id="discount-individual"
+            >30% de descuento</span
+          >
           <ul>
             <li>4 días de formación</li>
             <li>3 noches de alojamiento</li>
@@ -287,15 +473,27 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
-          <a href={linkIndividual} class="btn btn-gold" target="_blank" rel="noopener">Reserva por 150 €</a>
+          <a
+            href={linkIndividual}
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener">Reserva por 150 €</a
+          >
         </div>
       </div>
-      <div id="pricing-countdown" style="display:none;" class="countdown-banner">
+      <div
+        id="pricing-countdown"
+        style="display:none;"
+        class="countdown-banner"
+      >
         <span class="countdown-label" id="countdown-label"></span>
         <span class="countdown-timer" id="countdown-timer"></span>
         <span class="countdown-next" id="countdown-next"></span>
       </div>
-      <p class="pricing-note">Un bootcamp de IA en Madrid cuesta 2.450–7.000 EUR sin alojamiento ni comidas. <a href="/faq/">¿Más preguntas?</a></p>
+      <p class="pricing-note">
+        Un bootcamp de IA en Madrid cuesta 2.450–7.000 EUR sin alojamiento ni
+        comidas. <a href="/faq/">¿Más preguntas?</a>
+      </p>
     </div>
   </section>
 
@@ -310,18 +508,30 @@ const tools = [
         </details>
         <details>
           <summary>¿Es solo para gente de tecnología?</summary>
-          <p>No. Es para cualquier profesional que quiera integrar IA en su trabajo: diseño, administración, marketing, consultoría, servicios...</p>
+          <p>
+            No. Es para cualquier profesional que quiera integrar IA en su
+            trabajo: diseño, administración, marketing, consultoría,
+            servicios...
+          </p>
         </details>
         <details>
           <summary>¿Y si ya uso ChatGPT?</summary>
-          <p>Perfecto, pero probablemente lo uses al 10% de su capacidad. Aquí vas mucho más allá.</p>
+          <p>
+            Perfecto, pero probablemente lo uses al 10% de su capacidad. Aquí
+            vas mucho más allá.
+          </p>
         </details>
         <details>
           <summary>¿Qué pasa si la IA que aprendo se queda obsoleta?</summary>
-          <p>Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar y elegir. Y la comunidad alumni sigue activa con actualizaciones.</p>
+          <p>
+            Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar y
+            elegir. Y la comunidad alumni sigue activa con actualizaciones.
+          </p>
         </details>
       </div>
-      <p class="faq-more"><a href="/faq/">Ver todas las preguntas frecuentes</a></p>
+      <p class="faq-more">
+        <a href="/faq/">Ver todas las preguntas frecuentes</a>
+      </p>
     </div>
   </section>
 
@@ -329,34 +539,53 @@ const tools = [
   <section class="section alt" id="reservar">
     <div class="section-inner form-section">
       <h2>¿Tienes dudas? Escríbenos</h2>
-      <p class="form-subtitle">¿Tienes alguna pregunta antes de reservar? Te respondemos en menos de 24h.</p>
+      <p class="form-subtitle">
+        ¿Tienes alguna pregunta antes de reservar? Te respondemos en menos de
+        24h.
+      </p>
 
       <form
-        name="contacto-retiro"
+        name="contacto-residencia"
         method="POST"
         action="/gracias/"
         data-netlify="true"
         netlify-honeypot="bot-field"
         class="waitlist-form"
       >
-        <input type="hidden" name="form-name" value="contacto-retiro" />
+        <input type="hidden" name="form-name" value="contacto-residencia" />
         <p class="hidden-field">
           <label>No rellenar: <input name="bot-field" /></label>
         </p>
 
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            placeholder="Tu nombre"
+          />
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="tu@email.com"
+          />
         </div>
 
         <div class="form-group">
           <label for="mensaje">¿Qué quieres saber?</label>
-          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="3"
+            placeholder="Cuéntanos tu duda..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
@@ -366,8 +595,8 @@ const tools = [
 </Base>
 
 <style>
-  /* ===== Hero retiro ===== */
-  .hero-retiro {
+  /* ===== Hero residencia ===== */
+  .hero-residencia {
     padding-top: 5rem;
     padding-bottom: 4rem;
   }
@@ -375,7 +604,7 @@ const tools = [
     max-width: 1100px;
     margin: 0 auto;
   }
-  .hero-retiro h1 {
+  .hero-residencia h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     max-width: 700px;
     margin: 0 auto 1.5rem;
@@ -428,7 +657,9 @@ const tools = [
     margin-bottom: 0.25rem;
   }
 
-  .alt { background: #f5f5f5; }
+  .alt {
+    background: #f5f5f5;
+  }
 
   .day-detail {
     margin-bottom: 2rem;
@@ -478,7 +709,9 @@ const tools = [
     margin: 0;
   }
 
-  .pricing-section { text-align: center; }
+  .pricing-section {
+    text-align: center;
+  }
   .pricing-intro {
     color: #666;
     margin-bottom: 0;
@@ -516,7 +749,7 @@ const tools = [
     margin-bottom: 1.25rem;
   }
   .price-card.featured .room-subtitle {
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
   }
   .price-amount {
     display: block;
@@ -535,7 +768,7 @@ const tools = [
     min-height: 1em;
   }
   .price-card.featured .price-tier {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
   .price-discount {
     display: block;
@@ -546,7 +779,7 @@ const tools = [
     min-height: 1.2em;
   }
   .price-card.featured .price-discount {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
   }
   .price-card ul {
     text-align: left;
@@ -561,10 +794,10 @@ const tools = [
     font-size: 0.9rem;
   }
   .price-card.featured li {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
   }
   .price-card li::before {
-    content: '✓ ';
+    content: "✓ ";
     color: #000;
     font-weight: 600;
   }
@@ -590,7 +823,7 @@ const tools = [
     margin: 0 0 0.6rem;
   }
   .price-card.featured .deposit-note {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
   }
   @media (max-width: 600px) {
     .pricing-grid {
@@ -628,12 +861,12 @@ const tools = [
     display: none;
   }
   .faq-inline summary::before {
-    content: '+ ';
+    content: "+ ";
     color: var(--verde-musgo);
     font-weight: 700;
   }
   .faq-inline details[open] summary::before {
-    content: '− ';
+    content: "− ";
   }
   .faq-inline p {
     margin: 0.75rem 0 0;
@@ -788,7 +1021,9 @@ const tools = [
   }
 
   @media (max-width: 480px) {
-    .price-amount { font-size: 2rem; }
+    .price-amount {
+      font-size: 2rem;
+    }
   }
   .countdown-banner {
     max-width: 680px;
@@ -804,11 +1039,24 @@ const tools = [
     flex-wrap: wrap;
     font-size: 0.9rem;
   }
-  .countdown-label { color: #666; }
-  .countdown-timer { font-weight: 700; font-size: 1.05rem; color: #000; font-variant-numeric: tabular-nums; }
-  .countdown-next { color: #666; }
+  .countdown-label {
+    color: #666;
+  }
+  .countdown-timer {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #000;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown-next {
+    color: #666;
+  }
   @media (max-width: 600px) {
-    .countdown-banner { flex-direction: column; text-align: center; gap: 0.3rem; }
+    .countdown-banner {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.3rem;
+    }
   }
 </style>
 
@@ -816,56 +1064,99 @@ const tools = [
   // ── Precios dinámicos por fecha ────────────────────────────────────────────
   (function () {
     const schedule = [
-      { until: '2026-03-16', label: 'Early bird', until_text: 'hasta el 15 de marzo', discount: '30% de descuento', compartida: 442, individual: 558 },
-      { until: '2026-04-16', label: 'Segunda tanda', until_text: 'hasta el 15 de abril', discount: '15% de descuento', compartida: 537, individual: 677 },
-      { until: null, label: 'Precio normal', until_text: '', discount: '', compartida: 632, individual: 797 },
+      {
+        until: "2026-03-16",
+        label: "Early bird",
+        until_text: "hasta el 15 de marzo",
+        discount: "30% de descuento",
+        compartida: 442,
+        individual: 558,
+      },
+      {
+        until: "2026-04-16",
+        label: "Segunda tanda",
+        until_text: "hasta el 15 de abril",
+        discount: "15% de descuento",
+        compartida: 537,
+        individual: 677,
+      },
+      {
+        until: null,
+        label: "Precio normal",
+        until_text: "",
+        discount: "",
+        compartida: 632,
+        individual: 797,
+      },
     ];
 
     const now = new Date();
-    const tier = schedule.find((t) => !t.until || now < new Date(t.until)) || schedule[schedule.length - 1];
-    const tierText = tier.until_text ? `${tier.label} — ${tier.until_text}` : tier.label;
-    const set = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+    const tier =
+      schedule.find((t) => !t.until || now < new Date(t.until)) ||
+      schedule[schedule.length - 1];
+    const tierText = tier.until_text
+      ? `${tier.label} — ${tier.until_text}`
+      : tier.label;
+    const set = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    };
 
-    set('price-compartida', tier.compartida + ' EUR');
-    set('price-individual', tier.individual + ' EUR');
-    set('tier-compartida', tierText);
-    set('tier-individual', tierText);
-    set('discount-compartida', tier.discount);
-    set('discount-individual', tier.discount);
-    set('hero-price-from', String(tier.compartida));
+    set("price-compartida", tier.compartida + " EUR");
+    set("price-individual", tier.individual + " EUR");
+    set("tier-compartida", tierText);
+    set("tier-individual", tierText);
+    set("discount-compartida", tier.discount);
+    set("discount-individual", tier.discount);
+    set("hero-price-from", String(tier.compartida));
 
     // Countdown
     const countdownPhases = [
-      { deadline: new Date('2026-03-16T00:00:00'), next: { compartida: 537, individual: 677 } },
-      { deadline: new Date('2026-04-16T00:00:00'), next: { compartida: 632, individual: 797 } },
+      {
+        deadline: new Date("2026-03-16T00:00:00"),
+        next: { compartida: 537, individual: 677 },
+      },
+      {
+        deadline: new Date("2026-04-16T00:00:00"),
+        next: { compartida: 632, individual: 797 },
+      },
     ];
     const phase = countdownPhases.find((p) => now < p.deadline);
     if (phase) {
-      const banner = document.getElementById('pricing-countdown');
-      const labelEl = document.getElementById('countdown-label');
-      const timerEl = document.getElementById('countdown-timer');
-      const nextEl = document.getElementById('countdown-next');
+      const banner = document.getElementById("pricing-countdown");
+      const labelEl = document.getElementById("countdown-label");
+      const timerEl = document.getElementById("countdown-timer");
+      const nextEl = document.getElementById("countdown-next");
       if (banner && labelEl && timerEl && nextEl) {
-        banner.style.display = 'flex';
+        banner.style.display = "flex";
         const deadlineDate = phase.deadline;
         const deadlineDay = deadlineDate.getDate() - 1;
-        const deadlineMonth = deadlineDate.toLocaleString('es', { month: 'long' });
+        const deadlineMonth = deadlineDate.toLocaleString("es", {
+          month: "long",
+        });
         labelEl.textContent = `⏳ El precio sube el ${deadlineDay} de ${deadlineMonth} —`;
         nextEl.textContent = `Próximo precio: ${phase.next.compartida} € / ${phase.next.individual} €`;
-        function pad(n) { return String(n).padStart(2, '0'); }
+        function pad(n) {
+          return String(n).padStart(2, "0");
+        }
         function tick() {
           const diff = deadlineDate.getTime() - Date.now();
-          if (diff <= 0) { banner.style.display = 'none'; return; }
+          if (diff <= 0) {
+            banner.style.display = "none";
+            return;
+          }
           const d = Math.floor(diff / 86400000);
           const h = Math.floor((diff % 86400000) / 3600000);
           const m = Math.floor((diff % 3600000) / 60000);
           const s = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent = d > 0 ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s` : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+          timerEl.textContent =
+            d > 0
+              ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`
+              : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
         }
         tick();
         setInterval(tick, 1000);
       }
     }
   })();
-
 </script>

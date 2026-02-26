@@ -1,85 +1,101 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 
 const faqs = [
   {
-    q: '¿Necesito saber programar?',
-    a: 'No. Si sabes usar un navegador y herramientas digitales en tu trabajo, puedes seguir el programa. Esto no es un curso de programación — es un curso de usar IA como herramienta profesional.',
+    q: "¿Necesito saber programar?",
+    a: "No. Si sabes usar un navegador y herramientas digitales en tu trabajo, puedes seguir el programa. Esto no es un curso de programación — es un curso de usar IA como herramienta profesional.",
   },
   {
-    q: '¿Es solo para gente de tecnología?',
-    a: 'No. Es para cualquier profesional que quiera integrar IA en su trabajo: diseño, administración, marketing, consultoría, servicios, agencias... Si usas un ordenador para trabajar, este retiro es para ti.',
+    q: "¿Es solo para gente de tecnología?",
+    a: "No. Es para cualquier profesional que quiera integrar IA en su trabajo: diseño, administración, marketing, consultoría, servicios, agencias... Si usas un ordenador para trabajar, esta experiencia es para ti.",
   },
   {
-    q: '¿Y si ya uso ChatGPT?',
-    a: 'Perfecto, pero probablemente lo uses al 10% de su capacidad. En el retiro vas mucho más allá: asistentes personalizados, automatizaciones, herramientas de construcción, tu propio stack completo.',
+    q: "¿Y si ya uso ChatGPT?",
+    a: "Perfecto, pero probablemente lo uses al 10% de su capacidad. En la Residencia IA vas mucho más allá: asistentes personalizados, automatizaciones, herramientas de construcción, tu propio stack completo.",
   },
   {
-    q: '¿Qué pasa si la IA que aprendo se queda obsoleta en 2 meses?',
-    a: 'Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar, comparar y elegir. Además, nuestro equipo sigue investigando cada semana y la comunidad alumni se mantiene activa con actualizaciones.',
+    q: "¿Qué pasa si la IA que aprendo se queda obsoleta en 2 meses?",
+    a: "Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar, comparar y elegir. Además, nuestro equipo sigue investigando cada semana y la comunidad alumni se mantiene activa con actualizaciones.",
   },
   {
-    q: '¿Cómo llego a Anceu?',
-    a: 'Anceu está a 30 min de Pontevedra y 45 min de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO). Podemos coordinar transporte desde Pontevedra o Vigo.',
+    q: "¿Cómo llego a Anceu?",
+    a: "Anceu está a 30 min de Pontevedra y 45 min de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO). Podemos coordinar transporte desde Pontevedra o Vigo.",
   },
   {
-    q: '¿Qué tengo que llevar?',
-    a: 'Tu portátil y ganas de aprender. Todo lo demás (alojamiento, comidas, materiales, software) está incluido.',
+    q: "¿Qué tengo que llevar?",
+    a: "Tu portátil y ganas de aprender. Todo lo demás (alojamiento, comidas, materiales, software) está incluido.",
   },
   {
-    q: '¿Puedo deducirme el coste?',
-    a: 'Si eres autónomo o empresa, sí. Es un gasto de formación profesional deducible en tu IRPF o Impuesto de Sociedades.',
+    q: "¿Puedo deducirme el coste?",
+    a: "Si eres autónomo o empresa, sí. Es un gasto de formación profesional deducible en tu IRPF o Impuesto de Sociedades.",
   },
   {
-    q: '¿Cuál es la política de cancelación?',
-    a: 'Cancelación gratuita hasta 15 días antes. Entre 15 y 7 días, devolvemos el 50%. Menos de 7 días, no hay devolución (pero puedes transferir tu plaza a otra persona).',
+    q: "¿Cuál es la política de cancelación?",
+    a: "Cancelación gratuita hasta 15 días antes. Entre 15 y 7 días, devolvemos el 50%. Menos de 7 días, no hay devolución (pero puedes transferir tu plaza a otra persona).",
   },
   {
-    q: '¿Hay wifi bueno?',
-    a: '1 Gbps de fibra óptica. Anceu es un coliving tech, la conectividad es prioridad.',
+    q: "¿Hay wifi bueno?",
+    a: "1 Gbps de fibra óptica. Anceu es un coliving tech, la conectividad es prioridad.",
   },
   {
-    q: '¿Cuántas personas hay por edición?',
-    a: 'Máximo 12. Grupos pequeños para atención personalizada.',
+    q: "¿Cuántas personas hay por edición?",
+    a: "Máximo 12. Grupos pequeños para atención personalizada.",
   },
   {
-    q: '¿Qué me llevo al terminar?',
-    a: 'Herramientas de IA configuradas y funcionando en tu trabajo real, flujos de automatización, un prototipo propio, acceso a la comunidad alumni, materiales y una sesión de follow-up online a las 2-3 semanas.',
+    q: "¿Qué me llevo al terminar?",
+    a: "Herramientas de IA configuradas y funcionando en tu trabajo real, flujos de automatización, un prototipo propio, acceso a la comunidad alumni, materiales y una sesión de follow-up online a las 2-3 semanas.",
   },
   {
-    q: '¿Qué pasa si llueve?',
-    a: 'Estamos en Galicia, así que es probable. Toda la formación es en interior. La lluvia es parte del encanto.',
+    q: "¿Qué pasa si llueve?",
+    a: "Estamos en Galicia, así que es probable. Toda la formación es en interior. La lluvia es parte del encanto.",
   },
 ];
 
 const schema = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
+      "@type": "Question",
       name: faq.q,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: faq.a,
       },
     })),
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralgpt.gal/' },
-      { '@type': 'ListItem', position: 2, name: 'Preguntas frecuentes', item: 'https://ruralgpt.gal/faq/' },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://ruralgpt.gal/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Preguntas frecuentes",
+        item: "https://ruralgpt.gal/faq/",
+      },
     ],
   },
 ];
 ---
 
 <Base
-  title="Preguntas frecuentes — Retiro de IA Rural GPT"
-  description="Todo lo que necesitas saber sobre el retiro de IA en Galicia: nivel necesario, qué herramientas se aprenden, política de cancelación y más."
-  keywords={['precio retiro IA', 'necesito saber programar IA', 'cómo llegar Anceu', 'qué incluye retiro IA', 'retiro IA preguntas']}
+  title="Preguntas frecuentes — Residencia de IA Rural GPT"
+  description="Todo lo que necesitas saber sobre la Residencia de IA en Galicia: nivel necesario, qué herramientas se aprenden, política de cancelación y más."
+  keywords={[
+    "precio residencia IA",
+    "necesito saber programar IA",
+    "cómo llegar Anceu",
+    "qué incluye residencia IA",
+    "residencia IA preguntas",
+  ]}
   schema={schema}
 >
   <section class="section">
@@ -87,17 +103,23 @@ const schema = [
       <h1>Preguntas frecuentes</h1>
 
       <div class="faq-list">
-        {faqs.map((faq) => (
-          <details class="faq-item">
-            <summary>{faq.q}</summary>
-            <p>{faq.a}</p>
-          </details>
-        ))}
+        {
+          faqs.map((faq) => (
+            <details class="faq-item">
+              <summary>{faq.q}</summary>
+              <p>{faq.a}</p>
+            </details>
+          ))
+        }
       </div>
 
       <div class="cta-block">
-        <p>¿Tienes otra pregunta? Escríbenos a <strong>hola@ruralgpt.gal</strong></p>
-        <a href="/retiro-ia-galicia/" class="btn btn-primary">Ver el retiro</a>
+        <p>
+          ¿Tienes otra pregunta? Escríbenos a <strong>hola@ruralgpt.gal</strong>
+        </p>
+        <a href="/residencia-ia-galicia/" class="btn btn-primary"
+          >Ver la Residencia IA</a
+        >
       </div>
     </div>
   </section>
@@ -115,18 +137,36 @@ const schema = [
         class="contact-form"
       >
         <input type="hidden" name="form-name" value="contacto" />
-        <p style="display:none"><label>No rellenar: <input name="bot-field" /></label></p>
+        <p style="display:none">
+          <label>No rellenar: <input name="bot-field" /></label>
+        </p>
         <div class="cf-group">
           <label for="cf-nombre">Nombre</label>
-          <input type="text" id="cf-nombre" name="nombre" required placeholder="Tu nombre" />
+          <input
+            type="text"
+            id="cf-nombre"
+            name="nombre"
+            required
+            placeholder="Tu nombre"
+          />
         </div>
         <div class="cf-group">
           <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" required placeholder="tu@email.com" />
+          <input
+            type="email"
+            id="cf-email"
+            name="email"
+            required
+            placeholder="tu@email.com"
+          />
         </div>
         <div class="cf-group">
           <label for="cf-mensaje">¿Qué quieres saber?</label>
-          <textarea id="cf-mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
+          <textarea
+            id="cf-mensaje"
+            name="mensaje"
+            rows="3"
+            placeholder="Cuéntanos tu duda..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
@@ -160,14 +200,14 @@ const schema = [
     align-items: center;
   }
   .faq-item summary::after {
-    content: '+';
+    content: "+";
     font-size: 1.5rem;
     font-weight: 300;
     color: #999;
     transition: transform 0.2s;
   }
   .faq-item[open] summary::after {
-    content: '−';
+    content: "−";
   }
   .faq-item summary::-webkit-details-marker {
     display: none;
@@ -233,6 +273,11 @@ const schema = [
     outline: none;
     border-color: #000;
   }
-  .cf-group textarea { resize: vertical; }
-  .contact-form .btn { width: 100%; margin-top: 0.5rem; }
+  .cf-group textarea {
+    resize: vertical;
+  }
+  .contact-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 </style>

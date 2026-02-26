@@ -2,37 +2,37 @@
 const year = new Date().getFullYear();
 
 const links = [
-  { href: '/retiro-ia-galicia/', label: 'El retiro' },
-  { href: '/para-quien/', label: 'Para quién' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/faq/', label: 'FAQ' },
-  { href: '/sobre-nosotros/', label: 'Sobre nosotros' },
+  { href: "/residencia-ia-galicia/", label: "Residencia IA" },
+  { href: "/para-quien/", label: "Para quién" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/faq/", label: "FAQ" },
+  { href: "/sobre-nosotros/", label: "Sobre nosotros" },
 ];
 
 const legalLinks = [
-  { href: '/legal/', label: 'Aviso legal' },
-  { href: '/legal/#privacidad', label: 'Privacidad' },
+  { href: "/legal/", label: "Aviso legal" },
+  { href: "/legal/#privacidad", label: "Privacidad" },
 ];
 ---
 
 <footer class="footer">
   <div class="footer-top">
     <a href="/" class="footer-logo">
-      <img src="/images/logo-ruralgpt.png" alt="ruralGPT" style="height:28px;width:auto;display:block;" />
+      <img
+        src="/images/logo-ruralgpt.png"
+        alt="ruralGPT"
+        style="height:28px;width:auto;display:block;"
+      />
     </a>
     <nav class="footer-nav" aria-label="Footer">
-      {links.map(({ href, label }) => (
-        <a href={href}>{label}</a>
-      ))}
+      {links.map(({ href, label }) => <a href={href}>{label}</a>)}
     </nav>
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">&copy; {year} ruralGPT</p>
     <div class="footer-bottom-right">
       <a href="mailto:hola@ruralgpt.gal">hola@ruralgpt.gal</a>
-      {legalLinks.map(({ href, label }) => (
-        <a href={href}>{label}</a>
-      ))}
+      {legalLinks.map(({ href, label }) => <a href={href}>{label}</a>)}
     </div>
   </div>
 </footer>
@@ -53,7 +53,7 @@ const legalLinks = [
     margin-bottom: 1.5rem;
   }
   .footer-logo {
-    font-family: 'Bebas Neue', 'Inter', sans-serif;
+    font-family: "Bebas Neue", "Inter", sans-serif;
     font-size: 1.5rem;
     color: #000000;
     text-decoration: none;

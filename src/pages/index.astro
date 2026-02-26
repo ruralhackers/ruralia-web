@@ -12,7 +12,7 @@ const schema = {
   name: "ruralGPT",
   url: "https://ruralgpt.gal",
   description:
-    "Retiro inmersivo de IA aplicada para profesionales. 4 días en Galicia.",
+    "Residencia inmersiva de IA aplicada para profesionales. 4 días en Galicia.",
   foundingDate: "2026",
   sameAs: [],
 };
@@ -130,13 +130,13 @@ const tools = [
 ---
 
 <Base
-  title="ruralGPT — Retiro inmersivo de IA aplicada en Galicia"
+  title="ruralGPT — Residencia inmersiva de IA aplicada en Galicia"
   description="4 días en Galicia para ponerte al día con IA. Formación práctica, alojamiento y comidas incluidas. 12 plazas. 3–7 junio 2026."
   keywords={[
-    "retiro IA España",
+    "residencia IA España",
     "curso IA inmersivo",
     "formación IA Galicia",
-    "retiro inteligencia artificial",
+    "residencia inteligencia artificial",
   ]}
   schema={schema}
   hideHeader={true}
@@ -151,7 +151,7 @@ const tools = [
       />
     </a>
     <nav class="nav-links" id="home-nav">
-      <a href="/retiro-ia-galicia/">Residencia IA</a>
+      <a href="/residencia-ia-galicia/">Residencia IA</a>
       <a href="/para-quien/">Para quién</a>
       <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
@@ -206,7 +206,7 @@ const tools = [
         fetchpriority="high"
       />
     </div>
-    <a href="/retiro-ia-galicia/" class="hero-learn-link">
+    <a href="/residencia-ia-galicia/" class="hero-learn-link">
       Aprende IA en 4 días en Galicia →
     </a>
   </section>
@@ -295,7 +295,7 @@ const tools = [
     </div>
   </section>
 
-  <!-- ===== ARQUITECTURA DEL RETIRO ===== -->
+  <!-- ===== DONDE VIVIRÁS ESTA EXPERIENCIA ===== -->
   <section class="section arch">
     <p class="tag tag-italic">Dónde vivirás esta experiencia</p>
     <div class="arch-grid">
@@ -476,8 +476,8 @@ const tools = [
         <span class="gpt-letter">T</span>
         <h3>Transformador</h3>
         <p>
-          El modelo transforma el lenguaje. El retiro te transforma a ti. Sales
-          con una forma distinta de trabajar.
+          El modelo transforma el lenguaje. La experiencia te transforma a ti.
+          Sales con una forma distinta de trabajar.
         </p>
       </div>
     </div>
@@ -497,13 +497,35 @@ const tools = [
   <section class="section contact-section" id="contacto">
     <div class="section-inner contact-inner">
       <h2>¿Tienes dudas? Escríbenos</h2>
-      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+      <form
+        class="contact-form"
+        name="contacto"
+        method="POST"
+        data-netlify="true"
+      >
         <input type="hidden" name="form-name" value="contacto" />
         <div class="contact-row">
-          <input type="text" name="nombre" placeholder="Tu nombre" required class="contact-input" />
-          <input type="email" name="email" placeholder="tu@email.com" required class="contact-input" />
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+            class="contact-input"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="tu@email.com"
+            required
+            class="contact-input"
+          />
         </div>
-        <textarea name="mensaje" placeholder="Cuéntanos tu duda o situación..." rows="4" required class="contact-input contact-textarea"></textarea>
+        <textarea
+          name="mensaje"
+          placeholder="Cuéntanos tu duda o situación..."
+          rows="4"
+          required
+          class="contact-input contact-textarea"></textarea>
         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
       </form>
     </div>
@@ -863,7 +885,7 @@ const tools = [
   }
 
   /* ============================================================
-     ARQUITECTURA DEL RETIRO
+     DONDE VIVIRÁS ESTA EXPERIENCIA
   ============================================================ */
   .arch-grid {
     display: grid;
@@ -1350,9 +1372,21 @@ const tools = [
   /* ============================================================
      CONTACTO
   ============================================================ */
-  .contact-inner { max-width: 640px; margin: 0 auto; }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
-  .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
   .contact-input {
     padding: 0.75rem 1rem;
     border: 1px solid #ddd;
@@ -1363,9 +1397,17 @@ const tools = [
     width: 100%;
     box-sizing: border-box;
   }
-  .contact-input:focus { border-color: #00a66b; }
-  .contact-textarea { resize: vertical; }
-  @media (max-width: 540px) { .contact-row { grid-template-columns: 1fr; } }
+  .contact-input:focus {
+    border-color: #00a66b;
+  }
+  .contact-textarea {
+    resize: vertical;
+  }
+  @media (max-width: 540px) {
+    .contact-row {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
 <script>

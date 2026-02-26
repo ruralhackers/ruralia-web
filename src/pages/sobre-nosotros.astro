@@ -1,30 +1,64 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 
 const schema = [
   {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Rural GPT',
-    url: 'https://ruralgpt.gal',
-    description: 'Retiro inmersivo de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving.',
-    foundingDate: '2026',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Rural GPT",
+    url: "https://ruralgpt.gal",
+    description:
+      "Residencia inmersiva de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving.",
+    foundingDate: "2026",
     member: [
-      { '@type': 'Organization', name: 'Rural Hackers', url: 'https://ruralhackers.com' },
-      { '@type': 'Organization', name: 'Anceu Coliving', url: 'https://anceu.com' },
+      {
+        "@type": "Organization",
+        name: "Rural Hackers",
+        url: "https://ruralhackers.com",
+      },
+      {
+        "@type": "Organization",
+        name: "Anceu Coliving",
+        url: "https://anceu.com",
+      },
     ],
     founder: [
-      { '@type': 'Person', name: 'Agustín Jamardo', jobTitle: 'Fundador de Anceu Coliving, Desarrollador', url: 'https://linkedin.com/in/ajamardo' },
-      { '@type': 'Person', name: 'África Rodríguez', jobTitle: 'Cofundadora de Rural Hackers, Facilitadora', url: 'https://linkedin.com/in/rodriguezafricaruralhacker' },
-      { '@type': 'Person', name: 'Nacho Márquez', jobTitle: 'Cofundador de Rural Hackers, Director', url: 'https://linkedin.com/in/ignacio-mrqz' },
+      {
+        "@type": "Person",
+        name: "Agustín Jamardo",
+        jobTitle: "Fundador de Anceu Coliving, Desarrollador",
+        url: "https://linkedin.com/in/ajamardo",
+      },
+      {
+        "@type": "Person",
+        name: "África Rodríguez",
+        jobTitle: "Cofundadora de Rural Hackers, Facilitadora",
+        url: "https://linkedin.com/in/rodriguezafricaruralhacker",
+      },
+      {
+        "@type": "Person",
+        name: "Nacho Márquez",
+        jobTitle: "Cofundador de Rural Hackers, Director",
+        url: "https://linkedin.com/in/ignacio-mrqz",
+      },
     ],
   },
   {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralgpt.gal/' },
-      { '@type': 'ListItem', position: 2, name: 'Sobre nosotros', item: 'https://ruralgpt.gal/sobre-nosotros/' },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://ruralgpt.gal/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sobre nosotros",
+        item: "https://ruralgpt.gal/sobre-nosotros/",
+      },
     ],
   },
 ];
@@ -33,7 +67,13 @@ const schema = [
 <Base
   title="Sobre nosotros — Rural Hackers x Anceu Coliving | Rural GPT"
   description="Rural GPT es una iniciativa de Rural Hackers y Anceu Coliving. Formación tech inmersiva en el rural gallego."
-  keywords={['Rural Hackers', 'Anceu Coliving', 'formación tech rural', 'equipo Rural GPT', 'coliving Galicia']}
+  keywords={[
+    "Rural Hackers",
+    "Anceu Coliving",
+    "formación tech rural",
+    "equipo Rural GPT",
+    "coliving Galicia",
+  ]}
   schema={schema}
 >
   <section class="section">
@@ -41,46 +81,103 @@ const schema = [
       <h1>Sobre nosotros</h1>
 
       <h2>La historia</h2>
-      <p>Rural GPT nace de una idea simple: la mejor forma de aprender IA no es un vídeo de YouTube ni un máster de 8 meses. Es sentarte 4 días con gente como tú, en un sitio sin distracciones, y construir cosas reales.</p>
-      <p>Llevamos años organizando eventos tech en el rural gallego con Rural Hackers. Hemos visto que cuando juntas profesionales tech motivados, buena conexión a internet y un entorno que invite a concentrarse, pasan cosas buenas. Rural GPT es la versión intensiva y enfocada en IA de esa experiencia.</p>
+      <p>
+        Rural GPT nace de una idea simple: la mejor forma de aprender IA no es
+        un vídeo de YouTube ni un máster de 8 meses. Es sentarte 4 días con
+        gente como tú, en un sitio sin distracciones, y construir cosas reales.
+      </p>
+      <p>
+        Llevamos años organizando eventos tech en el rural gallego con Rural
+        Hackers. Hemos visto que cuando juntas profesionales tech motivados,
+        buena conexión a internet y un entorno que invite a concentrarse, pasan
+        cosas buenas. Rural GPT es la versión intensiva y enfocada en IA de esa
+        experiencia.
+      </p>
 
       <h2>Rural Hackers</h2>
-      <p>Comunidad de tecnólogos que exploran la intersección entre tecnología y mundo rural. Organizadores de los Hacker Days en Anceu y de eventos tech en pueblos de Galicia. Creen que la tecnología puede (y debe) funcionar fuera de las grandes ciudades.</p>
-      <p><a href="https://ruralhackers.com" target="_blank" rel="noopener">ruralhackers.com</a></p>
+      <p>
+        Comunidad de tecnólogos que exploran la intersección entre tecnología y
+        mundo rural. Organizadores de los Hacker Days en Anceu y de eventos tech
+        en pueblos de Galicia. Creen que la tecnología puede (y debe) funcionar
+        fuera de las grandes ciudades.
+      </p>
+      <p>
+        <a href="https://ruralhackers.com" target="_blank" rel="noopener"
+          >ruralhackers.com</a>
+      </p>
 
       <h2>Anceu Coliving</h2>
-      <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra) con 1 Gbps de fibra, espacio de trabajo y una comunidad internacional de profesionales remotos. El 55% de los colivers repiten.</p>
-      <p><a href="https://anceu.com" target="_blank" rel="noopener">anceu.com</a></p>
+      <p>
+        El primer coliving del noroeste de España. Un pueblo de menos de 100
+        habitantes en Ponte Caldelas (Pontevedra) con 1 Gbps de fibra, espacio
+        de trabajo y una comunidad internacional de profesionales remotos. El
+        55% de los colivers repiten.
+      </p>
+      <p>
+        <a href="https://anceu.com" target="_blank" rel="noopener">anceu.com</a>
+      </p>
 
       <h2>El equipo</h2>
-      <p>Los instructores de Rural GPT son profesionales que usan IA en su trabajo a diario. No académicos, no evangelistas: gente que construye cosas con IA y quiere enseñarte a hacer lo mismo.</p>
+      <p>
+        Los instructores de Rural GPT son profesionales que usan IA en su
+        trabajo a diario. No académicos, no evangelistas: gente que construye
+        cosas con IA y quiere enseñarte a hacer lo mismo.
+      </p>
 
       <div class="team-grid">
         <div class="team-member">
-          <img src="/images/agus.png" alt="Agustín Jamardo" class="team-photo" />
+          <img
+            src="/images/agus.png"
+            alt="Agustín Jamardo"
+            class="team-photo"
+          />
           <h3>Agustín Jamardo</h3>
           <p class="team-role">Fundador de Anceu Coliving · Desarrollador</p>
-          <p>Ingeniero de software especializado en back-end. Vivió y trabajó en China antes de volver a Galicia para fundar Anceu Coliving en 2020 — un pueblo de 98 habitantes con 1 Gbps de fibra. Cofundador de Rural Hackers. Lleva 12+ años trabajando en remoto y construyendo herramientas con IA.</p>
+          <p>
+            Ingeniero de software especializado en back-end. Vivió y trabajó en
+            China antes de volver a Galicia para fundar Anceu Coliving en 2020 —
+            un pueblo de 98 habitantes con 1 Gbps de fibra. Cofundador de Rural
+            Hackers. Lleva 12+ años trabajando en remoto y construyendo
+            herramientas con IA.
+          </p>
         </div>
 
         <div class="team-member">
-          <img src="/images/africa.jpg" alt="África Rodríguez" class="team-photo" />
+          <img
+            src="/images/africa.jpg"
+            alt="África Rodríguez"
+            class="team-photo"
+          />
           <h3>África Rodríguez</h3>
           <p class="team-role">Cofundadora de Rural Hackers · Facilitadora</p>
-          <p>Activista de cultura colaborativa y gestora de Anceu Coliving. Después de explorar capitales europeas, volvió a lo pequeño. Cofundó Espacio Arroelo (coworking en Pontevedra) y lleva desde 2018 formándose en educación no formal para facilitar proyectos europeos como Erasmus+ y The Break Fellowship.</p>
+          <p>
+            Activista de cultura colaborativa y gestora de Anceu Coliving.
+            Después de explorar capitales europeas, volvió a lo pequeño. Cofundó
+            Espacio Arroelo (coworking en Pontevedra) y lleva desde 2018
+            formándose en educación no formal para facilitar proyectos europeos
+            como Erasmus+ y The Break Fellowship.
+          </p>
         </div>
 
         <div class="team-member">
           <img src="/images/nacho.png" alt="Nacho Márquez" class="team-photo" />
           <h3>Nacho Márquez</h3>
           <p class="team-role">Cofundador de Rural Hackers · Director</p>
-          <p>Experiencia internacional en proyectos entre Marruecos, Estonia y Singapur. Ha participado en más de 20 proyectos Erasmus+ y trabajó con la Unión Europea. Director de Noites Abertas, programa juvenil de Pontevedra. Cree en los talentos híbridos y en que la tecnología funciona mejor fuera de la ciudad.</p>
+          <p>
+            Experiencia internacional en proyectos entre Marruecos, Estonia y
+            Singapur. Ha participado en más de 20 proyectos Erasmus+ y trabajó
+            con la Unión Europea. Director de Noites Abertas, programa juvenil
+            de Pontevedra. Cree en los talentos híbridos y en que la tecnología
+            funciona mejor fuera de la ciudad.
+          </p>
         </div>
       </div>
 
       <div class="cta-block">
         <p>¿Quieres conocernos en persona?</p>
-        <a href="/retiro-ia-galicia/" class="btn btn-primary">Ven al retiro</a>
+        <a href="/residencia-ia-galicia/" class="btn btn-primary"
+          >Ven a la Residencia IA</a
+        >
       </div>
     </div>
   </section>

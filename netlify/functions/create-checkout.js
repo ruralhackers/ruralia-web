@@ -17,7 +17,7 @@ export const handler = async (event) => {
   }
 
   const secretKey = process.env.STRIPE_SECRET_KEY;
-  const priceId   = process.env.STRIPE_PRICE_DEPOSIT;
+  const priceId = process.env.STRIPE_PRICE_DEPOSIT;
 
   if (!secretKey || !priceId) {
     return {
@@ -38,7 +38,7 @@ export const handler = async (event) => {
       mode: 'payment',
       line_items: [{ price: priceId, quantity: 1 }],
       success_url: `${siteUrl}/gracias/`,
-      cancel_url:  `${siteUrl}/retiro-ia-galicia/#pricing`,
+      cancel_url: `${siteUrl}/residencia-ia-galicia/#pricing`,
       locale: 'es',
       payment_method_types: ['card'],
       billing_address_collection: 'required',

@@ -1,20 +1,36 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://ruralgpt.gal/' },
-    { '@type': 'ListItem', position: 2, name: 'Para quién', item: 'https://ruralgpt.gal/para-quien/' },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://ruralgpt.gal/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Para quién",
+      item: "https://ruralgpt.gal/para-quien/",
+    },
   ],
 };
 ---
 
 <Base
-  title="¿Es para ti? — Retiro de IA Rural GPT"
-  description="Profesionales de 30-45 que siempre estuvieron al día con la tecnología pero se perdieron con la IA. Si te suena, este retiro es para ti."
-  keywords={['formación IA profesionales', 'curso IA diseño', 'IA para gestorías', 'IA para marketing', 'aprender IA sin programar']}
+  title="¿Es para ti? — Residencia de IA Rural GPT"
+  description="Profesionales de 30-45 que siempre estuvieron al día con la tecnología pero se perdieron con la IA. Si te suena, esta experiencia es para ti."
+  keywords={[
+    "formación IA profesionales",
+    "curso IA diseño",
+    "IA para gestorías",
+    "IA para marketing",
+    "aprender IA sin programar",
+  ]}
   schema={schema}
 >
   <section class="section">
@@ -23,33 +39,64 @@ const schema = {
 
       <h2>Esto es para ti si...</h2>
       <ul class="check-list">
-        <li>Trabajas con tecnología y sabes que deberías estar usando IA, pero no encuentras el momento</li>
-        <li>Eras la persona de referencia tech en tu entorno, pero la IA te ha adelantado</li>
-        <li>Has probado ChatGPT o alguna herramienta de IA, pero sientes que solo arañas la superficie</li>
-        <li>No tienes tiempo de investigar qué herramientas merecen la pena y cuáles son humo</li>
-        <li>Quieres integrar IA en tu trabajo diario para ser más eficiente y ganar más</li>
+        <li>
+          Trabajas con tecnología y sabes que deberías estar usando IA, pero no
+          encuentras el momento
+        </li>
+        <li>
+          Eras la persona de referencia tech en tu entorno, pero la IA te ha
+          adelantado
+        </li>
+        <li>
+          Has probado ChatGPT o alguna herramienta de IA, pero sientes que solo
+          arañas la superficie
+        </li>
+        <li>
+          No tienes tiempo de investigar qué herramientas merecen la pena y
+          cuáles son humo
+        </li>
+        <li>
+          Quieres integrar IA en tu trabajo diario para ser más eficiente y
+          ganar más
+        </li>
       </ul>
 
       <h2>¿Te suena?</h2>
 
       <div class="persona">
         <h2>Lucía, 36, diseñadora gráfica</h2>
-        <p>Lleva 10 años con Photoshop y Figma. Su clientela empieza a pedirle cosas "con IA" y no sabe por dónde empezar. Ha probado Midjourney por su cuenta pero siente que solo araña la superficie.</p>
+        <p>
+          Lleva 10 años con Photoshop y Figma. Su clientela empieza a pedirle
+          cosas "con IA" y no sabe por dónde empezar. Ha probado Midjourney por
+          su cuenta pero siente que solo araña la superficie.
+        </p>
       </div>
 
       <div class="persona">
         <h2>Marcos, 42, gestoría</h2>
-        <p>Gestiona la contabilidad y trámites de 40 autónomos. Sabe que la IA podría ahorrarle horas de papeleo, pero no tiene tiempo de investigar cuál usar ni cómo integrarla sin liarla.</p>
+        <p>
+          Gestiona la contabilidad y trámites de 40 autónomos. Sabe que la IA
+          podría ahorrarle horas de papeleo, pero no tiene tiempo de investigar
+          cuál usar ni cómo integrarla sin liarla.
+        </p>
       </div>
 
       <div class="persona">
         <h2>Andrea, 34, desarrolladora web freelance</h2>
-        <p>Monta webs con WordPress desde 2015. Ve que herramientas como Cursor o Bolt están cambiando el juego pero entre proyectos y clientes no encuentra el momento de sentarse a aprenderlas.</p>
+        <p>
+          Monta webs con WordPress desde 2015. Ve que herramientas como Cursor o
+          Bolt están cambiando el juego pero entre proyectos y clientes no
+          encuentra el momento de sentarse a aprenderlas.
+        </p>
       </div>
 
       <div class="persona">
         <h2>Dani, 39, consultor de marketing digital</h2>
-        <p>Lleva años vendiendo estrategia de SEO y redes. La IA está transformando su sector y necesita entender qué herramientas integrar antes de que su competencia lo haga primero.</p>
+        <p>
+          Lleva años vendiendo estrategia de SEO y redes. La IA está
+          transformando su sector y necesita entender qué herramientas integrar
+          antes de que su competencia lo haga primero.
+        </p>
       </div>
 
       <h2>Esto NO es para ti si...</h2>
@@ -61,14 +108,26 @@ const schema = {
       </ul>
 
       <h2>Qué nivel necesitas</h2>
-      <p><strong>No hace falta saber programar.</strong> Si sabes usar un navegador y herramientas digitales en tu trabajo, puedes seguir el programa sin problema. Esto no es un curso de programación. Es un curso de usar IA como herramienta profesional.</p>
+      <p>
+        <strong>No hace falta saber programar.</strong> Si sabes usar un navegador
+        y herramientas digitales en tu trabajo, puedes seguir el programa sin problema.
+        Esto no es un curso de programación. Es un curso de usar IA como herramienta
+        profesional.
+      </p>
 
       <h2>Todo incluido. Sin letra pequeña.</h2>
-      <p>Habitación compartida desde 442 EUR · habitación individual desde 558 EUR (precios early bird). Todo incluido: 4 días de formación, 3 noches de alojamiento, todas las comidas, materiales, comunidad alumni y sesión de seguimiento.</p>
+      <p>
+        Habitación compartida desde 442 EUR · habitación individual desde 558
+        EUR (precios early bird). Todo incluido: 4 días de formación, 3 noches
+        de alojamiento, todas las comidas, materiales, comunidad alumni y sesión
+        de seguimiento.
+      </p>
       <ul>
-        <li>Formación 100% <strong>deducible</strong> para autónomos y empresas</li>
+        <li>
+          Formación 100% <strong>deducible</strong> para autónomos y empresas
+        </li>
         <li>Un bootcamp equivalente cuesta 2.500-7.000 EUR y dura meses</li>
-        <li>Un retiro de IA en los Alpes cuesta 9.500 USD por 3 días</li>
+        <li>Una experiencia de IA en los Alpes cuesta 9.500 USD por 3 días</li>
       </ul>
 
       <div class="cta-block">
@@ -91,26 +150,29 @@ const schema = {
     font-size: 1.4rem;
     margin-top: 2.5rem;
   }
-  p, li {
+  p,
+  li {
     font-size: 1.05rem;
     color: #444;
     line-height: 1.7;
   }
-  .check-list, .cross-list {
+  .check-list,
+  .cross-list {
     list-style: none;
     padding: 0;
   }
   .check-list li::before {
-    content: '✓ ';
+    content: "✓ ";
     color: #000000;
     font-weight: 700;
   }
   .cross-list li::before {
-    content: '✗ ';
+    content: "✗ ";
     color: #999999;
     font-weight: 700;
   }
-  .check-list li, .cross-list li {
+  .check-list li,
+  .cross-list li {
     padding: 0.4rem 0;
   }
   .cta-block {
