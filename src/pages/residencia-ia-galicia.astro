@@ -426,7 +426,6 @@ const tools = [
         class="pricing-grid"
         data-prices='[
           {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
-          {"until":"2026-04-16","label":"Segunda tanda","until_text":"hasta el 15 de abril","discount":"15% de descuento","compartida":537,"individual":677},
           {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
         ]'
       >
@@ -1073,14 +1072,6 @@ const tools = [
         individual: 558,
       },
       {
-        until: "2026-04-16",
-        label: "Segunda tanda",
-        until_text: "hasta el 15 de abril",
-        discount: "15% de descuento",
-        compartida: 537,
-        individual: 677,
-      },
-      {
         until: null,
         label: "Precio normal",
         until_text: "",
@@ -1114,10 +1105,6 @@ const tools = [
     const countdownPhases = [
       {
         deadline: new Date("2026-03-16T00:00:00"),
-        next: { compartida: 537, individual: 677 },
-      },
-      {
-        deadline: new Date("2026-04-16T00:00:00"),
         next: { compartida: 632, individual: 797 },
       },
     ];
