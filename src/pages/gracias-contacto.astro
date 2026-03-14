@@ -1,0 +1,43 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Mensaje enviado | Rural GPT"
+  description="Gracias por contactarnos. Te responderemos lo antes posible."
+  robots="noindex, nofollow"
+>
+  <section class="section">
+    <div class="section-inner thanks-page">
+      <p class="check-icon">&#10003;</p>
+      <h1>¡Mensaje enviado!</h1>
+      <p class="thanks-text">
+        Gracias por escribirnos. Te responderemos en menos de 24h. Si tienes
+        alguna duda urgente, escríbenos a <strong>hola@ruralgpt.gal</strong>.
+      </p>
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .thanks-page {
+    text-align: center;
+    max-width: 520px;
+    padding: 4rem 0;
+  }
+  .check-icon {
+    font-size: 3rem;
+    color: #000;
+    margin: 0 0 1rem;
+    line-height: 1;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .thanks-text {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+</style>
