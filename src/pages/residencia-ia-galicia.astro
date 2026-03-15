@@ -33,24 +33,6 @@ const schema = [
     offers: [
       {
         "@type": "Offer",
-        name: "Early bird — Habitación compartida",
-        price: "442",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/LimitedAvailability",
-        validFrom: "2025-01-01",
-        validThrough: "2026-03-15",
-      },
-      {
-        "@type": "Offer",
-        name: "Early bird — Habitación individual",
-        price: "558",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/LimitedAvailability",
-        validFrom: "2025-01-01",
-        validThrough: "2026-03-15",
-      },
-      {
-        "@type": "Offer",
         name: "Habitación compartida",
         price: "632",
         priceCurrency: "EUR",
@@ -192,7 +174,7 @@ const tools = [
         >Aprovechar la oferta lanzamiento</a
       >
       <p class="hero-price">
-        Desde <span id="hero-price-from">442</span> EUR todo incluido · 3–7 junio
+        Desde <span id="hero-price-from">632</span> EUR todo incluido · 3–7 junio
         2026
       </p>
     </div>
@@ -425,39 +407,17 @@ const tools = [
       <div
         class="pricing-grid"
         data-prices='[
-          {"until":"2026-03-16","label":"Early bird","until_text":"hasta el 15 de marzo","discount":"30% de descuento","compartida":442,"individual":558},
           {"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}
         ]'
       >
-        <div class="price-card" id="card-compartida">
-          <div class="room-title">Habitación compartida</div>
-          <div class="room-subtitle">Compartida con otra persona</div>
-          <span class="price-amount" id="price-compartida">442 EUR</span>
-          <span class="price-tier" id="tier-compartida"
-            >Early bird — hasta el 15 de marzo</span
-          >
-          <span class="price-discount" id="discount-compartida"
-            >30% de descuento</span
-          >
-          <ul>
-            <li>4 días de formación</li>
-            <li>3 noches de alojamiento</li>
-            <li>Todas las comidas</li>
-            <li>Comunidad alumni</li>
-            <li>Sesión follow-up</li>
-          </ul>
-          <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
-          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
-        </div>
         <div class="price-card featured" id="card-individual">
           <div class="room-title">Habitación individual</div>
           <div class="room-subtitle">Habitación para ti solo</div>
-          <span class="price-amount" id="price-individual">558 EUR</span>
+          <span class="price-amount" id="price-individual">797 EUR</span>
           <span class="price-tier" id="tier-individual"
-            >Early bird — hasta el 15 de marzo</span
-          >
+            >Precio normal</span>
           <span class="price-discount" id="discount-individual"
-            >30% de descuento</span
+            ></span
           >
           <ul>
             <li>4 días de formación</li>
@@ -473,6 +433,25 @@ const tools = [
             target="_blank"
             rel="noopener">Reserva por 150 €</a
           >
+        </div>
+        <div class="price-card" id="card-compartida">
+          <div class="room-title">Habitación compartida</div>
+          <div class="room-subtitle">Compartida con otra persona</div>
+          <span class="price-amount" id="price-compartida">632 EUR</span>
+          <span class="price-tier" id="tier-compartida"
+            >Precio normal</span>
+          <span class="price-discount" id="discount-compartida"
+            ></span
+          >
+          <ul>
+            <li>4 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
+          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
         </div>
       </div>
       <div
@@ -1057,88 +1036,17 @@ const tools = [
 <script>
   // ── Precios dinámicos por fecha ────────────────────────────────────────────
   (function () {
-    const schedule = [
-      {
-        until: "2026-03-16",
-        label: "Early bird",
-        until_text: "hasta el 15 de marzo",
-        discount: "30% de descuento",
-        compartida: 442,
-        individual: 558,
-      },
-      {
-        until: null,
-        label: "Precio normal",
-        until_text: "",
-        discount: "",
-        compartida: 632,
-        individual: 797,
-      },
-    ];
-
-    const now = new Date();
-    const tier =
-      schedule.find((t) => !t.until || now < new Date(t.until)) ||
-      schedule[schedule.length - 1];
-    const tierText = tier.until_text
-      ? `${tier.label} — ${tier.until_text}`
-      : tier.label;
     const set = (id, value) => {
       const el = document.getElementById(id);
       if (el) el.textContent = value;
     };
 
-    set("price-compartida", tier.compartida + " EUR");
-    set("price-individual", tier.individual + " EUR");
-    set("tier-compartida", tierText);
-    set("tier-individual", tierText);
-    set("discount-compartida", tier.discount);
-    set("discount-individual", tier.discount);
-    set("hero-price-from", String(tier.compartida));
-
-    // Countdown
-    const countdownPhases = [
-      {
-        deadline: new Date("2026-03-16T00:00:00"),
-        next: { compartida: 632, individual: 797 },
-      },
-    ];
-    const phase = countdownPhases.find((p) => now < p.deadline);
-    if (phase) {
-      const banner = document.getElementById("pricing-countdown");
-      const labelEl = document.getElementById("countdown-label");
-      const timerEl = document.getElementById("countdown-timer");
-      const nextEl = document.getElementById("countdown-next");
-      if (banner && labelEl && timerEl && nextEl) {
-        banner.style.display = "flex";
-        const deadlineDate = phase.deadline;
-        const deadlineDay = deadlineDate.getDate() - 1;
-        const deadlineMonth = deadlineDate.toLocaleString("es", {
-          month: "long",
-        });
-        labelEl.textContent = `⏳ El precio sube el ${deadlineDay} de ${deadlineMonth} —`;
-        nextEl.textContent = `Próximo precio: ${phase.next.compartida} € / ${phase.next.individual} €`;
-        function pad(n) {
-          return String(n).padStart(2, "0");
-        }
-        function tick() {
-          const diff = deadlineDate.getTime() - Date.now();
-          if (diff <= 0) {
-            banner.style.display = "none";
-            return;
-          }
-          const d = Math.floor(diff / 86400000);
-          const h = Math.floor((diff % 86400000) / 3600000);
-          const m = Math.floor((diff % 3600000) / 60000);
-          const s = Math.floor((diff % 60000) / 1000);
-          timerEl.textContent =
-            d > 0
-              ? `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`
-              : `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
-        }
-        tick();
-        setInterval(tick, 1000);
-      }
-    }
+    set("price-compartida", "632 EUR");
+    set("price-individual", "797 EUR");
+    set("tier-compartida", "Precio normal");
+    set("tier-individual", "Precio normal");
+    set("discount-compartida", "");
+    set("discount-individual", "");
+    set("hero-price-from", "632");
   })();
 </script>
