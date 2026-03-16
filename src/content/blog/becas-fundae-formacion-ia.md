@@ -119,7 +119,7 @@ Esto es lo más importante. El sistema FUNDAE incentiva un tipo de formación: l
 
 Pero la investigación sobre aprendizaje adulto dice que la formación más efectiva para profesionales es **intensiva, práctica y contextualizada**. Es decir: corta, hands-on, y aplicada directamente al trabajo real de cada participante.
 
-Un curso de 40 horas repartidas en 3 meses, bonificable al 100%, puede tener una tasa de finalización del 15% y un impacto real cercano a cero. Una experiencia inmersiva de 4 días donde construyes cosas reales puede transformar tu forma de trabajar. Pero el segundo no siempre encaja en la casilla de FUNDAE.
+Un curso de 40 horas repartidas en 3 meses, bonificable al 100%, puede tener una tasa de finalización del 15% y un impacto real cercano a cero. Una experiencia inmersiva de 3 días donde construyes cosas reales puede transformar tu forma de trabajar. Pero el segundo no siempre encaja en la casilla de FUNDAE.
 
 ## Entonces, cómo financiar tu formación en IA si eres freelancer
 
@@ -159,11 +159,11 @@ Hay un motivo por el que los formatos inmersivos funcionan mejor que los cursos 
 - Coste neto: 0 euros (bonificado)
 - Impacto real: bajo
 
-**Experiencia inmersiva de 4 días:**
+**Experiencia inmersiva de 3 días:**
 - Tasa de finalización: 100% (estás allí)
 - Formato: 100% hands-on con herramientas reales
 - Aplicación práctica: trabajas en tu propio proyecto
-- Networking: 12 profesionales como tú durante 4 días
+- Networking: 12 profesionales como tú durante 3 días
 - Coste neto: 442-797 euros (deducible)
 - Impacto real: alto
 
@@ -175,7 +175,7 @@ Nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/) no es bonificable
 
 Preferimos diseñar la mejor formación posible — actualizada al día, 100% práctica, en grupos de 12 personas, con herramientas que vas a usar el lunes siguiente — en lugar de adaptar el programa a los requisitos burocráticos de la formación bonificada.
 
-En 4 días en [Anceu Coliving](/residencia-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
+En 3 días en [Anceu Coliving](/residencia-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
 El precio (desde 442 euros en early bird) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 

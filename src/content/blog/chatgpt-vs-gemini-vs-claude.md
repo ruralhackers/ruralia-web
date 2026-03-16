@@ -211,15 +211,15 @@ Es como un fotógrafo profesional. No usa una sola lente para todo. Sabe cuándo
 
 Con la IA pasa lo mismo. Y la diferencia en productividad entre alguien que usa "la IA" (una sola) y alguien que usa **las IAs** (las tres, cada una para lo que mejor hace) es enorme.
 
-## Aprende a dominar las tres en 4 días
+## Aprende a dominar las tres en 3 días
 
-Una cosa es leer un artículo comparativo. Otra muy diferente es sentarte delante de tu portátil, con un grupo reducido de profesionales, y dedicar cuatro días completos a aprender a usar ChatGPT, Gemini y Claude de forma práctica.
+Una cosa es leer un artículo comparativo. Otra muy diferente es sentarte delante de tu portátil, con un grupo reducido de profesionales, y dedicar tres días completos a aprender a usar ChatGPT, Gemini y Claude de forma práctica.
 
 Eso es exactamente lo que hacemos en la **[Residencia Rural GPT en Galicia](/residencia-ia-galicia/)**.
 
 El primer día de la Residencia IA lo dedicamos precisamente a esto: entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
 
-Pero no nos quedamos en la teoría. Los cuatro días incluyen:
+Pero no nos quedamos en la teoría. Los tres días incluyen:
 
 - **Configurar Custom GPTs y Claude Projects** para tus tareas recurrentes.
 - **Configurar asistentes y herramientas de IA** como Claude Code o Cursor para resolver tareas reales en tu trabajo.
@@ -230,4 +230,4 @@ Todo esto desde un coliving en el rural de Galicia, sin distracciones, con comid
 
 Si después de leer esta comparativa te has dado cuenta de que podrías estar sacándole mucho más partido a la IA en tu trabajo diario, [echa un vistazo al programa completo de la Residencia IA](/residencia-ia-galicia/).
 
-Son 4 días que te cambian los próximos 4 años.
+Son 3 días que te cambian los próximos 4 años.

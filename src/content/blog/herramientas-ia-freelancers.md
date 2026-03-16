@@ -182,6 +182,6 @@ Lo que marca la diferencia es:
 2. **Saber escribir buenos prompts.** La diferencia entre un resultado mediocre y uno excelente está en cómo le pides las cosas a la IA.
 3. **Integrar la IA en tu flujo real.** No como experimento, sino como parte de tu proceso de trabajo diario.
 
-Esas tres cosas son exactamente lo que hacemos en la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/). En 4 días, configuras tu stack de herramientas de IA, aprendes a usarlas de verdad con tu propio trabajo, y te vas con un sistema funcionando. 12 plazas por edición, todo incluido.
+Esas tres cosas son exactamente lo que hacemos en la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/). En 3 días, configuras tu stack de herramientas de IA, aprendes a usarlas de verdad con tu propio trabajo, y te vas con un sistema funcionando. 12 plazas por edición, todo incluido.
 
 [Mira el programa completo](/residencia-ia-galicia/) o [descubre si es para ti](/para-quien/).

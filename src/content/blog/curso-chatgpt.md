@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato inmersivo y presencial, echa un vistazo a nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/), donde trabajamos todo esto (y mucho más) durante 4 días. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato inmersivo y presencial, echa un vistazo a nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/), donde trabajamos todo esto (y mucho más) durante 3 días. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
@@ -342,7 +342,7 @@ Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesiona
 
 La realidad es que leer un curso de ChatGPT (por muy bueno que sea) no es lo mismo que practicar durante horas con feedback en tiempo real. Los artículos como este te dan la teoría y algunos prompts útiles, pero la verdadera transformación ocurre cuando te sientas, abres tu portátil y trabajas en tus proyectos reales con alguien al lado que te corrige y te enseña la siguiente técnica.
 
-Es exactamente lo que hacemos en la **[Residencia de IA de Rural GPT](/residencia-ia-galicia/)**: 4 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
+Es exactamente lo que hacemos en la **[Residencia de IA de Rural GPT](/residencia-ia-galicia/)**: 3 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
 
 Lo que cubrimos en la Residencia IA va mucho más allá de lo que puede cubrir un artículo:
 
@@ -351,7 +351,7 @@ Lo que cubrimos en la Residencia IA va mucho más allá de lo que puede cubrir u
 - **Stacks personalizados** donde combinas ChatGPT, Claude, [herramientas de IA](/blog/herramientas-ia-freelancers/) y automatización en workflows completos
 - **Práctica intensiva** sobre tus propios proyectos, con mentores que te dan feedback inmediato
 
-Todo incluido: formación, alojamiento en Anceu Coliving (un espacio increíble en el rural de Pontevedra con fibra óptica de 1 Gbps), gastronomía gallega y un grupo de profesionales con los que compartes 4 días intensos.
+Todo incluido: formación, alojamiento en Anceu Coliving (un espacio increíble en el rural de Pontevedra con fibra óptica de 1 Gbps), gastronomía gallega y un grupo de profesionales con los que compartes 3 días intensos.
 
 El formato presencial e inmersivo tiene tasas de finalización del 95% frente al 15% de los cursos online. No es magia: es lo que pasa cuando eliminas las distracciones y te rodeas de gente que quiere lo mismo que tú.
 

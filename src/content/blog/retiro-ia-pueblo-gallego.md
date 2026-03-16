@@ -22,7 +22,7 @@ La respuesta no es nueva: **inmersión total**. Es lo que hacen los retiros de i
 
 Aplicamos esa lógica a la IA:
 
-- **4 días completos** (no 2 horas a la semana durante 3 meses)
+- **3 días completos** (no 2 horas a la semana durante 3 meses)
 - **Todo incluido** (formación, alojamiento, comidas — para que no pienses en nada más)
 - **Grupos pequeños** (12 personas, para que haya atención real)
 - **100% práctico** (vienes con tu portátil, te vas con herramientas funcionando)
@@ -38,7 +38,7 @@ Pero también por razones prácticas:
 - La gastronomía gallega (incluida en el precio) es un valor añadido que no cuesta extra.
 - Y el entorno — naturaleza, silencio, aire limpio — es exactamente lo que necesitas para concentrarte.
 
-## Qué vas a hacer en 4 días
+## Qué vas a hacer en 3 días
 
 No vas a escuchar charlas. Vas a construir cosas.
 
