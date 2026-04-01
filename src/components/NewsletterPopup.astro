@@ -65,7 +65,8 @@
 
 <script>
   (function() {
-    if (sessionStorage.getItem('nl_dismissed')) return;
+    const dismissed = localStorage.getItem('nl_dismissed');
+    if (dismissed && Date.now() - Number(dismissed) < 30 * 24 * 60 * 60 * 1000) return;
     const overlay = document.getElementById('newsletter-overlay');
     if (!overlay) return;
 
@@ -73,7 +74,7 @@
 
     function dismiss() {
       overlay.classList.remove('open');
-      sessionStorage.setItem('nl_dismissed', '1');
+      localStorage.setItem('nl_dismissed', String(Date.now()));
     }
 
     document.getElementById('nl-close')?.addEventListener('click', dismiss);
