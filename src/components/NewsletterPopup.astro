@@ -70,9 +70,26 @@
     const overlay = document.getElementById('newsletter-overlay');
     if (!overlay) return;
 
-    setTimeout(() => { overlay.classList.add('open'); }, 3000);
+    let shown = false;
+    function show() {
+      if (shown) return;
+      shown = true;
+      overlay.classList.add('open');
+      window.removeEventListener('scroll', onScroll);
+    }
+
+    const timer = setTimeout(show, 10000);
+
+    function onScroll() {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      if (scrolled / total >= 0.5) show();
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     function dismiss() {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', onScroll);
       overlay.classList.remove('open');
       localStorage.setItem('nl_dismissed', String(Date.now()));
     }

@@ -7,7 +7,6 @@ export default defineConfig({
   site: 'https://ruralgpt.gal',
   adapter: netlify(),
   redirects: {
-    '/retiro-ia-galicia/': { status: 301, destination: '/residencia-ia-galicia/' },
     '/retiro-ia-galicia': { status: 301, destination: '/residencia-ia-galicia/' },
   },
   integrations: [
