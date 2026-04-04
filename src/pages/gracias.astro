@@ -7,6 +7,16 @@ import Base from "../layouts/Base.astro";
   description="Gracias por tu interés en Rural GPT. Te avisaremos cuando abramos inscripciones."
   robots="noindex, nofollow"
 >
+  <script>
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Purchase", {
+        content_name: "Residencia IA Galicia",
+        value: 150,
+        currency: "EUR",
+      });
+    }
+  </script>
+
   <section class="section">
     <div class="section-inner thanks-page">
       <p class="check-icon">&#10003;</p>

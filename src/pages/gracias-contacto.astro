@@ -7,6 +7,14 @@ import Base from "../layouts/Base.astro";
   description="Gracias por contactarnos. Te responderemos lo antes posible."
   robots="noindex, nofollow"
 >
+  <script>
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead", {
+        content_name: "Consulta Residencia IA",
+      });
+    }
+  </script>
+
   <section class="section">
     <div class="section-inner thanks-page">
       <p class="check-icon">&#10003;</p>

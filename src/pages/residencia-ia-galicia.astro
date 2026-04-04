@@ -1047,4 +1047,27 @@ const tools = [
     set("discount-individual", "");
     set("hero-price-from", "632");
   })();
+
+  // ── Meta Pixel events ──────────────────────────────────────────────────────
+  function fbTrack(event, params) {
+    if (typeof window.fbq === "function") window.fbq("track", event, params);
+  }
+
+  // ViewContent: alguien está viendo la página de la residencia
+  fbTrack("ViewContent", {
+    content_name: "Residencia IA Galicia",
+    content_category: "Evento formativo",
+    value: 797,
+    currency: "EUR",
+  });
+
+  // InitiateCheckout: clic en "Reserva por 150€"
+  document.querySelector(".btn-gold")?.addEventListener("click", () => {
+    fbTrack("InitiateCheckout", {
+      content_name: "Residencia IA Galicia",
+      value: 150,
+      currency: "EUR",
+      num_items: 1,
+    });
+  });
 </script>
