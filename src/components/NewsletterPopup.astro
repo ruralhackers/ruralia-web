@@ -4,8 +4,8 @@
   <div class="nl-modal">
     <button class="nl-close" id="nl-close" aria-label="Cerrar">✕</button>
     <p class="nl-eyebrow">Newsletter</p>
-    <h2 class="nl-title">Cada semana, las herramientas de IA que merecen tu tiempo.</h2>
-    <p class="nl-desc">Sin ruido. Sólo lo que funciona. Gratis.</p>
+    <h2 class="nl-title">Suscríbete y entérate cuando abramos nuevas plazas.</h2>
+    <p class="nl-desc">Novedades, recursos de IA y aviso prioritario en próximas ediciones. Sin ruido.</p>
     <form class="nl-form" id="nl-form">
       <input type="email" name="email" id="nl-email" placeholder="tu@email.com" required class="nl-input" autocomplete="email" />
       <button type="submit" class="nl-btn" id="nl-submit">Suscribirme</button>
@@ -65,8 +65,6 @@
 
 <script>
   (function() {
-    const dismissed = localStorage.getItem('nl_dismissed');
-    if (dismissed && Date.now() - Number(dismissed) < 30 * 24 * 60 * 60 * 1000) return;
     const overlay = document.getElementById('newsletter-overlay');
     if (!overlay) return;
 
@@ -78,17 +76,32 @@
       window.removeEventListener('scroll', onScroll);
     }
 
-    const timer = setTimeout(show, 10000);
+    // Expose a global opener so CTAs (e.g. "Lista de espera") can trigger the modal
+    // even after it has been dismissed.
+    (window as any).openNewsletter = function () {
+      shown = false; // allow re-opening on demand
+      clearTimeout(timer);
+      window.removeEventListener('scroll', onScroll);
+      overlay.classList.add('open');
+    };
 
+    const dismissed = localStorage.getItem('nl_dismissed');
+    const recentlyDismissed = dismissed && Date.now() - Number(dismissed) < 30 * 24 * 60 * 60 * 1000;
+
+    let timer: ReturnType<typeof setTimeout> | undefined;
     function onScroll() {
       const scrolled = window.scrollY + window.innerHeight;
       const total = document.documentElement.scrollHeight;
       if (scrolled / total >= 0.5) show();
     }
-    window.addEventListener('scroll', onScroll, { passive: true });
+
+    if (!recentlyDismissed) {
+      timer = setTimeout(show, 10000);
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
 
     function dismiss() {
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
       overlay.classList.remove('open');
       localStorage.setItem('nl_dismissed', String(Date.now()));

@@ -170,8 +170,8 @@ const tools = [
         vienes 3 días a Galicia y te vas con las herramientas de IA configuradas
         para tu trabajo.
       </p>
-      <a href="/#pricing" class="btn btn-primary btn-lg"
-        >Ver plazas disponibles</a
+      <a href="#" class="btn btn-primary btn-lg" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();"
+        >Lista de espera</a
       >
       <p class="hero-price">
         Desde <span id="hero-price-from">632</span> EUR todo incluido · 4–7 junio
@@ -425,12 +425,7 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
-          <a
-            href={linkIndividual}
-            class="btn btn-gold"
-            target="_blank"
-            rel="noopener">Reserva por 150 €</a
-          >
+          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
         </div>
         <div class="price-card" id="card-compartida">
           <div class="room-title">Habitación compartida</div>

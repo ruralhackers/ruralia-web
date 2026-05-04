@@ -151,7 +151,7 @@ const tools = [
       <a href="/faq/">FAQ</a>
       <a href="/sobre-nosotros/">Quiénes somos</a>
     </nav>
-    <a href="/#pricing" class="nav-cta">Reservar</a>
+    <a href="#" class="nav-cta" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
     <button
       class="nav-toggle"
       aria-label="Abrir menú"
@@ -188,7 +188,7 @@ const tools = [
           >
         </p>
       </div>
-      <a href="/#pricing" class="btn-dark">Reserva tu plaza</a>
+      <a href="#" class="btn-dark" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
     </div>
     <div class="hero-photo">
       <Image
@@ -359,12 +359,7 @@ const tools = [
             <li>Sesión follow-up</li>
           </ul>
           <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
-          <a
-            href={linkIndividual}
-            class="btn btn-gold"
-            target="_blank"
-            rel="noopener">Reserva por 150 €</a
-          >
+          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
         </div>
         <div class="price-card" id="card-compartida">
           <div class="room-title">Habitación compartida</div>
@@ -478,7 +473,7 @@ const tools = [
       Formación práctica, alojamiento y comidas incluidas. 12 plazas. Junio
       2026.
     </p>
-    <a href="/#pricing" class="btn-cta-final">Reserva tu plaza</a>
+    <a href="#" class="btn-cta-final" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
   </section>
 
   <!-- ===== CONTACTO ===== -->
