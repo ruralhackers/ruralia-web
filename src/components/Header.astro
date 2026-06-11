@@ -1,17 +1,23 @@
 ---
+import { useTranslations } from '../i18n/ui';
+import { getAlternateUrl } from '../i18n/routes';
+
+const locale = Astro.currentLocale ?? 'gl';
+const t = useTranslations(locale);
 const currentPath = Astro.url.pathname;
+const alternatePath = getAlternateUrl(currentPath, locale);
 
 const nav = [
-  { href: "/residencia-ia-galicia/", label: "Residencia IA" },
-  { href: "/para-quien/", label: "Para quién" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/faq/", label: "FAQ" },
-  { href: "/sobre-nosotros/", label: "Quiénes somos" },
+  { href: t('nav.href.residencia'), label: t('nav.residencia') },
+  { href: t('nav.href.para_quen'), label: t('nav.para_quen') },
+  { href: t('nav.href.blog'), label: t('nav.blog') },
+  { href: t('nav.href.faq'), label: t('nav.faq') },
+  { href: t('nav.href.sobre_nos'), label: t('nav.sobre_nos') },
 ];
 ---
 
 <header class="header">
-  <a href="/" class="header-logo">
+  <a href={locale === 'gl' ? '/' : '/es/'} class="header-logo">
     <img
       src="/images/logo-ruralgpt.png"
       alt="ruralGPT"
@@ -27,10 +33,11 @@ const nav = [
       ))
     }
   </nav>
-  <a href="#" class="header-cta" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
+  <a href="#" class="header-cta" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">{t('nav.cta')}</a>
+  <a href={alternatePath} class="header-lang" aria-label={`Cambiar a ${t('nav.lang_switcher')}`}>{t('nav.lang_switcher')}</a>
   <button
     class="menu-toggle"
-    aria-label="Abrir menú"
+    aria-label={t('nav.open_menu')}
     aria-expanded="false"
     aria-controls="header-nav"
   >
@@ -96,6 +103,22 @@ const nav = [
   .header-cta:hover {
     opacity: 0.75;
     color: #ffffff;
+  }
+  .header-lang {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 0.35rem 0.6rem;
+    transition: color 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+  }
+  .header-lang:hover {
+    color: #000;
+    border-color: #000;
   }
 
   /* Mobile */

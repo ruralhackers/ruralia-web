@@ -37,9 +37,9 @@ export const handler = async (event) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${siteUrl}/gracias/`,
+      success_url: `${siteUrl}/grazas/`,
       cancel_url: `${siteUrl}/residencia-ia-galicia/#pricing`,
-      locale: 'es',
+      locale: 'auto',
       payment_method_types: ['card'],
       billing_address_collection: 'required',
       custom_text: {

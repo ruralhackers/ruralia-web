@@ -1,0 +1,193 @@
+---
+import Base from "../layouts/Base.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://ruralgpt.gal/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Para quen",
+      item: "https://ruralgpt.gal/para-quen/",
+    },
+  ],
+};
+---
+
+<Base
+  title="¿É para ti? — Residencia de IA Rural GPT"
+  description="Profesionais de 30-45 que sempre estiveron ao día coa tecnoloxía pero se perderon coa IA. Se che soa, esta experiencia é para ti."
+  keywords={[
+    "formación IA profesionais",
+    "curso IA deseño",
+    "IA para xestorías",
+    "IA para marketing",
+    "aprender IA sen programar",
+  ]}
+  schema={schema}
+>
+  <section class="section">
+    <div class="section-inner content">
+      <h1>¿É para ti?</h1>
+
+      <h2>Isto é para ti se...</h2>
+      <ul class="check-list">
+        <li>
+          Traballas con tecnoloxía e sabes que deberías estar usando IA, pero non
+          atopas o momento
+        </li>
+        <li>
+          Eras a persoa de referencia tech no teu entorno, pero a IA adiantouche
+        </li>
+        <li>
+          Probaches ChatGPT ou algunha ferramenta de IA, pero sentes que só
+          rasgas a superficie
+        </li>
+        <li>
+          Non tes tempo de investigar que ferramentas merecen a pena e
+          cales son fume
+        </li>
+        <li>
+          Queres integrar IA no teu traballo diario para ser máis eficiente e
+          gañar máis
+        </li>
+      </ul>
+
+      <h2>¿Sóache?</h2>
+
+      <div class="persona">
+        <h2>Lucía, 36, deseñadora gráfica</h2>
+        <p>
+          Leva 10 anos con Photoshop e Figma. A súa clientela comeza a pedirlle
+          cousas "con IA" e non sabe por onde empezar. Probou Midjourney pola
+          súa conta pero sente que só rasga a superficie.
+        </p>
+      </div>
+
+      <div class="persona">
+        <h2>Marcos, 42, xestoría</h2>
+        <p>
+          Xestiona a contabilidade e trámites de 40 autónomos. Sabe que a IA
+          podería aforrarlle horas de papeleo, pero non ten tempo de investigar
+          cal usar nin como integrala sen armala.
+        </p>
+      </div>
+
+      <div class="persona">
+        <h2>Andrea, 34, desenvolvedora web freelance</h2>
+        <p>
+          Monta webs con WordPress dende 2015. Ve que ferramentas como Cursor ou
+          Bolt están cambiando o xogo pero entre proxectos e clientes non
+          atopa o momento de sentarse a aprendelas.
+        </p>
+      </div>
+
+      <div class="persona">
+        <h2>Dani, 39, consultor de marketing dixital</h2>
+        <p>
+          Leva anos vendendo estratexia de SEO e redes. A IA está
+          transformando o seu sector e necesita entender que ferramentas integrar
+          antes de que a súa competencia o faga primeiro.
+        </p>
+      </div>
+
+      <h2>Isto NON é para ti se...</h2>
+      <ul class="cross-list">
+        <li>Buscas teoría académica ou un máster de meses</li>
+        <li>Xa traballas con IA a diario e dominas varias ferramentas</li>
+        <li>Non tes portátil ou non tes ganas de experimentar</li>
+        <li>Buscas un curso online para facer ao teu ritmo</li>
+      </ul>
+
+      <h2>Que nivel necesitas</h2>
+      <p>
+        <strong>Non fai falta saber programar.</strong> Se sabes usar un navegador
+        e ferramentas dixitais no teu traballo, podes seguir o programa sen problema.
+        Isto non é un curso de programación. É un curso de usar IA como ferramenta
+        profesional.
+      </p>
+
+      <h2>Todo incluído. Sen letra pequena.</h2>
+      <p>
+        Cuarto individual dende 797 EUR. Todo incluído: 3 días de formación, 3 noites
+        de aloxamento, todas as comidas, materiais, comunidade alumni e sesión
+        de seguimento.
+      </p>
+      <ul>
+        <li>
+          Formación 100% <strong>deducible</strong> para autónomos e empresas
+        </li>
+        <li>Un bootcamp equivalente custa 2.500-7.000 EUR e dura meses</li>
+        <li>Unha experiencia de IA nos Alpes custa 9.500 USD por 3 días</li>
+      </ul>
+
+      <div class="cta-block">
+        <a href="#" class="btn btn-primary btn-lg" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .content {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+  }
+  p,
+  li {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.7;
+  }
+  .check-list,
+  .cross-list {
+    list-style: none;
+    padding: 0;
+  }
+  .check-list li::before {
+    content: "✓ ";
+    color: #000000;
+    font-weight: 700;
+  }
+  .cross-list li::before {
+    content: "✗ ";
+    color: #999999;
+    font-weight: 700;
+  }
+  .check-list li,
+  .cross-list li {
+    padding: 0.4rem 0;
+  }
+  .cta-block {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .persona {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f5f5f5;
+    border-left: 3px solid #000000;
+  }
+  .persona h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+  .persona p {
+    margin-bottom: 0;
+  }
+</style>

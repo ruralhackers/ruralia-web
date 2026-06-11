@@ -1,18 +1,22 @@
 ---
+import { useTranslations } from '../i18n/ui';
+
+const locale = Astro.currentLocale ?? 'gl';
+const t = useTranslations(locale);
 ---
-<div id="newsletter-overlay" class="nl-overlay" role="dialog" aria-modal="true" aria-label="Suscríbete a la newsletter">
+<div id="newsletter-overlay" class="nl-overlay" role="dialog" aria-modal="true" aria-label={t('newsletter.aria_label')}>
   <div class="nl-modal">
-    <button class="nl-close" id="nl-close" aria-label="Cerrar">✕</button>
-    <p class="nl-eyebrow">Newsletter</p>
-    <h2 class="nl-title">Suscríbete y entérate cuando abramos nuevas plazas.</h2>
-    <p class="nl-desc">Novedades, recursos de IA y aviso prioritario en próximas ediciones. Sin ruido.</p>
+    <button class="nl-close" id="nl-close" aria-label={t('newsletter.close_aria')}>✕</button>
+    <p class="nl-eyebrow">{t('newsletter.eyebrow')}</p>
+    <h2 class="nl-title">{t('newsletter.title')}</h2>
+    <p class="nl-desc">{t('newsletter.desc')}</p>
     <form class="nl-form" id="nl-form">
-      <input type="email" name="email" id="nl-email" placeholder="tu@email.com" required class="nl-input" autocomplete="email" />
-      <button type="submit" class="nl-btn" id="nl-submit">Suscribirme</button>
+      <input type="email" name="email" id="nl-email" placeholder={t('newsletter.placeholder')} required class="nl-input" autocomplete="email" />
+      <button type="submit" class="nl-btn" id="nl-submit">{t('newsletter.submit')}</button>
     </form>
-    <p class="nl-success" id="nl-success" style="display:none;">¡Apuntado! Te escribimos pronto.</p>
-    <p class="nl-error" id="nl-error" style="display:none;">Algo salió mal. Inténtalo de nuevo.</p>
-    <button class="nl-skip" id="nl-skip">Ahora no</button>
+    <p class="nl-success" id="nl-success" style="display:none;">{t('newsletter.success')}</p>
+    <p class="nl-error" id="nl-error" style="display:none;">{t('newsletter.error')}</p>
+    <button class="nl-skip" id="nl-skip">{t('newsletter.skip')}</button>
   </div>
 </div>
 

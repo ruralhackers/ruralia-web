@@ -1,6 +1,7 @@
 ---
 import Base from "./Base.astro";
 import { getCollection } from "astro:content";
+import { useTranslations } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -12,9 +13,19 @@ interface Props {
 }
 
 const { title, description, date, author, keywords, ogImage } = Astro.props;
+const locale = Astro.currentLocale ?? 'gl';
+const t = useTranslations(locale);
 
+// Build canonical URL based on locale
 const slug = Astro.url.pathname.replace(/\/$/, "").split("/").pop();
-const canonicalURL = `https://ruralgpt.gal/blog/${slug}/`;
+const canonicalURL = locale === 'gl'
+  ? `https://ruralgpt.gal/blog/${slug}/`
+  : `https://ruralgpt.gal/es/blog/${slug}/`;
+
+const inLanguage = locale === 'gl' ? 'gl' : 'es';
+const blogBase = locale === 'gl' ? '/blog/' : '/es/blog/';
+const homeLabel = locale === 'gl' ? 'Inicio' : 'Inicio';
+const blogLabel = 'Blog';
 
 const schema = [
   {
@@ -28,7 +39,7 @@ const schema = [
         ? ogImage
         : `https://ruralgpt.gal${ogImage}`
       : "https://ruralgpt.gal/images/ruralia-1.jpg",
-    inLanguage: "es",
+    inLanguage,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": canonicalURL,
@@ -50,28 +61,30 @@ const schema = [
       {
         "@type": "ListItem",
         position: 1,
-        name: "Inicio",
-        item: "https://ruralgpt.gal/",
+        name: homeLabel,
+        item: locale === 'gl' ? "https://ruralgpt.gal/" : "https://ruralgpt.gal/es/",
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Blog",
-        item: "https://ruralgpt.gal/blog/",
+        name: blogLabel,
+        item: `https://ruralgpt.gal${blogBase}`,
       },
       { "@type": "ListItem", position: 3, name: title, item: canonicalURL },
     ],
   },
 ];
 
-const formattedDate = new Date(date).toLocaleDateString("es-ES", {
+const langCode = locale === 'gl' ? 'gl-ES' : 'es-ES';
+const formattedDate = new Date(date).toLocaleDateString(langCode, {
   year: "numeric",
   month: "long",
   day: "numeric",
 });
 
-// Related posts: prefer posts sharing keywords, fallback to most recent
-const allPosts = await getCollection("blog");
+// Related posts from the current locale collection
+const collection = locale === 'gl' ? 'blogGl' : 'blogEs';
+const allPosts = await getCollection(collection);
 const otherPosts = allPosts.filter((p) => p.id !== slug);
 
 let relatedPosts;
@@ -99,11 +112,13 @@ if (keywords && keywords.length > 0) {
 
 const shareTitle = encodeURIComponent(title);
 const shareURL = encodeURIComponent(canonicalURL);
+const copiedText = t('blog.copied');
 ---
 
 <Base
   title={`${title} | Rural GPT`}
   description={description}
+  canonicalURL={canonicalURL}
   ogImage={ogImage}
   ogType="article"
   schema={schema}
@@ -124,29 +139,30 @@ const shareURL = encodeURIComponent(canonicalURL);
       <footer class="article-footer">
         <hr />
         <div class="share-links">
-          <span class="share-label">Compartir:</span>
+          <span class="share-label">{t('blog.share')}</span>
           <a
             href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareURL}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Compartir en Twitter/X">X</a
+            aria-label={t('blog.share_twitter_aria')}>X</a
           >
           <a
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareURL}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Compartir en LinkedIn">LinkedIn</a
+            aria-label={t('blog.share_linkedin_aria')}>LinkedIn</a
           >
           <button
             class="copy-url-btn"
             data-url={canonicalURL}
-            aria-label="Copiar enlace">Copiar enlace</button
+            data-copied={copiedText}
+            aria-label={t('blog.copy_link')}>{t('blog.copy_link')}</button
           >
         </div>
         <p>
-          ¿Te ha gustado este artículo? <a href="/residencia-ia-galicia/"
-            >Conoce nuestra Residencia de IA en Galicia</a
-          > — 3 días de formación práctica, todo incluido.
+          {t('blog.cta_text')} <a href={t('blog.cta_link_href')}
+            >{t('blog.cta_link_text')}</a
+          >{t('blog.cta_suffix')}
         </p>
       </footer>
     </div>
@@ -156,13 +172,13 @@ const shareURL = encodeURIComponent(canonicalURL);
     relatedPosts.length > 0 && (
       <section class="section related-section">
         <div class="article-inner">
-          <h2 class="related-heading">Artículos relacionados</h2>
+          <h2 class="related-heading">{t('blog.related_heading')}</h2>
           <ul class="related-list">
             {relatedPosts.map((p) => (
               <li>
-                <a href={`/blog/${p.id}/`}>{p.data.title}</a>
+                <a href={`${blogBase}${p.id}/`}>{p.data.title}</a>
                 <span class="related-date">
-                  {new Date(p.data.date).toLocaleDateString("es-ES", {
+                  {new Date(p.data.date).toLocaleDateString(langCode, {
                     year: "numeric",
                     month: "short",
                     day: "numeric",
@@ -181,10 +197,11 @@ const shareURL = encodeURIComponent(canonicalURL);
   document.querySelectorAll(".copy-url-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const url = (btn as HTMLElement).dataset.url;
+      const copied = (btn as HTMLElement).dataset.copied ?? 'Copiado';
       if (url) {
         navigator.clipboard.writeText(url).then(() => {
           const original = btn.textContent;
-          btn.textContent = "Copiado";
+          btn.textContent = copied;
           setTimeout(() => {
             btn.textContent = original;
           }, 2000);

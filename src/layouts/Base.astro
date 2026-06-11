@@ -21,10 +21,11 @@ interface Props {
 }
 
 const { hideHeader, ...props } = Astro.props;
+const locale = Astro.currentLocale ?? 'gl';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,7 +38,7 @@ const { hideHeader, ...props } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 
     <SEO {...props} />
-    <link rel="alternate" type="application/rss+xml" title="Rural GPT — Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Rural GPT — Blog" href={locale === 'gl' ? '/rss.xml' : '/es/rss.xml'} />
 
     <!-- Tracking (GA4 + Meta Pixel) loaded conditionally via CookieBanner -->
   </head>

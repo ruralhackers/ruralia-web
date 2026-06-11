@@ -1,16 +1,18 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from '../layouts/Base.astro';
 ---
 
 <Base
-  title="Mensaje enviado | Rural GPT"
-  description="Gracias por contactarnos. Te responderemos lo antes posible."
+  title="Apuntámoste | Rural GPT"
+  description="Grazas polo teu interese en Rural GPT. Avisarémosche cando abramos inscricións."
   robots="noindex, nofollow"
 >
   <script>
     if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead", {
-        content_name: "Consulta Residencia IA",
+      window.fbq("track", "Purchase", {
+        content_name: "Residencia IA Galicia",
+        value: 150,
+        currency: "EUR",
       });
     }
   </script>
@@ -18,12 +20,14 @@ import Base from "../layouts/Base.astro";
   <section class="section">
     <div class="section-inner thanks-page">
       <p class="check-icon">&#10003;</p>
-      <h1>¡Mensaje enviado!</h1>
+      <h1>¡Praza reservada!</h1>
       <p class="thanks-text">
-        Gracias por escribirnos. Te responderemos en menos de 24h. Si tienes
-        alguna duda urgente, escríbenos a <strong>hola@ruralgpt.gal</strong>.
+        Recibirás un email de confirmación con todos os detalles da
+        Residencia IA. Se tes algunha dúbida, escríbenos a <strong
+          >hola@ruralgpt.gal</strong
+        >.
       </p>
-      <a href="/" class="btn btn-primary">Volver al inicio</a>
+      <a href="/" class="btn btn-primary">Volver ao inicio</a>
     </div>
   </section>
 </Base>

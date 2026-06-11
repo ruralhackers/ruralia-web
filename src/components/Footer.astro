@@ -1,23 +1,27 @@
 ---
+import { useTranslations } from '../i18n/ui';
+
+const locale = Astro.currentLocale ?? 'gl';
+const t = useTranslations(locale);
 const year = new Date().getFullYear();
 
 const links = [
-  { href: "/residencia-ia-galicia/", label: "Residencia IA" },
-  { href: "/para-quien/", label: "Para quién" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/faq/", label: "FAQ" },
-  { href: "/sobre-nosotros/", label: "Sobre nosotros" },
+  { href: t('nav.href.residencia'), label: t('nav.residencia') },
+  { href: t('nav.href.para_quen'), label: t('nav.para_quen') },
+  { href: t('nav.href.blog'), label: t('nav.blog') },
+  { href: t('nav.href.faq'), label: t('nav.faq') },
+  { href: t('nav.href.sobre_nos'), label: t('nav.sobre_nos') },
 ];
 
 const legalLinks = [
-  { href: "/legal/", label: "Aviso legal" },
-  { href: "/legal/#privacidad", label: "Privacidad" },
+  { href: t('footer.legal_href'), label: t('footer.legal') },
+  { href: t('footer.privacidade_href'), label: t('footer.privacidade') },
 ];
 ---
 
 <footer class="footer">
   <div class="footer-top">
-    <a href="/" class="footer-logo">
+    <a href={locale === 'gl' ? '/' : '/es/'} class="footer-logo">
       <img
         src="/images/logo-ruralgpt.png"
         alt="ruralGPT"

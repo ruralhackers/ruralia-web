@@ -2,29 +2,29 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blogGl')).sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 ---
 
 <Base
-  title="Blog — IA aplicada para freelancers y profesionales tech | Rural GPT"
-  description="Tips, herramientas y guías prácticas de IA para freelancers, webmasters e indie hackers. Por el equipo de Rural GPT."
+  title="Blog — IA aplicada para freelancers e profesionais tech | Rural GPT"
+  description="Consellos, ferramentas e guías prácticas de IA para freelancers, webmasters e indie hackers. Polo equipo de Rural GPT."
 >
   <section class="section">
     <div class="section-inner">
       <h1>Blog</h1>
-      <p class="intro">Tips, herramientas y guías prácticas de IA aplicada para profesionales tech.</p>
+      <p class="intro">Consellos, ferramentas e guías prácticas de IA aplicada para profesionais tech.</p>
 
       {posts.length === 0 && (
-        <p class="empty">Próximamente. Estamos preparando contenido. Síguenos en redes para no perderte nada.</p>
+        <p class="empty">Proximamente. Estamos preparando contido. Síguenos en redes para non perderte nada.</p>
       )}
 
       <div class="post-list">
         {posts.map((post) => (
           <article class="post-card">
             <a href={`/blog/${post.id}/`}>
-              <time>{new Date(post.data.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <time>{new Date(post.data.date).toLocaleDateString('gl-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
               <h2>{post.data.title}</h2>
               <p>{post.data.description}</p>
             </a>

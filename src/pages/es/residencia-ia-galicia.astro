@@ -1,0 +1,371 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const linkCompartida = import.meta.env.PUBLIC_STRIPE_LINK_COMPARTIDA;
+const linkIndividual = import.meta.env.PUBLIC_STRIPE_LINK_INDIVIDUAL;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Rural GPT — Residencia de IA aplicada en Galicia",
+    description: "Residencia inmersiva de IA aplicada para profesionales. 3 días de formación práctica + alojamiento + comidas en Anceu Coliving, Galicia.",
+    startDate: "2026-06-04",
+    endDate: "2026-06-07",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location: {
+      "@type": "Place",
+      name: "Anceu Coliving",
+      address: { "@type": "PostalAddress", addressLocality: "Ponte Caldelas", addressRegion: "Pontevedra", addressCountry: "ES" },
+    },
+    organizer: { "@type": "Organization", name: "Rural GPT", url: "https://ruralgpt.gal" },
+    offers: [
+      { "@type": "Offer", name: "Habitación compartida", price: "632", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+      { "@type": "Offer", name: "Habitación individual", price: "797", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: "https://ruralgpt.gal/es/" },
+      { "@type": "ListItem", position: 2, name: "Residencia de IA en Galicia", item: "https://ruralgpt.gal/es/residencia-ia-galicia/" },
+    ],
+  },
+];
+
+const tools = [
+  { name: "ChatGPT", desc: "El asistente más versátil para texto, análisis y conversación", logo: "/logos/openai.svg", href: "https://chatgpt.com" },
+  { name: "Claude", desc: "Razonamiento profundo y trabajo con documentos largos", logo: "/logos/anthropic.svg", href: "https://claude.ai" },
+  { name: "Gemini", desc: "La IA de Google integrada con tu ecosistema", logo: "/logos/googlegemini.svg", href: "https://gemini.google.com" },
+  { name: "Kimi", desc: "Modelo de razonamiento avanzado open source", logo: "/logos/kimi.svg", href: "https://kimi.ai" },
+  { name: "Cursor", desc: "Programa y edita código con IA como copiloto", logo: "/logos/cursor.svg", href: "https://cursor.com" },
+  { name: "Runway", desc: "Genera vídeo e imágenes con IA profesional", logo: "/logos/runway.svg", href: "https://runwayml.com" },
+  { name: "Bolt", desc: "De idea a prototipo funcional en minutos", logo: "/logos/bolt.svg", href: "https://bolt.new" },
+  { name: "Lovable", desc: "Crea aplicaciones web completas sin programar", logo: "/logos/lovable.svg", href: "https://lovable.dev" },
+  { name: "v0", desc: "Genera componentes UI con una descripción", logo: "/logos/vercel.svg", href: "https://v0.dev" },
+  { name: "Make", desc: "Automatiza flujos de trabajo entre aplicaciones", logo: "/logos/make.svg", href: "https://make.com" },
+  { name: "Perplexity", desc: "Búsqueda inteligente con fuentes verificadas", logo: "/logos/perplexity.svg", href: "https://perplexity.ai" },
+  { name: "NotebookLM", desc: "Convierte documentos en conocimiento interactivo", logo: "/logos/notebooklm.svg", href: "https://notebooklm.google.com" },
+];
+---
+
+<Base
+  title="Residencia de IA en Galicia — 3 días, todo incluido | Rural GPT"
+  description="Ponte al día con IA en 3 días. Formación práctica en Anceu Coliving, Pontevedra. Alojamiento, comidas y herramientas incluidas. 12 plazas. Desde 632 EUR."
+  keywords={["residencia IA Galicia","curso intensivo IA presencial","ponerse al día con IA","formación IA todo incluido","curso IA Anceu Coliving"]}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="section hero-residencia">
+    <div class="section-inner text-center">
+      <h1>Ponte al día con IA en 3 días. Todo incluido.</h1>
+      <p class="hero-sub">
+        Esto es para ti si sientes que la IA va más rápido de lo que puedes procesar y quieres "un cortafuegos". En 3 días filtramos el ruido y te damos las herramientas exactas para que tu experiencia profesional se potencie, no se oxide.
+      </p>
+      <p class="hero-sub">
+        Nosotros investigamos por ti — y lo seguimos haciendo cada semana. Tú vienes 3 días a Galicia y te vas con las herramientas de IA configuradas para tu trabajo.
+      </p>
+      <a href="#" class="btn btn-primary btn-lg" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">Lista de espera</a>
+      <p class="hero-price">Desde <span id="hero-price-from">632</span> EUR todo incluido · 4–7 junio 2026</p>
+    </div>
+  </section>
+
+  <!-- Datos clave -->
+  <section class="section alt">
+    <div class="section-inner">
+      <div class="key-facts">
+        <div class="fact"><strong>Cuándo</strong><span>4–7 junio 2026</span></div>
+        <div class="fact"><strong>Dónde</strong><span>Anceu Coliving, Ponte Caldelas (Pontevedra)</span></div>
+        <div class="fact"><strong>Duración</strong><span>3 días / 3 noches</span></div>
+        <div class="fact"><strong>Plazas</strong><span>12 personas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué incluye -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>Qué incluye</h2>
+      <div class="includes-grid">
+        <div class="include-item"><strong>Formación</strong><p>3 días de talleres prácticos con herramientas de IA</p></div>
+        <div class="include-item"><strong>Alojamiento</strong><p>3 noches en Anceu Coliving</p></div>
+        <div class="include-item"><strong>Comidas</strong><p>Desayuno, comida y cena los 3 días. Gastronomía gallega.</p></div>
+        <div class="include-item"><strong>Materiales</strong><p>Acceso a todas las herramientas, licencias y materiales del curso</p></div>
+        <div class="include-item"><strong>Comunidad alumni</strong><p>Acceso al grupo privado de alumni después de la Residencia IA</p></div>
+        <div class="include-item"><strong>Follow-up</strong><p>Sesión online grupal de seguimiento a las 2-3 semanas</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Herramientas -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Herramientas que aprenderás a usar</h2>
+      <p>No todas las herramientas de IA sirven para lo mismo. Nosotros las probamos, tú te llevas las que encajan con tu trabajo.</p>
+      <div class="tools-grid">
+        {tools.map((tool) => (
+          <a class="tool-card" href={tool.href} target="_blank" rel="noopener noreferrer">
+            <div class="tool-top">
+              <img class="tool-logo" src={tool.logo} alt={tool.name} width="28" height="28" />
+              <span class="tool-arrow">↗</span>
+            </div>
+            <p class="tool-name">{tool.name}</p>
+            <p class="tool-desc">{tool.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Programa -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Programa: De "no me entero" a "ya lo tengo claro".</h2>
+      <div class="day-detail">
+        <h3>Jueves — "¿Dónde estoy?" — Mapa del terreno</h3>
+        <p>Llegas después de comer. Te situamos. Qué herramientas existen, para qué sirve cada una, cuáles son humo y cuáles merecen tu tiempo. Sales del primer día entendiendo el paisaje completo de la IA aplicada a trabajo real.</p>
+      </div>
+      <div class="day-detail">
+        <h3>Viernes — "¿Qué puedo automatizar?" — Tu trabajo bajo la lupa</h3>
+        <p>Analizamos tu flujo de trabajo real. Identificamos qué tareas puedes automatizar, delegar a IA o hacer en la mitad de tiempo. Aprendes a usar las herramientas clave: ChatGPT, Claude, Gemini, Make.</p>
+      </div>
+      <div class="day-detail">
+        <h3>Sábado — "¿Puedo construir cosas?" — De idea a prototipo</h3>
+        <p>Sí, puedes. Aunque no sepas programar. Con Cursor, Bolt, Lovable y v0 construyes herramientas que antes habrías encargado (y pagado). Montas tu kit definitivo y sales con todo configurado y listo para el lunes.</p>
+      </div>
+      <div class="day-detail">
+        <h3>Domingo — Cierre y despedida</h3>
+        <p>Desayuno juntos, últimas dudas y despedida antes de la hora de comer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Día típico -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Un día típico</h2>
+      <div class="schedule">
+        <div class="schedule-row"><span class="time">9:00</span><span>Desayuno juntos</span></div>
+        <div class="schedule-row"><span class="time">10:00 – 13:30</span><span>Taller práctico (hands-on con herramientas)</span></div>
+        <div class="schedule-row"><span class="time">13:30</span><span>Comida</span></div>
+        <div class="schedule-row"><span class="time">15:30 – 18:00</span><span>Aplicar lo aprendido a tu propio proyecto</span></div>
+        <div class="schedule-row"><span class="time">18:00 – 19:30</span><span>Tiempo libre, paseo, descanso</span></div>
+        <div class="schedule-row"><span class="time">20:00</span><span>Cena</span></div>
+        <div class="schedule-row"><span class="time">21:30</span><span>Sesión nocturna opcional — demos, preguntas, charla</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- El lugar -->
+  <section class="section alt">
+    <div class="section-inner">
+      <h2>El lugar: Anceu Coliving</h2>
+      <p>El primer coliving del noroeste de España. Un pueblo de menos de 100 habitantes en Ponte Caldelas (Pontevedra), con 1 Gbps de fibra óptica, espacio de trabajo equipado, y rodeado de naturaleza. El 55% de los colivers repiten.</p>
+      <p>A 30 minutos de Pontevedra y 45 de Vigo. Si vienes en avión, el aeropuerto más cercano es Vigo (VGO).</p>
+
+      <h2>Quién lo organiza</h2>
+      <p>Rural GPT es una iniciativa de <a href="https://ruralhackers.com" target="_blank" rel="noopener">Rural Hackers</a> y <a href="https://anceu.com" target="_blank" rel="noopener">Anceu Coliving</a>. Llevamos años organizando eventos tech en el rural gallego — Hacker Days, residencias creativas, hackathones con participantes de toda Europa.</p>
+      <div class="team-inline">
+        <p><strong>Agustín Jamardo</strong> — Fundador de Anceu Coliving. Desarrollador, 12+ años en remoto.</p>
+        <p><strong>África Rodríguez</strong> — Cofundadora de Rural Hackers. Facilitadora de proyectos europeos (Erasmus+).</p>
+        <p><strong>Nacho Márquez</strong> — Cofundador de Rural Hackers. Director de Noites Abertas. 20+ proyectos internacionales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section alt" id="pricing">
+    <div class="section-inner pricing-section">
+      <h2>Precio</h2>
+      <p class="pricing-intro">Todo incluido: formación, alojamiento, comidas, materiales y comunidad alumni.</p>
+      <div class="pricing-grid" data-prices='[{"until":null,"label":"Precio normal","until_text":"","discount":"","compartida":632,"individual":797}]'>
+        <div class="price-card featured" id="card-individual">
+          <div class="room-title">Habitación individual</div>
+          <div class="room-subtitle">Habitación para ti solo</div>
+          <span class="price-amount" id="price-individual">797 EUR</span>
+          <span class="price-tier" id="tier-individual">Precio normal</span>
+          <span class="price-discount" id="discount-individual"></span>
+          <ul>
+            <li>3 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <p class="deposit-note">150 € ahora · resto antes de la llegada</p>
+          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
+        </div>
+        <div class="price-card" id="card-compartida">
+          <div class="room-title">Habitación compartida</div>
+          <div class="room-subtitle">Compartida con otra persona</div>
+          <span class="price-amount" id="price-compartida">632 EUR</span>
+          <span class="price-tier" id="tier-compartida">Precio normal</span>
+          <span class="price-discount" id="discount-compartida"></span>
+          <ul>
+            <li>3 días de formación</li>
+            <li>3 noches de alojamiento</li>
+            <li>Todas las comidas</li>
+            <li>Comunidad alumni</li>
+            <li>Sesión follow-up</li>
+          </ul>
+          <p class="deposit-note">100 € ahora · resto antes de la llegada</p>
+          <span class="btn btn-sold-out" aria-disabled="true">Agotada</span>
+        </div>
+      </div>
+      <div id="pricing-countdown" style="display:none;" class="countdown-banner">
+        <span class="countdown-label" id="countdown-label"></span>
+        <span class="countdown-timer" id="countdown-timer"></span>
+        <span class="countdown-next" id="countdown-next"></span>
+      </div>
+      <p class="pricing-note">Un bootcamp de IA en Madrid cuesta 2.450–7.000 EUR sin alojamiento ni comidas. <a href="/es/faq/">¿Más preguntas?</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ inline -->
+  <section class="section">
+    <div class="section-inner">
+      <h2>Preguntas rápidas</h2>
+      <div class="faq-inline">
+        <details><summary>¿Necesito saber programar?</summary><p>No. Si sabes usar un navegador, puedes seguir el programa.</p></details>
+        <details><summary>¿Es solo para gente de tecnología?</summary><p>No. Es para cualquier profesional que quiera integrar IA en su trabajo: diseño, administración, marketing, consultoría, servicios...</p></details>
+        <details><summary>¿Y si ya uso ChatGPT?</summary><p>Perfecto, pero probablemente lo uses al 10% de su capacidad. Aquí vas mucho más allá.</p></details>
+        <details><summary>¿Qué pasa si la IA que aprendo se queda obsoleta?</summary><p>Por eso no te enseñamos UNA herramienta. Te enseñamos a evaluar y elegir. Y la comunidad alumni sigue activa con actualizaciones.</p></details>
+      </div>
+      <p class="faq-more"><a href="/es/faq/">Ver todas las preguntas frecuentes</a></p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section alt" id="reservar">
+    <div class="section-inner form-section">
+      <h2>¿Tienes dudas? Escríbenos</h2>
+      <p class="form-subtitle">¿Tienes alguna pregunta antes de reservar? Te respondemos en menos de 24h.</p>
+      <form name="contacto-residencia" method="POST" action="/es/gracias-contacto/" data-netlify="true" netlify-honeypot="bot-field" class="waitlist-form">
+        <input type="hidden" name="form-name" value="contacto-residencia" />
+        <p class="hidden-field"><label>No rellenar: <input name="bot-field" /></label></p>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">¿Qué quieres saber?</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos tu duda..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero-residencia { padding-top: 5rem; padding-bottom: 4rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .hero-residencia h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 700px; margin: 0 auto 1.5rem; }
+  .hero-sub { font-size: 1.15rem; color: var(--color-text-secondary); max-width: 580px; margin: 0 auto 2rem; line-height: 1.7; }
+  .hero-price { color: var(--marron-claro); font-size: 0.95rem; margin-top: 1rem; }
+  .key-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .fact { background: #f5f5f5; padding: 1rem; border-radius: 8px; text-align: center; }
+  .fact strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.25rem; }
+  .alt { background: #f5f5f5; }
+  .day-detail { margin-bottom: 2rem; }
+  .day-detail h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .day-detail p { color: #555; }
+  .schedule { max-width: 600px; }
+  .schedule-row { display: flex; gap: 1.5rem; padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0; }
+  .time { font-weight: 600; min-width: 130px; color: #555; font-size: 0.9rem; }
+  .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+  .include-item { background: #fff; padding: 1.25rem; border-radius: 8px; }
+  .include-item strong { display: block; margin-bottom: 0.25rem; }
+  .include-item p { color: #666; font-size: 0.9rem; margin: 0; }
+  .pricing-section { text-align: center; }
+  .pricing-intro { color: #666; margin-bottom: 0; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 680px; margin: 2rem auto; }
+  .price-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 2rem; text-align: center; display: flex; flex-direction: column; }
+  .price-card.featured { background: #000; border-color: #000; color: #fff; }
+  .room-title { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.2rem; }
+  .room-subtitle { font-size: 0.85rem; color: #888; margin-bottom: 1.25rem; }
+  .price-card.featured .room-subtitle { color: rgba(255,255,255,0.55); }
+  .price-amount { display: block; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.2rem; }
+  .price-tier { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 0.2rem; min-height: 1em; }
+  .price-card.featured .price-tier { color: rgba(255,255,255,0.5); }
+  .price-discount { display: block; font-size: 0.85rem; color: #555; font-weight: 500; margin-bottom: 1.5rem; min-height: 1.2em; }
+  .price-card.featured .price-discount { color: rgba(255,255,255,0.7); }
+  .price-card ul { text-align: left; list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
+  .price-card li { padding: 0.3rem 0; color: #555; font-size: 0.9rem; }
+  .price-card.featured li { color: rgba(255,255,255,0.8); }
+  .price-card li::before { content: "✓ "; color: #000; font-weight: 600; }
+  .price-card.featured li::before { color: #fff; }
+  .pricing-note { max-width: 560px; margin: 1rem auto 0; font-size: 0.9rem; color: #888; }
+  .price-card.featured .btn { background: #fff; color: #000; }
+  .price-card.featured .btn:hover { background: #f0f0f0; }
+  .deposit-note { font-size: 0.8rem; color: #888; margin: 0 0 0.6rem; }
+  .price-card.featured .deposit-note { color: rgba(255,255,255,0.5); }
+  @media (max-width: 600px) { .pricing-grid { grid-template-columns: 1fr; max-width: 380px; } }
+  .team-inline { margin-top: 1.5rem; }
+  .team-inline p { font-size: 0.95rem; color: #555; margin-bottom: 0.4rem; }
+  .faq-inline { max-width: 650px; }
+  .faq-inline details { border-bottom: 1px solid #e0e0e0; padding: 1rem 0; }
+  .faq-inline summary { font-weight: 600; font-size: 1.05rem; cursor: pointer; color: var(--color-heading); list-style: none; }
+  .faq-inline summary::-webkit-details-marker { display: none; }
+  .faq-inline summary::before { content: "+ "; color: var(--verde-musgo); font-weight: 700; }
+  .faq-inline details[open] summary::before { content: "− "; }
+  .faq-inline p { margin: 0.75rem 0 0; color: #555; font-size: 0.95rem; padding-left: 1.1rem; }
+  .faq-more { margin-top: 1rem; }
+  .faq-more a { font-weight: 500; font-size: 0.95rem; text-decoration: none; }
+  .faq-more a:hover { text-decoration: underline; }
+  .form-section { text-align: center; max-width: 480px; }
+  .form-subtitle { color: #666; margin-bottom: 2rem; }
+  .waitlist-form { text-align: left; }
+  .hidden-field { display: none; }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--marron-tierra); margin-bottom: 0.4rem; }
+  .form-group input, .form-group select { width: 100%; padding: 0.75rem 1rem; font-size: 1rem; font-family: var(--font-body); border: 1px solid #d1d5db; border-radius: 8px; background: #fff; color: var(--marron-tierra); transition: border-color 0.15s ease; }
+  .form-group input:focus, .form-group select:focus { outline: none; border-color: #000000; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
+  .form-group input::placeholder { color: #9ca3af; }
+  .form-group textarea { width: 100%; padding: 0.75rem 1rem; font-size: 1rem; font-family: var(--font-body); border: 1px solid #d1d5db; border-radius: 8px; background: #fff; color: var(--marron-tierra); transition: border-color 0.15s ease; resize: vertical; }
+  .form-group textarea:focus { outline: none; border-color: #000000; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
+  .form-group textarea::placeholder { color: #9ca3af; }
+  .waitlist-form .btn { width: 100%; margin-top: 0.5rem; }
+  .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 2rem; border-top: 1px solid #e0e0e0; border-left: 1px solid #e0e0e0; }
+  .tool-card { display: block; padding: 1.5rem; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; text-decoration: none; color: inherit; transition: background 0.15s ease; }
+  .tool-card:hover { background: #f5f5f5; }
+  .tool-card:hover .tool-arrow { opacity: 1; }
+  .tool-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+  .tool-logo { width: 28px; height: 28px; filter: grayscale(100%); display: block; }
+  .tool-arrow { font-size: 1rem; color: #999; opacity: 0; transition: opacity 0.15s ease; }
+  .tool-name { font-size: 0.95rem; font-weight: 600; color: #111; margin: 0 0 0.3rem; }
+  .tool-desc { font-size: 0.85rem; color: #666; margin: 0; line-height: 1.5; }
+  @media (max-width: 768px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .price-amount { font-size: 2rem; } }
+  .countdown-banner { max-width: 680px; margin: 1rem auto 0; padding: 1rem 1.5rem; background: #f0f0f0; border: 1px solid #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; font-size: 0.9rem; }
+  .countdown-label, .countdown-next { color: #666; }
+  .countdown-timer { font-weight: 700; font-size: 1.05rem; color: #000; font-variant-numeric: tabular-nums; }
+  @media (max-width: 600px) { .countdown-banner { flex-direction: column; text-align: center; gap: 0.3rem; } }
+</style>
+
+<script>
+  (function () {
+    const set = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    };
+    set("price-compartida", "632 EUR");
+    set("price-individual", "797 EUR");
+    set("tier-compartida", "Precio normal");
+    set("tier-individual", "Precio normal");
+    set("discount-compartida", "");
+    set("discount-individual", "");
+    set("hero-price-from", "632");
+  })();
+
+  function fbTrack(event, params) {
+    if (typeof window.fbq === "function") window.fbq("track", event, params);
+  }
+  fbTrack("ViewContent", { content_name: "Residencia IA Galicia", content_category: "Evento formativo", value: 797, currency: "EUR" });
+</script>

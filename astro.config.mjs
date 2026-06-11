@@ -6,52 +6,64 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   site: 'https://ruralgpt.gal',
   adapter: netlify(),
+  i18n: {
+    defaultLocale: 'gl',
+    locales: ['gl', 'es'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   redirects: {
+    // Legacy redirect (keep working)
     '/retiro-ia-galicia': { status: 301, destination: '/residencia-ia-galicia/' },
+    // Spanish pages that moved under /es/
+    '/para-quien/':        { status: 301, destination: '/es/para-quien/' },
+    '/sobre-nosotros/':    { status: 301, destination: '/es/sobre-nosotros/' },
+    '/gracias/':           { status: 301, destination: '/es/gracias/' },
+    '/gracias-contacto/':  { status: 301, destination: '/es/gracias-contacto/' },
   },
   integrations: [
     sitemap({
       serialize(item) {
         const url = item.url.replace('https://ruralgpt.gal', '');
 
-        // Exclude utility pages from sitemap
-        if (url === '/gracias/' || url === '/404/') {
+        // Exclude utility / noindex pages
+        if (
+          url === '/grazas/' || url === '/grazas-contacto/' ||
+          url === '/es/gracias/' || url === '/es/gracias-contacto/' ||
+          url === '/404/' || url === '/es/404/'
+        ) {
           return undefined;
         }
 
-        // Home
+        // ── GL pages ───────────────────────────────────────────────────
         if (url === '/') {
-          item.priority = 1.0;
-          item.changefreq = 'weekly';
+          item.priority = 1.0; item.changefreq = 'weekly';
+        } else if (['/residencia-ia-galicia/', '/para-quen/'].includes(url)) {
+          item.priority = 0.8; item.changefreq = 'weekly';
+        } else if (url === '/blog/') {
+          item.priority = 0.7; item.changefreq = 'weekly';
+        } else if (url.startsWith('/blog/')) {
+          item.priority = 0.6; item.changefreq = 'monthly';
+        } else if (['/sobre-nos/', '/faq/'].includes(url)) {
+          item.priority = 0.5; item.changefreq = 'monthly';
         }
-        // Landing pages principales
-        else if (['/residencia-ia-galicia/', '/para-quien/'].includes(url)) {
-          item.priority = 0.8;
-          item.changefreq = 'weekly';
-        }
-        // Blog index
-        else if (url === '/blog/') {
-          item.priority = 0.7;
-          item.changefreq = 'weekly';
-        }
-        // Blog posts
-        else if (url.startsWith('/blog/')) {
-          item.priority = 0.6;
-          item.changefreq = 'monthly';
-        }
-        // Páginas secundarias
-        else if (['/sobre-nosotros/', '/faq/'].includes(url)) {
-          item.priority = 0.5;
-          item.changefreq = 'monthly';
-        }
-        // Legal, gracias
-        else {
-          item.priority = 0.3;
-          item.changefreq = 'yearly';
+        // ── ES pages ───────────────────────────────────────────────────
+        else if (url === '/es/') {
+          item.priority = 0.9; item.changefreq = 'weekly';
+        } else if (['/es/residencia-ia-galicia/', '/es/para-quien/'].includes(url)) {
+          item.priority = 0.8; item.changefreq = 'weekly';
+        } else if (url === '/es/blog/') {
+          item.priority = 0.7; item.changefreq = 'weekly';
+        } else if (url.startsWith('/es/blog/')) {
+          item.priority = 0.6; item.changefreq = 'monthly';
+        } else if (['/es/sobre-nosotros/', '/es/faq/'].includes(url)) {
+          item.priority = 0.5; item.changefreq = 'monthly';
+        } else {
+          item.priority = 0.3; item.changefreq = 'yearly';
         }
 
         item.lastmod = new Date().toISOString().split('T')[0];
-
         return item;
       },
     }),
