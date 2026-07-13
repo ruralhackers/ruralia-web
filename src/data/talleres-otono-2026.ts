@@ -39,11 +39,16 @@ interface Campaign {
   hero: {
     eyebrow: string;
     title: string;
+    seoSubtitle: string;
     intro: string;
     body: string;
     meta: string;
     cta: string;
     packCta: string;
+  };
+  internalLinks: {
+    heading: string;
+    items: Array<{ label: string; href: string }>;
   };
   context: {
     tag: string;
@@ -114,9 +119,9 @@ const sharedPrices = {
 const gl: Campaign = {
   locale: "gl",
   seo: {
-    title: "Talleres Sprint de IA · Rural GPT · Anceu, Galicia",
+    title: "Talleres de IA en Galicia · Produtividade e Web | Rural GPT",
     description:
-      "Dous talleres intensivos dun día en Anceu: IA e Produtividade o 31 de outubro e Web con IA o 28 de novembro. 199 € + IVA, comida incluída e 15 prazas.",
+      "Talleres presenciais de IA en Anceu: Produtividade o 31 de outubro e Web o 28 de novembro. 199 € + IVA, comida incluída, 15 prazas. Rural Hackers × Anceu Coliving.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
@@ -131,6 +136,7 @@ const gl: Campaign = {
   hero: {
     eyebrow: "Talleres sprint · Outono 2026",
     title: "Pechas os ollos e xa é Nadal.",
+    seoSubtitle: "Talleres presenciais de IA en Galicia · Outono 2026",
     intro:
       "Dous talleres sprint dun día en Anceu. Saes con algo feito á túa medida, non con apuntamentos que nunca terás tempo de volver ler.",
     body:
@@ -364,14 +370,22 @@ const gl: Campaign = {
     title: "Tes dúbidas?",
     body: "Escríbenos a hola@ruralgpt.gal e axudámoste a escoller.",
   },
+  internalLinks: {
+    heading: "Máis información",
+    items: [
+      { label: "Para quen son", href: "/para-quen/" },
+      { label: "Preguntas frecuentes", href: "/faq/" },
+      { label: "Blog de IA aplicada", href: "/blog/" },
+    ],
+  },
 };
 
 const es: Campaign = {
   locale: "es",
   seo: {
-    title: "Talleres Sprint de IA · Rural GPT · Anceu, Galicia",
+    title: "Talleres de IA en Galicia · Productividad y Web | Rural GPT",
     description:
-      "Dos talleres intensivos de un día en Anceu: IA y Productividad el 31 de octubre y Web con IA el 28 de noviembre. 199 € + IVA, comida incluida y 15 plazas.",
+      "Talleres presenciales de IA en Anceu: Productividad el 31 de octubre y Web el 28 de noviembre. 199 € + IVA, comida incluida, 15 plazas. Rural Hackers × Anceu Coliving.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
@@ -386,6 +400,7 @@ const es: Campaign = {
   hero: {
     eyebrow: "Talleres sprint · Otoño 2026",
     title: "Cierras los ojos y ya es Navidad.",
+    seoSubtitle: "Talleres presenciales de IA en Galicia · Otoño 2026",
     intro:
       "Dos talleres sprint de un día en Anceu. Sales con algo hecho a tu medida, no con apuntes que jamás tendrás tiempo de volver a leer.",
     body:
@@ -615,6 +630,14 @@ const es: Campaign = {
   contact: {
     title: "¿Tienes dudas?",
     body: "Escríbenos a hola@ruralgpt.gal y te ayudamos a elegir.",
+  },
+  internalLinks: {
+    heading: "Más información",
+    items: [
+      { label: "Para quién son", href: "/es/para-quien/" },
+      { label: "Preguntas frecuentes", href: "/es/faq/" },
+      { label: "Blog de IA aplicada", href: "/es/blog/" },
+    ],
   },
 };
 

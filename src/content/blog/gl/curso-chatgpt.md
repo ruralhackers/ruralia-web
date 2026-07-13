@@ -150,8 +150,6 @@ As respostas melloran cando defines o que NON queres:
 
 Tes agora unha base sólida para usar ChatGPT como un profesional. Pero hai unha diferenza enorme entre ler sobre ferramentas e realmente integralas no teu fluxo de traballo diario.
 
-Iso é o que facemos na [Residencia Rural GPT en Galicia](/residencia-ia-galicia/): 3 días de práctica intensiva onde configuras o teu stack de IA, aprendes prompting avanzado con exemplos do teu propio traballo, e sairás con ferramentas funcionando.
+Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): prompting avanzado co teu propio traballo e ferramentas funcionando nun só día. 15 prazas, comida incluída.
 
-12 prazas por edición. Todo incluído.
-
-[Ver o programa](/residencia-ia-galicia/) · [Para quen é](/para-quen/) · [Preguntas frecuentes](/faq/)
+[Ver programa e reservar](/talleres-otono-2026/) · [Para quen é](/para-quen/) · [Preguntas frecuentes](/faq/)

@@ -137,10 +137,8 @@ Son uns 55 euros ao mes. Hablemos do que eses 55 euros che dan:
 
 Se es freelance e facturas máis de 1.000 euros ao mes, eses 55 euros amortízanse cunha **soa hora aforrada**. E vas aforrar moito máis que unha hora.
 
-## Aprende a dominar as tres en 3 días
+## Aprende a dominar as tres nun día
 
-Iso é exactamente o que facemos na **[Residencia Rural GPT en Galicia](/residencia-ia-galicia/)**.
+Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): entender as fortalezas de cada ferramenta, configurar o teu contorno de traballo coas tres, e construír un sistema onde cada tarefa vai á IA que mellor a resolve.
 
-O primeiro día da Residencia IA dedicámolo precisamente a isto: entender as fortalezas de cada ferramenta, configurar o teu contorno de traballo coas tres, e construír un sistema onde cada tarefa vai á IA que mellor a resolve.
-
-Son 3 días que che cambian os próximos 4 anos.
+[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)

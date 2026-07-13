@@ -147,12 +147,12 @@ Con Cursor, Bolt ou v0, o mesmo proxecto podes telo en funcionamento en 2-4 hora
 
 Non estamos dicindo que os desenvolvedores van desaparecer. Para aplicacións complexas, con autenticación robusta, escala e integracións avanzadas, aínda necesitarás alguén que saiba. Pero para as ferramentas do día a día do teu negocio — as que antes non podías permitirte — agora podes facelas ti.
 
-## O Día 3 da Residencia Rural GPT
+## O taller Web da Rural GPT
 
-O terceiro día da [Residencia de IA en Galicia](/residencia-ia-galicia/) está dedicado a construír con IA: Cursor, Bolt, v0 e Lovable. Cada participante sae con polo menos un prototipo funcional creado durante a xornada.
+O taller **Web e Produto Dixital** (28 de novembro, Anceu) está dedicado a construír con IA: Cursor, Bolt, v0 e Lovable. Cada participante sae coa súa web despregada nun só día.
 
-Non é teoría. Non é "así é como funciona en xeral". É: aquí está o teu portátil, aquí está a ferramenta, agora constrúe a túa primeira aplicación. Con alguén ao lado que te resolve os bloqueos en tempo real.
+Non é teoría. É: aquí está o teu portátil, aquí está a ferramenta, agora constrúe a túa web. Con alguén ao lado que te resolve os bloqueos en tempo real.
 
-Se tes algunha idea de ferramenta que axudaría ao teu negocio pero nunca atopaches o momento ou os recursos para construíla, este é o teu momento.
+Se tes algunha idea de ferramenta ou web que axudaría ao teu negocio pero nunca atopaches o momento ou os recursos para construíla, este é o teu momento.
 
-[Consulta o programa](/residencia-ia-galicia/) ou [descubre se é para ti](/para-quen/).
+[Ver programa e reservar](/talleres-otono-2026/) · [Descubre se é para ti](/para-quen/)

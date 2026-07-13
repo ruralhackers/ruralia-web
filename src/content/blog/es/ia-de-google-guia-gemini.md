@@ -136,6 +136,6 @@ En 15 minutos vas a tener una idea clara de si la IA de Google encaja en tu fluj
 
 ---
 
-En la [Residencia Rural GPT en Galicia](/es/residencia-ia-galicia/) trabajamos con Gemini, ChatGPT y Claude. El segundo día de la Residencia IA lo dedicamos a configurar asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM para que te vayas con un sistema de IAs funcionando para tu trabajo.
+En el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) trabajamos con Gemini, ChatGPT y Claude. Configurarás asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM en una sola jornada.
 
-3 días, 12 plazas, todo incluido. [Consulta el programa](/es/residencia-ia-galicia/) o [descubre si es para ti](/es/para-quien/).
+[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

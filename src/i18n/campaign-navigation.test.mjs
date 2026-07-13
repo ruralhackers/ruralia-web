@@ -1,9 +1,38 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
 const read = (path) => readFile(new URL(path, root), "utf8");
+
+const productivityPosts = {
+  gl: [
+    "curso-chatgpt.md",
+    "ia-de-google-guia-gemini.md",
+    "chatgpt-vs-gemini-vs-claude.md",
+    "ferramentas-ia-freelancers.md",
+    "analizar-gastos-negocio-ia.md",
+    "automatizacions-ia.md",
+  ],
+  es: [
+    "curso-chatgpt.md",
+    "ia-de-google-guia-gemini.md",
+    "chatgpt-vs-gemini-vs-claude.md",
+    "herramientas-ia-freelancers.md",
+    "analizar-gastos-negocio-ia.md",
+    "automatizaciones-ia.md",
+  ],
+};
+
+const webPosts = {
+  gl: ["crear-app-con-ia.md"],
+  es: ["crear-app-con-ia.md"],
+};
+
+const archivePosts = {
+  gl: ["retiro-ia-aldea-galega.md", "bolsas-fundae-formacion-ia.md"],
+  es: ["retiro-ia-pueblo-gallego.md", "becas-fundae-formacion-ia.md"],
+};
 
 test("shared navigation promotes localized workshops and reservation", async () => {
   const [ui, routes, header, footer] = await Promise.all([
@@ -61,17 +90,57 @@ test("audience and team pages no longer sell the completed residence", async () 
   }
 });
 
-test("blog CTA promotes workshops while historical residence copy stays archived", async () => {
+test("blog CTAs promote workshops or archive by topic", async () => {
   const ui = await read("i18n/ui.ts");
-  const [gl, esTools, esFunding] = await Promise.all([
-    read("content/blog/gl/ia-de-google-guia-gemini.md"),
-    read("content/blog/es/herramientas-ia-freelancers.md"),
-    read("content/blog/es/becas-fundae-formacion-ia.md"),
-  ]);
-
   assert.match(ui, /blog\.cta_link_href':\s*'\/talleres-otono-2026\/'/);
   assert.match(ui, /blog\.cta_link_href':\s*'\/es\/talleres-otono-2026\/'/);
-  assert.match(gl, /\(\/residencia-ia-galicia\/\)/);
-  assert.match(esTools, /\(\/es\/residencia-ia-galicia\/\)/);
-  assert.match(esFunding, /\(\/es\/residencia-ia-galicia\/\)/);
+
+  for (const file of productivityPosts.gl) {
+    const content = await read(`content/blog/gl/${file}`);
+    assert.match(content, /\/talleres-otono-2026\//);
+    assert.doesNotMatch(content, /12 prazas por edición/);
+    assert.doesNotMatch(content, /reserva a túa praza/i);
+  }
+
+  for (const file of productivityPosts.es) {
+    const content = await read(`content/blog/es/${file}`);
+    assert.match(content, /\/es\/talleres-otono-2026\//);
+    assert.doesNotMatch(content, /12 plazas por edición/);
+    assert.doesNotMatch(content, /reserva tu plaza/i);
+  }
+
+  for (const file of webPosts.gl) {
+    const content = await read(`content/blog/gl/${file}`);
+    assert.match(content, /\/talleres-otono-2026\//);
+  }
+
+  for (const file of webPosts.es) {
+    const content = await read(`content/blog/es/${file}`);
+    assert.match(content, /\/es\/talleres-otono-2026\//);
+  }
+
+  for (const file of archivePosts.gl) {
+    const content = await read(`content/blog/gl/${file}`);
+    assert.match(content, /\/residencia-ia-galicia\//);
+    assert.match(content, /\/talleres-otono-2026\//);
+  }
+
+  for (const file of archivePosts.es) {
+    const content = await read(`content/blog/es/${file}`);
+    assert.match(content, /\/es\/residencia-ia-galicia\//);
+    assert.match(content, /\/es\/talleres-otono-2026\//);
+  }
+
+  const glBlogFiles = await readdir(new URL("content/blog/gl/", root));
+  const esBlogFiles = await readdir(new URL("content/blog/es/", root));
+
+  for (const file of glBlogFiles) {
+    const content = await read(`content/blog/gl/${file}`);
+    assert.doesNotMatch(content, /Todo incluído\.\s*\n\s*\n\[Ver o programa\]\(\/residencia-ia-galicia\//);
+  }
+
+  for (const file of esBlogFiles) {
+    const content = await read(`content/blog/es/${file}`);
+    assert.doesNotMatch(content, /12 plazas, todo incluido/);
+  }
 });

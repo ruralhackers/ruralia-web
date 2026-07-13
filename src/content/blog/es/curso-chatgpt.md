@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato inmersivo y presencial, echa un vistazo a nuestra [Residencia de IA en Galicia](/es/residencia-ia-galicia/), donde trabajamos todo esto (y mucho más) durante 3 días. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct) y Web (28 nov), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
@@ -269,7 +269,7 @@ No recomiendo ChatGPT Enterprise para la mayoría de pymes y freelancers: el cos
 
 ## Errores comunes al usar ChatGPT
 
-Después de haber formado a cientos de profesionales en nuestras [formaciones de IA](/es/residencia-ia-galicia/), estos son los errores que vemos una y otra vez:
+Después de haber formado a cientos de profesionales en nuestros [talleres de IA](/es/talleres-otono-2026/), estos son los errores que vemos una y otra vez:
 
 ### 1. Prompts vagos
 
@@ -336,26 +336,13 @@ La respuesta pragmática: usa las tres. Cada una tiene fortalezas diferentes, y 
 
 Estamos preparando una [comparativa detallada de ChatGPT, Gemini y Claude](/es/blog/chatgpt-vs-gemini-vs-claude/) con benchmarks reales y casos de uso específicos. Síguenos para no perdértela.
 
-## Siguiente paso: de curso online a inmersión real
+## Siguiente paso: de curso online a práctica presencial
 
 Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesionales. Pero hay una diferencia enorme entre saber y hacer.
 
-La realidad es que leer un curso de ChatGPT (por muy bueno que sea) no es lo mismo que practicar durante horas con feedback en tiempo real. Los artículos como este te dan la teoría y algunos prompts útiles, pero la verdadera transformación ocurre cuando te sientas, abres tu portátil y trabajas en tus proyectos reales con alguien al lado que te corrige y te enseña la siguiente técnica.
+El taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) está pensado para eso: prompting avanzado, automatizaciones con [Make y tus herramientas reales](/es/blog/automatizaciones-ia/), y un [stack personalizado](/es/blog/herramientas-ia-freelancers/) funcionando en una sola jornada. 15 plazas, comida incluida.
 
-Es exactamente lo que hacemos en la **[Residencia de IA de Rural GPT](/es/residencia-ia-galicia/)**: 3 días de inmersión total en un pueblo de Galicia, con grupos pequeños de 12 personas, trabajando con tu portátil en tus proyectos reales. Sin distracciones, sin PowerPoints aburridos, sin teoría que no aplicas nunca.
-
-Lo que cubrimos en la Residencia IA va mucho más allá de lo que puede cubrir un artículo:
-
-- **[Automatizaciones con IA](/es/blog/automatizaciones-ia/)** que conectan ChatGPT con tus herramientas reales (email, CRM, facturación)
-- **Agentes de IA** que ejecutan tareas complejas de forma autónoma
-- **Stacks personalizados** donde combinas ChatGPT, Claude, [herramientas de IA](/es/blog/herramientas-ia-freelancers/) y automatización en workflows completos
-- **Práctica intensiva** sobre tus propios proyectos, con mentores que te dan feedback inmediato
-
-Todo incluido: formación, alojamiento en Anceu Coliving (un espacio increíble en el rural de Pontevedra con fibra óptica de 1 Gbps), gastronomía gallega y un grupo de profesionales con los que compartes 3 días intensos.
-
-El formato presencial e inmersivo tiene tasas de finalización del 95% frente al 15% de los cursos online. No es magia: es lo que pasa cuando eliminas las distracciones y te rodeas de gente que quiere lo mismo que tú.
-
-Si quieres saber si la Residencia IA es para ti, mira [para quién está pensado](/es/para-quien/). Las plazas son limitadas a 12 personas por edición.
+[Ver programa y reservar](/es/talleres-otono-2026/) · [Para quién es](/es/para-quien/) · [Preguntas frecuentes](/es/faq/)
 
 ---
 

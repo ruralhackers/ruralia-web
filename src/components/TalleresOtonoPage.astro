@@ -72,15 +72,6 @@ const schema = [
   })),
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: campaign.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       {
@@ -106,13 +97,16 @@ const schema = [
   keywords={campaign.seo.keywords}
   schema={schema}
   ogImage="/images/talleres-otono-2026/entorno-anceu.webp"
+  ogImageWidth={1600}
+  ogImageHeight={1067}
   ogImageAlt={campaign.venue.imageAlt}
 >
   <div class="editorial-page">
     <section class="workshop-hero">
       <div class="ed-container">
         <SectionTag text={campaign.hero.eyebrow} />
-        <h1>{campaign.hero.title}</h1>
+        <h1 aria-label={campaign.hero.seoSubtitle}>{campaign.hero.title}</h1>
+        <p class="hero-seo-subtitle">{campaign.hero.seoSubtitle}</p>
         <div class="hero-copy">
           <p class="hero-intro">{campaign.hero.intro}</p>
           <p>{campaign.hero.body}</p>
@@ -372,6 +366,21 @@ const schema = [
       </div>
     </section>
 
+    <nav class="site-links ed-section ed-section--white" aria-label={campaign.internalLinks.heading}>
+      <div class="ed-container">
+        <SectionTag text={campaign.internalLinks.heading} />
+        <ul class="site-links-list">
+          {
+            campaign.internalLinks.items.map((item) => (
+              <li>
+                <a href={item.href}>{item.label}<span aria-hidden="true">→</span></a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </nav>
+
     <section id="faq" class="ed-section faq-section">
       <div class="ed-container faq-layout">
         <div>
@@ -436,6 +445,42 @@ const schema = [
     line-height: 0.86;
     letter-spacing: 0.005em;
     text-wrap: balance;
+  }
+
+  .hero-seo-subtitle {
+    max-width: 65ch;
+    margin: 1rem 0 0;
+    color: var(--editorial-accent);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  .site-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-links-list a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--editorial-ink);
+    font-size: 0.85rem;
+    font-weight: 750;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .site-links-list a:hover {
+    color: var(--editorial-accent);
   }
 
   .hero-copy {

@@ -31,6 +31,12 @@ const posts = (await getCollection('blogEs')).sort(
           </article>
         ))}
       </div>
+
+      <aside class="blog-cta">
+        <p>¿Quieres poner esto en práctica?</p>
+        <a href="/es/talleres-otono-2026/">Conoce los talleres de IA de Rural GPT<span aria-hidden="true">→</span></a>
+        <span class="blog-cta-note">31 oct · Productividad — 28 nov · Web — Anceu, Galicia</span>
+      </aside>
     </div>
   </section>
 </Base>
@@ -46,4 +52,9 @@ const posts = (await getCollection('blogEs')).sort(
   .post-card time { font-size: 0.85rem; color: #888; }
   .post-card h2 { font-size: 1.25rem; margin: 0.25rem 0 0.5rem; }
   .post-card p { color: #555; font-size: 0.95rem; margin: 0; }
+  .blog-cta { margin-top: 3rem; padding: 2rem; border: 1px solid #111; border-radius: 12px; background: #fafafa; }
+  .blog-cta p { margin: 0 0 0.75rem; font-weight: 700; }
+  .blog-cta a { display: inline-flex; min-height: 44px; align-items: center; gap: 0.5rem; color: #111; font-weight: 700; text-decoration: none; }
+  .blog-cta a:hover { color: #2d6a4f; }
+  .blog-cta-note { display: block; margin-top: 0.75rem; color: #666; font-size: 0.85rem; }
 </style>

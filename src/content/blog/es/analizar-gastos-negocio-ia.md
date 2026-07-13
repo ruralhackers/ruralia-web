@@ -91,12 +91,12 @@ Lo mismo aplica a cualquier negocio. ¿Cuánto gastas en software por suscripcio
 
 Ahora sí.
 
-## Esto es lo que enseñamos en RuralGPT
+## Esto es lo que practicamos en el taller de Productividad
 
-En la Residencia IA de RuralGPT dedicamos un día entero a Claude Code: la versión de Claude que trabaja directamente con tus archivos, tu carpeta de proyectos, tu sistema. Sin subir nada a mano. Sin copiar y pegar. Sin límites de contexto por mes.
+En el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) trabajamos con Claude Code: la versión de Claude que trabaja directamente con tus archivos, tu carpeta de proyectos, tu sistema. Sin subir nada a mano. Sin copiar y pegar.
 
 Lo que hemos hecho aquí con facturas lo puedes hacer tú con los documentos de tu negocio: presupuestos, contratos, historial de clientes, registros de ventas. La diferencia entre Claude.ai y Claude Code no es de precio — es de lo que puedes llegar a hacer con él.
 
 No necesitas saber programar. Necesitas saber qué pregunta quieres responder.
 
-[Mira si la Residencia IA es para ti](/es/para-quien/) o [consulta el programa completo](/es/residencia-ia-galicia/).
+[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
