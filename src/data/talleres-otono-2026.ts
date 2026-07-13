@@ -232,7 +232,7 @@ const gl: Campaign = {
     },
     {
       title: "Comida",
-      detail: "Menú de O Granero incluído",
+      detail: "Menú do chef Granero incluído",
     },
     {
       title: "Materiais",
@@ -289,8 +289,8 @@ const gl: Campaign = {
       "Anceu Coliving e a paisaxe natural de Ponte Caldelas, Galicia",
     foodTitle: "A comida tamén forma parte do día",
     foodBody:
-      "O prezo inclúe o menú de O Granero para parar, compartir o que estás construíndo e volver á sesión con enerxía.",
-    foodImageAlt: "Menú preparado por O Granero para participantes de Rural GPT",
+      "O prezo inclúe o menú do chef Granero para parar, compartir o que estás construíndo e volver á sesión con enerxía.",
+    foodImageAlt: "Menú preparado polo chef Granero para participantes de Rural GPT",
   },
   teamHeading: "O equipo",
   teamIntro:
@@ -335,7 +335,7 @@ const gl: Campaign = {
     },
     {
       question: "Inclúe comida?",
-      answer: "Si. O prezo inclúe o menú do día en O Granero.",
+      answer: "Si. O prezo inclúe o menú do día do chef Granero.",
     },
     {
       question: "Podo ir con compañeiros da miña empresa?",
@@ -494,7 +494,7 @@ const es: Campaign = {
       title: "Formación presencial",
       detail: "Jornada intensiva de 9:00 a 18:00 con el equipo de Rural GPT",
     },
-    { title: "Comida", detail: "Menú de O Granero incluido" },
+    { title: "Comida", detail: "Menú del chef Granero incluido" },
     {
       title: "Materiales",
       detail: "Recursos y documentación para seguir practicando",
@@ -550,8 +550,8 @@ const es: Campaign = {
       "Anceu Coliving y el paisaje natural de Ponte Caldelas, Galicia",
     foodTitle: "La comida también forma parte del día",
     foodBody:
-      "El precio incluye el menú de O Granero para parar, compartir lo que estás construyendo y volver a la sesión con energía.",
-    foodImageAlt: "Menú preparado por O Granero para participantes de Rural GPT",
+      "El precio incluye el menú del chef Granero para parar, compartir lo que estás construyendo y volver a la sesión con energía.",
+    foodImageAlt: "Menú preparado por el chef Granero para participantes de Rural GPT",
   },
   teamHeading: "El equipo",
   teamIntro:
@@ -596,7 +596,7 @@ const es: Campaign = {
     },
     {
       question: "¿Incluye comida?",
-      answer: "Sí. El precio incluye el menú del día en O Granero.",
+      answer: "Sí. El precio incluye el menú del día del chef Granero.",
     },
     {
       question: "¿Puedo ir con compañeros de mi empresa?",
