@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  body?: string;
+  href: string;
+  label: string;
+  id?: string;
+  external?: boolean;
+}
+
+const { title, body, href, label, id, external = false } = Astro.props;
+---
+
+<section {id} class="cta-band">
+  <div class="copy">
+    <h2>{title}</h2>
+    {body && <p>{body}</p>}
+    <slot />
+  </div>
+  <a
+    class="cta"
+    href={href}
+    rel={external ? "noopener" : undefined}
+  >
+    {label}<span aria-hidden="true">{external ? "↗" : "→"}</span>
+  </a>
+</section>
+
+<style>
+  .cta-band {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 2rem;
+    padding: clamp(4rem, 9vw, 8rem) var(--editorial-pad, clamp(1.25rem, 5vw, 4rem));
+    border-top: 1px solid #333;
+    background: var(--editorial-ink, #0b0d0c);
+    color: #fff;
+  }
+
+  .copy {
+    max-width: 900px;
+  }
+
+  h2 {
+    margin: 0 0 1rem;
+    color: inherit;
+    font-family: var(--editorial-display, "Bebas Neue", sans-serif);
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0.005em;
+    text-wrap: balance;
+  }
+
+  p,
+  .copy :global(p) {
+    max-width: 65ch;
+    margin: 0.5rem 0 0;
+    color: #c7cbc8;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .cta {
+    display: inline-flex;
+    min-width: min(100%, 220px);
+    min-height: 52px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid #fff;
+    background: #fff;
+    color: var(--editorial-ink, #0b0d0c);
+    font-size: 0.8rem;
+    font-weight: 750;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  .cta:hover {
+    background: transparent;
+    color: #fff;
+  }
+
+  @media (max-width: 760px) {
+    .cta-band {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .cta {
+      width: 100%;
+    }
+  }
+</style>

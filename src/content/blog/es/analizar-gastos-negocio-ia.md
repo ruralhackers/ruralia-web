@@ -99,4 +99,4 @@ Lo que hemos hecho aquí con facturas lo puedes hacer tú con los documentos de 
 
 No necesitas saber programar. Necesitas saber qué pregunta quieres responder.
 
-[Mira si la Residencia IA es para ti](/para-quien/) o [consulta el programa completo](/residencia-ia-galicia/).
+[Mira si la Residencia IA es para ti](/es/para-quien/) o [consulta el programa completo](/es/residencia-ia-galicia/).

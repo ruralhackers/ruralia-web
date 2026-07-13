@@ -9,6 +9,7 @@
 export const routes: Record<string, string> = {
   // GL → ES
   '': '',                                    // / ↔ /es/
+  'talleres-otono-2026': 'talleres-otono-2026',
   'residencia-ia-galicia': 'residencia-ia-galicia',
   'para-quen': 'para-quien',
   'faq': 'faq',

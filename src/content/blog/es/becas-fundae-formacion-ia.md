@@ -123,7 +123,7 @@ Un curso de 40 horas repartidas en 3 meses, bonificable al 100%, puede tener una
 
 ## Entonces, cómo financiar tu formación en IA si eres freelancer
 
-Si eres autónomo sin empleados — como la mayoría del [público al que nos dirigimos](/para-quien/) — FUNDAE no es tu camino. Pero hay opciones reales:
+Si eres autónomo sin empleados — como la mayoría del [público al que nos dirigimos](/es/para-quien/) — FUNDAE no es tu camino. Pero hay opciones reales:
 
 ### Deducción fiscal como gasto de formación
 
@@ -171,16 +171,16 @@ Lo que cuesta 0 euros pero no cambias nada es más caro que lo que cuesta 800 eu
 
 ## Lo que hacemos en Rural GPT
 
-Nuestra [Residencia de IA en Galicia](/residencia-ia-galicia/) no es bonificable vía FUNDAE. Y es una decisión consciente.
+Nuestra [Residencia de IA en Galicia](/es/residencia-ia-galicia/) no es bonificable vía FUNDAE. Y es una decisión consciente.
 
 Preferimos diseñar la mejor formación posible — actualizada al día, 100% práctica, en grupos de 12 personas, con herramientas que vas a usar el lunes siguiente — en lugar de adaptar el programa a los requisitos burocráticos de la formación bonificada.
 
-En 3 días en [Anceu Coliving](/residencia-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
+En 3 días en [Anceu Coliving](/es/residencia-ia-galicia/), aprendes a usar [ChatGPT, Claude y Gemini](/es/blog/chatgpt-vs-gemini-vs-claude/) para tu trabajo real, configuras asistentes de IA personalizados para tu negocio, y [creas prototipos con IA](/es/blog/crear-app-con-ia/) sin necesidad de programar. Todo incluido: formación, alojamiento, comidas y comunidad.
 
 El precio (desde 442 euros en early bird) es deducible como gasto de formación profesional. Y el retorno — en productividad, en ingresos, en oportunidades — es inmediato.
 
 Si tu empresa tiene crédito FUNDAE, úsalo. Hay formaciones bonificables que merecen la pena. Pero si lo que buscas es el mayor impacto posible en el menor tiempo, a veces la mejor inversión es la que haces directamente, sin intermediarios ni burocracia.
 
-**[Consulta el programa y reserva tu plaza](/residencia-ia-galicia/).**
+**[Consulta el programa y reserva tu plaza](/es/residencia-ia-galicia/).**
 
-¿Tienes más preguntas sobre la Residencia IA? Mira nuestra página de [preguntas frecuentes](/faq/) o [a quién va dirigido](/para-quien/).
+¿Tienes más preguntas sobre la Residencia IA? Mira nuestra página de [preguntas frecuentes](/faq/) o [a quién va dirigido](/es/para-quien/).

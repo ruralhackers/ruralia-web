@@ -34,7 +34,7 @@ Esto es especialmente útil para:
 
 La ventaja de Gemini sobre ChatGPT para búsqueda es que Gemini siempre tiene acceso a internet y siempre cita fuentes. ChatGPT puede buscar en la web, pero no es su modo por defecto y a veces se inventa cosas. Gemini rara vez fabula cuando busca — si no encuentra algo, te lo dice.
 
-**Truco profesional:** usa Gemini para la investigación inicial y luego pasa a [ChatGPT](/blog/curso-chatgpt/) o Claude para el trabajo de producción (redacción, análisis, código). Cada herramienta tiene su momento.
+**Truco profesional:** usa Gemini para la investigación inicial y luego pasa a [ChatGPT](/es/blog/curso-chatgpt/) o Claude para el trabajo de producción (redacción, análisis, código). Cada herramienta tiene su momento.
 
 ## Gemini en Google Workspace: lo que cambia todo
 
@@ -106,7 +106,7 @@ NotebookLM es una herramienta de research. Le subes documentos (PDFs, páginas w
 
 ## Gemini vs ChatGPT: cuándo usar cada uno
 
-No vamos a repetir la [comparativa completa](/blog/chatgpt-vs-gemini-vs-claude/) (léela si quieres el detalle), pero en resumen:
+No vamos a repetir la [comparativa completa](/es/blog/chatgpt-vs-gemini-vs-claude/) (léela si quieres el detalle), pero en resumen:
 
 | Tarea | Mejor opción | Por qué |
 |-------|-------------|---------|
@@ -136,6 +136,6 @@ En 15 minutos vas a tener una idea clara de si la IA de Google encaja en tu fluj
 
 ---
 
-En la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/) trabajamos con Gemini, ChatGPT y Claude. El segundo día de la Residencia IA lo dedicamos a configurar asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM para que te vayas con un sistema de IAs funcionando para tu trabajo.
+En la [Residencia Rural GPT en Galicia](/es/residencia-ia-galicia/) trabajamos con Gemini, ChatGPT y Claude. El segundo día de la Residencia IA lo dedicamos a configurar asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM para que te vayas con un sistema de IAs funcionando para tu trabajo.
 
-3 días, 12 plazas, todo incluido. [Consulta el programa](/residencia-ia-galicia/) o [descubre si es para ti](/para-quien/).
+3 días, 12 plazas, todo incluido. [Consulta el programa](/es/residencia-ia-galicia/) o [descubre si es para ti](/es/para-quien/).

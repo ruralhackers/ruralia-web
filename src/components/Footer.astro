@@ -6,7 +6,7 @@ const t = useTranslations(locale);
 const year = new Date().getFullYear();
 
 const links = [
-  { href: t('nav.href.residencia'), label: t('nav.residencia') },
+  { href: t('nav.href.talleres'), label: t('nav.talleres') },
   { href: t('nav.href.para_quen'), label: t('nav.para_quen') },
   { href: t('nav.href.blog'), label: t('nav.blog') },
   { href: t('nav.href.faq'), label: t('nav.faq') },
@@ -57,6 +57,9 @@ const legalLinks = [
     margin-bottom: 1.5rem;
   }
   .footer-logo {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
     font-family: "Bebas Neue", "Inter", sans-serif;
     font-size: 1.5rem;
     color: #000000;
@@ -72,6 +75,10 @@ const legalLinks = [
     gap: 0.4rem 2rem;
   }
   .footer-nav a {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
     font-size: 0.85rem;
     color: #555555;
     text-decoration: none;
@@ -99,6 +106,9 @@ const legalLinks = [
     flex-wrap: wrap;
   }
   .footer-bottom-right a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
     font-size: 0.78rem;
     color: #999999;
     text-decoration: none;

@@ -18,7 +18,7 @@ Para un freelancer, esto es un antes y un después. Esas 2 horas diarias que pie
 
 Y no estamos hablando de teoría. En este artículo vas a ver 10 automatizaciones con IA concretas que puedes montar hoy, paso a paso, con las herramientas que ya existen. Algunas te llevarán 30 minutos. Otras, una hora. Pero todas van a devolverte tiempo cada semana durante meses.
 
-Si además quieres profundizar en prompting antes de meterte con flujos automatizados, empieza por nuestra [guía práctica de ChatGPT](/blog/curso-chatgpt/).
+Si además quieres profundizar en prompting antes de meterte con flujos automatizados, empieza por nuestra [guía práctica de ChatGPT](/es/blog/curso-chatgpt/).
 
 ## Make vs n8n: cuál elegir
 
@@ -193,10 +193,10 @@ Todo lo que has leído aquí se puede hacer por tu cuenta, desde casa, con pacie
 
 Pero hay una diferencia entre montar una automatización siguiendo un tutorial y montar tu sistema completo de automatizaciones con alguien al lado que te guía, te resuelve los bloqueos en tiempo real y te ayuda a decidir qué tiene sentido automatizar en tu caso concreto.
 
-En la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/) dedicamos 3 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/blog/herramientas-ia-freelancers/). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
+En la [Residencia Rural GPT en Galicia](/es/residencia-ia-galicia/) dedicamos 3 días a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/es/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/es/blog/herramientas-ia-freelancers/). Todo en Anceu Coliving, un espacio de coworking y coliving con fibra de 1 Gbps en medio del rural gallego.
 
 La Residencia IA incluye alojamiento, comidas y grupos de 12 personas máximo. No es teoría. Te vas con herramientas funcionando en tu trabajo.
 
-Si te interesa saber si es para ti, mira la página de [perfiles y requisitos](/para-quien/). Y si ya lo tienes claro, los detalles completos del programa están en la [página de la Residencia IA](/residencia-ia-galicia/).
+Si te interesa saber si es para ti, mira la página de [perfiles y requisitos](/es/para-quien/). Y si ya lo tienes claro, los detalles completos del programa están en la [página de la Residencia IA](/es/residencia-ia-galicia/).
 
 Las automatizaciones con IA no son el futuro. Son el presente. La única pregunta es cuánto tiempo más vas a seguir haciendo a mano lo que una máquina puede hacer por ti en segundos.

@@ -11,7 +11,16 @@ const t = useTranslations(locale);
     <h2 class="nl-title">{t('newsletter.title')}</h2>
     <p class="nl-desc">{t('newsletter.desc')}</p>
     <form class="nl-form" id="nl-form">
-      <input type="email" name="email" id="nl-email" placeholder={t('newsletter.placeholder')} required class="nl-input" autocomplete="email" />
+      <input
+        type="email"
+        name="email"
+        id="nl-email"
+        placeholder={t('newsletter.placeholder')}
+        aria-label={t('newsletter.placeholder')}
+        required
+        class="nl-input"
+        autocomplete="email"
+      />
       <button type="submit" class="nl-btn" id="nl-submit">{t('newsletter.submit')}</button>
     </form>
     <p class="nl-success" id="nl-success" style="display:none;">{t('newsletter.success')}</p>
@@ -37,6 +46,7 @@ const t = useTranslations(locale);
   .nl-close {
     position: absolute; top: 1rem; right: 1rem;
     background: none; border: none; cursor: pointer;
+    min-width: 44px; min-height: 44px;
     font-size: 1rem; color: #999; padding: 0.25rem;
   }
   .nl-eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin: 0 0 0.75rem; }
@@ -44,7 +54,7 @@ const t = useTranslations(locale);
   .nl-desc { font-size: 0.95rem; color: #666; margin: 0 0 1.5rem; }
   .nl-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
   .nl-input {
-    flex: 1; min-width: 0; padding: 0.75rem 1rem;
+    flex: 1; min-width: 0; min-height: 44px; padding: 0.75rem 1rem;
     border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;
     font-family: inherit; outline: none;
   }
@@ -59,6 +69,7 @@ const t = useTranslations(locale);
   .nl-btn:disabled { opacity: 0.6; cursor: not-allowed; }
   .nl-skip {
     background: none; border: none; cursor: pointer;
+    min-height: 44px;
     font-size: 0.8rem; color: #aaa; margin-top: 1rem;
     font-family: inherit; text-decoration: underline; display: block; width: 100%;
   }
@@ -73,20 +84,32 @@ const t = useTranslations(locale);
     if (!overlay) return;
 
     let shown = false;
+    let previouslyFocused: HTMLElement | null = null;
+
+    function openDialog() {
+      previouslyFocused = document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+      overlay.classList.add('open');
+      requestAnimationFrame(() => {
+        document.getElementById('nl-email')?.focus();
+      });
+    }
+
     function show() {
       if (shown) return;
       shown = true;
-      overlay.classList.add('open');
+      openDialog();
       window.removeEventListener('scroll', onScroll);
     }
 
     // Expose a global opener so CTAs (e.g. "Lista de espera") can trigger the modal
     // even after it has been dismissed.
     (window as any).openNewsletter = function () {
-      shown = false; // allow re-opening on demand
+      shown = true;
       clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
-      overlay.classList.add('open');
+      openDialog();
     };
 
     const dismissed = localStorage.getItem('nl_dismissed');
@@ -109,11 +132,39 @@ const t = useTranslations(locale);
       window.removeEventListener('scroll', onScroll);
       overlay.classList.remove('open');
       localStorage.setItem('nl_dismissed', String(Date.now()));
+      previouslyFocused?.focus();
+      previouslyFocused = null;
     }
 
     document.getElementById('nl-close')?.addEventListener('click', dismiss);
     document.getElementById('nl-skip')?.addEventListener('click', dismiss);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) dismiss(); });
+    document.addEventListener('keydown', (event) => {
+      if (!overlay.classList.contains('open')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        dismiss();
+        return;
+      }
+      if (event.key === 'Tab') {
+        const focusable = Array.from(
+          overlay.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])',
+          ),
+        ).filter((element) => element.offsetParent !== null);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (!first || !last) return;
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
 
     document.getElementById('nl-form')?.addEventListener('submit', async (e) => {
       e.preventDefault();

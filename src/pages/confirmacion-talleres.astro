@@ -1,0 +1,194 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/editorial.css";
+import SectionTag from "../components/ui/SectionTag.astro";
+---
+
+<Base
+  title="Grazas / Gracias — Reserva confirmada | Rural GPT"
+  description="Confirmación de reserva para los talleres Rural GPT."
+  robots="noindex, follow"
+>
+  <div class="editorial-page confirmation-page">
+    <header class="confirmation-hero">
+      <SectionTag text="Rural GPT · Talleres 2026" />
+      <h1>Grazas.<br /><span>Gracias.</span></h1>
+      <p>A túa reserva está confirmada. · Tu reserva está confirmada.</p>
+    </header>
+
+    <div class="language-grid">
+      <section lang="gl">
+        <p class="language">GL · Galego</p>
+        <h2>O teu sitio está gardado.</h2>
+        <ol>
+          <li>
+            <strong>Revisa o teu correo.</strong>
+            Stripe enviarache agora o recibo da compra.
+          </li>
+          <li>
+            <strong>Apunta a data.</strong>
+            Escribirémosche cos horarios, como chegar a Anceu e todo o necesario para a xornada.
+          </li>
+          <li>
+            <strong>Trae o teu portátil.</strong>
+            Uns días antes pedirémosche información para adaptar o taller ao teu caso.
+          </li>
+        </ol>
+        <p class="help">
+          Se non recibes o correo ou tes calquera dúbida, escríbenos a
+          <a href="mailto:hola@ruralgpt.gal">hola@ruralgpt.gal</a>.
+        </p>
+        <div class="actions">
+          <a class="ed-button" href="/">Volver ao inicio</a>
+          <a class="ed-button ed-button--outline" href="/talleres-otono-2026/">
+            Ver os talleres
+          </a>
+        </div>
+      </section>
+
+      <section lang="es">
+        <p class="language">ES · Castellano</p>
+        <h2>Tu sitio está guardado.</h2>
+        <ol>
+          <li>
+            <strong>Revisa tu correo.</strong>
+            Stripe te enviará ahora el recibo de la compra.
+          </li>
+          <li>
+            <strong>Apunta la fecha.</strong>
+            Te escribiremos con los horarios, cómo llegar a Anceu y todo lo necesario para la jornada.
+          </li>
+          <li>
+            <strong>Trae tu portátil.</strong>
+            Unos días antes te pediremos información para adaptar el taller a tu caso.
+          </li>
+        </ol>
+        <p class="help">
+          Si no recibes el correo o tienes cualquier duda, escríbenos a
+          <a href="mailto:hola@ruralgpt.gal">hola@ruralgpt.gal</a>.
+        </p>
+        <div class="actions">
+          <a class="ed-button" href="/es/">Volver al inicio</a>
+          <a class="ed-button ed-button--outline" href="/es/talleres-otono-2026/">
+            Ver los talleres
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .confirmation-page {
+    min-height: 80vh;
+  }
+
+  .confirmation-hero {
+    padding: clamp(4rem, 9vw, 8rem) var(--editorial-pad);
+    border-bottom: 1px solid var(--editorial-line);
+    background: var(--editorial-paper);
+  }
+
+  .confirmation-hero h1 {
+    margin: 0;
+    font-family: var(--editorial-display);
+    font-size: clamp(5rem, 14vw, 12rem);
+    font-weight: 400;
+    line-height: 0.78;
+    letter-spacing: 0.005em;
+  }
+
+  .confirmation-hero h1 span {
+    color: var(--editorial-accent);
+  }
+
+  .confirmation-hero > p {
+    margin: 3rem 0 0;
+    color: var(--editorial-muted);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  .language-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--editorial-line);
+    gap: 1px;
+  }
+
+  .language-grid > section {
+    padding: clamp(3rem, 7vw, 6rem) var(--editorial-pad);
+    background: #fff;
+  }
+
+  .language {
+    margin: 0 0 3rem;
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0 0 2rem;
+    font-family: var(--editorial-display);
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.005em;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    counter-reset: steps;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding: 1.4rem 0 1.4rem 3rem;
+    border-top: 1px solid var(--editorial-line);
+    color: var(--editorial-muted);
+    line-height: 1.65;
+    counter-increment: steps;
+  }
+
+  li::before {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    color: var(--editorial-accent);
+    content: "0" counter(steps);
+    font-size: 0.72rem;
+    font-weight: 750;
+  }
+
+  li strong {
+    display: block;
+    color: var(--editorial-ink);
+  }
+
+  .help {
+    margin: 2.5rem 0;
+    color: var(--editorial-muted);
+    line-height: 1.65;
+  }
+
+  .help a {
+    color: var(--editorial-accent);
+    font-weight: 700;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 760px) {
+    .language-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

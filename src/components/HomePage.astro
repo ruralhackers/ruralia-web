@@ -1,0 +1,882 @@
+---
+import { Image } from "astro:assets";
+import heroPhoto from "../assets/images/ruralia-1.jpg";
+import Base from "../layouts/Base.astro";
+import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import "../styles/editorial.css";
+import SectionTag from "./ui/SectionTag.astro";
+import EditorialSplit from "./ui/EditorialSplit.astro";
+import CtaBand from "./ui/CtaBand.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isGl = locale === "gl";
+const campaign = getTalleresCampaign(locale);
+const landingUrl = isGl
+  ? "/talleres-otono-2026/"
+  : "/es/talleres-otono-2026/";
+const residenceUrl = isGl
+  ? "/residencia-ia-galicia/"
+  : "/es/residencia-ia-galicia/";
+
+const copy = isGl
+  ? {
+      seoTitle: "ruralGPT — Formación práctica de IA en Galicia",
+      seoDescription:
+        "Talleres sprint de IA para profesionais en Anceu. Produtividade e web nunha xornada, con comida incluída. Rural Hackers × Anceu Coliving.",
+      heroLabel: "Formación práctica de IA · Galicia",
+      heroAria: "A IA avanza. O teu traballo, tamén.",
+      heroLine1: "A IA AVANZA.",
+      heroLine2: "O TEU TRABALLO, TAMÉN.",
+      heroQuestion: "O TEU TRABALLO TAMÉN?",
+      heroBody:
+        "A IA non che vai quitar o traballo, pero unha persoa profesional que sabe usala si. Formación práctica para integrar ferramentas reais no teu traballo, sen teoría futurista nin cursos eternos.",
+      heroMeta:
+        "31 outubro · Produtividade — 28 novembro · Web — Anceu Coliving",
+      heroCta: "Ver talleres de outono",
+      definitionTag: "Que é Rural GPT",
+      definition:
+        "Formación presencial de IA aplicada no rural galego. Unha iniciativa de Rural Hackers e Anceu Coliving para profesionais que queren avanzar sen perderse no ruído.",
+      principles: [
+        "Non é un curso en liña.",
+        "Non é teoría.",
+        "É traballo real coas túas ferramentas e co teu negocio.",
+      ],
+      workshopsTag: "Agora en Rural GPT",
+      workshopsTitle: "Dous sprints. Dous resultados antes de Nadal.",
+      workshopsIntro:
+        "Un día intensivo, grupo de 15 persoas e comida incluída. Escolle un taller ou automatiza en outubro e publica en novembro co Pack Outono.",
+      workshopCta: "Ver programa e reservar",
+      testimonialTag: "O que xa pasou",
+      testimonialTitle: "Unha tarefa de media hora. Agora, un botón.",
+      testimonial:
+        "Sara optimizaba 80 imaxes á man cada día. Na primeira Residencia Rural GPT construíu o seu propio executable e reduciu o traballo a menos dun minuto.",
+      testimonialConclusion:
+        "Iso é Rural GPT: solucións reais, sinxelas e creadas por ti.",
+      toolsTag: "Ferramentas que traballamos",
+      toolsTitle: "A ferramenta correcta para cada problema.",
+      toolsIntro:
+        "Non ensinamos marcas por moda. Comparamos, escollemos e aplicamos as que realmente encaixan co teu traballo.",
+      gptIntro:
+        "Millóns de persoas usan ChatGPT cada día. Ti vaslles dar un novo significado a estas letras.",
+      gpt: [
+        ["G", "Xerativo", "Xera textos, ideas, código e prototipos que antes levaban horas."],
+        ["P", "Preentrenado", "Aproveita unha enorme base de coñecemento para o teu contexto real."],
+        ["T", "Transformador", "Transforma a linguaxe e, ben aplicado, tamén a túa forma de traballar."],
+      ],
+      archiveTag: "Edición anterior",
+      archiveTitle: "Residencia IA · Xuño 2026 — Esgotada",
+      archiveBody:
+        "A primeira edición esgotou as 12 prazas. Profesionais de hostalaría, márketing, educación e xestión saíron con ferramentas configuradas e automatizacións funcionando.",
+      archiveCta: "Ver a edición anterior",
+      finalTitle: "Un día. Un problema. Unha solución real.",
+      finalBody:
+        "31 outubro · Produtividade — 28 novembro · Web — 199 € + IVA por taller",
+      contactTitle: "Tes dúbidas? Escríbenos",
+      name: "O teu nome",
+      email: "ti@email.com",
+      message: "Cóntanos a túa dúbida ou situación...",
+      send: "Enviar mensaxe",
+    }
+  : {
+      seoTitle: "ruralGPT — Formación práctica de IA en Galicia",
+      seoDescription:
+        "Talleres sprint de IA para profesionales en Anceu. Productividad y web en una jornada, con comida incluida. Rural Hackers × Anceu Coliving.",
+      heroLabel: "Formación práctica de IA · Galicia",
+      heroAria: "La IA avanza. Tu trabajo, también.",
+      heroLine1: "LA IA AVANZA.",
+      heroLine2: "TU TRABAJO, TAMBIÉN.",
+      heroQuestion: "¿TU TRABAJO TAMBIÉN?",
+      heroBody:
+        "La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Formación práctica para integrar herramientas reales en tu trabajo, sin teoría futurista ni cursos eternos.",
+      heroMeta:
+        "31 octubre · Productividad — 28 noviembre · Web — Anceu Coliving",
+      heroCta: "Ver talleres de otoño",
+      definitionTag: "Qué es Rural GPT",
+      definition:
+        "Formación presencial de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving para profesionales que quieren avanzar sin perderse en el ruido.",
+      principles: [
+        "No es un curso online.",
+        "No es teoría.",
+        "Es trabajo real con tus herramientas y con tu negocio.",
+      ],
+      workshopsTag: "Ahora en Rural GPT",
+      workshopsTitle: "Dos sprints. Dos resultados antes de Navidad.",
+      workshopsIntro:
+        "Un día intensivo, grupo de 15 personas y comida incluida. Elige un taller o automatiza en octubre y publica en noviembre con el Pack Otoño.",
+      workshopCta: "Ver programa y reservar",
+      testimonialTag: "Lo que ya ocurrió",
+      testimonialTitle: "Una tarea de media hora. Ahora, un botón.",
+      testimonial:
+        "Sara optimizaba 80 imágenes a mano cada día. En la primera Residencia Rural GPT construyó su propio ejecutable y redujo el trabajo a menos de un minuto.",
+      testimonialConclusion:
+        "Eso es Rural GPT: soluciones reales, sencillas y creadas por ti.",
+      toolsTag: "Herramientas que trabajamos",
+      toolsTitle: "La herramienta correcta para cada problema.",
+      toolsIntro:
+        "No enseñamos marcas por moda. Comparamos, elegimos y aplicamos las que realmente encajan con tu trabajo.",
+      gptIntro:
+        "Millones de personas usan ChatGPT cada día. Tú vas a darles un nuevo significado a estas letras.",
+      gpt: [
+        ["G", "Generativo", "Genera textos, ideas, código y prototipos que antes llevaban horas."],
+        ["P", "Preentrenado", "Aprovecha una enorme base de conocimiento para tu contexto real."],
+        ["T", "Transformador", "Transforma el lenguaje y, bien aplicado, también tu forma de trabajar."],
+      ],
+      archiveTag: "Edición anterior",
+      archiveTitle: "Residencia IA · Junio 2026 — Agotada",
+      archiveBody:
+        "La primera edición agotó las 12 plazas. Profesionales de hostelería, marketing, educación y gestión salieron con herramientas configuradas y automatizaciones funcionando.",
+      archiveCta: "Ver la edición anterior",
+      finalTitle: "Un día. Un problema. Una solución real.",
+      finalBody:
+        "31 octubre · Productividad — 28 noviembre · Web — 199 € + IVA por taller",
+      contactTitle: "¿Tienes dudas? Escríbenos",
+      name: "Tu nombre",
+      email: "tu@email.com",
+      message: "Cuéntanos tu duda o situación...",
+      send: "Enviar mensaje",
+    };
+
+const tools = [
+  {
+    name: "ChatGPT",
+    desc: isGl
+      ? "Texto, análise e asistentes para o traballo diario."
+      : "Texto, análisis y asistentes para el trabajo diario.",
+    logo: "/logos/openai.svg",
+    href: "https://chatgpt.com",
+  },
+  {
+    name: "Claude",
+    desc: isGl
+      ? "Razoamento, documentos longos e creación de artefactos."
+      : "Razonamiento, documentos largos y creación de artefactos.",
+    logo: "/logos/anthropic.svg",
+    href: "https://claude.ai",
+  },
+  {
+    name: "Make",
+    desc: isGl
+      ? "Automatización de fluxos entre aplicacións sen programar."
+      : "Automatización de flujos entre aplicaciones sin programar.",
+    logo: "/logos/make.svg",
+    href: "https://make.com",
+  },
+  {
+    name: "NotebookLM",
+    desc: isGl
+      ? "Coñecemento e investigación a partir dos teus documentos."
+      : "Conocimiento e investigación a partir de tus documentos.",
+    logo: "/logos/notebooklm.svg",
+    href: "https://notebooklm.google.com",
+  },
+  {
+    name: "Cursor",
+    desc: isGl
+      ? "Constrúe ferramentas con IA, tamén se non programas."
+      : "Construye herramientas con IA, aunque no programes.",
+    logo: "/logos/cursor.svg",
+    href: "https://cursor.com",
+  },
+  {
+    name: "Lovable",
+    desc: isGl
+      ? "Da descrición á web funcional en linguaxe natural."
+      : "De la descripción a la web funcional en lenguaje natural.",
+    logo: "/logos/lovable.svg",
+    href: "https://lovable.dev",
+  },
+  {
+    name: "Gemini",
+    desc: isGl
+      ? "A IA integrada no ecosistema de Google."
+      : "La IA integrada en el ecosistema de Google.",
+    logo: "/logos/googlegemini.svg",
+    href: "https://gemini.google.com",
+  },
+  {
+    name: "Bolt",
+    desc: isGl
+      ? "Prototipos dixitais en minutos para validar ideas."
+      : "Prototipos digitales en minutos para validar ideas.",
+    logo: "/logos/bolt.svg",
+    href: "https://bolt.new",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Rural GPT",
+  url: "https://ruralgpt.gal",
+  description: copy.seoDescription,
+  foundingDate: "2026",
+  member: [
+    { "@type": "Organization", name: "Rural Hackers" },
+    { "@type": "Organization", name: "Anceu Coliving" },
+  ],
+};
+---
+
+<Base
+  title={copy.seoTitle}
+  description={copy.seoDescription}
+  keywords={[
+    "formación IA Galicia",
+    "taller IA presencial",
+    "IA para profesionais",
+    "Rural GPT",
+  ]}
+  schema={schema}
+  ogImage="/images/talleres-otono-2026/entorno-anceu.webp"
+>
+  <div class="editorial-page home-page">
+    <section class="home-hero">
+      <div class="hero-head">
+        <SectionTag text={copy.heroLabel} />
+        <h1 aria-label={copy.heroAria}>
+          <span aria-hidden="true" data-hero-line1>{copy.heroLine1}</span>
+          <span aria-hidden="true" data-hero-line2>{copy.heroLine2}</span>
+        </h1>
+      </div>
+      <div class="hero-bottom">
+        <div>
+          <p>{copy.heroBody}</p>
+          <p class="hero-meta">{copy.heroMeta}</p>
+        </div>
+        <a class="ed-button" href={landingUrl}>{copy.heroCta}<span aria-hidden="true">→</span></a>
+      </div>
+      <Image
+        class="hero-image"
+        src={heroPhoto}
+        alt={isGl
+          ? "Anceu Coliving entre montes e natureza en Galicia"
+          : "Anceu Coliving entre montes y naturaleza en Galicia"}
+        widths={[640, 960, 1280, 1920]}
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </section>
+
+    <section class="definition ed-section ed-section--white">
+      <div class="ed-container definition-grid">
+        <div>
+          <SectionTag text={copy.definitionTag} />
+          <p class="definition-copy">{copy.definition}</p>
+        </div>
+        <div class="principles">
+          {copy.principles.map((principle) => <p>{principle}</p>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-section workshops-teaser">
+      <div class="ed-container">
+        <SectionTag text={copy.workshopsTag} />
+        <h2 class="ed-heading">{copy.workshopsTitle}</h2>
+        <p class="ed-lead">{copy.workshopsIntro}</p>
+        <div class="teaser-grid">
+          {
+            campaign.workshops.map((workshop, index) => (
+              <a class="teaser-card" href={landingUrl}>
+                <span class="teaser-number">0{index + 1}</span>
+                <span class="teaser-date">{workshop.dateShort}</span>
+                <h3>{workshop.title}</h3>
+                <p>{workshop.hook}</p>
+                <strong>{workshop.priceLabel}</strong>
+                <span class="teaser-arrow" aria-hidden="true">→</span>
+              </a>
+            ))
+          }
+        </div>
+        <a class="pack-teaser" href={landingUrl}>
+          <span>
+            <small>{campaign.pack.tag}</small>
+            <strong>{campaign.pack.title}</strong>
+          </span>
+          <span>
+            <strong>{campaign.pack.priceLabel}</strong>
+            <small>{campaign.pack.savingLabel}</small>
+          </span>
+          <span class="pack-action">{copy.workshopCta}<b aria-hidden="true">→</b></span>
+        </a>
+      </div>
+    </section>
+
+    <EditorialSplit tone="white">
+      <SectionTag text={copy.testimonialTag} />
+      <h2 class="ed-heading">{copy.testimonialTitle}</h2>
+      <blockquote>{copy.testimonial}</blockquote>
+      <p><strong>{copy.testimonialConclusion}</strong></p>
+      <a class="text-link" href={landingUrl}>{copy.workshopCta}<span aria-hidden="true">→</span></a>
+      <img
+        slot="media"
+        src="/images/talleres-otono-2026/sara-testimonial.webp"
+        srcset="/images/talleres-otono-2026/sara-testimonial-480.webp 480w, /images/talleres-otono-2026/sara-testimonial-800.webp 800w, /images/talleres-otono-2026/sara-testimonial-1200.webp 1200w"
+        sizes="(max-width: 800px) 100vw, 50vw"
+        alt={campaign.testimonial.imageAlt}
+        width="1200"
+        height="900"
+        loading="lazy"
+      />
+    </EditorialSplit>
+
+    <section class="ed-section ed-section--white tools-section">
+      <div class="ed-container">
+        <SectionTag text={copy.toolsTag} />
+        <div class="section-heading-grid">
+          <h2 class="ed-heading">{copy.toolsTitle}</h2>
+          <p class="ed-lead">{copy.toolsIntro}</p>
+        </div>
+        <div class="tools-grid">
+          {
+            tools.map((tool) => (
+              <a href={tool.href} target="_blank" rel="noopener">
+                <img src={tool.logo} alt="" width="30" height="30" loading="lazy" />
+                <span aria-hidden="true">↗</span>
+                <h3>{tool.name}</h3>
+                <p>{tool.desc}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-section gpt-section">
+      <div class="ed-container">
+        <p class="gpt-intro">{copy.gptIntro}</p>
+        <div class="gpt-grid">
+          {
+            copy.gpt.map(([letter, title, body]) => (
+              <article>
+                <span>{letter}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-band">
+      <div>
+        <SectionTag text={copy.archiveTag} />
+        <h2>{copy.archiveTitle}</h2>
+      </div>
+      <p>{copy.archiveBody}</p>
+      <a href={residenceUrl}>{copy.archiveCta}<span aria-hidden="true">→</span></a>
+    </section>
+
+    <CtaBand
+      title={copy.finalTitle}
+      body={copy.finalBody}
+      href={landingUrl}
+      label={copy.heroCta}
+    />
+
+    <section class="ed-section ed-section--white contact-section">
+      <div class="contact-inner">
+        <h2>{copy.contactTitle}</h2>
+        <form
+          name={`contacto-home-${locale}`}
+          method="POST"
+          action={isGl ? "/grazas-contacto/" : "/es/gracias-contacto/"}
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value={`contacto-home-${locale}`} />
+          <label>
+            <span>{copy.name}</span>
+            <input type="text" name="nombre" autocomplete="name" required />
+          </label>
+          <label>
+            <span>{copy.email}</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="message-field">
+            <span>{copy.message}</span>
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button class="ed-button" type="submit">{copy.send}</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .home-hero {
+    background: var(--editorial-paper);
+  }
+
+  .hero-head {
+    padding: clamp(3.5rem, 8vw, 7rem) var(--editorial-pad) clamp(2rem, 5vw, 4rem);
+  }
+
+  .hero-head h1 {
+    max-width: 1200px;
+    min-height: calc(2 * clamp(4rem, 11vw, 10rem) * 0.88);
+    margin: 0;
+    font-family: var(--editorial-display);
+    font-size: clamp(4rem, 11vw, 10rem);
+    font-weight: 400;
+    line-height: 0.88;
+    letter-spacing: 0.005em;
+  }
+
+  .hero-head h1 span {
+    display: block;
+  }
+
+  .hero-head h1 span:last-child {
+    color: var(--editorial-muted);
+  }
+
+  .hero-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 2rem;
+    padding: 1.5rem var(--editorial-pad) 2rem;
+    border-top: 1px solid var(--editorial-line);
+  }
+
+  .hero-bottom p {
+    max-width: 78ch;
+    margin: 0;
+    color: var(--editorial-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-bottom .hero-meta {
+    margin-top: 0.65rem;
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: clamp(340px, 54vw, 680px);
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+
+  .definition-grid,
+  .section-heading-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 9vw, 9rem);
+  }
+
+  .definition-copy {
+    max-width: 55ch;
+    color: var(--editorial-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .principles p {
+    margin: 0;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--editorial-line);
+    color: var(--editorial-ink);
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-weight: 650;
+  }
+
+  .principles p:last-child {
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+    border: 1px solid var(--editorial-line);
+    background: var(--editorial-line);
+    gap: 1px;
+  }
+
+  .teaser-card {
+    position: relative;
+    display: grid;
+    min-height: 420px;
+    align-content: start;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: #fff;
+    color: var(--editorial-ink);
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  .teaser-card:hover {
+    background: var(--editorial-accent);
+    color: #fff;
+  }
+
+  .teaser-number,
+  .teaser-date {
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .teaser-date {
+    margin-top: clamp(3rem, 8vw, 7rem);
+    color: var(--editorial-accent);
+  }
+
+  .teaser-card:hover .teaser-date {
+    color: #cfe2d7;
+  }
+
+  .teaser-card h3 {
+    margin: 0.7rem 0;
+    color: inherit;
+    font-family: var(--editorial-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.005em;
+  }
+
+  .teaser-card p {
+    max-width: 36ch;
+    color: inherit;
+    line-height: 1.6;
+  }
+
+  .teaser-card > strong {
+    align-self: end;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .teaser-arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .pack-teaser {
+    display: grid;
+    grid-template-columns: 1.1fr 0.8fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background: var(--editorial-ink);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .pack-teaser > span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pack-teaser small {
+    color: #bfc4c1;
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .pack-action {
+    align-items: center;
+    flex-direction: row !important;
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  blockquote {
+    margin: 0 0 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--editorial-accent);
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.65;
+  }
+
+  :global(.editorial-split p) {
+    color: var(--editorial-muted);
+    line-height: 1.7;
+  }
+
+  .text-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--editorial-accent);
+    font-weight: 750;
+  }
+
+  .section-heading-grid {
+    align-items: end;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    border-top: 1px solid var(--editorial-line);
+    border-left: 1px solid var(--editorial-line);
+  }
+
+  .tools-grid a {
+    position: relative;
+    min-height: 210px;
+    padding: 1.4rem;
+    border-right: 1px solid var(--editorial-line);
+    border-bottom: 1px solid var(--editorial-line);
+    color: var(--editorial-ink);
+    text-decoration: none;
+    transition: background-color 180ms ease;
+  }
+
+  .tools-grid a:hover {
+    background: var(--editorial-soft);
+  }
+
+  .tools-grid a > span {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    color: var(--editorial-muted);
+  }
+
+  .tools-grid h3 {
+    margin: 2.5rem 0 0.4rem;
+    font-size: 1rem;
+  }
+
+  .tools-grid p {
+    margin: 0;
+    color: var(--editorial-muted);
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .gpt-intro {
+    max-width: 650px;
+    margin: 0 auto 4rem;
+    color: var(--editorial-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .gpt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .gpt-grid article {
+    text-align: center;
+  }
+
+  .gpt-grid article > span {
+    color: var(--editorial-accent);
+    font-family: var(--editorial-display);
+    font-size: clamp(5rem, 10vw, 9rem);
+    line-height: 0.8;
+  }
+
+  .gpt-grid h3 {
+    margin: 1rem 0 0.6rem;
+  }
+
+  .gpt-grid p {
+    color: var(--editorial-muted);
+    line-height: 1.6;
+  }
+
+  .archive-band {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr auto;
+    align-items: end;
+    gap: 2.5rem;
+    padding: clamp(3rem, 6vw, 5rem) var(--editorial-pad);
+    border-top: 1px solid var(--editorial-line);
+    background: var(--editorial-soft);
+  }
+
+  .archive-band h2 {
+    margin: 0;
+    font-family: var(--editorial-display);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    letter-spacing: 0.005em;
+  }
+
+  .archive-band p {
+    margin: 0;
+    color: var(--editorial-muted);
+    line-height: 1.65;
+  }
+
+  .archive-band a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--editorial-ink);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .contact-inner {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .contact-inner h2 {
+    margin: 0 0 2rem;
+    font-family: var(--editorial-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.005em;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  label {
+    display: grid;
+    gap: 0.45rem;
+    color: var(--editorial-muted);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.85rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--editorial-line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--editorial-ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+
+  .message-field {
+    grid-column: 1 / -1;
+  }
+
+  form button {
+    justify-self: start;
+  }
+
+  @media (max-width: 900px) {
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .archive-band {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .hero-bottom,
+    .definition-grid,
+    .section-heading-grid,
+    .teaser-grid,
+    .gpt-grid,
+    form {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-bottom {
+      align-items: start;
+    }
+
+    .hero-bottom .ed-button {
+      width: 100%;
+    }
+
+    .teaser-card {
+      min-height: 360px;
+    }
+
+    .pack-teaser {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .tools-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .message-field {
+      grid-column: auto;
+    }
+  }
+</style>
+
+<script define:vars={{ finalLine1: copy.heroLine1, finalLine2: copy.heroLine2, questionLine2: copy.heroQuestion }}>
+  const line1 = document.querySelector("[data-hero-line1]");
+  const line2 = document.querySelector("[data-hero-line2]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (line1 && line2 && !reducedMotion) {
+    const type = (element, text, speed, done) => {
+      element.textContent = "";
+      let index = 0;
+      const timer = window.setInterval(() => {
+        element.textContent += text[index];
+        index += 1;
+        if (index >= text.length) {
+          window.clearInterval(timer);
+          done?.();
+        }
+      }, speed);
+    };
+
+    const erase = (element, speed, done) => {
+      const timer = window.setInterval(() => {
+        element.textContent = element.textContent.slice(0, -1);
+        if (!element.textContent) {
+          window.clearInterval(timer);
+          done();
+        }
+      }, speed);
+    };
+
+    line1.textContent = finalLine1.replace(/\.$/, ",");
+    type(line2, questionLine2, 48, () => {
+      window.setTimeout(() => {
+        erase(line2, 24, () => {
+          line1.textContent = finalLine1;
+          type(line2, finalLine2, 42);
+        });
+      }, 1300);
+    });
+  }
+</script>
