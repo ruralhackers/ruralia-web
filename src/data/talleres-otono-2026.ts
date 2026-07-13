@@ -165,8 +165,8 @@ const gl: Campaign = {
       title: "IA e Produtividade",
       shortTitle: "Produtividade",
       dateISO: "2026-10-31",
-      dateLabel: "31 de outubro de 2026 · Anceu Coliving",
-      dateShort: "31 OUT",
+      dateLabel: "31 de outubro de 2026 · Anceu Coliving*",
+      dateShort: "31 OUT*",
       eyebrow: "Taller 01",
       hook:
         "Entras coas túas tarefas repetitivas. Saes con automatizacións reais.",
@@ -429,8 +429,8 @@ const es: Campaign = {
       title: "IA y Productividad",
       shortTitle: "Productividad",
       dateISO: "2026-10-31",
-      dateLabel: "31 de octubre de 2026 · Anceu Coliving",
-      dateShort: "31 OCT",
+      dateLabel: "31 de octubre de 2026 · Anceu Coliving*",
+      dateShort: "31 OCT*",
       eyebrow: "Taller 01",
       hook:
         "Entras con tus tareas repetitivas. Sales con automatizaciones reales.",

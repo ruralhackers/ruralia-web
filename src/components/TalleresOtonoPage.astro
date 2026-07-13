@@ -198,6 +198,11 @@ const schema = [
             ? "Os prezos indicados non inclúen o IVA."
             : "Los precios indicados no incluyen el IVA."}
         </p>
+        <p class="tool-warning">
+          {isGl
+            ? "* Será necesario ter unha licenza de pago de ChatGPT, Claude, Gemini, Antigravity ou Cursor."
+            : "* Será necesaria una licencia de pago de ChatGPT, Claude, Gemini, Antigravity o Cursor."}
+        </p>
         <div class="price-grid">
           {
             campaign.workshops.map((workshop) => (
@@ -669,6 +674,14 @@ const schema = [
     margin-bottom: 2rem;
     color: var(--editorial-accent);
     font-weight: 700;
+  }
+
+  .tool-warning {
+    max-width: 70ch;
+    margin: -1rem 0 2rem;
+    color: var(--editorial-muted);
+    font-size: 0.95rem;
+    font-weight: 650;
   }
 
   .price-grid {
