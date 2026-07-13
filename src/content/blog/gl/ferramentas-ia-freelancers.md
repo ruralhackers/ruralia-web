@@ -179,6 +179,6 @@ O que marca a diferenza é:
 2. **Saber escribir bos prompts.** A diferenza entre un resultado mediocre e un excelente está en como lle pides as cousas á IA.
 3. **Integrar a IA no teu fluxo real.** Non como experimento, senón como parte do teu proceso de traballo diario.
 
-Esas tres cousas son exactamente o que facemos na [Residencia Rural GPT en Galicia](/residencia-ia-galicia/). En 3 días, configuras o teu stack de ferramentas de IA, aprendes a usalas de verdade co teu propio traballo, e vas cun sistema funcionando. 12 prazas por edición, todo incluído.
+Esas tres cousas son exactamente o que traballamos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): o teu stack de ferramentas de IA, prompts co teu propio traballo e automatizacións funcionando nun só día. 15 prazas, comida incluída.
 
-[Mira o programa completo](/residencia-ia-galicia/) ou [descobre se é para ti](/para-quen/).
+[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)

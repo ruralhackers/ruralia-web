@@ -42,9 +42,9 @@ Pero también por razones prácticas:
 
 No vas a escuchar charlas. Vas a construir cosas.
 
-- **Día 1:** [Prompting avanzado](/blog/curso-chatgpt/) y elegir la [herramienta correcta](/blog/chatgpt-vs-gemini-vs-claude/) (ChatGPT, Claude, Gemini) para cada tarea real.
-- **Día 2:** Asistentes y [herramientas de IA](/blog/herramientas-ia-freelancers/): GPTs custom, Claude Projects, Claude Code, Cursor. Configura IAs que trabajan para ti.
-- **Día 3:** [Construir con IA](/blog/crear-app-con-ia/) usando Cursor, Bolt y v0. De idea a prototipo en una tarde.
+- **Día 1:** [Prompting avanzado](/es/blog/curso-chatgpt/) y elegir la [herramienta correcta](/es/blog/chatgpt-vs-gemini-vs-claude/) (ChatGPT, Claude, Gemini) para cada tarea real.
+- **Día 2:** Asistentes y [herramientas de IA](/es/blog/herramientas-ia-freelancers/): GPTs custom, Claude Projects, Claude Code, Cursor. Configura IAs que trabajan para ti.
+- **Día 3:** [Construir con IA](/es/blog/crear-app-con-ia/) usando Cursor, Bolt y v0. De idea a prototipo en una tarde.
 - **Día 4:** Montar tu stack personalizado de IA. Lo que vas a usar el lunes cuando vuelvas a casa.
 
 ## Para quién es esto
@@ -53,4 +53,6 @@ Para gente que se busca la vida con tecnología: freelancers, webmasters, indie 
 
 No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
 
-[Mira si la Residencia IA es para ti](/para-quien/) o [consulta el programa completo](/residencia-ia-galicia/).
+La primera edición de la Residencia IA (junio 2026) agotó las 12 plazas. Ahora ofrecemos dos talleres sprint de un día: Productividad (31 oct) y Web (28 nov).
+
+[Ver los talleres de otoño](/es/talleres-otono-2026/) · [Consulta la edición anterior](/es/residencia-ia-galicia/)

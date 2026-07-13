@@ -22,7 +22,7 @@ Antes de hablar de herramientas especializadas, necesitas un asistente de IA gen
 
 **Precio:** gratis (GPT-4o mini) / 20 $/mes (Plus).
 
-ChatGPT sigue siendo el más versátil. Los Custom GPTs son la killer feature para freelancers: creas un asistente con tus instrucciones, tus documentos de referencia y tu tono de comunicación, y lo usas cada vez que necesitas hacer la misma tarea. Un GPT para propuestas, otro para facturas, otro para contenido de redes. [Tenemos una guía completa de ChatGPT](/blog/curso-chatgpt/) si quieres profundizar.
+ChatGPT sigue siendo el más versátil. Los Custom GPTs son la killer feature para freelancers: creas un asistente con tus instrucciones, tus documentos de referencia y tu tono de comunicación, y lo usas cada vez que necesitas hacer la misma tarea. Un GPT para propuestas, otro para facturas, otro para contenido de redes. [Tenemos una guía completa de ChatGPT](/es/blog/curso-chatgpt/) si quieres profundizar.
 
 ### 2. Claude (Anthropic)
 
@@ -30,7 +30,7 @@ ChatGPT sigue siendo el más versátil. Los Custom GPTs son la killer feature pa
 
 **Precio:** gratis (limitado) / 20 $/mes (Pro).
 
-Claude es el que mejores textos escribe de los tres. Si necesitas una propuesta de 5 páginas que suene profesional y tenga matices, Claude es tu herramienta. También es excelente para analizar contratos, PDFs largos y documentos técnicos. Claude Projects te permite crear espacios de trabajo con contexto persistente — similar a los GPTs de ChatGPT pero con ventana de contexto más grande. Para más detalle, lee nuestra [comparativa ChatGPT vs Gemini vs Claude](/blog/chatgpt-vs-gemini-vs-claude/).
+Claude es el que mejores textos escribe de los tres. Si necesitas una propuesta de 5 páginas que suene profesional y tenga matices, Claude es tu herramienta. También es excelente para analizar contratos, PDFs largos y documentos técnicos. Claude Projects te permite crear espacios de trabajo con contexto persistente — similar a los GPTs de ChatGPT pero con ventana de contexto más grande. Para más detalle, lee nuestra [comparativa ChatGPT vs Gemini vs Claude](/es/blog/chatgpt-vs-gemini-vs-claude/).
 
 ### 3. Gemini (Google)
 
@@ -38,7 +38,7 @@ Claude es el que mejores textos escribe de los tres. Si necesitas una propuesta 
 
 **Precio:** gratis / 21,99 $/mes (Advanced).
 
-La ventaja de Gemini es que vive dentro de las herramientas que ya usas. Si tu flujo de trabajo pasa por Gmail y Google Docs, Gemini Advanced te ahorra horas. Los Gems (asistentes personalizados) tienen acceso a búsqueda de Google y a tu Drive, algo que ni ChatGPT ni Claude ofrecen. [Guía completa de Gemini aquí](/blog/ia-de-google-guia-gemini/).
+La ventaja de Gemini es que vive dentro de las herramientas que ya usas. Si tu flujo de trabajo pasa por Gmail y Google Docs, Gemini Advanced te ahorra horas. Los Gems (asistentes personalizados) tienen acceso a búsqueda de Google y a tu Drive, algo que ni ChatGPT ni Claude ofrecen. [Guía completa de Gemini aquí](/es/blog/ia-de-google-guia-gemini/).
 
 ## Herramientas para construir sin programar
 
@@ -64,7 +64,7 @@ Claude Code es un asistente de programación en terminal que puede leer, editar 
 
 **Precio:** planes gratuitos limitados / planes de pago desde 10-20 $/mes.
 
-Bolt (de StackBlitz) y v0 (de Vercel) generan aplicaciones web completas desde una descripción en texto natural. Le dices "crea un dashboard para trackear mis facturas" y te genera una interfaz funcional con código real que puedes desplegar. Ideal para validar ideas con clientes antes de invertir tiempo en desarrollo. [Guía paso a paso de cómo crear una app con IA](/blog/crear-app-con-ia/).
+Bolt (de StackBlitz) y v0 (de Vercel) generan aplicaciones web completas desde una descripción en texto natural. Le dices "crea un dashboard para trackear mis facturas" y te genera una interfaz funcional con código real que puedes desplegar. Ideal para validar ideas con clientes antes de invertir tiempo en desarrollo. [Guía paso a paso de cómo crear una app con IA](/es/blog/crear-app-con-ia/).
 
 ## Herramientas de investigación y análisis
 
@@ -82,7 +82,7 @@ Perplexity es un buscador con IA que siempre cita fuentes. La diferencia con Gem
 
 **Precio:** gratis.
 
-La herramienta más infravalorada de 2026. Le subes documentos (PDFs, webs, vídeos de YouTube) y crea un cuaderno inteligente que solo responde con información de tus fuentes. No fabula. Para freelancers que trabajan con contratos, propuestas de clientes o documentación técnica, es oro puro. [Más detalle en nuestra guía de Gemini](/blog/ia-de-google-guia-gemini/).
+La herramienta más infravalorada de 2026. Le subes documentos (PDFs, webs, vídeos de YouTube) y crea un cuaderno inteligente que solo responde con información de tus fuentes. No fabula. Para freelancers que trabajan con contratos, propuestas de clientes o documentación técnica, es oro puro. [Más detalle en nuestra guía de Gemini](/es/blog/ia-de-google-guia-gemini/).
 
 ## Herramientas de contenido y comunicación
 
@@ -118,7 +118,7 @@ DALL-E de ChatGPT es bueno para imágenes rápidas, pero cuando necesitas calida
 
 **Precio:** gratis (limitado) / desde 9 $/mes.
 
-Make es una plataforma de automatización visual. Arrastras módulos, los conectas, y tienes un flujo automático. La gracia es conectarlos con APIs de IA: un email llega, la IA lo clasifica, extrae los datos y los mete en tu CRM. [10 flujos de automatización con IA listos para copiar](/blog/automatizaciones-ia/).
+Make es una plataforma de automatización visual. Arrastras módulos, los conectas, y tienes un flujo automático. La gracia es conectarlos con APIs de IA: un email llega, la IA lo clasifica, extrae los datos y los mete en tu CRM. [10 flujos de automatización con IA listos para copiar](/es/blog/automatizaciones-ia/).
 
 ### 13. Notion AI
 
@@ -182,6 +182,6 @@ Lo que marca la diferencia es:
 2. **Saber escribir buenos prompts.** La diferencia entre un resultado mediocre y uno excelente está en cómo le pides las cosas a la IA.
 3. **Integrar la IA en tu flujo real.** No como experimento, sino como parte de tu proceso de trabajo diario.
 
-Esas tres cosas son exactamente lo que hacemos en la [Residencia Rural GPT en Galicia](/residencia-ia-galicia/). En 3 días, configuras tu stack de herramientas de IA, aprendes a usarlas de verdad con tu propio trabajo, y te vas con un sistema funcionando. 12 plazas por edición, todo incluido.
+Esas tres cosas son exactamente lo que trabajamos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): tu stack de herramientas de IA, prompts con tu propio trabajo y automatizaciones funcionando en una sola jornada. 15 plazas, comida incluida.
 
-[Mira el programa completo](/residencia-ia-galicia/) o [descubre si es para ti](/para-quien/).
+[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

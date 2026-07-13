@@ -76,7 +76,7 @@ Google ofrece Gemini gratis con capacidades bastante decentes, y Gemini Advanced
 
 ### Mejor para
 
-Investigación y fact-checking (busca en tiempo real), usuarios de Google Workspace, análisis de documentos largos, y cualquier tarea donde necesites procesar mucha información de golpe. Tenemos una [guía práctica de Gemini](/blog/ia-de-google-guia-gemini/) con casos de uso detallados.
+Investigación y fact-checking (busca en tiempo real), usuarios de Google Workspace, análisis de documentos largos, y cualquier tarea donde necesites procesar mucha información de golpe. Tenemos una [guía práctica de Gemini](/es/blog/ia-de-google-guia-gemini/) con casos de uso detallados.
 
 ## Claude (Anthropic): el más preciso
 
@@ -104,7 +104,7 @@ Anthropic ofrece Claude Opus 4 como su modelo más capaz y Claude Sonnet 4.5 com
 
 ### Mejor para
 
-Documentos largos y complejos, análisis detallado, programación, redacción profesional, propuestas para clientes, cualquier tarea donde la precisión y la calidad de escritura importen más que la velocidad o el ecosistema. Si te dedicas a escribir [propuestas y automatizaciones para clientes](/blog/automatizaciones-ia/), Claude es probablemente tu mejor aliado.
+Documentos largos y complejos, análisis detallado, programación, redacción profesional, propuestas para clientes, cualquier tarea donde la precisión y la calidad de escritura importen más que la velocidad o el ecosistema. Si te dedicas a escribir [propuestas y automatizaciones para clientes](/es/blog/automatizaciones-ia/), Claude es probablemente tu mejor aliado.
 
 ## Comparativa directa: tabla resumen
 
@@ -159,7 +159,7 @@ Para programación, depende de la complejidad. Para scripts rápidos, funciones 
 
 Un ejemplo concreto: le pido a los dos que me creen una API REST en Python con autenticación JWT, conexión a base de datos y tests. El código de Claude funciona a la primera. El de ChatGPT necesita dos o tres iteraciones para arreglar detalles.
 
-Si quieres profundizar en cómo usar IA para programar, tenemos una guía sobre cómo [aprovechar ChatGPT en tu flujo de trabajo](/blog/curso-chatgpt/).
+Si quieres profundizar en cómo usar IA para programar, tenemos una guía sobre cómo [aprovechar ChatGPT en tu flujo de trabajo](/es/blog/curso-chatgpt/).
 
 ### Imágenes: ChatGPT
 
@@ -211,23 +211,10 @@ Es como un fotógrafo profesional. No usa una sola lente para todo. Sabe cuándo
 
 Con la IA pasa lo mismo. Y la diferencia en productividad entre alguien que usa "la IA" (una sola) y alguien que usa **las IAs** (las tres, cada una para lo que mejor hace) es enorme.
 
-## Aprende a dominar las tres en 3 días
+## Aprende a dominar las tres en un día
 
-Una cosa es leer un artículo comparativo. Otra muy diferente es sentarte delante de tu portátil, con un grupo reducido de profesionales, y dedicar tres días completos a aprender a usar ChatGPT, Gemini y Claude de forma práctica.
+Una cosa es leer un artículo comparativo. Otra muy diferente es dedicar una jornada intensiva a aprender a usar ChatGPT, Gemini y Claude de forma práctica con tu propio trabajo.
 
-Eso es exactamente lo que hacemos en la **[Residencia Rural GPT en Galicia](/residencia-ia-galicia/)**.
+Eso es lo que hacemos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
 
-El primer día de la Residencia IA lo dedicamos precisamente a esto: entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
-
-Pero no nos quedamos en la teoría. Los tres días incluyen:
-
-- **Configurar Custom GPTs y Claude Projects** para tus tareas recurrentes.
-- **Configurar asistentes y herramientas de IA** como Claude Code o Cursor para resolver tareas reales en tu trabajo.
-- **Practicar con tus propios proyectos** — vienes con tu trabajo real, te vas con soluciones funcionando.
-- **Aprender de otros profesionales** — 12 personas máximo, todos con el mismo objetivo.
-
-Todo esto desde un coliving en el rural de Galicia, sin distracciones, con comidas incluidas y con un entorno que invita a la concentración y la desconexión del ruido habitual.
-
-Si después de leer esta comparativa te has dado cuenta de que podrías estar sacándole mucho más partido a la IA en tu trabajo diario, [echa un vistazo al programa completo de la Residencia IA](/residencia-ia-galicia/).
-
-Son 3 días que te cambian los próximos 4 años.
+[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

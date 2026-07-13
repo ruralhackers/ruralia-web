@@ -8,7 +8,7 @@ const currentPath = Astro.url.pathname;
 const alternatePath = getAlternateUrl(currentPath, locale);
 
 const nav = [
-  { href: t('nav.href.residencia'), label: t('nav.residencia') },
+  { href: t('nav.href.talleres'), label: t('nav.talleres') },
   { href: t('nav.href.para_quen'), label: t('nav.para_quen') },
   { href: t('nav.href.blog'), label: t('nav.blog') },
   { href: t('nav.href.faq'), label: t('nav.faq') },
@@ -33,7 +33,7 @@ const nav = [
       ))
     }
   </nav>
-  <a href="#" class="header-cta" onclick="event.preventDefault(); window.openNewsletter && window.openNewsletter();">{t('nav.cta')}</a>
+  <a href={t('nav.href.talleres')} class="header-cta">{t('nav.cta')}</a>
   <a href={alternatePath} class="header-lang" aria-label={`Cambiar a ${t('nav.lang_switcher')}`}>{t('nav.lang_switcher')}</a>
   <button
     class="menu-toggle"
@@ -63,6 +63,7 @@ const nav = [
     margin-right: auto;
     flex-shrink: 0;
     display: flex;
+    min-height: 44px;
     align-items: center;
   }
   .header-logo-img {
@@ -76,6 +77,10 @@ const nav = [
     gap: 2rem;
   }
   .header-nav a {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
     font-size: 0.85rem;
     font-weight: 500;
     color: #555555;
@@ -88,6 +93,9 @@ const nav = [
     color: #000000;
   }
   .header-cta {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
     background: #000000;
     color: #ffffff;
     font-size: 0.82rem;
@@ -105,6 +113,11 @@ const nav = [
     color: #ffffff;
   }
   .header-lang {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -124,6 +137,9 @@ const nav = [
   /* Mobile */
   .menu-toggle {
     display: none;
+    width: 44px;
+    min-height: 44px;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 5px;

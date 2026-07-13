@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://ruralgpt.gal/sitemap.xml
+Sitemap: https://ruralgpt.gal/sitemap-index.xml

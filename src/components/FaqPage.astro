@@ -1,0 +1,149 @@
+---
+import Base from "../layouts/Base.astro";
+import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import "../styles/editorial.css";
+import SectionTag from "./ui/SectionTag.astro";
+import CtaBand from "./ui/CtaBand.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isGl = locale === "gl";
+const campaign = getTalleresCampaign(locale);
+const landingUrl = isGl
+  ? "/talleres-otono-2026/"
+  : "/es/talleres-otono-2026/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: campaign.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: `https://ruralgpt.gal${isGl ? "/" : "/es/"}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: campaign.faqHeading,
+        item: `https://ruralgpt.gal${isGl ? "/faq/" : "/es/faq/"}`,
+      },
+    ],
+  },
+];
+---
+
+<Base
+  title={`${campaign.faqHeading} — Talleres Rural GPT`}
+  description={isGl
+    ? "Nivel, comida, aloxamento, resultados e condicións dos talleres sprint de IA de Rural GPT en Anceu."
+    : "Nivel, comida, alojamiento, resultados y condiciones de los talleres sprint de IA de Rural GPT en Anceu."}
+  schema={schema}
+>
+  <div class="editorial-page">
+    <section class="faq-hero">
+      <div class="ed-container">
+        <SectionTag text="Rural GPT · Outono 2026" />
+        <h1>{campaign.faqHeading}</h1>
+        <p>
+          {isGl
+            ? "Todo o que necesitas saber antes de reservar un dos talleres."
+            : "Todo lo que necesitas saber antes de reservar uno de los talleres."}
+        </p>
+      </div>
+    </section>
+    <section class="ed-section ed-section--white">
+      <div class="faq-list">
+        {
+          campaign.faq.map((item, index) => (
+            <details open={index === 0}>
+              <summary>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                {item.question}
+              </summary>
+              <p>{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+    <CtaBand
+      title={campaign.finalCta.title}
+      body={campaign.finalCta.body}
+      href={landingUrl}
+      label={campaign.hero.cta}
+    />
+  </div>
+</Base>
+
+<style>
+  .faq-hero {
+    padding: clamp(4rem, 9vw, 8rem) var(--editorial-pad);
+    background: var(--editorial-paper);
+  }
+
+  .faq-hero h1 {
+    margin: 0;
+    font-family: var(--editorial-display);
+    font-size: clamp(4rem, 11vw, 9rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 0.005em;
+  }
+
+  .faq-hero p {
+    max-width: 60ch;
+    margin: 2rem 0 0;
+    color: var(--editorial-muted);
+    font-size: 1.15rem;
+  }
+
+  .faq-list {
+    width: min(100%, 900px);
+    margin-inline: auto;
+    border-top: 1px solid var(--editorial-line);
+  }
+
+  details {
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  summary {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+    min-height: 72px;
+    align-items: center;
+    padding: 1.1rem 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  summary span {
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+  }
+
+  details p {
+    max-width: 68ch;
+    margin: 0;
+    padding: 0 0 1.7rem 3rem;
+    color: var(--editorial-muted);
+    line-height: 1.75;
+  }
+</style>

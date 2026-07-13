@@ -1,0 +1,511 @@
+---
+import { Image } from "astro:assets";
+import heroPhoto from "../assets/images/ruralia-1.jpg";
+import Base from "../layouts/Base.astro";
+import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import "../styles/editorial.css";
+import SectionTag from "./ui/SectionTag.astro";
+import EditorialSplit from "./ui/EditorialSplit.astro";
+import CtaBand from "./ui/CtaBand.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isGl = locale === "gl";
+const campaign = getTalleresCampaign(locale);
+const landingUrl = isGl
+  ? "/talleres-otono-2026/"
+  : "/es/talleres-otono-2026/";
+
+const copy = isGl
+  ? {
+      title: "Residencia IA · Xuño 2026 — Esgotada",
+      seoTitle: "Residencia de IA en Galicia · Edición xuño 2026 | Rural GPT",
+      seoDescription:
+        "Así foi a primeira Residencia Rural GPT en Anceu: tres días de IA aplicada, doce profesionais e solucións reais. Edición finalizada.",
+      intro:
+        "A primeira Residencia Rural GPT reuniu durante tres días en Anceu a doce profesionais de sectores moi distintos para aplicar a IA ao seu traballo real.",
+      status: "Edición finalizada · 4–7 xuño 2026",
+      cta: "Ver os talleres actuais",
+      facts: [
+        ["Cando", "4–7 xuño 2026"],
+        ["Onde", "Anceu Coliving · Ponte Caldelas"],
+        ["Formato", "3 días · 3 noites"],
+        ["Grupo", "12 profesionais · prazas esgotadas"],
+      ],
+      programTag: "O programa",
+      programTitle: "Tres preguntas. Tres días para respondelas.",
+      days: [
+        {
+          day: "Xoves",
+          title: "Onde estou?",
+          body: "Mapa do terreo: que ferramentas existen, para que serve cada unha e cales merecen o teu tempo.",
+        },
+        {
+          day: "Venres",
+          title: "Que podo automatizar?",
+          body: "O traballo baixo a lupa: tarefas que podes automatizar, delegar á IA ou facer na metade de tempo.",
+        },
+        {
+          day: "Sábado",
+          title: "Podo construír cousas?",
+          body: "Da idea ao prototipo con Cursor, Bolt e Lovable, mesmo sen saber programar.",
+        },
+      ],
+      includedTag: "O formato",
+      includedTitle: "Formación, convivencia e foco.",
+      includedBody:
+        "A experiencia incluíu tres días de formación práctica, tres noites en Anceu Coliving, todas as comidas, materiais, comunidade alumni e unha sesión de seguimento.",
+      resultTag: "Un dos resultados",
+      placeTag: "O lugar",
+      placeTitle: "Un laboratorio de innovación nunha aldea galega.",
+      placeBody:
+        "Anceu Coliving combina fibra de 1 Gbps, natureza e espazos para traballar sen as distraccións da cidade. Ese contorno foi parte da experiencia.",
+      accommodationFaq: [
+        {
+          question: "Como era o aloxamento?",
+          answer:
+            "A edición incluía tres noites en Anceu Coliving, con opción de cuarto individual ou compartido para un máximo de dúas persoas.",
+        },
+        {
+          question: "Que comidas estaban incluídas?",
+          answer:
+            "Almorzo, xantar e cea durante a residencia, con gastronomía local e opcións adaptadas a necesidades alimentarias comunicadas con antelación.",
+        },
+        {
+          question: "Como se chegaba a Anceu?",
+          answer:
+            "Anceu está en Ponte Caldelas, a uns trinta minutos de Pontevedra. Coordináronse chegadas compartidas entre participantes.",
+        },
+      ],
+      finalTitle: "A residencia rematou. Rural GPT continúa.",
+      finalBody:
+        "En outono volvemos cun formato máis curto: dous talleres sprint dunha xornada, en Anceu e co mesmo enfoque práctico.",
+    }
+  : {
+      title: "Residencia IA · Junio 2026 — Agotada",
+      seoTitle: "Residencia de IA en Galicia · Edición junio 2026 | Rural GPT",
+      seoDescription:
+        "Así fue la primera Residencia Rural GPT en Anceu: tres días de IA aplicada, doce profesionales y soluciones reales. Edición finalizada.",
+      intro:
+        "La primera Residencia Rural GPT reunió durante tres días en Anceu a doce profesionales de sectores muy distintos para aplicar la IA a su trabajo real.",
+      status: "Edición finalizada · 4–7 junio 2026",
+      cta: "Ver los talleres actuales",
+      facts: [
+        ["Cuándo", "4–7 junio 2026"],
+        ["Dónde", "Anceu Coliving · Ponte Caldelas"],
+        ["Formato", "3 días · 3 noches"],
+        ["Grupo", "12 profesionales · plazas agotadas"],
+      ],
+      programTag: "El programa",
+      programTitle: "Tres preguntas. Tres días para responderlas.",
+      days: [
+        {
+          day: "Jueves",
+          title: "¿Dónde estoy?",
+          body: "Mapa del terreno: qué herramientas existen, para qué sirve cada una y cuáles merecen tu tiempo.",
+        },
+        {
+          day: "Viernes",
+          title: "¿Qué puedo automatizar?",
+          body: "El trabajo bajo la lupa: tareas que puedes automatizar, delegar a la IA o hacer en la mitad de tiempo.",
+        },
+        {
+          day: "Sábado",
+          title: "¿Puedo construir cosas?",
+          body: "De la idea al prototipo con Cursor, Bolt y Lovable, incluso sin saber programar.",
+        },
+      ],
+      includedTag: "El formato",
+      includedTitle: "Formación, convivencia y foco.",
+      includedBody:
+        "La experiencia incluyó tres días de formación práctica, tres noches en Anceu Coliving, todas las comidas, materiales, comunidad alumni y una sesión de seguimiento.",
+      resultTag: "Uno de los resultados",
+      placeTag: "El lugar",
+      placeTitle: "Un laboratorio de innovación en una aldea gallega.",
+      placeBody:
+        "Anceu Coliving combina fibra de 1 Gbps, naturaleza y espacios para trabajar sin las distracciones de la ciudad. Ese entorno fue parte de la experiencia.",
+      accommodationFaq: [
+        {
+          question: "¿Cómo era el alojamiento?",
+          answer:
+            "La edición incluía tres noches en Anceu Coliving, con opción de habitación individual o compartida para un máximo de dos personas.",
+        },
+        {
+          question: "¿Qué comidas estaban incluidas?",
+          answer:
+            "Desayuno, comida y cena durante la residencia, con gastronomía local y opciones adaptadas a necesidades alimentarias comunicadas con antelación.",
+        },
+        {
+          question: "¿Cómo se llegaba a Anceu?",
+          answer:
+            "Anceu está en Ponte Caldelas, a unos treinta minutos de Pontevedra. Se coordinaron llegadas compartidas entre participantes.",
+        },
+      ],
+      finalTitle: "La residencia terminó. Rural GPT continúa.",
+      finalBody:
+        "En otoño volvemos con un formato más corto: dos talleres sprint de una jornada, en Anceu y con el mismo enfoque práctico.",
+    };
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Rural GPT — Residencia de IA aplicada en Galicia",
+    description: copy.seoDescription,
+    startDate: "2026-06-04",
+    endDate: "2026-06-07",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventCompleted",
+    maximumAttendeeCapacity: 12,
+    location: {
+      "@type": "Place",
+      name: "Anceu Coliving",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Ponte Caldelas",
+        addressRegion: "Pontevedra",
+        addressCountry: "ES",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Rural GPT",
+      url: "https://ruralgpt.gal",
+    },
+    offers: {
+      "@type": "Offer",
+      name: isGl ? "Edición xuño 2026" : "Edición junio 2026",
+      url: `https://ruralgpt.gal${
+        isGl ? "/residencia-ia-galicia/" : "/es/residencia-ia-galicia/"
+      }`,
+      price: 632,
+      availability: "https://schema.org/SoldOut",
+      priceCurrency: "EUR",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: `https://ruralgpt.gal${isGl ? "/" : "/es/"}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: copy.title,
+        item: `https://ruralgpt.gal${
+          isGl ? "/residencia-ia-galicia/" : "/es/residencia-ia-galicia/"
+        }`,
+      },
+    ],
+  },
+];
+---
+
+<Base
+  title={copy.seoTitle}
+  description={copy.seoDescription}
+  keywords={[
+    "residencia IA Galicia",
+    "formación IA presencial",
+    "Anceu Coliving",
+    "Rural GPT",
+  ]}
+  schema={schema}
+>
+  <div class="editorial-page archive-page">
+    <section class="archive-hero">
+      <div class="archive-hero-copy">
+        <SectionTag text={copy.status} />
+        <h1>{copy.title}</h1>
+        <p>{copy.intro}</p>
+        <a class="ed-button" href={landingUrl}>{copy.cta}<span aria-hidden="true">→</span></a>
+      </div>
+      <Image
+        src={heroPhoto}
+        alt={isGl
+          ? "Anceu Coliving, sede da primeira Residencia Rural GPT"
+          : "Anceu Coliving, sede de la primera Residencia Rural GPT"}
+        widths={[640, 960, 1280]}
+        sizes="(max-width: 800px) 100vw, 50vw"
+        loading="eager"
+      />
+    </section>
+
+    <section class="facts">
+      {
+        copy.facts.map(([label, value]) => (
+          <div>
+            <span>{label}</span>
+            <strong>{value}</strong>
+          </div>
+        ))
+      }
+    </section>
+
+    <section class="ed-section ed-section--white program-section">
+      <div class="ed-container">
+        <SectionTag text={copy.programTag} />
+        <h2 class="ed-heading">{copy.programTitle}</h2>
+        <div class="days-grid">
+          {
+            copy.days.map((day, index) => (
+              <article>
+                <span>0{index + 1} · {day.day}</span>
+                <h3>{day.title}</h3>
+                <p>{day.body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <EditorialSplit reverse tone="soft">
+      <SectionTag text={copy.includedTag} />
+      <h2 class="ed-heading">{copy.includedTitle}</h2>
+      <p>{copy.includedBody}</p>
+      <img
+        slot="media"
+        src="/images/talleres-otono-2026/equipo.webp"
+        srcset="/images/talleres-otono-2026/equipo-480.webp 480w, /images/talleres-otono-2026/equipo-800.webp 800w, /images/talleres-otono-2026/equipo-1200.webp 1200w"
+        sizes="(max-width: 800px) 100vw, 50vw"
+        alt={campaign.teamImageAlt}
+        width="1600"
+        height="900"
+        loading="lazy"
+      />
+    </EditorialSplit>
+
+    <EditorialSplit tone="white">
+      <SectionTag text={copy.resultTag} />
+      <h2 class="ed-heading">{campaign.testimonial.title}</h2>
+      <blockquote>{campaign.testimonial.quote}</blockquote>
+      <p><strong>{campaign.testimonial.conclusion}</strong></p>
+      <img
+        slot="media"
+        src="/images/talleres-otono-2026/sara-testimonial.webp"
+        srcset="/images/talleres-otono-2026/sara-testimonial-480.webp 480w, /images/talleres-otono-2026/sara-testimonial-800.webp 800w, /images/talleres-otono-2026/sara-testimonial-1200.webp 1200w"
+        sizes="(max-width: 800px) 100vw, 50vw"
+        alt={campaign.testimonial.imageAlt}
+        width="1200"
+        height="900"
+        loading="lazy"
+      />
+    </EditorialSplit>
+
+    <EditorialSplit reverse>
+      <SectionTag text={copy.placeTag} />
+      <h2 class="ed-heading">{copy.placeTitle}</h2>
+      <p>{copy.placeBody}</p>
+      <img
+        slot="media"
+        src="/images/talleres-otono-2026/entorno-anceu.webp"
+        srcset="/images/talleres-otono-2026/entorno-anceu-480.webp 480w, /images/talleres-otono-2026/entorno-anceu-800.webp 800w, /images/talleres-otono-2026/entorno-anceu-1200.webp 1200w"
+        sizes="(max-width: 800px) 100vw, 50vw"
+        alt={campaign.venue.imageAlt}
+        width="1600"
+        height="1067"
+        loading="lazy"
+      />
+    </EditorialSplit>
+
+    <section class="ed-section ed-section--white archive-faq">
+      <div class="ed-container">
+        <SectionTag text={isGl ? "Preguntas da edición" : "Preguntas de la edición"} />
+        <h2 class="ed-heading">
+          {isGl ? "Aloxamento e loxística" : "Alojamiento y logística"}
+        </h2>
+        <div class="archive-faq-list">
+          {
+            copy.accommodationFaq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <CtaBand
+      title={copy.finalTitle}
+      body={copy.finalBody}
+      href={landingUrl}
+      label={copy.cta}
+    />
+  </div>
+</Base>
+
+<style>
+  .archive-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 680px;
+    background: var(--editorial-paper);
+  }
+
+  .archive-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(3.5rem, 8vw, 7rem) var(--editorial-pad);
+  }
+
+  .archive-hero h1 {
+    margin: 0 0 2rem;
+    font-family: var(--editorial-display);
+    font-size: clamp(4rem, 9vw, 8rem);
+    font-weight: 400;
+    line-height: 0.88;
+    letter-spacing: 0.005em;
+  }
+
+  .archive-hero p {
+    max-width: 55ch;
+    color: var(--editorial-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .archive-hero .ed-button {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+
+  .archive-hero :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--editorial-line);
+    border-bottom: 1px solid var(--editorial-line);
+    background: var(--editorial-line);
+    gap: 1px;
+  }
+
+  .facts div {
+    display: flex;
+    min-height: 130px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem var(--editorial-pad);
+    background: #fff;
+  }
+
+  .facts span {
+    color: var(--editorial-accent);
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    border-top: 1px solid var(--editorial-line);
+    border-left: 1px solid var(--editorial-line);
+  }
+
+  .days-grid article {
+    min-height: 320px;
+    padding: 2rem;
+    border-right: 1px solid var(--editorial-line);
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .days-grid span {
+    color: var(--editorial-accent);
+    font-size: 0.7rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .days-grid h3 {
+    margin: 5rem 0 1rem;
+    font-family: var(--editorial-display);
+    font-size: clamp(2.3rem, 5vw, 3.7rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.005em;
+  }
+
+  .days-grid p,
+  :global(.editorial-split p) {
+    color: var(--editorial-muted);
+    line-height: 1.7;
+  }
+
+  blockquote {
+    margin: 0 0 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--editorial-accent);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.65;
+  }
+
+  .archive-faq-list {
+    width: min(100%, 850px);
+    border-top: 1px solid var(--editorial-line);
+  }
+
+  .archive-faq-list details {
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  .archive-faq-list summary {
+    min-height: 64px;
+    padding: 1.1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .archive-faq-list p {
+    max-width: 65ch;
+    margin: 0;
+    padding-bottom: 1.5rem;
+    color: var(--editorial-muted);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 800px) {
+    .archive-hero,
+    .facts,
+    .days-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .archive-hero {
+      min-height: 0;
+    }
+
+    .archive-hero :global(img) {
+      max-height: 440px;
+    }
+
+    .facts div {
+      min-height: 100px;
+    }
+
+    .days-grid h3 {
+      margin-top: 2.5rem;
+    }
+  }
+</style>

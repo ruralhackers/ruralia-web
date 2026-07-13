@@ -6,16 +6,18 @@
 export const ui = {
   gl: {
     // Header nav
+    'nav.talleres': 'Talleres',
     'nav.residencia': 'Residencia IA',
     'nav.para_quen': 'Para quen',
     'nav.blog': 'Blog',
     'nav.faq': 'FAQ',
     'nav.sobre_nos': 'Quen somos',
-    'nav.cta': 'Lista de espera',
+    'nav.cta': 'Reservar',
     'nav.open_menu': 'Abrir menú',
     'nav.lang_switcher': 'ES',
 
     // Nav hrefs (GL paths)
+    'nav.href.talleres': '/talleres-otono-2026/',
     'nav.href.residencia': '/residencia-ia-galicia/',
     'nav.href.para_quen': '/para-quen/',
     'nav.href.blog': '/blog/',
@@ -55,9 +57,9 @@ export const ui = {
     'blog.copy_link': 'Copiar ligazón',
     'blog.copied': 'Copiado',
     'blog.cta_text': '¿Gustouche este artigo?',
-    'blog.cta_link_text': 'Coñece a nosa Residencia de IA en Galicia',
-    'blog.cta_link_href': '/residencia-ia-galicia/',
-    'blog.cta_suffix': ' — 3 días de formación práctica, todo incluído.',
+    'blog.cta_link_text': 'Coñece os talleres de IA de Rural GPT',
+    'blog.cta_link_href': '/talleres-otono-2026/',
+    'blog.cta_suffix': ' — unha xornada práctica, un resultado real.',
     'blog.related_heading': 'Artigos relacionados',
 
     // 404
@@ -86,16 +88,18 @@ export const ui = {
   },
   es: {
     // Header nav
+    'nav.talleres': 'Talleres',
     'nav.residencia': 'Residencia IA',
     'nav.para_quen': 'Para quién',
     'nav.blog': 'Blog',
     'nav.faq': 'FAQ',
     'nav.sobre_nos': 'Quiénes somos',
-    'nav.cta': 'Lista de espera',
+    'nav.cta': 'Reservar',
     'nav.open_menu': 'Abrir menú',
     'nav.lang_switcher': 'GL',
 
     // Nav hrefs (ES paths)
+    'nav.href.talleres': '/es/talleres-otono-2026/',
     'nav.href.residencia': '/es/residencia-ia-galicia/',
     'nav.href.para_quen': '/es/para-quien/',
     'nav.href.blog': '/es/blog/',
@@ -135,9 +139,9 @@ export const ui = {
     'blog.copy_link': 'Copiar enlace',
     'blog.copied': 'Copiado',
     'blog.cta_text': '¿Te ha gustado este artículo?',
-    'blog.cta_link_text': 'Conoce nuestra Residencia de IA en Galicia',
-    'blog.cta_link_href': '/es/residencia-ia-galicia/',
-    'blog.cta_suffix': ' — 3 días de formación práctica, todo incluido.',
+    'blog.cta_link_text': 'Conoce los talleres de IA de Rural GPT',
+    'blog.cta_link_href': '/es/talleres-otono-2026/',
+    'blog.cta_suffix': ' — una jornada práctica, un resultado real.',
     'blog.related_heading': 'Artículos relacionados',
 
     // 404

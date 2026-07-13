@@ -1,0 +1,36 @@
+---
+interface Props {
+  text: string;
+  inverted?: boolean;
+}
+
+const { text, inverted = false } = Astro.props;
+---
+
+<p class:list={["section-tag", { inverted }]}>{text}</p>
+
+<style>
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0 0 1.5rem;
+    color: var(--editorial-accent, #1f5c3f);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.13em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .section-tag::before {
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    content: "";
+  }
+
+  .section-tag.inverted {
+    color: #b8d3c4;
+  }
+</style>

@@ -1,0 +1,143 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  date?: string;
+  priceLabel: string;
+  taxNote?: string;
+  href: string;
+  cta: string;
+  featured?: boolean;
+}
+
+const {
+  eyebrow,
+  title,
+  date,
+  priceLabel,
+  taxNote = "IVA non incluído · IVA no incluido",
+  href,
+  cta,
+  featured = false,
+} = Astro.props;
+---
+
+<article class:list={["price-card", { featured }]}>
+  <p class="eyebrow">{eyebrow}</p>
+  <h3>{title}</h3>
+  {date && <p class="date">{date}</p>}
+  <div class="details"><slot /></div>
+  <div class="price-wrap">
+    <strong class="price">{priceLabel}</strong>
+    <span class="tax">{taxNote}</span>
+  </div>
+  <a class="card-cta" href={href} rel="noopener">{cta}<span aria-hidden="true">↗</span></a>
+</article>
+
+<style>
+  .price-card {
+    display: flex;
+    min-width: 0;
+    min-height: 100%;
+    flex-direction: column;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border: 1px solid var(--editorial-line, #d7dad7);
+    background: #fff;
+    color: var(--editorial-ink, #0b0d0c);
+  }
+
+  .price-card.featured {
+    border-color: var(--editorial-accent, #1f5c3f);
+    background: var(--editorial-accent, #1f5c3f);
+    color: #fff;
+  }
+
+  .eyebrow,
+  .date,
+  .tax {
+    margin: 0;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow {
+    margin-bottom: 1.5rem;
+    color: var(--editorial-accent, #1f5c3f);
+  }
+
+  .featured .eyebrow,
+  .featured .date,
+  .featured .tax {
+    color: #d5e5dc;
+  }
+
+  h3 {
+    margin: 0 0 0.65rem;
+    color: inherit;
+    font-family: var(--editorial-display, "Bebas Neue", sans-serif);
+    font-size: clamp(2.35rem, 5vw, 4.4rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.005em;
+  }
+
+  .date {
+    color: var(--editorial-muted, #5c625e);
+  }
+
+  .details {
+    flex: 1;
+    margin: 1.75rem 0;
+    color: inherit;
+  }
+
+  .details :global(p) {
+    color: inherit;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .price-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .price {
+    font-size: clamp(1.65rem, 4vw, 2.4rem);
+    letter-spacing: -0.04em;
+  }
+
+  .tax {
+    color: var(--editorial-muted, #5c625e);
+  }
+
+  .card-cta {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    border: 1px solid currentColor;
+    color: inherit;
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+
+  .card-cta:hover {
+    background: var(--editorial-ink, #0b0d0c);
+    color: #fff;
+  }
+
+  .featured .card-cta:hover {
+    background: #fff;
+    color: var(--editorial-accent, #1f5c3f);
+  }
+</style>
