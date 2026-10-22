@@ -228,7 +228,7 @@ const gl: Campaign = {
   includes: [
     {
       title: "Formación presencial",
-      detail: "Xornada intensiva de 9:00 a 18:00 co equipo de Rural GPT",
+      detail: "Xornada intensiva de 10:00 a 18:00 co equipo de Rural GPT",
     },
     {
       title: "Comida",
@@ -492,7 +492,7 @@ const es: Campaign = {
   includes: [
     {
       title: "Formación presencial",
-      detail: "Jornada intensiva de 9:00 a 18:00 con el equipo de Rural GPT",
+      detail: "Jornada intensiva de 10:00 a 18:00 con el equipo de Rural GPT",
     },
     { title: "Comida", detail: "Menú del chef Granero incluido" },
     {
