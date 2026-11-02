@@ -18,6 +18,12 @@ const homeUrl = isGl ? "/" : "/es/";
 const canonicalPath = isGl
   ? "/talleres-otono-2026/"
   : "/es/talleres-otono-2026/";
+// CTA final: si el Pack está cerrado, apunta al primer taller con plazas abiertas.
+const openWorkshop = campaign.workshops.find((workshop) => !workshop.closed);
+const finalCta =
+  campaign.pack.closed && openWorkshop
+    ? { href: openWorkshop.stripeUrl, label: openWorkshop.cta }
+    : { href: campaign.pack.stripeUrl, label: campaign.pack.cta };
 const imageSrcset = (name: string) =>
   [480, 800, 1200]
     .map(
@@ -58,10 +64,14 @@ const schema = [
     },
     offers: {
       "@type": "Offer",
-      url: workshop.stripeUrl,
+      url: workshop.closed
+        ? `https://ruralgpt.gal${canonicalPath}`
+        : workshop.stripeUrl,
       price: workshop.price,
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
+      availability: workshop.closed
+        ? "https://schema.org/SoldOut"
+        : "https://schema.org/InStock",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
         price: workshop.price,
@@ -209,6 +219,8 @@ const schema = [
                 taxNote={isGl ? "IVA non incluído" : "IVA no incluido"}
                 href={workshop.stripeUrl}
                 cta={workshop.cta}
+                closed={workshop.closed}
+                closedLabel={campaign.closedLabel}
               >
                 <p>{workshop.result}</p>
               </PriceCard>
@@ -221,6 +233,8 @@ const schema = [
             taxNote={isGl ? "IVA non incluído" : "IVA no incluido"}
             href={campaign.pack.stripeUrl}
             cta={campaign.pack.cta}
+            closed={campaign.pack.closed}
+            closedLabel={campaign.closedLabel}
             featured
           >
             <p>{campaign.pack.body}</p>
@@ -274,9 +288,17 @@ const schema = [
       <div class="pack-price">
         <strong>{campaign.pack.priceLabel}</strong>
         <span>{campaign.pack.savingLabel}</span>
-        <a href={campaign.pack.stripeUrl} rel="noopener">
-          {campaign.pack.cta}<span aria-hidden="true">↗</span>
-        </a>
+        {
+          campaign.pack.closed ? (
+            <span class="pack-closed" role="link" aria-disabled="true">
+              {campaign.closedLabel}
+            </span>
+          ) : (
+            <a href={campaign.pack.stripeUrl} rel="noopener">
+              {campaign.pack.cta}<span aria-hidden="true">↗</span>
+            </a>
+          )
+        }
       </div>
     </section>
 
@@ -406,8 +428,8 @@ const schema = [
     <CtaBand
       title={campaign.finalCta.title}
       body={campaign.finalCta.body}
-      href={campaign.pack.stripeUrl}
-      label={campaign.pack.cta}
+      href={finalCta.href}
+      label={finalCta.label}
       external
     >
       <p>{campaign.finalCta.productivity}</p>
@@ -766,6 +788,22 @@ const schema = [
     font-weight: 750;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  .pack-price .pack-closed {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px dashed #fff;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   blockquote {

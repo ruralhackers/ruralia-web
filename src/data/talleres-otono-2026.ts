@@ -24,6 +24,8 @@ export interface Workshop {
   capacity: number;
   stripeUrl: string;
   cta: string;
+  /** Reservas cerradas: el botón se muestra desactivado y no enlaza a Stripe. */
+  closed?: boolean;
 }
 
 interface Campaign {
@@ -35,6 +37,7 @@ interface Campaign {
   };
   navLabel: string;
   reserveLabel: string;
+  closedLabel: string;
   capacity: number;
   hero: {
     eyebrow: string;
@@ -73,6 +76,7 @@ interface Campaign {
     savingLabel: string;
     cta: string;
     stripeUrl: string;
+    closed?: boolean;
   };
   testimonial: {
     tag: string;
@@ -133,6 +137,7 @@ const gl: Campaign = {
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
+  closedLabel: "Prazas pechadas",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Outono 2026",
@@ -192,6 +197,7 @@ const gl: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Produtividade",
+      closed: true,
     },
     {
       id: "web",
@@ -267,6 +273,7 @@ const gl: Campaign = {
     savingLabel: "Aforras 48 € fronte ás dúas reservas por separado",
     cta: "Reservar Pack Outono",
     stripeUrl: STRIPE_LINKS.pack,
+    closed: true,
   },
   testimonial: {
     tag: "Un resultado real",
@@ -364,9 +371,9 @@ const gl: Campaign = {
     title: "Un día. Un problema. Unha solución real.",
     body:
       "Comida incluída · 15 prazas por taller · Anceu, Galicia · Prezos sen IVA",
-    productivity: "31 de outubro — Produtividade — 199 € + IVA",
+    productivity: "31 de outubro — Produtividade — Prazas pechadas",
     web: "28 de novembro — Asesorías e xestorías — 199 € + IVA",
-    pack: "Os dous talleres — 350 € + IVA",
+    pack: "Os dous talleres — 350 € + IVA — Prazas pechadas",
   },
   contact: {
     title: "Tes dúbidas?",
@@ -399,6 +406,7 @@ const es: Campaign = {
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
+  closedLabel: "Plazas cerradas",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Otoño 2026",
@@ -458,6 +466,7 @@ const es: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Productividad",
+      closed: true,
     },
     {
       id: "web",
@@ -530,6 +539,7 @@ const es: Campaign = {
     savingLabel: "Ahorras 48 € frente a las dos reservas por separado",
     cta: "Reservar Pack Otoño",
     stripeUrl: STRIPE_LINKS.pack,
+    closed: true,
   },
   testimonial: {
     tag: "Un resultado real",
@@ -627,9 +637,9 @@ const es: Campaign = {
     title: "Un día. Un problema. Una solución real.",
     body:
       "Comida incluida · 15 plazas por taller · Anceu, Galicia · Precios sin IVA",
-    productivity: "31 de octubre — Productividad — 199 € + IVA",
+    productivity: "31 de octubre — Productividad — Plazas cerradas",
     web: "28 de noviembre — Asesorías y gestorías — 199 € + IVA",
-    pack: "Los dos talleres — 350 € + IVA",
+    pack: "Los dos talleres — 350 € + IVA — Plazas cerradas",
   },
   contact: {
     title: "¿Tienes dudas?",
