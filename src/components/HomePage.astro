@@ -48,7 +48,7 @@ const copy = isGl
       workshopsTag: "Agora en Rural GPT",
       workshopsTitle: "Dous sprints. Dous resultados antes de Nadal.",
       workshopsIntro:
-        "Un día intensivo, grupo de 15 persoas e comida incluída. As prazas de Produtividade e do Pack Outono xa están pechadas; a reserva aberta é a do taller para asesorías e xestorías do 28 de novembro.",
+        "Un día intensivo, grupo de 15 persoas e comida incluída. As prazas de Produtividade xa están pechadas; a reserva aberta é a do taller para asesorías e xestorías do 28 de novembro.",
       workshopCta: "Ver programa e reservar",
       testimonialTag: "O que xa pasou",
       testimonialTitle: "Unha tarefa de media hora. Agora, un botón.",
@@ -106,7 +106,7 @@ const copy = isGl
       workshopsTag: "Ahora en Rural GPT",
       workshopsTitle: "Dos sprints. Dos resultados antes de Navidad.",
       workshopsIntro:
-        "Un día intensivo, grupo de 15 personas y comida incluida. Las plazas de Productividad y del Pack Otoño ya están cerradas; la reserva abierta es la del taller para asesorías y gestorías del 28 de noviembre.",
+        "Un día intensivo, grupo de 15 personas y comida incluida. Las plazas de Productividad ya están cerradas; la reserva abierta es la del taller para asesorías y gestorías del 28 de noviembre.",
       workshopCta: "Ver programa y reservar",
       testimonialTag: "Lo que ya ocurrió",
       testimonialTitle: "Una tarea de media hora. Ahora, un botón.",
@@ -299,20 +299,6 @@ const schema = {
             ))
           }
         </div>
-        <a class="pack-teaser" href={landingUrl}>
-          <span>
-            <small>{campaign.pack.tag}</small>
-            <strong>{campaign.pack.title}</strong>
-          </span>
-          <span>
-            <strong>{campaign.pack.priceLabel}</strong>
-            <small>{campaign.pack.savingLabel}</small>
-          </span>
-          <span class="pack-action">
-            {campaign.pack.closed ? campaign.closedLabel : copy.workshopCta}
-            <b aria-hidden="true">→</b>
-          </span>
-        </a>
       </div>
     </section>
 
@@ -578,39 +564,6 @@ const schema = {
     font-size: 1.5rem;
   }
 
-  .pack-teaser {
-    display: grid;
-    grid-template-columns: 1.1fr 0.8fr auto;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem 2rem;
-    background: var(--editorial-ink);
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .pack-teaser > span {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .pack-teaser small {
-    color: #bfc4c1;
-    font-size: 0.7rem;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-  }
-
-  .pack-action {
-    align-items: center;
-    flex-direction: row !important;
-    font-size: 0.76rem;
-    font-weight: 750;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
   blockquote {
     margin: 0 0 1.5rem;
     padding-left: 1.5rem;
@@ -832,11 +785,6 @@ const schema = {
 
     .teaser-card {
       min-height: 360px;
-    }
-
-    .pack-teaser {
-      grid-template-columns: 1fr;
-      align-items: start;
     }
 
     .tools-grid {

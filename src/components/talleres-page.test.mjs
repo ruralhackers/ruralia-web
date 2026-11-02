@@ -15,7 +15,7 @@ test("provides Galician and Spanish route wrappers", async () => {
   assert.match(es, /locale="es"/);
 });
 
-test("landing exposes the conversion sections and three reservation links", async () => {
+test("landing exposes the conversion sections and workshop reservation links", async () => {
   const [page, data] = await Promise.all([
     read("components/TalleresOtonoPage.astro"),
     read("data/talleres-otono-2026.ts"),
@@ -35,7 +35,8 @@ test("landing exposes the conversion sections and three reservation links", asyn
   }
 
   assert.match(page, /workshop\.stripeUrl/);
-  assert.match(page, /campaign\.pack\.stripeUrl/);
+  assert.doesNotMatch(page, /campaign\.pack/);
+  assert.doesNotMatch(data, /350|Pack Out|Pack Oto/);
   assert.match(page, /valueAddedTaxIncluded:\s*false/);
   assert.match(page, /loading="lazy"/);
   assert.match(page, /srcset=/);

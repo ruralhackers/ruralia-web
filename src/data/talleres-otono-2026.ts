@@ -3,7 +3,6 @@ export type Locale = "gl" | "es";
 export const STRIPE_LINKS = {
   productivity: "https://buy.stripe.com/fZueVdgx54124ag0jVcAo04",
   web: "https://buy.stripe.com/cNibJ1dkT556ayE4AbcAo05",
-  pack: "https://buy.stripe.com/8x24gz94D7de7ms0jVcAo06",
 } as const;
 
 export interface Workshop {
@@ -47,7 +46,6 @@ interface Campaign {
     body: string;
     meta: string;
     cta: string;
-    packCta: string;
   };
   internalLinks: {
     heading: string;
@@ -67,17 +65,6 @@ interface Campaign {
   excludesHeading: string;
   excludes: string[];
   includesImageAlt: string;
-  pack: {
-    tag: string;
-    title: string;
-    body: string;
-    price: number;
-    priceLabel: string;
-    savingLabel: string;
-    cta: string;
-    stripeUrl: string;
-    closed?: boolean;
-  };
   testimonial: {
     tag: string;
     title: string;
@@ -107,7 +94,6 @@ interface Campaign {
     body: string;
     productivity: string;
     web: string;
-    pack: string;
   };
   contact: {
     title: string;
@@ -150,7 +136,6 @@ const gl: Campaign = {
     meta:
       "31 de outubro · Produtividade — 28 de novembro · Asesorías e xestorías — 199 € + IVA · 15 prazas por taller",
     cta: "Ver os talleres",
-    packCta: "Reservar Pack Outono",
   },
   context: {
     tag: "O punto de partida",
@@ -164,7 +149,7 @@ const gl: Campaign = {
   },
   workshopsHeading: "Dous días para resolver dous problemas reais",
   workshopsIntro:
-    "Escolle o problema que queres sacar da lista antes de rematar o ano, ou reserva os dous días co Pack Outono.",
+    "Escolle o problema que queres sacar da lista antes de rematar o ano.",
   workshops: [
     {
       id: "productivity",
@@ -263,18 +248,6 @@ const gl: Campaign = {
   ],
   includesImageAlt:
     "Resumo visual do que inclúe o prezo dos talleres Rural GPT",
-  pack: {
-    tag: "Pack Outono",
-    title: "Automatiza en outubro. IA con garantías en novembro.",
-    body:
-      "Reserva IA e Produtividade o 31 de outubro e IA para Asesorías e Xestorías o 28 de novembro.",
-    price: 350,
-    priceLabel: "350 € + IVA",
-    savingLabel: "Aforras 48 € fronte ás dúas reservas por separado",
-    cta: "Reservar Pack Outono",
-    stripeUrl: STRIPE_LINKS.pack,
-    closed: true,
-  },
   testimonial: {
     tag: "Un resultado real",
     title: "De media hora cada día a menos dun minuto.",
@@ -373,7 +346,6 @@ const gl: Campaign = {
       "Comida incluída · 15 prazas por taller · Anceu, Galicia · Prezos sen IVA",
     productivity: "31 de outubro — Produtividade — Prazas pechadas",
     web: "28 de novembro — Asesorías e xestorías — 199 € + IVA",
-    pack: "Os dous talleres — 350 € + IVA — Prazas pechadas",
   },
   contact: {
     title: "Tes dúbidas?",
@@ -419,7 +391,6 @@ const es: Campaign = {
     meta:
       "31 de octubre · Productividad — 28 de noviembre · Asesorías y gestorías — 199 € + IVA · 15 plazas por taller",
     cta: "Ver los talleres",
-    packCta: "Reservar Pack Otoño",
   },
   context: {
     tag: "El punto de partida",
@@ -433,7 +404,7 @@ const es: Campaign = {
   },
   workshopsHeading: "Dos días para resolver dos problemas reales",
   workshopsIntro:
-    "Elige el problema que quieres sacar de la lista antes de terminar el año, o reserva los dos días con el Pack Otoño.",
+    "Elige el problema que quieres sacar de la lista antes de terminar el año.",
   workshops: [
     {
       id: "productivity",
@@ -529,18 +500,6 @@ const es: Campaign = {
   ],
   includesImageAlt:
     "Resumen visual de lo que incluye el precio de los talleres Rural GPT",
-  pack: {
-    tag: "Pack Otoño",
-    title: "Automatiza en octubre. IA con garantías en noviembre.",
-    body:
-      "Reserva IA y Productividad el 31 de octubre e IA para Asesorías y Gestorías el 28 de noviembre.",
-    price: 350,
-    priceLabel: "350 € + IVA",
-    savingLabel: "Ahorras 48 € frente a las dos reservas por separado",
-    cta: "Reservar Pack Otoño",
-    stripeUrl: STRIPE_LINKS.pack,
-    closed: true,
-  },
   testimonial: {
     tag: "Un resultado real",
     title: "De media hora cada día a menos de un minuto.",
@@ -639,7 +598,6 @@ const es: Campaign = {
       "Comida incluida · 15 plazas por taller · Anceu, Galicia · Precios sin IVA",
     productivity: "31 de octubre — Productividad — Plazas cerradas",
     web: "28 de noviembre — Asesorías y gestorías — 199 € + IVA",
-    pack: "Los dos talleres — 350 € + IVA — Plazas cerradas",
   },
   contact: {
     title: "¿Tienes dudas?",
