@@ -24,6 +24,8 @@ export interface Workshop {
   capacity: number;
   stripeUrl: string;
   cta: string;
+  /** Reservas cerradas: el botón se muestra desactivado y no enlaza a Stripe. */
+  closed?: boolean;
 }
 
 interface Campaign {
@@ -35,6 +37,7 @@ interface Campaign {
   };
   navLabel: string;
   reserveLabel: string;
+  closedLabel: string;
   capacity: number;
   hero: {
     eyebrow: string;
@@ -73,6 +76,7 @@ interface Campaign {
     savingLabel: string;
     cta: string;
     stripeUrl: string;
+    closed?: boolean;
   };
   testimonial: {
     tag: string;
@@ -119,19 +123,21 @@ const sharedPrices = {
 const gl: Campaign = {
   locale: "gl",
   seo: {
-    title: "Talleres de IA en Galicia · Produtividade e Web | Rural GPT",
+    title: "Talleres de IA en Galicia · Produtividade e Asesorías | Rural GPT",
     description:
-      "Talleres presenciais de IA en Anceu: Produtividade o 31 de outubro e Web o 28 de novembro. 199 € + IVA, comida incluída, 15 prazas. Rural Hackers × Anceu Coliving.",
+      "Talleres presenciais de IA en Anceu: Produtividade o 31 de outubro e IA para asesorías e xestorías o 28 de novembro. 199 € + IVA, comida incluída, 15 prazas. Rural Hackers × Anceu Coliving.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
       "automatización IA",
-      "crear web con IA",
+      "IA para asesorías e xestorías",
+      "IA RGPD",
       "Anceu Coliving",
     ],
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
+  closedLabel: "Prazas pechadas",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Outono 2026",
@@ -142,7 +148,7 @@ const gl: Campaign = {
     body:
       "IA aplicada para profesionais non técnicos. Sen teoría futurista. Sen un curso en liña de 40 horas. Un día intensivo, grupo reducido e comida incluída no corazón de Galicia.",
     meta:
-      "31 de outubro · Produtividade — 28 de novembro · Web — 199 € + IVA · 15 prazas por taller",
+      "31 de outubro · Produtividade — 28 de novembro · Asesorías e xestorías — 199 € + IVA · 15 prazas por taller",
     cta: "Ver os talleres",
     packCta: "Reservar Pack Outono",
   },
@@ -191,37 +197,39 @@ const gl: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Produtividade",
+      closed: true,
     },
     {
       id: "web",
-      title: "Web e Produto Dixital",
-      shortTitle: "Web",
+      title: "IA para Asesorías e Xestorías",
+      shortTitle: "Asesorías",
       dateISO: "2026-11-28",
       dateLabel: "28 de novembro de 2026 · Anceu Coliving",
       dateShort: "28 NOV",
       eyebrow: "Taller 02",
-      hook: "Entras cunha idea. Saes coa túa web en produción.",
+      hook:
+        "Entras con prazos, papeis e tarefas repetitivas. Saes coa IA traballando para o teu despacho, cumprindo o RGPD.",
       description:
-        "Levas meses con «a web» na lista de pendentes? Este sprint serve para crear, publicar e despregar unha web real nun só día, sen saber programar e sen depender de ninguén.",
+        "As asesorías e xestorías traballan con datos persoais e fiscais dos seus clientes e non poden usar calquera ferramenta. Nesta xornada aprenderás a integrar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos de IA aloxados en Europa, para mellorar os teus procesos, evitar os despistes de sempre (prazos, papeis esquecidos, tarefas repetitivas) e deixar de perder tempo en traballo que non achega valor.",
       audience: [
-        "Persoas emprendedoras e freelance que necesitan presenza en liña xa",
-        "Negocios locais que queren unha web funcional sen investir miles de euros",
-        "Creativos, consultoras e profesionais que queren validar unha idea rápido",
-        "Persoas que queren entender o proceso completo, da idea á URL pública",
+        "Asesorías fiscais, laborais e contables",
+        "Xestorías administrativas e despachos profesionais",
+        "Equipos que xestionan documentación e datos persoais dos seus clientes",
+        "Profesionais que queren usar a IA sen poñer en risco a confidencialidade",
       ],
       topics: [
-        "Deseño e creación da web con Lovable usando linguaxe natural",
-        "Control de versións con GitHub, sen medo e paso a paso",
-        "Despregamento en produción con Netlify e URL real",
-        "Cambios, melloras e publicación en tempo real",
-        "Boas prácticas para seguir evolucionando a web despois do taller",
+        "Que esixen o RGPD e a LOPDGDD cando usas IA con datos de clientes",
+        "Como escoller modelos de IA aloxados na Unión Europea e que revisar antes de usalos",
+        "Análise dos procesos do despacho: que automatizar e que debe seguir en mans humanas",
+        "Control de prazos, lembretes e documentación pendente para evitar esquecementos",
+        "Automatización de tarefas repetitivas para dedicar o tempo ao que achega valor",
       ],
       result:
-        "Sairás coa túa web despregada, acceso ao repositorio e os coñecementos necesarios para seguir modificándoa pola túa conta.",
+        "Sairás con criterio para usar a IA na túa asesoría respectando a normativa de protección de datos, con procesos concretos identificados para mellorar e unha folla de ruta para aplicalos no teu despacho ao día seguinte.",
       ...sharedPrices,
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
-      cta: "Reservar Web",
+      cta: "Reservar Asesorías",
     },
   ],
   includesHeading: "Que inclúe",
@@ -257,14 +265,15 @@ const gl: Campaign = {
     "Resumo visual do que inclúe o prezo dos talleres Rural GPT",
   pack: {
     tag: "Pack Outono",
-    title: "Automatiza en outubro. Publica en novembro.",
+    title: "Automatiza en outubro. IA con garantías en novembro.",
     body:
-      "Reserva IA e Produtividade o 31 de outubro e Web e Produto Dixital o 28 de novembro.",
+      "Reserva IA e Produtividade o 31 de outubro e IA para Asesorías e Xestorías o 28 de novembro.",
     price: 350,
     priceLabel: "350 € + IVA",
     savingLabel: "Aforras 48 € fronte ás dúas reservas por separado",
     cta: "Reservar Pack Outono",
     stripeUrl: STRIPE_LINKS.pack,
+    closed: true,
   },
   testimonial: {
     tag: "Un resultado real",
@@ -321,12 +330,12 @@ const gl: Campaign = {
     {
       question: "Necesito saber programar?",
       answer:
-        "Non. O enfoque é práctico e accesible para perfís non técnicos. No taller de web explicamos GitHub e Netlify paso a paso.",
+        "Non. O enfoque é práctico e accesible para perfís non técnicos. No taller para asesorías e xestorías traballamos sobre os procesos reais do teu despacho, sen necesidade de coñecementos técnicos.",
     },
     {
       question: "Que levo ao rematar o día?",
       answer:
-        "En Produtividade, dúas ou tres automatizacións configuradas e criterio para seguir. En Web, o teu sitio despregado cunha URL pública e acceso ao repositorio.",
+        "En Produtividade, dúas ou tres automatizacións configuradas e criterio para seguir. En Asesorías e Xestorías, criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho.",
     },
     {
       question: "Inclúe aloxamento?",
@@ -362,9 +371,9 @@ const gl: Campaign = {
     title: "Un día. Un problema. Unha solución real.",
     body:
       "Comida incluída · 15 prazas por taller · Anceu, Galicia · Prezos sen IVA",
-    productivity: "31 de outubro — Produtividade — 199 € + IVA",
-    web: "28 de novembro — Web — 199 € + IVA",
-    pack: "Os dous talleres — 350 € + IVA",
+    productivity: "31 de outubro — Produtividade — Prazas pechadas",
+    web: "28 de novembro — Asesorías e xestorías — 199 € + IVA",
+    pack: "Os dous talleres — 350 € + IVA — Prazas pechadas",
   },
   contact: {
     title: "Tes dúbidas?",
@@ -383,19 +392,21 @@ const gl: Campaign = {
 const es: Campaign = {
   locale: "es",
   seo: {
-    title: "Talleres de IA en Galicia · Productividad y Web | Rural GPT",
+    title: "Talleres de IA en Galicia · Productividad y Asesorías | Rural GPT",
     description:
-      "Talleres presenciales de IA en Anceu: Productividad el 31 de octubre y Web el 28 de noviembre. 199 € + IVA, comida incluida, 15 plazas. Rural Hackers × Anceu Coliving.",
+      "Talleres presenciales de IA en Anceu: Productividad el 31 de octubre e IA para asesorías y gestorías el 28 de noviembre. 199 € + IVA, comida incluida, 15 plazas. Rural Hackers × Anceu Coliving.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
       "automatización IA",
-      "crear web con IA",
+      "IA para asesorías y gestorías",
+      "IA RGPD",
       "Anceu Coliving",
     ],
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
+  closedLabel: "Plazas cerradas",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Otoño 2026",
@@ -406,7 +417,7 @@ const es: Campaign = {
     body:
       "IA aplicada para profesionales no técnicos. Sin teoría futurista. Sin un curso online de 40 horas. Un día intensivo, grupo reducido y comida incluida en el corazón de Galicia.",
     meta:
-      "31 de octubre · Productividad — 28 de noviembre · Web — 199 € + IVA · 15 plazas por taller",
+      "31 de octubre · Productividad — 28 de noviembre · Asesorías y gestorías — 199 € + IVA · 15 plazas por taller",
     cta: "Ver los talleres",
     packCta: "Reservar Pack Otoño",
   },
@@ -455,37 +466,39 @@ const es: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Productividad",
+      closed: true,
     },
     {
       id: "web",
-      title: "Web y Producto Digital",
-      shortTitle: "Web",
+      title: "IA para Asesorías y Gestorías",
+      shortTitle: "Asesorías",
       dateISO: "2026-11-28",
       dateLabel: "28 de noviembre de 2026 · Anceu Coliving",
       dateShort: "28 NOV",
       eyebrow: "Taller 02",
-      hook: "Entras con una idea. Sales con tu web en producción.",
+      hook:
+        "Entras con plazos, papeles y tareas repetitivas. Sales con la IA trabajando para tu despacho, cumpliendo el RGPD.",
       description:
-        "¿Llevas meses con «la web» en la lista de pendientes? Este sprint sirve para crear, publicar y desplegar una web real en un solo día, sin saber programar y sin depender de nadie.",
+        "Las asesorías y gestorías trabajan con datos personales y fiscales de sus clientes y no pueden usar cualquier herramienta. En esta jornada aprenderás a integrar la IA en el día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos de IA alojados en Europa, para mejorar tus procesos, evitar los despistes de siempre (plazos, papeles olvidados, tareas repetitivas) y dejar de perder tiempo en trabajo que no aporta valor.",
       audience: [
-        "Personas emprendedoras y freelance que necesitan presencia online ya",
-        "Negocios locales que quieren una web funcional sin invertir miles de euros",
-        "Creativos, consultoras y profesionales que quieren validar una idea rápido",
-        "Personas que quieren entender el proceso completo, de la idea a la URL pública",
+        "Asesorías fiscales, laborales y contables",
+        "Gestorías administrativas y despachos profesionales",
+        "Equipos que gestionan documentación y datos personales de sus clientes",
+        "Profesionales que quieren usar la IA sin poner en riesgo la confidencialidad",
       ],
       topics: [
-        "Diseño y creación de la web con Lovable usando lenguaje natural",
-        "Control de versiones con GitHub, sin miedo y paso a paso",
-        "Despliegue en producción con Netlify y URL real",
-        "Cambios, mejoras y publicación en tiempo real",
-        "Buenas prácticas para seguir evolucionando la web después del taller",
+        "Qué exigen el RGPD y la LOPDGDD cuando usas IA con datos de clientes",
+        "Cómo elegir modelos de IA alojados en la Unión Europea y qué revisar antes de usarlos",
+        "Análisis de los procesos del despacho: qué automatizar y qué debe seguir en manos humanas",
+        "Control de plazos, recordatorios y documentación pendiente para evitar olvidos",
+        "Automatización de tareas repetitivas para dedicar el tiempo a lo que aporta valor",
       ],
       result:
-        "Saldrás con tu web desplegada, acceso al repositorio y los conocimientos necesarios para seguir modificándola por tu cuenta.",
+        "Saldrás con criterio para usar la IA en tu asesoría respetando la normativa de protección de datos, con procesos concretos identificados para mejorar y una hoja de ruta para aplicarlos en tu despacho al día siguiente.",
       ...sharedPrices,
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
-      cta: "Reservar Web",
+      cta: "Reservar Asesorías",
     },
   ],
   includesHeading: "Qué incluye",
@@ -518,14 +531,15 @@ const es: Campaign = {
     "Resumen visual de lo que incluye el precio de los talleres Rural GPT",
   pack: {
     tag: "Pack Otoño",
-    title: "Automatiza en octubre. Publica en noviembre.",
+    title: "Automatiza en octubre. IA con garantías en noviembre.",
     body:
-      "Reserva IA y Productividad el 31 de octubre y Web y Producto Digital el 28 de noviembre.",
+      "Reserva IA y Productividad el 31 de octubre e IA para Asesorías y Gestorías el 28 de noviembre.",
     price: 350,
     priceLabel: "350 € + IVA",
     savingLabel: "Ahorras 48 € frente a las dos reservas por separado",
     cta: "Reservar Pack Otoño",
     stripeUrl: STRIPE_LINKS.pack,
+    closed: true,
   },
   testimonial: {
     tag: "Un resultado real",
@@ -582,12 +596,12 @@ const es: Campaign = {
     {
       question: "¿Necesito saber programar?",
       answer:
-        "No. El enfoque es práctico y accesible para perfiles no técnicos. En el taller de web explicamos GitHub y Netlify paso a paso.",
+        "No. El enfoque es práctico y accesible para perfiles no técnicos. En el taller para asesorías y gestorías trabajamos sobre los procesos reales de tu despacho, sin necesidad de conocimientos técnicos.",
     },
     {
       question: "¿Qué me llevo al terminar el día?",
       answer:
-        "En Productividad, dos o tres automatizaciones configuradas y criterio para seguir. En Web, tu sitio desplegado con una URL pública y acceso al repositorio.",
+        "En Productividad, dos o tres automatizaciones configuradas y criterio para seguir. En Asesorías y Gestorías, criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho.",
     },
     {
       question: "¿Incluye alojamiento?",
@@ -623,9 +637,9 @@ const es: Campaign = {
     title: "Un día. Un problema. Una solución real.",
     body:
       "Comida incluida · 15 plazas por taller · Anceu, Galicia · Precios sin IVA",
-    productivity: "31 de octubre — Productividad — 199 € + IVA",
-    web: "28 de noviembre — Web — 199 € + IVA",
-    pack: "Los dos talleres — 350 € + IVA",
+    productivity: "31 de octubre — Productividad — Plazas cerradas",
+    web: "28 de noviembre — Asesorías y gestorías — 199 € + IVA",
+    pack: "Los dos talleres — 350 € + IVA — Plazas cerradas",
   },
   contact: {
     title: "¿Tienes dudas?",

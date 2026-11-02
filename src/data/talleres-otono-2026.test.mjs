@@ -49,3 +49,13 @@ test("lists all three team members in both locales", () => {
     );
   }
 });
+
+test("productivity workshop and pack are closed; asesorías stays open", () => {
+  for (const campaign of Object.values(talleresOtono2026)) {
+    const byId = Object.fromEntries(campaign.workshops.map((w) => [w.id, w]));
+    assert.equal(byId.productivity.closed, true);
+    assert.notEqual(byId.web.closed, true);
+    assert.equal(campaign.pack.closed, true);
+    assert.ok(campaign.closedLabel.length > 0);
+  }
+});

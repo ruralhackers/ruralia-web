@@ -8,6 +8,8 @@ interface Props {
   href: string;
   cta: string;
   featured?: boolean;
+  closed?: boolean;
+  closedLabel?: string;
 }
 
 const {
@@ -19,6 +21,8 @@ const {
   href,
   cta,
   featured = false,
+  closed = false,
+  closedLabel = "Prazas pechadas · Plazas cerradas",
 } = Astro.props;
 ---
 
@@ -31,7 +35,13 @@ const {
     <strong class="price">{priceLabel}</strong>
     <span class="tax">{taxNote}</span>
   </div>
-  <a class="card-cta" href={href} rel="noopener">{cta}<span aria-hidden="true">↗</span></a>
+  {
+    closed ? (
+      <span class="card-cta card-cta--closed" role="link" aria-disabled="true">{closedLabel}</span>
+    ) : (
+      <a class="card-cta" href={href} rel="noopener">{cta}<span aria-hidden="true">↗</span></a>
+    )
+  }
 </article>
 
 <style>
@@ -134,6 +144,18 @@ const {
   .card-cta:hover {
     background: var(--editorial-ink, #0b0d0c);
     color: #fff;
+  }
+
+  .card-cta--closed {
+    border-style: dashed;
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .card-cta--closed:hover,
+  .featured .card-cta--closed:hover {
+    background: transparent;
+    color: inherit;
   }
 
   .featured .card-cta:hover {

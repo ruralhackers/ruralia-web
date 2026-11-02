@@ -141,4 +141,6 @@ Se es freelance e facturas máis de 1.000 euros ao mes, eses 55 euros amortízan
 
 Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): entender as fortalezas de cada ferramenta, configurar o teu contorno de traballo coas tres, e construír un sistema onde cada tarefa vai á IA que mellor a resolve.
 
+As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+
 [Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)

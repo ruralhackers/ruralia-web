@@ -100,4 +100,6 @@ O que fixemos aquí con facturas podes facelo ti cos documentos do teu negocio: 
 
 Non necesitas saber programar. Necesitas saber que pregunta queres responder.
 
+As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+
 [Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)

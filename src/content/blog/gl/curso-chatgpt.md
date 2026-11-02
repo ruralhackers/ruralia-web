@@ -152,4 +152,6 @@ Tes agora unha base sólida para usar ChatGPT como un profesional. Pero hai unha
 
 Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): prompting avanzado co teu propio traballo e ferramentas funcionando nun só día. 15 prazas, comida incluída.
 
+As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+
 [Ver programa e reservar](/talleres-otono-2026/) · [Para quen é](/para-quen/) · [Preguntas frecuentes](/faq/)

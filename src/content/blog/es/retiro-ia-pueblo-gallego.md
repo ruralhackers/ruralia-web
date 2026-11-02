@@ -53,6 +53,6 @@ Para gente que se busca la vida con tecnología: freelancers, webmasters, indie 
 
 No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
 
-La primera edición de la Residencia IA (junio 2026) agotó las 12 plazas. Ahora ofrecemos dos talleres sprint de un día: Productividad (31 oct) y Web (28 nov).
+La primera edición de la Residencia IA (junio 2026) agotó las 12 plazas. Este otoño hemos organizado dos talleres sprint de un día: Productividad (31 oct, plazas cerradas) e IA para asesorías y gestorías (28 nov), que sigue con reservas abiertas.
 
 [Ver los talleres de otoño](/es/talleres-otono-2026/) · [Consulta la edición anterior](/es/residencia-ia-galicia/)

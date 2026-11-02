@@ -56,7 +56,7 @@ No genera aplicaciones completas. Genera piezas que puedes ensamblar. Piensa en 
 
 Si es tu primera vez, empieza por **Bolt**. Es la curva de aprendizaje más suave y los resultados son inmediatos. Cuando quieras más control, pasa a **Cursor**. Y usa **v0** como complemento para componentes puntuales.
 
-Si quieres aprender las tres en profundidad con alguien guiándote, el [taller Web de Rural GPT](/es/talleres-otono-2026/) (28 de noviembre) está dedicado exactamente a esto.
+Y si trabajas en una asesoría o gestoría y lo que buscas es aplicar la IA en tu despacho con garantías de protección de datos, el [taller IA para Asesorías y Gestorías de Rural GPT](/es/talleres-otono-2026/) (28 de noviembre) está pensado para ti.
 
 ## Tutorial: tu primera app con Cursor AI
 
@@ -363,7 +363,7 @@ Esto es normal. La ventaja de construir con IA es que iterar es rápido y barato
 
 Si has llegado hasta aquí y has probado las herramientas, probablemente has experimentado dos cosas: la emoción de ver tu idea tomar forma y la frustración de no saber cómo resolver ciertos problemas.
 
-El **taller Web y Producto Digital** de Rural GPT (28 de noviembre, Anceu) está dedicado íntegramente a construir con IA: Cursor, Bolt y v0, las tres herramientas que has visto en este artículo. Construcción guiada con soporte en tiempo real, web desplegada al final del día.
+Los talleres presenciales de Rural GPT en Anceu sirven para dar ese paso con alguien al lado. El 28 de noviembre celebramos el taller **IA para Asesorías y Gestorías**: una jornada para integrar la IA en el día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos de IA alojados en Europa. No es un taller de desarrollo de apps, pero si tu despacho quiere mejorar sus procesos, evitar los despistes de siempre y dejar de perder tiempo en tareas que no aportan valor, es tu sitio.
 
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
 

@@ -48,6 +48,6 @@ test("landing exposes the conversion sections and three reservation links", asyn
   assert.match(page, /ogImageWidth=\{1600\}/);
   assert.doesNotMatch(page, /"@type":\s*"FAQPage"/);
   assert.match(data, /seoSubtitle:\s*"Talleres presenciais de IA en Galicia · Outono 2026"/);
-  assert.match(data, /title:\s*"Talleres de IA en Galicia · Produtividade e Web \| Rural GPT"/);
-  assert.match(data, /title:\s*"Talleres de IA en Galicia · Productividad y Web \| Rural GPT"/);
+  assert.match(data, /title:\s*"Talleres de IA en Galicia · Produtividade e Asesorías \| Rural GPT"/);
+  assert.match(data, /title:\s*"Talleres de IA en Galicia · Productividad y Asesorías \| Rural GPT"/);
 });

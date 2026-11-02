@@ -99,4 +99,6 @@ Lo que hemos hecho aquí con facturas lo puedes hacer tú con los documentos de 
 
 No necesitas saber programar. Necesitas saber qué pregunta quieres responder.
 
+Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct) y Web (28 nov), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct, plazas cerradas) e IA para asesorías y gestorías (28 nov, reservas abiertas), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
@@ -341,6 +341,8 @@ Estamos preparando una [comparativa detallada de ChatGPT, Gemini y Claude](/es/b
 Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesionales. Pero hay una diferencia enorme entre saber y hacer.
 
 El taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) está pensado para eso: prompting avanzado, automatizaciones con [Make y tus herramientas reales](/es/blog/automatizaciones-ia/), y un [stack personalizado](/es/blog/herramientas-ia-freelancers/) funcionando en una sola jornada. 15 plazas, comida incluida.
+
+Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
 
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Para quién es](/es/para-quien/) · [Preguntas frecuentes](/es/faq/)
 
