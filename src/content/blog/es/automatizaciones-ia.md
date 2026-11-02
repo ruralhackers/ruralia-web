@@ -195,6 +195,8 @@ Pero hay una diferencia entre montar una automatización siguiendo un tutorial y
 
 En el [taller IA y Productividad de Rural GPT](/es/talleres-otono-2026/) (31 de octubre, Anceu) dedicamos la jornada a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/es/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/es/blog/herramientas-ia-freelancers/). Un día, comida incluida, 15 plazas.
 
+Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
 
 Las automatizaciones con IA no son el futuro. Son el presente. La única pregunta es cuánto tiempo más vas a seguir haciendo a mano lo que una máquina puede hacer por ti en segundos.

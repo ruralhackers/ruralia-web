@@ -139,4 +139,6 @@ En 15 minutos vas ter unha idea clara de se a IA de Google encaixa no teu fluxo 
 
 No taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu) traballamos con Gemini, ChatGPT e Claude. Configurarás asistentes personalizados (Gems, GPTs, Claude Projects) e ferramentas como NotebookLM nun só día.
 
+As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+
 [Ver programa e reservar](/talleres-otono-2026/) · [Descubre se é para ti](/para-quen/)

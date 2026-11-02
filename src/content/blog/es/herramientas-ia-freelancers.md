@@ -184,4 +184,6 @@ Lo que marca la diferencia es:
 
 Esas tres cosas son exactamente lo que trabajamos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): tu stack de herramientas de IA, prompts con tu propio trabajo y automatizaciones funcionando en una sola jornada. 15 plazas, comida incluida.
 
+Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

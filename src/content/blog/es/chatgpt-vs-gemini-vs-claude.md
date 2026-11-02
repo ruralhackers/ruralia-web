@@ -217,4 +217,6 @@ Una cosa es leer un artículo comparativo. Otra muy diferente es dedicar una jor
 
 Eso es lo que hacemos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
 
+Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+
 [Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)

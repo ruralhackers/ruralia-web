@@ -147,6 +147,8 @@ En 30 minutos tes a túa primeira automatización con IA funcionando.
 
 No [taller IA e Produtividade da Rural GPT](/talleres-otono-2026/) (31 de outubro, Anceu) dedicamos a xornada a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desenvolvemento con IA](/blog/crear-app-con-ia/) e creación do teu [stack personalizado](/blog/ferramentas-ia-freelancers/). Un día, comida incluída, 15 prazas.
 
+As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+
 [Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)
 
 As automatizacións con IA non son o futuro. Son o presente. A única pregunta é canto tempo máis vas seguir facendo a man o que unha máquina pode facer por ti en segundos.
