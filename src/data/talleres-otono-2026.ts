@@ -3,7 +3,6 @@ export type Locale = "gl" | "es";
 export const STRIPE_LINKS = {
   productivity: "https://buy.stripe.com/fZueVdgx54124ag0jVcAo04",
   web: "https://buy.stripe.com/cNibJ1dkT556ayE4AbcAo05",
-  pack: "https://buy.stripe.com/8x24gz94D7de7ms0jVcAo06",
 } as const;
 
 export interface Workshop {
@@ -26,7 +25,24 @@ export interface Workshop {
   cta: string;
   /** Reservas cerradas: el botón se muestra desactivado y no enlaza a Stripe. */
   closed?: boolean;
+  /** Slug de la landing individual (GL: /talleres/<slug>/, ES: /es/talleres/<slug>/). */
+  slug: string;
+  /** Imagen base en /images/talleres-otono-2026/ (OG y JSON-LD). */
+  image: string;
+  seoDescription: string;
+  keywords: string[];
+  /** FAQs propias de la landing; se completan con las FAQs compartidas (sharedFaqKeys). */
+  faq: Array<{ question: string; answer: string }>;
 }
+
+export interface FaqItem {
+  key?: string;
+  question: string;
+  answer: string;
+}
+
+/** FAQs generales que también se muestran en cada landing de taller. */
+export const sharedFaqKeys = ["alojamiento", "comida", "empresa", "deducible"];
 
 interface Campaign {
   locale: Locale;
@@ -38,6 +54,8 @@ interface Campaign {
   navLabel: string;
   reserveLabel: string;
   closedLabel: string;
+  moreInfoLabel: string;
+  closedNotice: string;
   capacity: number;
   hero: {
     eyebrow: string;
@@ -47,7 +65,6 @@ interface Campaign {
     body: string;
     meta: string;
     cta: string;
-    packCta: string;
   };
   internalLinks: {
     heading: string;
@@ -67,17 +84,6 @@ interface Campaign {
   excludesHeading: string;
   excludes: string[];
   includesImageAlt: string;
-  pack: {
-    tag: string;
-    title: string;
-    body: string;
-    price: number;
-    priceLabel: string;
-    savingLabel: string;
-    cta: string;
-    stripeUrl: string;
-    closed?: boolean;
-  };
   testimonial: {
     tag: string;
     title: string;
@@ -101,13 +107,12 @@ interface Campaign {
   teamImageAlt: string;
   team: Array<{ name: string; role: string; bio: string }>;
   faqHeading: string;
-  faq: Array<{ question: string; answer: string }>;
+  faq: FaqItem[];
   finalCta: {
     title: string;
     body: string;
     productivity: string;
     web: string;
-    pack: string;
   };
   contact: {
     title: string;
@@ -138,6 +143,8 @@ const gl: Campaign = {
   navLabel: "Talleres",
   reserveLabel: "Reservar",
   closedLabel: "Prazas pechadas",
+  moreInfoLabel: "Ver taller",
+  closedNotice: "As prazas deste taller están pechadas.",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Outono 2026",
@@ -150,7 +157,6 @@ const gl: Campaign = {
     meta:
       "31 de outubro · Produtividade — 28 de novembro · Asesorías e xestorías — 199 € + IVA · 15 prazas por taller",
     cta: "Ver os talleres",
-    packCta: "Reservar Pack Outono",
   },
   context: {
     tag: "O punto de partida",
@@ -164,7 +170,7 @@ const gl: Campaign = {
   },
   workshopsHeading: "Dous días para resolver dous problemas reais",
   workshopsIntro:
-    "Escolle o problema que queres sacar da lista antes de rematar o ano, ou reserva os dous días co Pack Outono.",
+    "Escolle o problema que queres sacar da lista antes de rematar o ano.",
   workshops: [
     {
       id: "productivity",
@@ -198,6 +204,26 @@ const gl: Campaign = {
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Produtividade",
       closed: true,
+      slug: "ia-produtividade",
+      image: "tareas-mierderas",
+      seoDescription:
+        "Taller presencial de IA e Produtividade o 31 de outubro en Anceu Coliving (Ponte Caldelas). Prazas pechadas.",
+      keywords: ["taller IA Galicia", "automatización IA", "IA e produtividade", "Anceu Coliving"],
+      faq: [
+        {
+          question: "Quedan prazas?",
+          answer:
+            "Non. As prazas deste taller están pechadas. A reserva aberta agora é a do taller IA para Asesorías e Xestorías do 28 de novembro.",
+        },
+        {
+          question: "Necesito saber programar?",
+          answer: "Non. O enfoque é práctico e accesible para perfís non técnicos.",
+        },
+        {
+          question: "Que levo ao rematar o día?",
+          answer: "Dúas ou tres automatizacións configuradas e criterio para seguir.",
+        },
+      ],
     },
     {
       id: "web",
@@ -230,6 +256,23 @@ const gl: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
       cta: "Reservar Asesorías",
+      slug: "ia-asesorias-xestorias",
+      image: "equipo",
+      seoDescription:
+        "Taller presencial para asesorías e xestorías o 28 de novembro en Anceu: usa a IA cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa. 199 € + IVA, comida incluída, 15 prazas.",
+      keywords: ["IA para asesorías", "IA para xestorías", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
+      faq: [
+        {
+          question: "Necesito coñecementos técnicos?",
+          answer:
+            "Non. Traballamos sobre os procesos reais do teu despacho, sen necesidade de coñecementos técnicos.",
+        },
+        {
+          question: "Que levo ao rematar o día?",
+          answer:
+            "Criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho.",
+        },
+      ],
     },
   ],
   includesHeading: "Que inclúe",
@@ -263,18 +306,6 @@ const gl: Campaign = {
   ],
   includesImageAlt:
     "Resumo visual do que inclúe o prezo dos talleres Rural GPT",
-  pack: {
-    tag: "Pack Outono",
-    title: "Automatiza en outubro. IA con garantías en novembro.",
-    body:
-      "Reserva IA e Produtividade o 31 de outubro e IA para Asesorías e Xestorías o 28 de novembro.",
-    price: 350,
-    priceLabel: "350 € + IVA",
-    savingLabel: "Aforras 48 € fronte ás dúas reservas por separado",
-    cta: "Reservar Pack Outono",
-    stripeUrl: STRIPE_LINKS.pack,
-    closed: true,
-  },
   testimonial: {
     tag: "Un resultado real",
     title: "De media hora cada día a menos dun minuto.",
@@ -338,15 +369,18 @@ const gl: Campaign = {
         "En Produtividade, dúas ou tres automatizacións configuradas e criterio para seguir. En Asesorías e Xestorías, criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho.",
     },
     {
+      key: "alojamiento",
       question: "Inclúe aloxamento?",
       answer:
         "Non. É un formato sprint dunha xornada. Se vés de fóra, escríbenos e recomendarémosche opcións na zona.",
     },
     {
+      key: "comida",
       question: "Inclúe comida?",
       answer: "Si. O prezo inclúe o menú do día do chef Granero.",
     },
     {
+      key: "empresa",
       question: "Podo ir con compañeiros da miña empresa?",
       answer:
         "Si. Para reservas de tres ou máis prazas, escríbenos e xestionamos o bloque con facturación á empresa.",
@@ -362,6 +396,7 @@ const gl: Campaign = {
         "Se quedan prazas no outro taller, si. Escríbenos polo menos sete días antes.",
     },
     {
+      key: "deducible",
       question: "É deducible para autónomos e empresas?",
       answer:
         "Si. É formación profesional e emitimos factura. Consulta coa túa asesoría como aplicala no teu caso.",
@@ -373,7 +408,6 @@ const gl: Campaign = {
       "Comida incluída · 15 prazas por taller · Anceu, Galicia · Prezos sen IVA",
     productivity: "31 de outubro — Produtividade — Prazas pechadas",
     web: "28 de novembro — Asesorías e xestorías — 199 € + IVA",
-    pack: "Os dous talleres — 350 € + IVA — Prazas pechadas",
   },
   contact: {
     title: "Tes dúbidas?",
@@ -407,6 +441,8 @@ const es: Campaign = {
   navLabel: "Talleres",
   reserveLabel: "Reservar",
   closedLabel: "Plazas cerradas",
+  moreInfoLabel: "Ver taller",
+  closedNotice: "Las plazas de este taller están cerradas.",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Otoño 2026",
@@ -419,7 +455,6 @@ const es: Campaign = {
     meta:
       "31 de octubre · Productividad — 28 de noviembre · Asesorías y gestorías — 199 € + IVA · 15 plazas por taller",
     cta: "Ver los talleres",
-    packCta: "Reservar Pack Otoño",
   },
   context: {
     tag: "El punto de partida",
@@ -433,7 +468,7 @@ const es: Campaign = {
   },
   workshopsHeading: "Dos días para resolver dos problemas reales",
   workshopsIntro:
-    "Elige el problema que quieres sacar de la lista antes de terminar el año, o reserva los dos días con el Pack Otoño.",
+    "Elige el problema que quieres sacar de la lista antes de terminar el año.",
   workshops: [
     {
       id: "productivity",
@@ -467,6 +502,26 @@ const es: Campaign = {
       stripeUrl: STRIPE_LINKS.productivity,
       cta: "Reservar Productividad",
       closed: true,
+      slug: "ia-productividad",
+      image: "tareas-mierderas",
+      seoDescription:
+        "Taller presencial de IA y Productividad el 31 de octubre en Anceu Coliving (Ponte Caldelas). Plazas cerradas.",
+      keywords: ["taller IA Galicia", "automatización IA", "IA y productividad", "Anceu Coliving"],
+      faq: [
+        {
+          question: "¿Quedan plazas?",
+          answer:
+            "No. Las plazas de este taller están cerradas. La reserva abierta ahora es la del taller IA para Asesorías y Gestorías del 28 de noviembre.",
+        },
+        {
+          question: "¿Necesito saber programar?",
+          answer: "No. El enfoque es práctico y accesible para perfiles no técnicos.",
+        },
+        {
+          question: "¿Qué me llevo al terminar el día?",
+          answer: "Dos o tres automatizaciones configuradas y criterio para seguir.",
+        },
+      ],
     },
     {
       id: "web",
@@ -499,6 +554,23 @@ const es: Campaign = {
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
       cta: "Reservar Asesorías",
+      slug: "ia-asesorias-gestorias",
+      image: "equipo",
+      seoDescription:
+        "Taller presencial para asesorías y gestorías el 28 de noviembre en Anceu: usa la IA cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa. 199 € + IVA, comida incluida, 15 plazas.",
+      keywords: ["IA para asesorías", "IA para gestorías", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
+      faq: [
+        {
+          question: "¿Necesito conocimientos técnicos?",
+          answer:
+            "No. Trabajamos sobre los procesos reales de tu despacho, sin necesidad de conocimientos técnicos.",
+        },
+        {
+          question: "¿Qué me llevo al terminar el día?",
+          answer:
+            "Criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho.",
+        },
+      ],
     },
   ],
   includesHeading: "Qué incluye",
@@ -529,18 +601,6 @@ const es: Campaign = {
   ],
   includesImageAlt:
     "Resumen visual de lo que incluye el precio de los talleres Rural GPT",
-  pack: {
-    tag: "Pack Otoño",
-    title: "Automatiza en octubre. IA con garantías en noviembre.",
-    body:
-      "Reserva IA y Productividad el 31 de octubre e IA para Asesorías y Gestorías el 28 de noviembre.",
-    price: 350,
-    priceLabel: "350 € + IVA",
-    savingLabel: "Ahorras 48 € frente a las dos reservas por separado",
-    cta: "Reservar Pack Otoño",
-    stripeUrl: STRIPE_LINKS.pack,
-    closed: true,
-  },
   testimonial: {
     tag: "Un resultado real",
     title: "De media hora cada día a menos de un minuto.",
@@ -604,15 +664,18 @@ const es: Campaign = {
         "En Productividad, dos o tres automatizaciones configuradas y criterio para seguir. En Asesorías y Gestorías, criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho.",
     },
     {
+      key: "alojamiento",
       question: "¿Incluye alojamiento?",
       answer:
         "No. Es un formato sprint de una jornada. Si vienes de fuera, escríbenos y te recomendaremos opciones en la zona.",
     },
     {
+      key: "comida",
       question: "¿Incluye comida?",
       answer: "Sí. El precio incluye el menú del día del chef Granero.",
     },
     {
+      key: "empresa",
       question: "¿Puedo ir con compañeros de mi empresa?",
       answer:
         "Sí. Para reservas de tres o más plazas, escríbenos y gestionamos el bloque con facturación a la empresa.",
@@ -628,6 +691,7 @@ const es: Campaign = {
         "Si quedan plazas en el otro taller, sí. Escríbenos al menos siete días antes.",
     },
     {
+      key: "deducible",
       question: "¿Es deducible para autónomos y empresas?",
       answer:
         "Sí. Es formación profesional y emitimos factura. Consulta con tu asesoría cómo aplicarla en tu caso.",
@@ -639,7 +703,6 @@ const es: Campaign = {
       "Comida incluida · 15 plazas por taller · Anceu, Galicia · Precios sin IVA",
     productivity: "31 de octubre — Productividad — Plazas cerradas",
     web: "28 de noviembre — Asesorías y gestorías — 199 € + IVA",
-    pack: "Los dos talleres — 350 € + IVA — Plazas cerradas",
   },
   contact: {
     title: "¿Tienes dudas?",
@@ -659,4 +722,74 @@ export const talleresOtono2026: Record<Locale, Campaign> = { gl, es };
 
 export function getTalleresCampaign(locale: string | undefined): Campaign {
   return talleresOtono2026[locale === "es" ? "es" : "gl"];
+}
+
+/** Ruta de la landing individual de un taller. */
+export function getWorkshopPath(locale: Locale, workshop: Pick<Workshop, "slug">): string {
+  return locale === "es" ? `/es/talleres/${workshop.slug}/` : `/talleres/${workshop.slug}/`;
+}
+
+/** Ruta de la página general de talleres. */
+export function getTalleresPath(locale: Locale): string {
+  return locale === "es" ? "/es/talleres-otono-2026/" : "/talleres-otono-2026/";
+}
+
+/** FAQs de una landing: las propias del taller + las compartidas. */
+export function getWorkshopFaq(campaign: Campaign, workshop: Workshop): FaqItem[] {
+  const shared = campaign.faq.filter((item) => item.key && sharedFaqKeys.includes(item.key));
+  return [...workshop.faq, ...shared];
+}
+
+/** JSON-LD Event de un taller (compartido entre la página general y las landings). */
+export function buildWorkshopEvent(
+  workshop: Workshop,
+  locale: Locale,
+  pageUrl?: string,
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: `${workshop.title} · Rural GPT`,
+    description: workshop.description,
+    ...(pageUrl ? { url: pageUrl } : {}),
+    startDate: `${workshop.dateISO}T10:00:00+01:00`,
+    endDate: `${workshop.dateISO}T18:00:00+01:00`,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    maximumAttendeeCapacity: workshop.capacity,
+    inLanguage: locale,
+    image: `https://ruralgpt.gal/images/talleres-otono-2026/${workshop.image}.webp`,
+    location: {
+      "@type": "Place",
+      name: "Anceu Coliving",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Ponte Caldelas",
+        addressRegion: "Pontevedra",
+        addressCountry: "ES",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Rural GPT",
+      url: "https://ruralgpt.gal",
+    },
+    offers: {
+      "@type": "Offer",
+      url: workshop.closed
+        ? `https://ruralgpt.gal${getWorkshopPath(locale, workshop)}`
+        : workshop.stripeUrl,
+      price: workshop.price,
+      priceCurrency: "EUR",
+      availability: workshop.closed
+        ? "https://schema.org/SoldOut"
+        : "https://schema.org/InStock",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: workshop.price,
+        priceCurrency: "EUR",
+        valueAddedTaxIncluded: false,
+      },
+    },
+  };
 }

@@ -3,6 +3,9 @@ import assert from "node:assert/strict";
 
 import {
   STRIPE_LINKS,
+  buildWorkshopEvent,
+  getWorkshopFaq,
+  getWorkshopPath,
   talleresOtono2026,
 } from "./talleres-otono-2026.ts";
 
@@ -15,8 +18,7 @@ test("publishes both localized workshop campaigns", () => {
 test("uses the confirmed capacity and tax-exclusive prices everywhere", () => {
   for (const campaign of Object.values(talleresOtono2026)) {
     assert.equal(campaign.capacity, 15);
-    assert.equal(campaign.pack.price, 350);
-    assert.match(campaign.pack.priceLabel, /350 € \+ IVA/);
+    assert.equal("pack" in campaign, false);
 
     for (const workshop of campaign.workshops) {
       assert.equal(workshop.capacity, 15);
@@ -26,7 +28,7 @@ test("uses the confirmed capacity and tax-exclusive prices everywhere", () => {
   }
 });
 
-test("contains the three confirmed live Stripe payment links", () => {
+test("contains the confirmed live Stripe payment links (no pack)", () => {
   assert.equal(
     STRIPE_LINKS.productivity,
     "https://buy.stripe.com/fZueVdgx54124ag0jVcAo04",
@@ -35,10 +37,7 @@ test("contains the three confirmed live Stripe payment links", () => {
     STRIPE_LINKS.web,
     "https://buy.stripe.com/cNibJ1dkT556ayE4AbcAo05",
   );
-  assert.equal(
-    STRIPE_LINKS.pack,
-    "https://buy.stripe.com/8x24gz94D7de7ms0jVcAo06",
-  );
+  assert.deepEqual(Object.keys(STRIPE_LINKS).sort(), ["productivity", "web"]);
 });
 
 test("lists all three team members in both locales", () => {
@@ -50,12 +49,41 @@ test("lists all three team members in both locales", () => {
   }
 });
 
-test("productivity workshop and pack are closed; asesorías stays open", () => {
+test("productivity workshop is closed; asesorías stays open", () => {
   for (const campaign of Object.values(talleresOtono2026)) {
     const byId = Object.fromEntries(campaign.workshops.map((w) => [w.id, w]));
     assert.equal(byId.productivity.closed, true);
     assert.notEqual(byId.web.closed, true);
-    assert.equal(campaign.pack.closed, true);
     assert.ok(campaign.closedLabel.length > 0);
+  }
+});
+
+test("workshop landings have clean localized slugs, own FAQs and a single Event", () => {
+  const expected = {
+    gl: {
+      productivity: "/talleres/ia-produtividade/",
+      web: "/talleres/ia-asesorias-xestorias/",
+    },
+    es: {
+      productivity: "/es/talleres/ia-productividad/",
+      web: "/es/talleres/ia-asesorias-gestorias/",
+    },
+  };
+  for (const [locale, campaign] of Object.entries(talleresOtono2026)) {
+    for (const workshop of campaign.workshops) {
+      assert.equal(getWorkshopPath(locale, workshop), expected[locale][workshop.id]);
+      assert.ok(workshop.seoDescription.length > 50);
+      const faq = getWorkshopFaq(campaign, workshop);
+      assert.ok(faq.length >= workshop.faq.length + 4);
+      const event = buildWorkshopEvent(workshop, locale, "https://ruralgpt.gal/x/");
+      assert.equal(event["@type"], "Event");
+      assert.equal(event.url, "https://ruralgpt.gal/x/");
+      if (workshop.closed) {
+        assert.equal(event.offers.availability, "https://schema.org/SoldOut");
+        assert.doesNotMatch(event.offers.url, /stripe/);
+      } else {
+        assert.equal(event.offers.url, STRIPE_LINKS.web);
+      }
+    }
   }
 });

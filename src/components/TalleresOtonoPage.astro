@@ -1,6 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import {
+  buildWorkshopEvent,
+  getTalleresCampaign,
+  getWorkshopPath,
+  type Locale,
+} from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
 import SectionTag from "./ui/SectionTag.astro";
 import EditorialSplit from "./ui/EditorialSplit.astro";
@@ -18,12 +23,11 @@ const homeUrl = isGl ? "/" : "/es/";
 const canonicalPath = isGl
   ? "/talleres-otono-2026/"
   : "/es/talleres-otono-2026/";
-// CTA final: si el Pack está cerrado, apunta al primer taller con plazas abiertas.
+// CTA final: apunta al primer taller con plazas abiertas (o a la sección de reservas).
 const openWorkshop = campaign.workshops.find((workshop) => !workshop.closed);
-const finalCta =
-  campaign.pack.closed && openWorkshop
-    ? { href: openWorkshop.stripeUrl, label: openWorkshop.cta }
-    : { href: campaign.pack.stripeUrl, label: campaign.pack.cta };
+const finalCta = openWorkshop
+  ? { href: openWorkshop.stripeUrl, label: openWorkshop.cta, external: true }
+  : { href: "#reservas", label: isGl ? "Ver prezos" : "Ver precios", external: false };
 const imageSrcset = (name: string) =>
   [480, 800, 1200]
     .map(
@@ -33,53 +37,9 @@ const imageSrcset = (name: string) =>
     .join(", ");
 
 const schema = [
-  ...campaign.workshops.map((workshop) => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: `${workshop.title} · Rural GPT`,
-    description: workshop.description,
-    startDate: `${workshop.dateISO}T10:00:00+01:00`,
-    endDate: `${workshop.dateISO}T18:00:00+01:00`,
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    maximumAttendeeCapacity: workshop.capacity,
-    inLanguage: locale,
-    image: `https://ruralgpt.gal/images/talleres-otono-2026/${
-      workshop.id === "productivity" ? "tareas-mierderas" : "equipo"
-    }.webp`,
-    location: {
-      "@type": "Place",
-      name: "Anceu Coliving",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Ponte Caldelas",
-        addressRegion: "Pontevedra",
-        addressCountry: "ES",
-      },
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "Rural GPT",
-      url: "https://ruralgpt.gal",
-    },
-    offers: {
-      "@type": "Offer",
-      url: workshop.closed
-        ? `https://ruralgpt.gal${canonicalPath}`
-        : workshop.stripeUrl,
-      price: workshop.price,
-      priceCurrency: "EUR",
-      availability: workshop.closed
-        ? "https://schema.org/SoldOut"
-        : "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: workshop.price,
-        priceCurrency: "EUR",
-        valueAddedTaxIncluded: false,
-      },
-    },
-  })),
+  ...campaign.workshops.map((workshop) =>
+    buildWorkshopEvent(workshop, locale, `https://ruralgpt.gal${getWorkshopPath(locale, workshop)}`),
+  ),
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -132,11 +92,6 @@ const schema = [
               </a>
             ))
           }
-          <a href="#pack">
-            <span>{campaign.pack.tag}</span>
-            <strong>{campaign.pack.priceLabel}</strong>
-            <span aria-hidden="true">↓</span>
-          </a>
         </nav>
       </div>
     </section>
@@ -192,6 +147,9 @@ const schema = [
               <span>{isGl ? "Resultado" : "Resultado"}</span>
               <p>{workshop.result}</p>
             </aside>
+            <a class="workshop-more" href={getWorkshopPath(locale, workshop)}>
+              {campaign.moreInfoLabel}: {workshop.shortTitle}<span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
       ))
@@ -201,7 +159,7 @@ const schema = [
       <div class="ed-container">
         <SectionTag text={isGl ? "Reserva" : "Reserva"} />
         <h2 class="ed-heading">
-          {isGl ? "Escolle un día. Ou queda cos dous." : "Elige un día. O quédate con los dos."}
+          {isGl ? "Escolle o teu día." : "Elige tu día."}
         </h2>
         <p class="tax-warning">
           {isGl
@@ -226,20 +184,6 @@ const schema = [
               </PriceCard>
             ))
           }
-          <PriceCard
-            eyebrow={campaign.pack.tag}
-            title={campaign.pack.title}
-            priceLabel={campaign.pack.priceLabel}
-            taxNote={isGl ? "IVA non incluído" : "IVA no incluido"}
-            href={campaign.pack.stripeUrl}
-            cta={campaign.pack.cta}
-            closed={campaign.pack.closed}
-            closedLabel={campaign.closedLabel}
-            featured
-          >
-            <p>{campaign.pack.body}</p>
-            <p><strong>{campaign.pack.savingLabel}</strong></p>
-          </PriceCard>
         </div>
       </div>
     </section>
@@ -278,29 +222,6 @@ const schema = [
         loading="lazy"
       />
     </EditorialSplit>
-
-    <section id="pack" class="pack-section">
-      <div>
-        <SectionTag text={campaign.pack.tag} inverted />
-        <h2>{campaign.pack.title}</h2>
-        <p>{campaign.pack.body}</p>
-      </div>
-      <div class="pack-price">
-        <strong>{campaign.pack.priceLabel}</strong>
-        <span>{campaign.pack.savingLabel}</span>
-        {
-          campaign.pack.closed ? (
-            <span class="pack-closed" role="link" aria-disabled="true">
-              {campaign.closedLabel}
-            </span>
-          ) : (
-            <a href={campaign.pack.stripeUrl} rel="noopener">
-              {campaign.pack.cta}<span aria-hidden="true">↗</span>
-            </a>
-          )
-        }
-      </div>
-    </section>
 
     <EditorialSplit id="proba-social" tone="white">
       <SectionTag text={campaign.testimonial.tag} />
@@ -430,11 +351,10 @@ const schema = [
       body={campaign.finalCta.body}
       href={finalCta.href}
       label={finalCta.label}
-      external
+      external={finalCta.external}
     >
       <p>{campaign.finalCta.productivity}</p>
       <p>{campaign.finalCta.web}</p>
-      <p>{campaign.finalCta.pack}</p>
     </CtaBand>
 
     <section class="contact-strip">
@@ -538,7 +458,7 @@ const schema = [
 
   .hero-options {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-inline: calc(var(--editorial-pad) * -1);
     border-top: 1px solid var(--editorial-line);
     background: var(--editorial-line);
@@ -683,6 +603,27 @@ const schema = [
     font-weight: 650;
   }
 
+  .workshop-more {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-self: start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid currentColor;
+    color: var(--editorial-ink);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .workshop-more:hover {
+    background: var(--editorial-ink);
+    color: #fff;
+  }
+
   .reservation-section {
     background: var(--editorial-paper);
   }
@@ -695,7 +636,7 @@ const schema = [
 
   .price-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
@@ -728,82 +669,6 @@ const schema = [
   dd {
     margin: 0.2rem 0 0;
     color: var(--editorial-muted);
-  }
-
-  .pack-section {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 3rem;
-    padding: clamp(4rem, 8vw, 7rem) var(--editorial-pad);
-    background: var(--editorial-accent);
-    color: #fff;
-  }
-
-  .pack-section h2 {
-    max-width: 850px;
-    margin: 0 0 1rem;
-    color: inherit;
-    font-family: var(--editorial-display);
-    font-size: clamp(3rem, 7vw, 6rem);
-    font-weight: 400;
-    line-height: 0.92;
-    letter-spacing: 0.005em;
-  }
-
-  .pack-section p {
-    max-width: 65ch;
-    color: #dce9e1;
-  }
-
-  .pack-price {
-    display: flex;
-    min-width: 280px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-  }
-
-  .pack-price strong {
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    letter-spacing: -0.05em;
-  }
-
-  .pack-price span {
-    font-size: 0.78rem;
-  }
-
-  .pack-price a {
-    display: flex;
-    width: 100%;
-    min-height: 48px;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding: 0.85rem 1rem;
-    border: 1px solid #fff;
-    background: #fff;
-    color: var(--editorial-accent);
-    font-size: 0.78rem;
-    font-weight: 750;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  .pack-price .pack-closed {
-    display: flex;
-    width: 100%;
-    min-height: 48px;
-    align-items: center;
-    margin-top: 1rem;
-    padding: 0.85rem 1rem;
-    border: 1px dashed #fff;
-    color: #fff;
-    font-size: 0.78rem;
-    font-weight: 750;
-    text-transform: uppercase;
-    opacity: 0.6;
-    cursor: not-allowed;
   }
 
   blockquote {
@@ -972,7 +837,6 @@ const schema = [
   @media (max-width: 800px) {
     .hero-copy,
     .workshop,
-    .pack-section,
     .team-intro,
     .faq-layout {
       grid-template-columns: 1fr;
@@ -993,10 +857,6 @@ const schema = [
 
     .workshop-date {
       margin-top: 2.5rem;
-    }
-
-    .pack-price {
-      min-width: 0;
     }
 
     .contact-strip {
