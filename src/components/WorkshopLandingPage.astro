@@ -1,0 +1,502 @@
+---
+/**
+ * Landing individual de un taller (destino de anuncios).
+ * Todo el contenido sale de src/data/talleres-otono-2026.ts.
+ */
+import Base from "../layouts/Base.astro";
+import {
+  buildWorkshopEvent,
+  getTalleresCampaign,
+  getTalleresPath,
+  getWorkshopFaq,
+  getWorkshopPath,
+  type Locale,
+  type Workshop,
+} from "../data/talleres-otono-2026";
+import "../styles/editorial.css";
+import SectionTag from "./ui/SectionTag.astro";
+import PriceCard from "./ui/PriceCard.astro";
+import CtaBand from "./ui/CtaBand.astro";
+
+interface Props {
+  locale: Locale;
+  id: Workshop["id"];
+}
+
+const { locale, id } = Astro.props;
+const campaign = getTalleresCampaign(locale);
+const workshop = campaign.workshops.find((item) => item.id === id);
+if (!workshop) throw new Error(`Workshop not found: ${id}`);
+
+const isGl = locale === "gl";
+const homeUrl = isGl ? "/" : "/es/";
+const talleresPath = getTalleresPath(locale);
+const pagePath = getWorkshopPath(locale, workshop);
+const pageUrl = `https://ruralgpt.gal${pagePath}`;
+const faq = getWorkshopFaq(campaign, workshop);
+const openWorkshop = campaign.workshops.find((item) => !item.closed && item.id !== workshop.id);
+
+const t = isGl
+  ? {
+      audience: "Para quen é",
+      topics: "Que traballaremos",
+      result: "Resultado",
+      practical: "Información práctica",
+      date: "Data",
+      price: "Prezo",
+      places: "Prazas",
+      placesValue: `${workshop.capacity} prazas`,
+      venue: "Lugar",
+      tax: "IVA non incluído",
+      taxWarning: "Os prezos indicados non inclúen o IVA.",
+      reserve: "Reserva",
+      allWorkshops: "Ver todos os talleres",
+      seeOpen: "Ver taller",
+    }
+  : {
+      audience: "Para quién es",
+      topics: "Qué trabajaremos",
+      result: "Resultado",
+      practical: "Información práctica",
+      date: "Fecha",
+      price: "Precio",
+      places: "Plazas",
+      placesValue: `${workshop.capacity} plazas`,
+      venue: "Lugar",
+      tax: "IVA no incluido",
+      taxWarning: "Los precios indicados no incluyen el IVA.",
+      reserve: "Reserva",
+      allWorkshops: "Ver todos los talleres",
+      seeOpen: "Ver taller",
+    };
+
+const finalCta = workshop.closed
+  ? openWorkshop
+    ? {
+        href: getWorkshopPath(locale, openWorkshop),
+        label: `${t.seeOpen}: ${openWorkshop.shortTitle}`,
+        external: false,
+      }
+    : { href: talleresPath, label: t.allWorkshops, external: false }
+  : { href: workshop.stripeUrl, label: workshop.cta, external: true };
+
+const schema = [
+  buildWorkshopEvent(workshop, locale, pageUrl),
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: `https://ruralgpt.gal${homeUrl}` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: campaign.navLabel,
+        item: `https://ruralgpt.gal${talleresPath}`,
+      },
+      { "@type": "ListItem", position: 3, name: workshop.title, item: pageUrl },
+    ],
+  },
+];
+---
+
+<Base
+  title={`${workshop.title} · ${workshop.dateShort} · Anceu | Rural GPT`}
+  description={workshop.seoDescription}
+  canonicalURL={pageUrl}
+  keywords={workshop.keywords}
+  schema={schema}
+  ogImage={`/images/talleres-otono-2026/${workshop.image}.webp`}
+  ogImageWidth={1600}
+  ogImageHeight={1067}
+  ogImageAlt={workshop.title}
+>
+  <div class="editorial-page">
+    <section class="landing-hero">
+      <div class="ed-container">
+        <SectionTag text={`${workshop.eyebrow} · ${campaign.hero.eyebrow}`} />
+        <p class="landing-date">{workshop.dateShort}</p>
+        <h1>{workshop.title}</h1>
+        <p class="landing-hook">{workshop.hook}</p>
+        <p class="landing-description">{workshop.description}</p>
+        {workshop.closed && <p class="landing-closed">{campaign.closedNotice}</p>}
+        <div class="landing-actions">
+          {
+            workshop.closed ? (
+              <span class="landing-cta landing-cta--closed" role="link" aria-disabled="true">
+                {campaign.closedLabel}
+              </span>
+            ) : (
+              <a class="landing-cta" href={workshop.stripeUrl} rel="noopener">
+                {workshop.cta} · {workshop.priceLabel}<span aria-hidden="true">↗</span>
+              </a>
+            )
+          }
+          {
+            workshop.closed && openWorkshop && (
+              <a class="landing-secondary" href={getWorkshopPath(locale, openWorkshop)}>
+                {t.seeOpen}: {openWorkshop.title}<span aria-hidden="true">→</span>
+              </a>
+            )
+          }
+          <a class="landing-secondary" href={talleresPath}>
+            {t.allWorkshops}<span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-section ed-section--white facts-section" aria-label={t.practical}>
+      <div class="ed-container">
+        <SectionTag text={t.practical} />
+        <dl class="facts">
+          <div><dt>{t.date}</dt><dd>{workshop.dateLabel}</dd></div>
+          <div><dt>{t.price}</dt><dd>{workshop.priceLabel}</dd></div>
+          <div><dt>{t.places}</dt><dd>{t.placesValue}</dd></div>
+          <div><dt>{t.venue}</dt><dd>{campaign.venue.title}</dd></div>
+        </dl>
+        <h2 class="facts-heading">{campaign.includesHeading}</h2>
+        <dl class="facts facts--includes">
+          {
+            campaign.includes.map((item) => (
+              <div>
+                <dt>{item.title}</dt>
+                <dd>{item.detail}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </section>
+
+    <article class="workshop">
+      <div class="workshop-detail">
+        <section>
+          <h2>{t.audience}</h2>
+          <ul class="ed-list">{workshop.audience.map((item) => <li>{item}</li>)}</ul>
+        </section>
+        <section>
+          <h2>{t.topics}</h2>
+          <ul class="ed-list">{workshop.topics.map((item) => <li>{item}</li>)}</ul>
+        </section>
+      </div>
+      <aside class="workshop-result">
+        <span>{t.result}</span>
+        <p>{workshop.result}</p>
+      </aside>
+    </article>
+
+    <section id="reservas" class="ed-section reservation-section">
+      <div class="ed-container">
+        <SectionTag text={t.reserve} />
+        <p class="tax-warning">{t.taxWarning}</p>
+        <div class="price-grid">
+          <PriceCard
+            eyebrow={workshop.eyebrow}
+            title={workshop.title}
+            date={workshop.dateLabel}
+            priceLabel={workshop.priceLabel}
+            taxNote={t.tax}
+            href={workshop.stripeUrl}
+            cta={workshop.cta}
+            closed={workshop.closed}
+            closedLabel={campaign.closedLabel}
+          >
+            <p>{workshop.result}</p>
+          </PriceCard>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="ed-section faq-section">
+      <div class="ed-container faq-layout">
+        <div>
+          <SectionTag text="FAQ" />
+          <h2 class="ed-heading">{campaign.faqHeading}</h2>
+        </div>
+        <div class="faq-list">
+          {
+            faq.map((item, index) => (
+              <details>
+                <summary>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {item.question}
+                </summary>
+                <p>{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <CtaBand
+      title={campaign.finalCta.title}
+      body={campaign.finalCta.body}
+      href={finalCta.href}
+      label={finalCta.label}
+      external={finalCta.external}
+    />
+
+    <section class="contact-strip">
+      <h2>{campaign.contact.title}</h2>
+      <p>
+        {campaign.contact.body.split("hola@ruralgpt.gal")[0]}
+        <a class="contact-mail" href="mailto:hola@ruralgpt.gal">hola@ruralgpt.gal</a>
+        {campaign.contact.body.split("hola@ruralgpt.gal")[1]}
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .landing-hero {
+    padding: clamp(4rem, 9vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+    background: var(--editorial-paper);
+  }
+
+  .landing-date {
+    margin: 2rem 0 0;
+    color: var(--editorial-accent);
+    font-family: var(--editorial-display);
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    line-height: 0.9;
+  }
+
+  .landing-hero h1 {
+    max-width: 18ch;
+    margin: 0.75rem 0 1.25rem;
+    font-family: var(--editorial-display);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0.005em;
+  }
+
+  .landing-hook {
+    max-width: 40ch;
+    font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .landing-description {
+    max-width: 70ch;
+    color: var(--editorial-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .landing-closed {
+    color: var(--editorial-accent);
+    font-weight: 750;
+  }
+
+  .landing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .landing-cta,
+  .landing-secondary {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.2rem;
+    border: 1px solid var(--editorial-ink);
+    font-size: 0.8rem;
+    font-weight: 750;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .landing-cta {
+    background: var(--editorial-accent);
+    border-color: var(--editorial-accent);
+    color: #fff;
+  }
+
+  .landing-cta--closed {
+    border-style: dashed;
+    background: transparent;
+    border-color: var(--editorial-ink);
+    color: var(--editorial-ink);
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .landing-secondary {
+    color: var(--editorial-ink);
+  }
+
+  .landing-secondary:hover {
+    background: var(--editorial-ink);
+    color: #fff;
+  }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+  }
+
+  .facts--includes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .facts div {
+    padding: 1.25rem;
+    border: 1px solid var(--editorial-line);
+  }
+
+  .facts dt {
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .facts dd {
+    margin: 0.4rem 0 0;
+    font-weight: 650;
+  }
+
+  .facts-heading {
+    margin: 3rem 0 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .workshop {
+    display: grid;
+    gap: 2rem;
+    padding: clamp(3rem, 7vw, 6rem) var(--editorial-pad);
+    border-top: 1px solid var(--editorial-line);
+    background: var(--editorial-soft);
+  }
+
+  .workshop-detail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .workshop-detail h2 {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .workshop-result {
+    padding: 2rem;
+    border-left: 4px solid var(--editorial-accent);
+    background: #fff;
+  }
+
+  .workshop-result span {
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .workshop-result p {
+    margin: 0.75rem 0 0;
+    color: var(--editorial-ink);
+    font-weight: 650;
+  }
+
+  .reservation-section {
+    background: var(--editorial-paper);
+  }
+
+  .tax-warning {
+    margin-bottom: 2rem;
+    color: var(--editorial-accent);
+    font-weight: 700;
+  }
+
+  .price-grid {
+    display: grid;
+    max-width: 560px;
+  }
+
+  .faq-section {
+    background: var(--editorial-paper);
+  }
+
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: clamp(3rem, 8vw, 8rem);
+  }
+
+  .faq-list {
+    border-top: 1px solid var(--editorial-line);
+  }
+
+  details {
+    border-bottom: 1px solid var(--editorial-line);
+  }
+
+  summary {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 1rem;
+    min-height: 64px;
+    align-items: center;
+    padding: 1rem 0;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  summary span {
+    color: var(--editorial-accent);
+    font-size: 0.72rem;
+  }
+
+  details p {
+    max-width: 65ch;
+    margin: 0;
+    padding: 0 0 1.5rem 3rem;
+    color: var(--editorial-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .contact-strip {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem var(--editorial-pad);
+    border-top: 1px solid var(--editorial-line);
+  }
+
+  .contact-mail {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    .facts,
+    .workshop-detail,
+    .faq-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-strip {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

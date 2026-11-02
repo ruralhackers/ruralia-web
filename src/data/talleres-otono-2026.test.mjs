@@ -3,6 +3,9 @@ import assert from "node:assert/strict";
 
 import {
   STRIPE_LINKS,
+  buildWorkshopEvent,
+  getWorkshopFaq,
+  getWorkshopPath,
   talleresOtono2026,
 } from "./talleres-otono-2026.ts";
 
@@ -52,5 +55,35 @@ test("productivity workshop is closed; asesorías stays open", () => {
     assert.equal(byId.productivity.closed, true);
     assert.notEqual(byId.web.closed, true);
     assert.ok(campaign.closedLabel.length > 0);
+  }
+});
+
+test("workshop landings have clean localized slugs, own FAQs and a single Event", () => {
+  const expected = {
+    gl: {
+      productivity: "/talleres/ia-produtividade/",
+      web: "/talleres/ia-asesorias-xestorias/",
+    },
+    es: {
+      productivity: "/es/talleres/ia-productividad/",
+      web: "/es/talleres/ia-asesorias-gestorias/",
+    },
+  };
+  for (const [locale, campaign] of Object.entries(talleresOtono2026)) {
+    for (const workshop of campaign.workshops) {
+      assert.equal(getWorkshopPath(locale, workshop), expected[locale][workshop.id]);
+      assert.ok(workshop.seoDescription.length > 50);
+      const faq = getWorkshopFaq(campaign, workshop);
+      assert.ok(faq.length >= workshop.faq.length + 4);
+      const event = buildWorkshopEvent(workshop, locale, "https://ruralgpt.gal/x/");
+      assert.equal(event["@type"], "Event");
+      assert.equal(event.url, "https://ruralgpt.gal/x/");
+      if (workshop.closed) {
+        assert.equal(event.offers.availability, "https://schema.org/SoldOut");
+        assert.doesNotMatch(event.offers.url, /stripe/);
+      } else {
+        assert.equal(event.offers.url, STRIPE_LINKS.web);
+      }
+    }
   }
 });

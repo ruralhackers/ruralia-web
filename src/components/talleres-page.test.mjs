@@ -37,7 +37,9 @@ test("landing exposes the conversion sections and workshop reservation links", a
   assert.match(page, /workshop\.stripeUrl/);
   assert.doesNotMatch(page, /campaign\.pack/);
   assert.doesNotMatch(data, /350|Pack Out|Pack Oto/);
-  assert.match(page, /valueAddedTaxIncluded:\s*false/);
+  assert.match(page, /buildWorkshopEvent/);
+  assert.match(data, /valueAddedTaxIncluded:\s*false/);
+  assert.match(page, /getWorkshopPath\(locale, workshop\)/);
   assert.match(page, /loading="lazy"/);
   assert.match(page, /srcset=/);
   assert.match(page, /sizes=/);
@@ -51,4 +53,24 @@ test("landing exposes the conversion sections and workshop reservation links", a
   assert.match(data, /seoSubtitle:\s*"Talleres presenciais de IA en Galicia · Outono 2026"/);
   assert.match(data, /title:\s*"Talleres de IA en Galicia · Produtividade e Asesorías \| Rural GPT"/);
   assert.match(data, /title:\s*"Talleres de IA en Galicia · Productividad y Asesorías \| Rural GPT"/);
+});
+
+test("each workshop has GL and ES landing routes built from the shared data", async () => {
+  const [gl, es, landing, routes] = await Promise.all([
+    read("pages/talleres/[slug].astro"),
+    read("pages/es/talleres/[slug].astro"),
+    read("components/WorkshopLandingPage.astro"),
+    read("i18n/routes.ts"),
+  ]);
+
+  assert.match(gl, /locale="gl"/);
+  assert.match(es, /locale="es"/);
+  assert.match(gl, /getStaticPaths/);
+  assert.match(es, /getStaticPaths/);
+  assert.match(landing, /buildWorkshopEvent\(workshop, locale, pageUrl\)/);
+  assert.match(landing, /canonicalURL=\{pageUrl\}/);
+  assert.match(landing, /<PriceCard/);
+  assert.match(landing, /getWorkshopFaq/);
+  assert.match(routes, /'talleres\/ia-asesorias-xestorias': 'talleres\/ia-asesorias-gestorias'/);
+  assert.match(routes, /'talleres\/ia-produtividade': 'talleres\/ia-productividad'/);
 });

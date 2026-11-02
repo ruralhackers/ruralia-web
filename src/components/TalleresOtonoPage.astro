@@ -1,6 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import {
+  buildWorkshopEvent,
+  getTalleresCampaign,
+  getWorkshopPath,
+  type Locale,
+} from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
 import SectionTag from "./ui/SectionTag.astro";
 import EditorialSplit from "./ui/EditorialSplit.astro";
@@ -32,53 +37,9 @@ const imageSrcset = (name: string) =>
     .join(", ");
 
 const schema = [
-  ...campaign.workshops.map((workshop) => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: `${workshop.title} · Rural GPT`,
-    description: workshop.description,
-    startDate: `${workshop.dateISO}T10:00:00+01:00`,
-    endDate: `${workshop.dateISO}T18:00:00+01:00`,
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    maximumAttendeeCapacity: workshop.capacity,
-    inLanguage: locale,
-    image: `https://ruralgpt.gal/images/talleres-otono-2026/${
-      workshop.id === "productivity" ? "tareas-mierderas" : "equipo"
-    }.webp`,
-    location: {
-      "@type": "Place",
-      name: "Anceu Coliving",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Ponte Caldelas",
-        addressRegion: "Pontevedra",
-        addressCountry: "ES",
-      },
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "Rural GPT",
-      url: "https://ruralgpt.gal",
-    },
-    offers: {
-      "@type": "Offer",
-      url: workshop.closed
-        ? `https://ruralgpt.gal${canonicalPath}`
-        : workshop.stripeUrl,
-      price: workshop.price,
-      priceCurrency: "EUR",
-      availability: workshop.closed
-        ? "https://schema.org/SoldOut"
-        : "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: workshop.price,
-        priceCurrency: "EUR",
-        valueAddedTaxIncluded: false,
-      },
-    },
-  })),
+  ...campaign.workshops.map((workshop) =>
+    buildWorkshopEvent(workshop, locale, `https://ruralgpt.gal${getWorkshopPath(locale, workshop)}`),
+  ),
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -186,6 +147,9 @@ const schema = [
               <span>{isGl ? "Resultado" : "Resultado"}</span>
               <p>{workshop.result}</p>
             </aside>
+            <a class="workshop-more" href={getWorkshopPath(locale, workshop)}>
+              {campaign.moreInfoLabel}: {workshop.shortTitle}<span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
       ))
@@ -637,6 +601,27 @@ const schema = [
     margin: 0.75rem 0 0;
     color: var(--editorial-ink);
     font-weight: 650;
+  }
+
+  .workshop-more {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-self: start;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid currentColor;
+    color: var(--editorial-ink);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .workshop-more:hover {
+    background: var(--editorial-ink);
+    color: #fff;
   }
 
   .reservation-section {

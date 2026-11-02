@@ -1,0 +1,15 @@
+---
+import WorkshopLandingPage from "../../../components/WorkshopLandingPage.astro";
+import { talleresOtono2026 } from "../../../data/talleres-otono-2026";
+
+export function getStaticPaths() {
+  return talleresOtono2026.es.workshops.map((workshop) => ({
+    params: { slug: workshop.slug },
+    props: { id: workshop.id },
+  }));
+}
+
+const { id } = Astro.props;
+---
+
+<WorkshopLandingPage locale="es" id={id} />

@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import heroPhoto from "../assets/images/ruralia-1.jpg";
 import Base from "../layouts/Base.astro";
-import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import { getTalleresCampaign, getWorkshopPath, type Locale } from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
 import SectionTag from "./ui/SectionTag.astro";
 import EditorialSplit from "./ui/EditorialSplit.astro";
@@ -284,7 +284,7 @@ const schema = {
         <div class="teaser-grid">
           {
             campaign.workshops.map((workshop, index) => (
-              <a class="teaser-card" href={landingUrl}>
+              <a class="teaser-card" href={getWorkshopPath(locale, workshop)}>
                 <span class="teaser-number">0{index + 1}</span>
                 <span class="teaser-date">{workshop.dateShort}</span>
                 <h3>{workshop.title}</h3>
@@ -294,6 +294,7 @@ const schema = {
                     ? `${workshop.priceLabel} · ${campaign.closedLabel}`
                     : workshop.priceLabel}
                 </strong>
+                <span class="teaser-more">{campaign.moreInfoLabel}</span>
                 <span class="teaser-arrow" aria-hidden="true">→</span>
               </a>
             ))
@@ -555,6 +556,17 @@ const schema = {
     align-self: end;
     margin-top: 2rem;
     font-size: 1.3rem;
+  }
+
+  .teaser-more {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.74rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-transform: uppercase;
   }
 
   .teaser-arrow {
