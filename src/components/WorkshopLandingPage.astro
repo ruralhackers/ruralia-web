@@ -168,7 +168,8 @@ const schema = [
       </div>
     </section>
 
-    <article class="workshop">
+    <article class="ed-section ed-section--soft workshop">
+      <div class="ed-container workshop-inner">
       <div class="workshop-detail">
         <section>
           <h2>{t.audience}</h2>
@@ -183,6 +184,7 @@ const schema = [
         <span>{t.result}</span>
         <p>{workshop.result}</p>
       </aside>
+      </div>
     </article>
 
     <section id="reservas" class="ed-section reservation-section">
@@ -250,7 +252,7 @@ const schema = [
 
 <style>
   .landing-hero {
-    padding: clamp(4rem, 9vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+    padding: clamp(4rem, 9vw, 8rem) var(--editorial-pad) clamp(3rem, 6vw, 5rem);
     background: var(--editorial-paper);
   }
 
@@ -373,12 +375,9 @@ const schema = [
     text-transform: uppercase;
   }
 
-  .workshop {
+  .workshop-inner {
     display: grid;
-    gap: 2rem;
-    padding: clamp(3rem, 7vw, 6rem) var(--editorial-pad);
-    border-top: 1px solid var(--editorial-line);
-    background: var(--editorial-soft);
+    gap: clamp(2rem, 5vw, 3rem);
   }
 
   .workshop-detail {
@@ -479,6 +478,12 @@ const schema = [
     gap: 1rem;
     padding: 2rem var(--editorial-pad);
     border-top: 1px solid var(--editorial-line);
+    background: #fff;
+  }
+
+  .contact-strip h2,
+  .contact-strip p {
+    margin: 0;
   }
 
   .contact-mail {
