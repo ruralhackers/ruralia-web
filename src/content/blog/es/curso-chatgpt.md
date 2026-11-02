@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct) y Web (28 nov), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct) e IA para asesorías y gestorías (28 nov), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
