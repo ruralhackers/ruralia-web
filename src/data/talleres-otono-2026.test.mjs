@@ -35,7 +35,7 @@ test("contains the confirmed live Stripe payment links (no pack)", () => {
   );
   assert.equal(
     STRIPE_LINKS.web,
-    "https://buy.stripe.com/cNibJ1dkT556ayE4AbcAo05",
+    "https://buy.stripe.com/5kQcN65ya5lF5uTfbkeZ200",
   );
   assert.deepEqual(Object.keys(STRIPE_LINKS).sort(), ["productivity", "web"]);
 });

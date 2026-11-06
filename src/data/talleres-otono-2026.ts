@@ -2,7 +2,7 @@ export type Locale = "gl" | "es";
 
 export const STRIPE_LINKS = {
   productivity: "https://buy.stripe.com/fZueVdgx54124ag0jVcAo04",
-  web: "https://buy.stripe.com/cNibJ1dkT556ayE4AbcAo05",
+  web: "https://buy.stripe.com/5kQcN65ya5lF5uTfbkeZ200",
 } as const;
 
 export interface Workshop {
