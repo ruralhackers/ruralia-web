@@ -49,7 +49,7 @@ No vas a escuchar charlas. Vas a construir cosas.
 
 ## Para quién es esto
 
-Para gente que se busca la vida con tecnología: freelancers, webmasters, indie hackers, consultores. Gente que usa herramientas digitales a diario y quiere integrar IA en su flujo de trabajo.
+Para profesionales que se ganan la vida con la tecnología: freelancers, webmasters, indie hackers, consultores. Gente que usa herramientas digitales a diario y quiere integrar IA en su flujo de trabajo.
 
 No hace falta saber programar. Sí hace falta tener ganas de cacharrear.
 

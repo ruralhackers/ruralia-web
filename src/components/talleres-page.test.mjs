@@ -48,7 +48,7 @@ test("landing exposes the conversion sections and workshop reservation links", a
   assert.match(page, /\.contact-strip\s*\{[\s\S]*padding-bottom:\s*6rem/);
   assert.match(page, /hero\.seoSubtitle/);
   assert.match(page, /campaign\.internalLinks/);
-  assert.match(page, /ogImageWidth=\{1600\}/);
+  assert.match(page, /ogImageWidth=\{1200\}/);
   assert.doesNotMatch(page, /"@type":\s*"FAQPage"/);
   assert.match(data, /seoSubtitle:\s*"Talleres presenciais de IA en Galicia · Outono 2026"/);
   assert.match(data, /title:\s*"Taller de IA para Asesorías, Xestorías e Administración · 28 nov \| Rural GPT"/);

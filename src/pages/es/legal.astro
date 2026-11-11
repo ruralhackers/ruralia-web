@@ -22,9 +22,10 @@ import Base from "../../layouts/Base.astro";
         <li><strong>Domicilio:</strong> Anceu, Ponte Caldelas, 36820 Pontevedra, España</li>
         <li><strong>Email de contacto:</strong> hola@ruralgpt.gal</li>
         <li><strong>Sitio web:</strong> https://ruralgpt.gal</li>
+        {/* PENDIENTE: NIF de Rural Hackers y inscripción registral (Registro de Asociaciones de …, n.º …). */}
       </ul>
 
-      <h2>Política de privacidad</h2>
+      <h2 id="privacidad">Política de privacidad</h2>
       <p>
         En cumplimiento del Reglamento General de Protección de Datos (RGPD) y
         la Ley Orgánica 3/2018 de Protección de Datos Personales y Garantía de
@@ -37,15 +38,15 @@ import Base from "../../layouts/Base.astro";
       <h3>Finalidad del tratamiento</h3>
       <p>Los datos personales recogidos a través de este sitio web serán tratados con las siguientes finalidades:</p>
       <ul>
-        <li>Gestionar tu inscripción y participación en la Residencia IA de Rural GPT.</li>
-        <li>Enviarte información relacionada con la Residencia IA (confirmación, logística, materiales).</li>
-        <li>Mantenerte informado sobre futuras ediciones, si das tu consentimiento.</li>
+        <li>Gestionar tu inscripción y tu participación en los talleres y formaciones de Rural GPT.</li>
+        <li>Enviarte información relacionada con el taller en el que te has inscrito (confirmación, logística y materiales).</li>
+        <li>Enviarte novedades sobre próximos talleres y formaciones, si nos das tu consentimiento.</li>
       </ul>
 
       <h3>Base legal</h3>
       <ul>
         <li><strong>Ejecución de contrato:</strong> para la gestión de la inscripción y el servicio contratado.</li>
-        <li><strong>Consentimiento:</strong> para el envío de comunicaciones sobre futuras ediciones.</li>
+        <li><strong>Consentimiento:</strong> para el envío de novedades sobre próximos talleres y formaciones.</li>
         <li><strong>Interés legítimo:</strong> para la mejora del servicio y análisis interno.</li>
       </ul>
 
@@ -74,28 +75,50 @@ import Base from "../../layouts/Base.astro";
       </ul>
       <p>Puedes cambiar tu preferencia en cualquier momento eliminando la clave <em>cookie_consent</em> del almacenamiento local de tu navegador o borrando los datos del sitio.</p>
 
-      <h2 id="privacidad">Condiciones de contratación</h2>
+      <h2 id="contratacion">Condiciones de contratación</h2>
+
+      <h3>Talleres sprint (formato de una jornada)</h3>
+      <p>La compra de una plaza en un taller de Rural GPT se realiza a través de Stripe. Al realizar el pago, aceptas las siguientes condiciones.</p>
+
+      <h4>Precio y qué incluye</h4>
+      <ul>
+        <li>El precio es el que aparece en la ficha de cada taller. Los precios no incluyen el IVA, que se añade en el pago y aparece desglosado en la factura.</li>
+        <li>Incluye la formación presencial de la jornada (de 10:00 a 18:00), la comida del día y los materiales del taller.</li>
+        <li>No incluye alojamiento ni el desplazamiento hasta Anceu Coliving.</li>
+        <li>Para reservas de tres o más plazas, escríbenos a hola@ruralgpt.gal y gestionamos el bloque con facturación a la empresa.</li>
+      </ul>
+
+      {/* PENDIENTE: «Política de cancelación» de los talleres de un día (plazos y porcentajes). No publicar hasta confirmarla. */}
+
+      <h4>Modificaciones</h4>
+      <p>Rural GPT se reserva el derecho de modificar el programa, el equipo de formación o la fecha por causa justificada. En ese caso, te ofreceremos la devolución íntegra del importe.</p>
+
+      <h4>Responsabilidad</h4>
+      <p>Rural GPT no se hace responsable de daños o pérdidas de equipos personales durante el taller.</p>
+
+      <h3 id="residencia-ia">Residencia IA (edición anterior, junio de 2026)</h3>
+      <p>Estas condiciones se aplicaron a la Residencia IA celebrada en junio de 2026. Las mantenemos aquí como referencia para quienes participaron.</p>
       <p>La compra de una plaza en la Residencia IA de Rural GPT se realiza a través de Stripe. Al realizar el pago, aceptas las siguientes condiciones:</p>
 
-      <h3>Precio y qué incluye</h3>
+      <h4>Precio y qué incluye</h4>
       <ul>
         <li>El precio incluye formación, alojamiento (3 noches) y pensión completa (desayuno, comida y cena durante 3 días).</li>
         <li>No incluye transporte hasta Anceu Coliving.</li>
         <li>Los precios indicados incluyen IVA cuando corresponda.</li>
       </ul>
 
-      <h3>Política de cancelación</h3>
+      <h4>Política de cancelación</h4>
       <ul>
         <li>Cancelación gratuita hasta 15 días antes del inicio de la Residencia IA.</li>
         <li>Entre 15 y 7 días antes: devolución del 50%.</li>
         <li>Menos de 7 días: sin devolución, pero la plaza es transferible a otra persona.</li>
       </ul>
 
-      <h3>Modificaciones</h3>
+      <h4>Modificaciones</h4>
       <p>Rural GPT se reserva el derecho de modificar el programa, los instructores o las fechas por causa justificada, ofreciendo en ese caso la posibilidad de devolución íntegra del importe.</p>
 
-      <h3>Responsabilidad</h3>
-      <p>Rural GPT no se hace responsable de daños o pérdidas de equipos personales durante la Residencia IA. Se recomienda a los asistentes contratar un seguro de viaje si lo consideran oportuno.</p>
+      <h4>Responsabilidad</h4>
+      <p>Rural GPT no se hace responsable de daños o pérdidas de equipos personales durante la Residencia IA. Recomendamos contratar un seguro de viaje si lo consideras oportuno.</p>
     </div>
   </section>
 </Base>

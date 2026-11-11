@@ -81,7 +81,8 @@ const finalCta = workshop.closed
   : { href: workshop.stripeUrl, label: workshop.cta, external: true };
 
 const schema = [
-  buildWorkshopEvent(workshop, locale, pageUrl),
+  // Talleres ya celebrados: sin Event, para que los resultados muestren el taller abierto.
+  ...(workshop.closed ? [] : [buildWorkshopEvent(workshop, locale, pageUrl)]),
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -100,14 +101,16 @@ const schema = [
 ---
 
 <Base
-  title={`${workshop.title} · ${workshop.dateShort} · Anceu | Rural GPT`}
+  title={workshop.seoTitle ?? `${workshop.title} · ${workshop.dateShort} · Anceu | Rural GPT`}
   description={workshop.seoDescription}
+  ogTitle={workshop.ogTitle}
+  ogDescription={workshop.ogDescription}
   canonicalURL={pageUrl}
   keywords={workshop.keywords}
   schema={schema}
-  ogImage={`/images/talleres-otono-2026/${workshop.image}.webp`}
-  ogImageWidth={1600}
-  ogImageHeight={1067}
+  ogImage={`/images/talleres-otono-2026/${workshop.image}-og.webp`}
+  ogImageWidth={1200}
+  ogImageHeight={630}
   ogImageAlt={workshop.title}
 >
   <div class="editorial-page">
@@ -115,6 +118,7 @@ const schema = [
       <div class="ed-container">
         <SectionTag text={`${workshop.eyebrow} · ${campaign.hero.eyebrow}`} />
         <p class="landing-date">{workshop.dateShort}</p>
+        {workshop.kicker && <p class="landing-kicker">{workshop.kicker}</p>}
         <h1>{workshop.title}</h1>
         <p class="landing-hook">{workshop.hook}</p>
         <p class="landing-description">{workshop.description}</p>
@@ -261,6 +265,14 @@ const schema = [
     font-family: var(--editorial-display);
     font-size: clamp(3.5rem, 9vw, 7rem);
     line-height: 0.9;
+  }
+
+  .landing-kicker {
+    margin: 1.25rem 0 0;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .landing-hero h1 {

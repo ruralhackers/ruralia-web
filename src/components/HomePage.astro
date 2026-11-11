@@ -27,27 +27,20 @@ const residenceUrl = isGl
 
 const copy = isGl
   ? {
-      seoTitle: "Rural GPT · Talleres de IA en Galicia | Anceu",
+      seoTitle: "Rural GPT · IA para datos sensibles · Obradoiro o 28 de novembro en Anceu",
       seoDescription:
         "Formación presencial de IA en Anceu. Próximo taller: IA para asesorías, xestorías e departamentos de administración, 28 de novembro, 199 € + IVA, comida incluída. Rural Hackers × Anceu Coliving.",
-      heroLabel: "Formación práctica de IA · Galicia",
-      heroAria: "A IA avanza. O teu traballo, tamén.",
-      heroLine1: "A IA AVANZA.",
-      heroLine2: "O TEU TRABALLO, TAMÉN.",
-      heroQuestion: "O TEU TRABALLO TAMÉN?",
+      heroLabel: "Obradoiro presencial · 28 de novembro · Anceu Coliving",
+      heroTitle: "IA para datos sensibles",
       heroBody:
-        "A IA non che vai quitar o traballo, pero unha persoa profesional que sabe usala si. Formación práctica para integrar ferramentas reais no teu traballo, sen teoría futurista nin cursos eternos.",
-      heroMeta:
-        "28 novembro · Asesorías, xestorías e administración — Anceu Coliving",
-      heroCta: "Ver programa",
+        "A túa clientela non debería atopar o erro antes ca ti. Formación nova para asesorías, xestorías e administración: revisar facturas, cadralas co banco e protexer os datos da túa clientela.",
+      heroCta: "Ver o programa",
       reserveCta: "Reservar praza",
       definitionTag: "Que é Rural GPT",
       definition:
         "Formación presencial de IA aplicada no rural galego. Unha iniciativa de Rural Hackers e Anceu Coliving para profesionais que queren avanzar sen perderse no ruído.",
       principles: [
-        "Non é un curso en liña.",
-        "Non é teoría.",
-        "É traballo real coas túas ferramentas e co teu negocio.",
+        "Formación presencial, cos teus procesos reais e con ferramentas que si se poden usar cando manexas datos sensibles.",
       ],
       workshopsTag: "Agora en Rural GPT",
       workshopsTitle: "Un sprint máis antes de Nadal.",
@@ -64,6 +57,8 @@ const copy = isGl
       toolsTitle: "A ferramenta correcta para cada problema.",
       toolsIntro:
         "Non ensinamos marcas por moda. Comparamos, escollemos e aplicamos as que realmente encaixan co teu traballo.",
+      toolsDataNote:
+        "Ollo cos datos: non todas estas ferramentas serven para traballar con información da túa clientela. Para iso usamos servizos con garantías de confidencialidade e modelos aloxados na UE, como Langdock.",
       gptIntro:
         "Millóns de persoas usan ChatGPT cada día. Ti vaslles dar un novo significado a estas letras.",
       gpt: [
@@ -86,27 +81,20 @@ const copy = isGl
       send: "Enviar mensaxe",
     }
   : {
-      seoTitle: "Rural GPT · Talleres de IA en Galicia | Anceu",
+      seoTitle: "Rural GPT · IA para datos sensibles · Taller el 28 de noviembre en Anceu",
       seoDescription:
         "Formación presencial de IA en Anceu. Próximo taller: IA para asesorías, gestorías y departamentos de administración, 28 de noviembre, 199 € + IVA, comida incluida. Rural Hackers × Anceu Coliving.",
-      heroLabel: "Formación práctica de IA · Galicia",
-      heroAria: "La IA avanza. Tu trabajo, también.",
-      heroLine1: "LA IA AVANZA.",
-      heroLine2: "TU TRABAJO, TAMBIÉN.",
-      heroQuestion: "¿TU TRABAJO TAMBIÉN?",
+      heroLabel: "Taller presencial · 28 de noviembre · Anceu Coliving",
+      heroTitle: "IA para datos sensibles",
       heroBody:
-        "La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Formación práctica para integrar herramientas reales en tu trabajo, sin teoría futurista ni cursos eternos.",
-      heroMeta:
-        "28 noviembre · Asesorías, gestorías y administración — Anceu Coliving",
-      heroCta: "Ver programa",
+        "Tu clientela no debería encontrar el error antes que tú. Formación nueva para asesorías, gestorías y administración: revisar facturas, cuadrarlas con el banco y proteger los datos de tu clientela.",
+      heroCta: "Ver el programa",
       reserveCta: "Reservar plaza",
       definitionTag: "Qué es Rural GPT",
       definition:
         "Formación presencial de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving para profesionales que quieren avanzar sin perderse en el ruido.",
       principles: [
-        "No es un curso online.",
-        "No es teoría.",
-        "Es trabajo real con tus herramientas y con tu negocio.",
+        "Formación presencial, con tus procesos reales y con herramientas que sí se pueden usar cuando manejas datos sensibles.",
       ],
       workshopsTag: "Ahora en Rural GPT",
       workshopsTitle: "Un sprint más antes de Navidad.",
@@ -123,6 +111,8 @@ const copy = isGl
       toolsTitle: "La herramienta correcta para cada problema.",
       toolsIntro:
         "No enseñamos marcas por moda. Comparamos, elegimos y aplicamos las que realmente encajan con tu trabajo.",
+      toolsDataNote:
+        "Ojo con los datos: no todas estas herramientas sirven para trabajar con información de tu clientela. Para eso usamos servicios con garantías de confidencialidad y modelos alojados en la UE, como Langdock.",
       gptIntro:
         "Millones de personas usan ChatGPT cada día. Tú vas a darles un nuevo significado a estas letras.",
       gpt: [
@@ -145,7 +135,16 @@ const copy = isGl
       send: "Enviar mensaje",
     };
 
-const tools = [
+const tools: Array<{ name: string; desc: string; logo?: string; badge?: string; featured?: boolean; href: string }> = [
+  {
+    name: "Langdock",
+    desc: isGl
+      ? "Modelos de IA aloxados na UE para traballar con datos da túa clientela."
+      : "Modelos de IA alojados en la UE para trabajar con datos de tu clientela.",
+    badge: "UE",
+    featured: true,
+    href: "https://www.langdock.com",
+  },
   {
     name: "ChatGPT",
     desc: isGl
@@ -236,23 +235,19 @@ const schema = {
     "Rural GPT",
   ]}
   schema={schema}
-  ogImage="/images/talleres-otono-2026/entorno-anceu.webp"
-  ogImageWidth={1600}
-  ogImageHeight={1067}
+  ogImage="/images/talleres-otono-2026/entorno-anceu-og.webp"
+  ogImageWidth={1200}
+  ogImageHeight={630}
 >
   <div class="editorial-page home-page">
     <section class="home-hero">
       <div class="hero-head">
         <SectionTag text={copy.heroLabel} />
-        <h1 aria-label={copy.heroAria}>
-          <span aria-hidden="true" data-hero-line1>{copy.heroLine1}</span>
-          <span aria-hidden="true" data-hero-line2>{copy.heroLine2}</span>
-        </h1>
+        <h1>{copy.heroTitle}</h1>
       </div>
       <div class="hero-bottom">
         <div>
-          <p>{copy.heroBody}</p>
-          <p class="hero-meta">{copy.heroMeta}</p>
+          <p class="hero-body">{copy.heroBody}</p>
         </div>
         <div class="hero-actions">
           {
@@ -303,6 +298,7 @@ const schema = {
               <a class="teaser-card" href={getWorkshopPath(locale, workshop)}>
                 <span class="teaser-number">{workshop.eyebrow}</span>
                 <span class="teaser-date">{workshop.dateShort}</span>
+                {workshop.kicker && <span class="teaser-number">{workshop.kicker}</span>}
                 <h3>{workshop.title}</h3>
                 <p>{workshop.hook}</p>
                 <strong>
@@ -345,8 +341,12 @@ const schema = {
         <div class="tools-grid">
           {
             tools.map((tool) => (
-              <a href={tool.href} target="_blank" rel="noopener">
-                <img src={tool.logo} alt="" width="30" height="30" loading="lazy" />
+              <a class:list={{ featured: tool.featured }} href={tool.href} target="_blank" rel="noopener">
+                {tool.logo ? (
+                  <img src={tool.logo} alt="" width="30" height="30" loading="lazy" />
+                ) : (
+                  <strong class="tool-badge" aria-hidden="true">{tool.badge}</strong>
+                )}
                 <span aria-hidden="true">↗</span>
                 <h3>{tool.name}</h3>
                 <p>{tool.desc}</p>
@@ -354,6 +354,7 @@ const schema = {
             ))
           }
         </div>
+        <p class="tools-note">{copy.toolsDataNote}</p>
       </div>
     </section>
 
@@ -431,7 +432,6 @@ const schema = {
 
   .hero-head h1 {
     max-width: 1200px;
-    min-height: calc(2 * clamp(4rem, 11vw, 9rem) * 0.88);
     margin: 0;
     font-family: var(--editorial-display);
     font-size: clamp(4rem, 11vw, 9rem);
@@ -440,13 +440,6 @@ const schema = {
     letter-spacing: 0.005em;
   }
 
-  .hero-head h1 span {
-    display: block;
-  }
-
-  .hero-head h1 span:last-child {
-    color: var(--editorial-muted);
-  }
 
   .hero-bottom {
     display: grid;
@@ -472,13 +465,12 @@ const schema = {
     line-height: 1.65;
   }
 
-  .hero-bottom .hero-meta {
-    margin-top: 0.65rem;
-    color: var(--editorial-accent);
-    font-size: 0.72rem;
-    font-weight: 750;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  .hero-bottom .hero-body {
+    max-width: 62ch;
+    color: var(--editorial-ink);
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    font-weight: 600;
+    line-height: 1.5;
   }
 
   .hero-image {
@@ -642,6 +634,34 @@ const schema = {
     color: var(--editorial-ink);
     text-decoration: none;
     transition: background-color 180ms ease;
+  }
+
+  .tools-grid a.featured {
+    grid-column: 1 / -1;
+    min-height: auto;
+    background: var(--editorial-soft);
+  }
+
+  .tool-badge {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background: var(--editorial-ink);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+
+  .tools-note {
+    max-width: 78ch;
+    margin: 1.5rem 0 0;
+    padding-left: 1rem;
+    border-left: 4px solid var(--editorial-accent);
+    color: var(--editorial-ink);
+    font-weight: 650;
+    line-height: 1.6;
   }
 
   .tools-grid a:hover {
@@ -834,44 +854,3 @@ const schema = {
     }
   }
 </style>
-
-<script define:vars={{ finalLine1: copy.heroLine1, finalLine2: copy.heroLine2, questionLine2: copy.heroQuestion }}>
-  const line1 = document.querySelector("[data-hero-line1]");
-  const line2 = document.querySelector("[data-hero-line2]");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (line1 && line2 && !reducedMotion) {
-    const type = (element, text, speed, done) => {
-      element.textContent = "";
-      let index = 0;
-      const timer = window.setInterval(() => {
-        element.textContent += text[index];
-        index += 1;
-        if (index >= text.length) {
-          window.clearInterval(timer);
-          done?.();
-        }
-      }, speed);
-    };
-
-    const erase = (element, speed, done) => {
-      const timer = window.setInterval(() => {
-        element.textContent = element.textContent.slice(0, -1);
-        if (!element.textContent) {
-          window.clearInterval(timer);
-          done();
-        }
-      }, speed);
-    };
-
-    line1.textContent = finalLine1.replace(/\.$/, ",");
-    type(line2, questionLine2, 48, () => {
-      window.setTimeout(() => {
-        erase(line2, 24, () => {
-          line1.textContent = finalLine1;
-          type(line2, finalLine2, 42);
-        });
-      }, 1300);
-    });
-  }
-</script>

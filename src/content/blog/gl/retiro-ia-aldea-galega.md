@@ -50,7 +50,7 @@ Non vas escoitar charlas. Vas construír cousas.
 
 ## Para quen é isto
 
-Para xente que se busca a vida con tecnoloxía: freelancers, webmasters, indie hackers, consultores. Xente que usa ferramentas dixitais a diario e quere integrar IA no seu fluxo de traballo.
+Para profesionais que se gañan a vida coa tecnoloxía: freelancers, webmasters, indie hackers, consultores. Xente que usa ferramentas dixitais a diario e quere integrar IA no seu fluxo de traballo.
 
 Non fai falta saber programar. Si fai falta ter ganas de cacharrear.
 
