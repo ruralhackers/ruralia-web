@@ -85,7 +85,7 @@ test("audience and team pages no longer sell the completed residence", async () 
   ]);
 
   for (const page of pages) {
-    assert.match(page, /talleres-otono-2026/);
+    assert.match(page, /talleres-otono-2026|talleres\/ia-asesorias-(xestorias|gestorias)/);
     assert.doesNotMatch(page, /Lista de espera/);
   }
 });
