@@ -4,6 +4,7 @@ import {
   buildWorkshopEvent,
   getTalleresCampaign,
   getWorkshopPath,
+  getWorkshopsOpenFirst,
   type Locale,
 } from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
@@ -24,7 +25,8 @@ const canonicalPath = isGl
   ? "/talleres-otono-2026/"
   : "/es/talleres-otono-2026/";
 // CTA final: apunta al primer taller con plazas abiertas (o a la sección de reservas).
-const openWorkshop = campaign.workshops.find((workshop) => !workshop.closed);
+const workshops = getWorkshopsOpenFirst(campaign);
+const openWorkshop = workshops.find((workshop) => !workshop.closed);
 const finalCta = openWorkshop
   ? { href: openWorkshop.stripeUrl, label: openWorkshop.cta, external: true }
   : { href: "#reservas", label: isGl ? "Ver prezos" : "Ver precios", external: false };
@@ -84,7 +86,7 @@ const schema = [
         <p class="hero-meta">{campaign.hero.meta}</p>
         <nav class="hero-options" aria-label={campaign.workshopsHeading}>
           {
-            campaign.workshops.map((workshop) => (
+            workshops.map((workshop) => (
               <a href={`#${workshop.id}`}>
                 <span>{workshop.dateShort}</span>
                 <strong>{workshop.shortTitle}</strong>
@@ -121,7 +123,7 @@ const schema = [
     </section>
 
     {
-      campaign.workshops.map((workshop, index) => (
+      workshops.map((workshop, index) => (
         <article id={workshop.id} class:list={["workshop", { alternate: index % 2 }]}>
           <header class="workshop-head">
             <p class="workshop-number">{workshop.eyebrow}</p>
@@ -159,7 +161,7 @@ const schema = [
       <div class="ed-container">
         <SectionTag text={isGl ? "Reserva" : "Reserva"} />
         <h2 class="ed-heading">
-          {isGl ? "Escolle o teu día." : "Elige tu día."}
+          {isGl ? "Reserva a túa praza." : "Reserva tu plaza."}
         </h2>
         <p class="tax-warning">
           {isGl
@@ -168,7 +170,7 @@ const schema = [
         </p>
         <div class="price-grid">
           {
-            campaign.workshops.map((workshop) => (
+            workshops.map((workshop) => (
               <PriceCard
                 eyebrow={workshop.eyebrow}
                 title={workshop.title}

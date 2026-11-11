@@ -51,7 +51,7 @@ const t = isGl
       taxWarning: "Os prezos indicados non inclúen o IVA.",
       reserve: "Reserva",
       allWorkshops: "Ver todos os talleres",
-      seeOpen: "Ver taller",
+      seeOpen: "Próximo taller",
     }
   : {
       audience: "Para quién es",
@@ -67,7 +67,7 @@ const t = isGl
       taxWarning: "Los precios indicados no incluyen el IVA.",
       reserve: "Reserva",
       allWorkshops: "Ver todos los talleres",
-      seeOpen: "Ver taller",
+      seeOpen: "Próximo taller",
     };
 
 const finalCta = workshop.closed
@@ -122,19 +122,18 @@ const schema = [
         <div class="landing-actions">
           {
             workshop.closed ? (
-              <span class="landing-cta landing-cta--closed" role="link" aria-disabled="true">
-                {campaign.closedLabel}
-              </span>
+              openWorkshop ? (
+                <a class="landing-cta" href={getWorkshopPath(locale, openWorkshop)}>
+                  {t.seeOpen}: {openWorkshop.dateShort} · {openWorkshop.shortTitle}<span aria-hidden="true">→</span>
+                </a>
+              ) : (
+                <span class="landing-cta landing-cta--closed" role="link" aria-disabled="true">
+                  {campaign.closedLabel}
+                </span>
+              )
             ) : (
               <a class="landing-cta" href={workshop.stripeUrl} rel="noopener">
                 {workshop.cta} · {workshop.priceLabel}<span aria-hidden="true">↗</span>
-              </a>
-            )
-          }
-          {
-            workshop.closed && openWorkshop && (
-              <a class="landing-secondary" href={getWorkshopPath(locale, openWorkshop)}>
-                {t.seeOpen}: {openWorkshop.title}<span aria-hidden="true">→</span>
               </a>
             )
           }

@@ -6,6 +6,7 @@ import {
   buildWorkshopEvent,
   getWorkshopFaq,
   getWorkshopPath,
+  getWorkshopsOpenFirst,
   talleresOtono2026,
 } from "./talleres-otono-2026.ts";
 
@@ -79,11 +80,21 @@ test("workshop landings have clean localized slugs, own FAQs and a single Event"
       assert.equal(event["@type"], "Event");
       assert.equal(event.url, "https://ruralgpt.gal/x/");
       if (workshop.closed) {
-        assert.equal(event.offers.availability, "https://schema.org/SoldOut");
-        assert.doesNotMatch(event.offers.url, /stripe/);
+        assert.equal(event.offers, undefined);
       } else {
         assert.equal(event.offers.url, STRIPE_LINKS.web);
+        assert.equal(event.offers.availability, "https://schema.org/InStock");
       }
     }
+  }
+});
+
+test("open workshop is listed first and targets admin departments too", () => {
+  for (const campaign of Object.values(talleresOtono2026)) {
+    const [first, last] = getWorkshopsOpenFirst(campaign);
+    assert.equal(first.id, "web");
+    assert.equal(last.id, "productivity");
+    assert.match(first.title, /Departamentos de Administración/);
+    assert.ok(first.audience.some((item) => /[Dd]epartamentos de administración/.test(item)));
   }
 });

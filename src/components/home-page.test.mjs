@@ -20,7 +20,7 @@ test("new home is a brand hub that links to the workshop landing", async () => {
 
   assert.match(home, /data-hero-line1/);
   assert.match(home, /prefers-reduced-motion/);
-  assert.match(home, /campaign\.workshops/);
+  assert.match(home, /getWorkshopsOpenFirst\(campaign\)/);
   assert.match(home, /talleres-otono-2026/);
   assert.match(home, /sara-testimonial\.webp/);
   assert.match(home, /sara-testimonial-480\.webp/);

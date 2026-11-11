@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import heroPhoto from "../assets/images/ruralia-1.jpg";
 import Base from "../layouts/Base.astro";
-import { getTalleresCampaign, getWorkshopPath, type Locale } from "../data/talleres-otono-2026";
+import { getTalleresCampaign, getWorkshopPath, getWorkshopsOpenFirst, type Locale } from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
 import SectionTag from "./ui/SectionTag.astro";
 import EditorialSplit from "./ui/EditorialSplit.astro";
@@ -26,7 +26,7 @@ const copy = isGl
   ? {
       seoTitle: "Rural GPT · Talleres de IA en Galicia | Anceu",
       seoDescription:
-        "Talleres sprint de IA para profesionais en Anceu. Produtividade (31 out, prazas pechadas) e IA para asesorías e xestorías (28 nov, reservas abertas), 199 € + IVA, comida incluída. Rural Hackers × Anceu Coliving.",
+        "Formación presencial de IA en Anceu. Próximo taller: IA para asesorías, xestorías e departamentos de administración, 28 de novembro, 199 € + IVA, comida incluída. Rural Hackers × Anceu Coliving.",
       heroLabel: "Formación práctica de IA · Galicia",
       heroAria: "A IA avanza. O teu traballo, tamén.",
       heroLine1: "A IA AVANZA.",
@@ -35,8 +35,8 @@ const copy = isGl
       heroBody:
         "A IA non che vai quitar o traballo, pero unha persoa profesional que sabe usala si. Formación práctica para integrar ferramentas reais no teu traballo, sen teoría futurista nin cursos eternos.",
       heroMeta:
-        "31 outubro · Produtividade (prazas pechadas) — 28 novembro · Asesorías e xestorías — Anceu Coliving",
-      heroCta: "Ver talleres de outono",
+        "28 novembro · Asesorías, xestorías e administración — Anceu Coliving",
+      heroCta: "Ver o taller do 28 de novembro",
       definitionTag: "Que é Rural GPT",
       definition:
         "Formación presencial de IA aplicada no rural galego. Unha iniciativa de Rural Hackers e Anceu Coliving para profesionais que queren avanzar sen perderse no ruído.",
@@ -46,9 +46,9 @@ const copy = isGl
         "É traballo real coas túas ferramentas e co teu negocio.",
       ],
       workshopsTag: "Agora en Rural GPT",
-      workshopsTitle: "Dous sprints. Dous resultados antes de Nadal.",
+      workshopsTitle: "Un sprint máis antes de Nadal.",
       workshopsIntro:
-        "Un día intensivo, grupo de 15 persoas e comida incluída. As prazas de Produtividade xa están pechadas; a reserva aberta é a do taller para asesorías e xestorías do 28 de novembro.",
+        "Un día intensivo, grupo de 15 persoas e comida incluída. O 28 de novembro, IA para asesorías, xestorías e departamentos de administración, cumprindo o RGPD. O taller de Produtividade xa se celebrou o 31 de outubro.",
       workshopCta: "Ver programa e reservar",
       testimonialTag: "O que xa pasou",
       testimonialTitle: "Unha tarefa de media hora. Agora, un botón.",
@@ -74,7 +74,7 @@ const copy = isGl
       archiveCta: "Ver a edición anterior",
       finalTitle: "Un día. Un problema. Unha solución real.",
       finalBody:
-        "31 outubro · Produtividade (prazas pechadas) — 28 novembro · Asesorías e xestorías — 199 € + IVA",
+        "28 novembro · Asesorías, xestorías e administración — 199 € + IVA",
       contactTitle: "Tes dúbidas? Escríbenos",
       name: "O teu nome",
       email: "ti@email.com",
@@ -84,7 +84,7 @@ const copy = isGl
   : {
       seoTitle: "Rural GPT · Talleres de IA en Galicia | Anceu",
       seoDescription:
-        "Talleres sprint de IA para profesionales en Anceu. Productividad (31 oct, plazas cerradas) e IA para asesorías y gestorías (28 nov, reservas abiertas), 199 € + IVA, comida incluida. Rural Hackers × Anceu Coliving.",
+        "Formación presencial de IA en Anceu. Próximo taller: IA para asesorías, gestorías y departamentos de administración, 28 de noviembre, 199 € + IVA, comida incluida. Rural Hackers × Anceu Coliving.",
       heroLabel: "Formación práctica de IA · Galicia",
       heroAria: "La IA avanza. Tu trabajo, también.",
       heroLine1: "LA IA AVANZA.",
@@ -93,8 +93,8 @@ const copy = isGl
       heroBody:
         "La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Formación práctica para integrar herramientas reales en tu trabajo, sin teoría futurista ni cursos eternos.",
       heroMeta:
-        "31 octubre · Productividad (plazas cerradas) — 28 noviembre · Asesorías y gestorías — Anceu Coliving",
-      heroCta: "Ver talleres de otoño",
+        "28 noviembre · Asesorías, gestorías y administración — Anceu Coliving",
+      heroCta: "Ver el taller del 28 de noviembre",
       definitionTag: "Qué es Rural GPT",
       definition:
         "Formación presencial de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving para profesionales que quieren avanzar sin perderse en el ruido.",
@@ -104,9 +104,9 @@ const copy = isGl
         "Es trabajo real con tus herramientas y con tu negocio.",
       ],
       workshopsTag: "Ahora en Rural GPT",
-      workshopsTitle: "Dos sprints. Dos resultados antes de Navidad.",
+      workshopsTitle: "Un sprint más antes de Navidad.",
       workshopsIntro:
-        "Un día intensivo, grupo de 15 personas y comida incluida. Las plazas de Productividad ya están cerradas; la reserva abierta es la del taller para asesorías y gestorías del 28 de noviembre.",
+        "Un día intensivo, grupo de 15 personas y comida incluida. El 28 de noviembre, IA para asesorías, gestorías y departamentos de administración, cumpliendo el RGPD. El taller de Productividad ya se celebró el 31 de octubre.",
       workshopCta: "Ver programa y reservar",
       testimonialTag: "Lo que ya ocurrió",
       testimonialTitle: "Una tarea de media hora. Ahora, un botón.",
@@ -132,7 +132,7 @@ const copy = isGl
       archiveCta: "Ver la edición anterior",
       finalTitle: "Un día. Un problema. Una solución real.",
       finalBody:
-        "31 octubre · Productividad (plazas cerradas) — 28 noviembre · Asesorías y gestorías — 199 € + IVA",
+        "28 noviembre · Asesorías, gestorías y administración — 199 € + IVA",
       contactTitle: "¿Tienes dudas? Escríbenos",
       name: "Tu nombre",
       email: "tu@email.com",
@@ -283,16 +283,14 @@ const schema = {
         <p class="ed-lead">{copy.workshopsIntro}</p>
         <div class="teaser-grid">
           {
-            campaign.workshops.map((workshop, index) => (
+            getWorkshopsOpenFirst(campaign).map((workshop) => (
               <a class="teaser-card" href={getWorkshopPath(locale, workshop)}>
-                <span class="teaser-number">0{index + 1}</span>
+                <span class="teaser-number">{workshop.eyebrow}</span>
                 <span class="teaser-date">{workshop.dateShort}</span>
                 <h3>{workshop.title}</h3>
                 <p>{workshop.hook}</p>
                 <strong>
-                  {workshop.closed
-                    ? `${workshop.priceLabel} · ${campaign.closedLabel}`
-                    : workshop.priceLabel}
+                  {workshop.closed ? campaign.closedLabel : workshop.priceLabel}
                 </strong>
                 <span class="teaser-more">{campaign.moreInfoLabel}</span>
                 <span class="teaser-arrow" aria-hidden="true">→</span>
