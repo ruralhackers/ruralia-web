@@ -26,5 +26,6 @@ test("new home is a brand hub that links to the workshop landing", async () => {
   assert.match(home, /sara-testimonial-480\.webp/);
   assert.match(home, /residencia-ia-galicia/);
   assert.doesNotMatch(home, /PUBLIC_STRIPE_LINK/);
+  assert.match(home, /openWorkshop\.stripeUrl/);
   assert.doesNotMatch(home, /room-102/);
 });
