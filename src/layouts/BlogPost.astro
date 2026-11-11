@@ -110,6 +110,19 @@ if (keywords && keywords.length > 0) {
     .slice(0, 3);
 }
 
+// Counterpart post in the other locale, matched by translationKey (falls back to id).
+// GL/ES slugs can differ (e.g. automatizacions-ia ↔ automatizaciones-ia).
+const otherLocale = locale === 'gl' ? 'es' : 'gl';
+const currentPost = allPosts.find((p) => p.id === slug);
+const currentKey = currentPost?.data.translationKey ?? slug;
+const otherCollection = await getCollection(otherLocale === 'gl' ? 'blogGl' : 'blogEs');
+const counterpart = otherCollection.find(
+  (p) => (p.data.translationKey ?? p.id) === currentKey || p.id === currentKey,
+);
+const otherBlogBase = otherLocale === 'gl' ? '/blog/' : '/es/blog/';
+// No counterpart → switcher goes to the other locale's blog index and hreflang is omitted.
+const alternateUrl = counterpart ? `${otherBlogBase}${counterpart.id}/` : otherBlogBase;
+
 const shareTitle = encodeURIComponent(title);
 const shareURL = encodeURIComponent(canonicalURL);
 const copiedText = t('blog.copied');
@@ -125,6 +138,8 @@ const copiedText = t('blog.copied');
   keywords={keywords}
   date={date}
   author={author}
+  alternateUrl={alternateUrl}
+  skipHreflang={!counterpart}
 >
   <article class="section">
     <div class="article-inner">
