@@ -18,6 +18,9 @@ const campaign = getTalleresCampaign(locale);
 const landingUrl = isGl
   ? "/talleres-otono-2026/"
   : "/es/talleres-otono-2026/";
+// Taller con reservas abiertas: pago directo con Stripe desde la home.
+const openWorkshop = getWorkshopsOpenFirst(campaign).find((workshop) => !workshop.closed);
+const programUrl = openWorkshop ? getWorkshopPath(locale, openWorkshop) : landingUrl;
 const residenceUrl = isGl
   ? "/residencia-ia-galicia/"
   : "/es/residencia-ia-galicia/";
@@ -36,7 +39,8 @@ const copy = isGl
         "A IA non che vai quitar o traballo, pero unha persoa profesional que sabe usala si. Formación práctica para integrar ferramentas reais no teu traballo, sen teoría futurista nin cursos eternos.",
       heroMeta:
         "28 novembro · Asesorías, xestorías e administración — Anceu Coliving",
-      heroCta: "Ver o taller do 28 de novembro",
+      heroCta: "Ver programa",
+      reserveCta: "Reservar praza",
       definitionTag: "Que é Rural GPT",
       definition:
         "Formación presencial de IA aplicada no rural galego. Unha iniciativa de Rural Hackers e Anceu Coliving para profesionais que queren avanzar sen perderse no ruído.",
@@ -94,7 +98,8 @@ const copy = isGl
         "La IA no te va a quitar el trabajo, pero un profesional que sabe usarla sí. Formación práctica para integrar herramientas reales en tu trabajo, sin teoría futurista ni cursos eternos.",
       heroMeta:
         "28 noviembre · Asesorías, gestorías y administración — Anceu Coliving",
-      heroCta: "Ver el taller del 28 de noviembre",
+      heroCta: "Ver programa",
+      reserveCta: "Reservar plaza",
       definitionTag: "Qué es Rural GPT",
       definition:
         "Formación presencial de IA aplicada en el rural gallego. Una iniciativa de Rural Hackers y Anceu Coliving para profesionales que quieren avanzar sin perderse en el ruido.",
@@ -249,7 +254,18 @@ const schema = {
           <p>{copy.heroBody}</p>
           <p class="hero-meta">{copy.heroMeta}</p>
         </div>
-        <a class="ed-button" href={landingUrl}>{copy.heroCta}<span aria-hidden="true">→</span></a>
+        <div class="hero-actions">
+          {
+            openWorkshop && (
+              <a class="ed-button" href={openWorkshop.stripeUrl} rel="noopener">
+                {copy.reserveCta} · {openWorkshop.priceLabel}<span aria-hidden="true">↗</span>
+              </a>
+            )
+          }
+          <a class:list={["ed-button", { "ed-button--outline": openWorkshop }]} href={programUrl}>
+            {copy.heroCta}<span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
       <Image
         class="hero-image"
@@ -370,8 +386,9 @@ const schema = {
     <CtaBand
       title={copy.finalTitle}
       body={copy.finalBody}
-      href={landingUrl}
-      label={copy.heroCta}
+      href={openWorkshop ? openWorkshop.stripeUrl : landingUrl}
+      label={openWorkshop ? `${copy.reserveCta} · ${openWorkshop.priceLabel}` : copy.heroCta}
+      external={!!openWorkshop}
     />
 
     <section class="ed-section ed-section--white contact-section">
@@ -438,6 +455,13 @@ const schema = {
     gap: 2rem;
     padding: 1.5rem var(--editorial-pad) 2rem;
     border-top: 1px solid var(--editorial-line);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
   }
 
   .hero-bottom p {
@@ -787,6 +811,10 @@ const schema = {
 
     .hero-bottom {
       align-items: start;
+    }
+
+    .hero-actions {
+      flex-direction: column;
     }
 
     .hero-bottom .ed-button {
