@@ -187,16 +187,12 @@ Antes de que te lances a automatizar todo lo que se mueva, un par de avisos basa
 
 **Documenta tus flujos.** Ponles nombres descriptivos a los escenarios. Añade notas en los módulos que expliquen qué hace cada uno y por qué. Dentro de tres meses no vas a recordar por qué pusiste ese filtro o ese condicional. Y si algún día otra persona tiene que mantener tus automatizaciones, te lo va a agradecer.
 
-## El taller de Productividad de Rural GPT es automatización
+## Automatizar en una asesoría o departamento de administración
 
-Todo lo que has leído aquí se puede hacer por tu cuenta, desde casa, con paciencia y tutoriales. Lo hemos escrito para que sea así de accionable.
+Flujos como el de extracción de facturas son oro en una asesoría, una gestoría o el departamento de administración de una empresa. Pero ahí hay un matiz que un freelancer puede pasar por alto: cada documento que atraviesa el flujo lleva datos de clientes, y eso obliga a pensar en qué modelo de IA usas, dónde se procesan los datos y qué dice el RGPD.
 
-Pero hay una diferencia entre montar una automatización siguiendo un tutorial y montar tu sistema completo con alguien al lado que te guía en tiempo real.
+De eso va el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT, el 28 de noviembre en Anceu Coliving (Ponte Caldelas): automatizar tareas repetitivas, facturas de proveedores, conciliaciones y control de plazos y documentos cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa. De 10:00 a 18:00, 15 plazas, comida incluida.
 
-En el [taller IA y Productividad de Rural GPT](/es/talleres-otono-2026/) (31 de octubre, Anceu) dedicamos la jornada a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desarrollo con IA](/es/blog/crear-app-con-ia/) y creación de tu [stack personalizado](/es/blog/herramientas-ia-freelancers/). Un día, comida incluida, 15 plazas.
+Si tu caso no es una asesoría, los flujos de este artículo funcionan igual: empieza por lo que más tiempo te quita. Y si quieres ir un paso más allá, mira cómo [crear tus propias herramientas con IA](/es/blog/crear-app-con-ia/) o qué [herramientas de IA](/es/blog/herramientas-ia-freelancers/) encajan en tu trabajo.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
-
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
-
-Las automatizaciones con IA no son el futuro. Son el presente. La única pregunta es cuánto tiempo más vas a seguir haciendo a mano lo que una máquina puede hacer por ti en segundos.
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/)

@@ -128,35 +128,37 @@ const sharedPrices = {
 const gl: Campaign = {
   locale: "gl",
   seo: {
-    title: "Talleres de IA en Galicia · Produtividade e Asesorías | Rural GPT",
+    title: "Taller de IA para Asesorías, Xestorías e Administración · 28 nov | Rural GPT",
     description:
-      "Talleres presenciais de IA en Anceu: Produtividade o 31 de outubro e IA para asesorías e xestorías o 28 de novembro. 199 € + IVA, comida incluída, 15 prazas. Rural Hackers × Anceu Coliving.",
+      "Taller presencial de IA para asesorías, xestorías e departamentos de administración o 28 de novembro en Anceu: IA cumprindo o RGPD, con modelos aloxados en Europa. 199 € + IVA, comida incluída, 15 prazas.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
       "automatización IA",
       "IA para asesorías e xestorías",
+      "IA para departamentos de administración",
+      "IA para empresas RGPD",
       "IA RGPD",
       "Anceu Coliving",
     ],
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
-  closedLabel: "Prazas pechadas",
+  closedLabel: "Xa celebrado",
   moreInfoLabel: "Ver taller",
-  closedNotice: "As prazas deste taller están pechadas.",
+  closedNotice: "Este taller xa se celebrou o 31 de outubro. A próxima data é o 28 de novembro.",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Outono 2026",
     title: "Pechas os ollos e xa é Nadal.",
     seoSubtitle: "Talleres presenciais de IA en Galicia · Outono 2026",
     intro:
-      "Dous talleres sprint dun día en Anceu. Saes con algo feito á túa medida, non con apuntamentos que nunca terás tempo de volver ler.",
+      "O último sprint do ano: un día en Anceu para asesorías, xestorías e departamentos de administración. Saes con algo feito á túa medida, non con apuntamentos que nunca terás tempo de volver ler.",
     body:
       "IA aplicada para profesionais non técnicos. Sen teoría futurista. Sen un curso en liña de 40 horas. Un día intensivo, grupo reducido e comida incluída no corazón de Galicia.",
     meta:
-      "31 de outubro · Produtividade — 28 de novembro · Asesorías e xestorías — 199 € + IVA · 15 prazas por taller",
-    cta: "Ver os talleres",
+      "28 de novembro · Asesorías, xestorías e administración — 199 € + IVA · 15 prazas",
+    cta: "Ver o taller",
   },
   context: {
     tag: "O punto de partida",
@@ -168,9 +170,9 @@ const gl: Campaign = {
     imageAlt:
       "Participantes da primeira Residencia Rural GPT analizando tarefas repetitivas",
   },
-  workshopsHeading: "Dous días para resolver dous problemas reais",
+  workshopsHeading: "Un día para poñer a IA a traballar no teu despacho",
   workshopsIntro:
-    "Escolle o problema que queres sacar da lista antes de rematar o ano.",
+    "O 28 de novembro é a última data de 2026. O taller de Produtividade do 31 de outubro xa se celebrou.",
   workshops: [
     {
       id: "productivity",
@@ -179,9 +181,9 @@ const gl: Campaign = {
       dateISO: "2026-10-31",
       dateLabel: "31 de outubro de 2026 · Anceu Coliving",
       dateShort: "31 OUT",
-      eyebrow: "Taller 01",
+      eyebrow: "Edición anterior",
       hook:
-        "Entras coas túas tarefas repetitivas. Saes con automatizacións reais.",
+        "Celebrouse o 31 de outubro: as persoas participantes entraron coas súas tarefas repetitivas e saíron con automatizacións reais.",
       description:
         "Cantas horas perdes cada semana en follas de cálculo, correos, orzamentos, resumos, informes ou procesando imaxes á man? Identificarás que paga a pena automatizar, que ferramenta usar e levarás dous ou tres fluxos funcionando para aplicar ao día seguinte.",
       audience: [
@@ -207,13 +209,13 @@ const gl: Campaign = {
       slug: "ia-produtividade",
       image: "tareas-mierderas",
       seoDescription:
-        "Taller presencial de IA e Produtividade o 31 de outubro en Anceu Coliving (Ponte Caldelas). Prazas pechadas.",
+        "Taller presencial de IA e Produtividade celebrado o 31 de outubro en Anceu Coliving (Ponte Caldelas). A próxima data é o taller para asesorías, xestorías e administración do 28 de novembro.",
       keywords: ["taller IA Galicia", "automatización IA", "IA e produtividade", "Anceu Coliving"],
       faq: [
         {
           question: "Quedan prazas?",
           answer:
-            "Non. As prazas deste taller están pechadas. A reserva aberta agora é a do taller IA para Asesorías e Xestorías do 28 de novembro.",
+            "Non. Este taller xa se celebrou o 31 de outubro. A reserva aberta agora é a do taller IA para Asesorías, Xestorías e Departamentos de Administración do 28 de novembro.",
         },
         {
           question: "Necesito saber programar?",
@@ -227,50 +229,57 @@ const gl: Campaign = {
     },
     {
       id: "web",
-      title: "IA para Asesorías e Xestorías",
-      shortTitle: "Asesorías",
+      title: "IA para Asesorías, Xestorías e Departamentos de Administración",
+      shortTitle: "Asesorías e administración",
       dateISO: "2026-11-28",
       dateLabel: "28 de novembro de 2026 · Anceu Coliving",
       dateShort: "28 NOV",
-      eyebrow: "Taller 02",
+      eyebrow: "Próximo taller",
       hook:
-        "Entras con prazos, papeis e tarefas repetitivas. Saes coa IA traballando para o teu despacho, cumprindo o RGPD.",
+        "Entras con prazos, papeis e tarefas repetitivas. Saes coa IA traballando para o teu despacho ou departamento, cumprindo o RGPD.",
       description:
-        "As asesorías e xestorías traballan con datos persoais e fiscais dos seus clientes e non poden usar calquera ferramenta. Nesta xornada aprenderás a integrar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos de IA aloxados en Europa, para mellorar os teus procesos, evitar os despistes de sempre (prazos, papeis esquecidos, tarefas repetitivas) e deixar de perder tempo en traballo que non achega valor.",
+        "Asesorías, xestorías e departamentos de administración traballan con datos persoais, fiscais e laborais de clientes, persoal e provedores, e non poden usar calquera ferramenta. Nesta xornada aprenderás a integrar a IA no día a día do despacho ou do departamento cumprindo o RGPD e a LOPDGDD, con modelos de IA aloxados en Europa, para mellorar os teus procesos, evitar os despistes de sempre (prazos, papeis esquecidos, tarefas repetitivas) e deixar de perder tempo en traballo que non achega valor.",
       audience: [
         "Asesorías fiscais, laborais e contables",
         "Xestorías administrativas e despachos profesionais",
-        "Equipos que xestionan documentación e datos persoais dos seus clientes",
+        "Departamentos de administración, contabilidade e RRHH de empresas",
+        "Equipos que xestionan documentación e datos persoais de clientes, persoal ou provedores",
         "Profesionais que queren usar a IA sen poñer en risco a confidencialidade",
       ],
       topics: [
         "Que esixen o RGPD e a LOPDGDD cando usas IA con datos de clientes",
-        "Como escoller modelos de IA aloxados na Unión Europea e que revisar antes de usalos",
-        "Análise dos procesos do despacho: que automatizar e que debe seguir en mans humanas",
+        "Como escoller modelos de IA aloxados na Unión Europea (p. ex. Langdock) e que revisar antes de usalos",
+        "Análise dos procesos do despacho ou departamento: que automatizar e que debe seguir en mans humanas",
+        "Facturas de provedores, conciliacións e documentación interna: que pode preparar a IA e que revisas ti",
         "Control de prazos, lembretes e documentación pendente para evitar esquecementos",
         "Automatización de tarefas repetitivas para dedicar o tempo ao que achega valor",
       ],
       result:
-        "Sairás con criterio para usar a IA na túa asesoría respectando a normativa de protección de datos, con procesos concretos identificados para mellorar e unha folla de ruta para aplicalos no teu despacho ao día seguinte.",
+        "Sairás con criterio para usar a IA na túa asesoría, xestoría ou departamento respectando a normativa de protección de datos, con procesos concretos identificados para mellorar e unha folla de ruta para aplicalos ao día seguinte.",
       ...sharedPrices,
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
-      cta: "Reservar Asesorías",
+      cta: "Reservar praza",
       slug: "ia-asesorias-xestorias",
       image: "equipo",
       seoDescription:
-        "Taller presencial para asesorías e xestorías o 28 de novembro en Anceu: usa a IA cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa. 199 € + IVA, comida incluída, 15 prazas.",
-      keywords: ["IA para asesorías", "IA para xestorías", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
+        "Taller presencial para asesorías, xestorías e departamentos de administración o 28 de novembro en Anceu: usa a IA cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa. 199 € + IVA, comida incluída, 15 prazas.",
+      keywords: ["IA para asesorías", "IA para xestorías", "IA para departamentos de administración", "IA para empresas RGPD", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
       faq: [
         {
           question: "Necesito coñecementos técnicos?",
           answer:
-            "Non. Traballamos sobre os procesos reais do teu despacho, sen necesidade de coñecementos técnicos.",
+            "Non. Traballamos sobre os procesos reais do teu despacho ou departamento, sen necesidade de coñecementos técnicos.",
         },
         {
           question: "Que levo ao rematar o día?",
           answer:
-            "Criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho.",
+            "Criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho ou departamento.",
+        },
+        {
+          question: "Serve se traballo no departamento de administración dunha empresa?",
+          answer:
+            "Si. Os problemas son os mesmos que nun despacho: datos persoais, prazos, facturas e documentación. Traballamos sobre os procesos reais do teu departamento.",
         },
       ],
     },
@@ -361,12 +370,12 @@ const gl: Campaign = {
     {
       question: "Necesito saber programar?",
       answer:
-        "Non. O enfoque é práctico e accesible para perfís non técnicos. No taller para asesorías e xestorías traballamos sobre os procesos reais do teu despacho, sen necesidade de coñecementos técnicos.",
+        "Non. O enfoque é práctico e accesible para perfís non técnicos. Traballamos sobre os procesos reais do teu despacho ou departamento, sen necesidade de coñecementos técnicos.",
     },
     {
       question: "Que levo ao rematar o día?",
       answer:
-        "En Produtividade, dúas ou tres automatizacións configuradas e criterio para seguir. En Asesorías e Xestorías, criterio para usar a IA cumprindo o RGPD e a LOPDGDD e unha folla de ruta para mellorar os procesos do teu despacho.",
+        "Criterio para usar a IA cumprindo o RGPD e a LOPDGDD, procesos concretos identificados e unha folla de ruta para mellorar o traballo do teu despacho ou departamento.",
     },
     {
       key: "alojamiento",
@@ -388,12 +397,7 @@ const gl: Campaign = {
     {
       question: "Haberá máis edicións este ano?",
       answer:
-        "Estas son as dúas únicas datas de 2026. Ata 2027 non volveremos facer residencias longas de tres días.",
-    },
-    {
-      question: "Podo cambiar de taller se me equivoco?",
-      answer:
-        "Se quedan prazas no outro taller, si. Escríbenos polo menos sete días antes.",
+        "O 28 de novembro é a última data de 2026. Ata 2027 non haberá novas edicións nin residencias longas.",
     },
     {
       key: "deducible",
@@ -405,13 +409,13 @@ const gl: Campaign = {
   finalCta: {
     title: "Un día. Un problema. Unha solución real.",
     body:
-      "Comida incluída · 15 prazas por taller · Anceu, Galicia · Prezos sen IVA",
-    productivity: "31 de outubro — Produtividade — Prazas pechadas",
-    web: "28 de novembro — Asesorías e xestorías — 199 € + IVA",
+      "Comida incluída · 15 prazas · Anceu, Galicia · Prezos sen IVA",
+    productivity: "31 de outubro — Produtividade — Xa celebrado",
+    web: "28 de novembro — Asesorías, xestorías e administración — 199 € + IVA",
   },
   contact: {
     title: "Tes dúbidas?",
-    body: "Escríbenos a hola@ruralgpt.gal e axudámoste a escoller.",
+    body: "Escríbenos a hola@ruralgpt.gal e resolvemos as túas dúbidas.",
   },
   internalLinks: {
     heading: "Máis información",
@@ -426,35 +430,37 @@ const gl: Campaign = {
 const es: Campaign = {
   locale: "es",
   seo: {
-    title: "Talleres de IA en Galicia · Productividad y Asesorías | Rural GPT",
+    title: "Taller de IA para Asesorías, Gestorías y Administración · 28 nov | Rural GPT",
     description:
-      "Talleres presenciales de IA en Anceu: Productividad el 31 de octubre e IA para asesorías y gestorías el 28 de noviembre. 199 € + IVA, comida incluida, 15 plazas. Rural Hackers × Anceu Coliving.",
+      "Taller presencial de IA para asesorías, gestorías y departamentos de administración el 28 de noviembre en Anceu: IA cumpliendo el RGPD, con modelos alojados en Europa. 199 € + IVA, comida incluida, 15 plazas.",
     keywords: [
       "taller IA Galicia",
       "curso IA presencial",
       "automatización IA",
       "IA para asesorías y gestorías",
+      "IA para departamentos de administración",
+      "IA para empresas RGPD",
       "IA RGPD",
       "Anceu Coliving",
     ],
   },
   navLabel: "Talleres",
   reserveLabel: "Reservar",
-  closedLabel: "Plazas cerradas",
+  closedLabel: "Ya celebrado",
   moreInfoLabel: "Ver taller",
-  closedNotice: "Las plazas de este taller están cerradas.",
+  closedNotice: "Este taller ya se celebró el 31 de octubre. La próxima fecha es el 28 de noviembre.",
   capacity: 15,
   hero: {
     eyebrow: "Talleres sprint · Otoño 2026",
     title: "Cierras los ojos y ya es Navidad.",
     seoSubtitle: "Talleres presenciales de IA en Galicia · Otoño 2026",
     intro:
-      "Dos talleres sprint de un día en Anceu. Sales con algo hecho a tu medida, no con apuntes que jamás tendrás tiempo de volver a leer.",
+      "El último sprint del año: un día en Anceu para asesorías, gestorías y departamentos de administración. Sales con algo hecho a tu medida, no con apuntes que jamás tendrás tiempo de volver a leer.",
     body:
       "IA aplicada para profesionales no técnicos. Sin teoría futurista. Sin un curso online de 40 horas. Un día intensivo, grupo reducido y comida incluida en el corazón de Galicia.",
     meta:
-      "31 de octubre · Productividad — 28 de noviembre · Asesorías y gestorías — 199 € + IVA · 15 plazas por taller",
-    cta: "Ver los talleres",
+      "28 de noviembre · Asesorías, gestorías y administración — 199 € + IVA · 15 plazas",
+    cta: "Ver el taller",
   },
   context: {
     tag: "El punto de partida",
@@ -466,9 +472,9 @@ const es: Campaign = {
     imageAlt:
       "Participantes de la primera Residencia Rural GPT analizando tareas repetitivas",
   },
-  workshopsHeading: "Dos días para resolver dos problemas reales",
+  workshopsHeading: "Un día para poner la IA a trabajar en tu despacho",
   workshopsIntro:
-    "Elige el problema que quieres sacar de la lista antes de terminar el año.",
+    "El 28 de noviembre es la última fecha de 2026. El taller de Productividad del 31 de octubre ya se celebró.",
   workshops: [
     {
       id: "productivity",
@@ -477,9 +483,9 @@ const es: Campaign = {
       dateISO: "2026-10-31",
       dateLabel: "31 de octubre de 2026 · Anceu Coliving",
       dateShort: "31 OCT",
-      eyebrow: "Taller 01",
+      eyebrow: "Edición anterior",
       hook:
-        "Entras con tus tareas repetitivas. Sales con automatizaciones reales.",
+        "Se celebró el 31 de octubre: los participantes entraron con sus tareas repetitivas y salieron con automatizaciones reales.",
       description:
         "¿Cuántas horas pierdes cada semana en hojas de cálculo, correos, presupuestos, resúmenes, informes o procesando imágenes a mano? Identificarás qué merece la pena automatizar, qué herramienta utilizar y te llevarás dos o tres flujos funcionando para aplicar al día siguiente.",
       audience: [
@@ -505,13 +511,13 @@ const es: Campaign = {
       slug: "ia-productividad",
       image: "tareas-mierderas",
       seoDescription:
-        "Taller presencial de IA y Productividad el 31 de octubre en Anceu Coliving (Ponte Caldelas). Plazas cerradas.",
+        "Taller presencial de IA y Productividad celebrado el 31 de octubre en Anceu Coliving (Ponte Caldelas). La próxima fecha es el taller para asesorías, gestorías y administración del 28 de noviembre.",
       keywords: ["taller IA Galicia", "automatización IA", "IA y productividad", "Anceu Coliving"],
       faq: [
         {
           question: "¿Quedan plazas?",
           answer:
-            "No. Las plazas de este taller están cerradas. La reserva abierta ahora es la del taller IA para Asesorías y Gestorías del 28 de noviembre.",
+            "No. Este taller ya se celebró el 31 de octubre. La reserva abierta ahora es la del taller IA para Asesorías, Gestorías y Departamentos de Administración del 28 de noviembre.",
         },
         {
           question: "¿Necesito saber programar?",
@@ -525,50 +531,57 @@ const es: Campaign = {
     },
     {
       id: "web",
-      title: "IA para Asesorías y Gestorías",
-      shortTitle: "Asesorías",
+      title: "IA para Asesorías, Gestorías y Departamentos de Administración",
+      shortTitle: "Asesorías y administración",
       dateISO: "2026-11-28",
       dateLabel: "28 de noviembre de 2026 · Anceu Coliving",
       dateShort: "28 NOV",
-      eyebrow: "Taller 02",
+      eyebrow: "Próximo taller",
       hook:
-        "Entras con plazos, papeles y tareas repetitivas. Sales con la IA trabajando para tu despacho, cumpliendo el RGPD.",
+        "Entras con plazos, papeles y tareas repetitivas. Sales con la IA trabajando para tu despacho o departamento, cumpliendo el RGPD.",
       description:
-        "Las asesorías y gestorías trabajan con datos personales y fiscales de sus clientes y no pueden usar cualquier herramienta. En esta jornada aprenderás a integrar la IA en el día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos de IA alojados en Europa, para mejorar tus procesos, evitar los despistes de siempre (plazos, papeles olvidados, tareas repetitivas) y dejar de perder tiempo en trabajo que no aporta valor.",
+        "Asesorías, gestorías y departamentos de administración trabajan con datos personales, fiscales y laborales de clientes, plantilla y proveedores, y no pueden usar cualquier herramienta. En esta jornada aprenderás a integrar la IA en el día a día del despacho o del departamento cumpliendo el RGPD y la LOPDGDD, con modelos de IA alojados en Europa, para mejorar tus procesos, evitar los despistes de siempre (plazos, papeles olvidados, tareas repetitivas) y dejar de perder tiempo en trabajo que no aporta valor.",
       audience: [
         "Asesorías fiscales, laborales y contables",
         "Gestorías administrativas y despachos profesionales",
-        "Equipos que gestionan documentación y datos personales de sus clientes",
+        "Departamentos de administración, contabilidad y RRHH de empresas",
+        "Equipos que gestionan documentación y datos personales de clientes, plantilla o proveedores",
         "Profesionales que quieren usar la IA sin poner en riesgo la confidencialidad",
       ],
       topics: [
         "Qué exigen el RGPD y la LOPDGDD cuando usas IA con datos de clientes",
-        "Cómo elegir modelos de IA alojados en la Unión Europea y qué revisar antes de usarlos",
-        "Análisis de los procesos del despacho: qué automatizar y qué debe seguir en manos humanas",
+        "Cómo elegir modelos de IA alojados en la Unión Europea (p. ej. Langdock) y qué revisar antes de usarlos",
+        "Análisis de los procesos del despacho o departamento: qué automatizar y qué debe seguir en manos humanas",
+        "Facturas de proveedores, conciliaciones y documentación interna: qué puede preparar la IA y qué revisas tú",
         "Control de plazos, recordatorios y documentación pendiente para evitar olvidos",
         "Automatización de tareas repetitivas para dedicar el tiempo a lo que aporta valor",
       ],
       result:
-        "Saldrás con criterio para usar la IA en tu asesoría respetando la normativa de protección de datos, con procesos concretos identificados para mejorar y una hoja de ruta para aplicarlos en tu despacho al día siguiente.",
+        "Saldrás con criterio para usar la IA en tu asesoría, gestoría o departamento respetando la normativa de protección de datos, con procesos concretos identificados para mejorar y una hoja de ruta para aplicarlos al día siguiente.",
       ...sharedPrices,
       priceLabel: "199 € + IVA",
       stripeUrl: STRIPE_LINKS.web,
-      cta: "Reservar Asesorías",
+      cta: "Reservar plaza",
       slug: "ia-asesorias-gestorias",
       image: "equipo",
       seoDescription:
-        "Taller presencial para asesorías y gestorías el 28 de noviembre en Anceu: usa la IA cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa. 199 € + IVA, comida incluida, 15 plazas.",
-      keywords: ["IA para asesorías", "IA para gestorías", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
+        "Taller presencial para asesorías, gestorías y departamentos de administración el 28 de noviembre en Anceu: usa la IA cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa. 199 € + IVA, comida incluida, 15 plazas.",
+      keywords: ["IA para asesorías", "IA para gestorías", "IA para departamentos de administración", "IA para empresas RGPD", "IA RGPD", "LOPDGDD", "taller IA Galicia"],
       faq: [
         {
           question: "¿Necesito conocimientos técnicos?",
           answer:
-            "No. Trabajamos sobre los procesos reales de tu despacho, sin necesidad de conocimientos técnicos.",
+            "No. Trabajamos sobre los procesos reales de tu despacho o departamento, sin necesidad de conocimientos técnicos.",
         },
         {
           question: "¿Qué me llevo al terminar el día?",
           answer:
-            "Criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho.",
+            "Criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho o departamento.",
+        },
+        {
+          question: "¿Sirve si trabajo en el departamento de administración de una empresa?",
+          answer:
+            "Sí. Los problemas son los mismos que en un despacho: datos personales, plazos, facturas y documentación. Trabajamos sobre los procesos reales de tu departamento.",
         },
       ],
     },
@@ -656,12 +669,12 @@ const es: Campaign = {
     {
       question: "¿Necesito saber programar?",
       answer:
-        "No. El enfoque es práctico y accesible para perfiles no técnicos. En el taller para asesorías y gestorías trabajamos sobre los procesos reales de tu despacho, sin necesidad de conocimientos técnicos.",
+        "No. El enfoque es práctico y accesible para perfiles no técnicos. Trabajamos sobre los procesos reales de tu despacho o departamento, sin necesidad de conocimientos técnicos.",
     },
     {
       question: "¿Qué me llevo al terminar el día?",
       answer:
-        "En Productividad, dos o tres automatizaciones configuradas y criterio para seguir. En Asesorías y Gestorías, criterio para usar la IA cumpliendo el RGPD y la LOPDGDD y una hoja de ruta para mejorar los procesos de tu despacho.",
+        "Criterio para usar la IA cumpliendo el RGPD y la LOPDGDD, procesos concretos identificados y una hoja de ruta para mejorar el trabajo de tu despacho o departamento.",
     },
     {
       key: "alojamiento",
@@ -683,12 +696,7 @@ const es: Campaign = {
     {
       question: "¿Habrá más ediciones este año?",
       answer:
-        "Estas son las dos únicas fechas de 2026. Hasta 2027 no volveremos a organizar residencias largas de tres días.",
-    },
-    {
-      question: "¿Puedo cambiar de taller si me equivoco?",
-      answer:
-        "Si quedan plazas en el otro taller, sí. Escríbenos al menos siete días antes.",
+        "El 28 de noviembre es la última fecha de 2026. Hasta 2027 no habrá nuevas ediciones ni residencias largas.",
     },
     {
       key: "deducible",
@@ -700,13 +708,13 @@ const es: Campaign = {
   finalCta: {
     title: "Un día. Un problema. Una solución real.",
     body:
-      "Comida incluida · 15 plazas por taller · Anceu, Galicia · Precios sin IVA",
-    productivity: "31 de octubre — Productividad — Plazas cerradas",
-    web: "28 de noviembre — Asesorías y gestorías — 199 € + IVA",
+      "Comida incluida · 15 plazas · Anceu, Galicia · Precios sin IVA",
+    productivity: "31 de octubre — Productividad — Ya celebrado",
+    web: "28 de noviembre — Asesorías, gestorías y administración — 199 € + IVA",
   },
   contact: {
     title: "¿Tienes dudas?",
-    body: "Escríbenos a hola@ruralgpt.gal y te ayudamos a elegir.",
+    body: "Escríbenos a hola@ruralgpt.gal y resolvemos tus dudas.",
   },
   internalLinks: {
     heading: "Más información",
@@ -774,22 +782,29 @@ export function buildWorkshopEvent(
       name: "Rural GPT",
       url: "https://ruralgpt.gal",
     },
-    offers: {
-      "@type": "Offer",
-      url: workshop.closed
-        ? `https://ruralgpt.gal${getWorkshopPath(locale, workshop)}`
-        : workshop.stripeUrl,
-      price: workshop.price,
-      priceCurrency: "EUR",
-      availability: workshop.closed
-        ? "https://schema.org/SoldOut"
-        : "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: workshop.price,
-        priceCurrency: "EUR",
-        valueAddedTaxIncluded: false,
-      },
-    },
+    // Talleres ya celebrados: sin oferta de reserva.
+    ...(workshop.closed
+      ? {}
+      : {
+          offers: {
+            "@type": "Offer",
+            url: workshop.stripeUrl,
+            price: workshop.price,
+            priceCurrency: "EUR",
+            availability: "https://schema.org/InStock",
+            validFrom: "2026-09-01T00:00:00+02:00",
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: workshop.price,
+              priceCurrency: "EUR",
+              valueAddedTaxIncluded: false,
+            },
+          },
+        }),
   };
+}
+
+/** Talleres con reservas abiertas primero; los ya celebrados al final. */
+export function getWorkshopsOpenFirst(campaign: Pick<Campaign, "workshops">): Workshop[] {
+  return [...campaign.workshops].sort((a, b) => Number(!!a.closed) - Number(!!b.closed));
 }

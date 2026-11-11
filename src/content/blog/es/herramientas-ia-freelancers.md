@@ -40,6 +40,8 @@ Claude es el que mejores textos escribe de los tres. Si necesitas una propuesta 
 
 La ventaja de Gemini es que vive dentro de las herramientas que ya usas. Si tu flujo de trabajo pasa por Gmail y Google Docs, Gemini Advanced te ahorra horas. Los Gems (asistentes personalizados) tienen acceso a búsqueda de Google y a tu Drive, algo que ni ChatGPT ni Claude ofrecen. [Guía completa de Gemini aquí](/es/blog/ia-de-google-guia-gemini/).
 
+**¿Y Grok?** El asistente de xAI, integrado en X, es la otra alternativa generalista que conviene conocer. Tiene versión gratuita y de pago, y es especialmente útil si trabajas mucho con lo que se mueve en X. En nuestro día a día lo usamos menos que los tres de arriba, pero juega en la misma liga.
+
 ## Herramientas para construir sin programar
 
 ### 4. Cursor
@@ -58,13 +60,13 @@ Cursor es un editor de código basado en VS Code con IA integrada. Le describes 
 
 Claude Code es un asistente de programación en terminal que puede leer, editar y crear archivos en tu proyecto. La diferencia con Cursor es que Claude Code entiende el contexto completo de tu codebase. Le dices "añade un formulario de contacto a la web" y sabe dónde están los componentes, qué framework usas y cómo encaja todo. Es como tener un developer junior muy competente sentado a tu lado.
 
-### 6. Bolt / v0
+### 6. Claude + Claude Design
 
-**Para qué lo uso:** prototipos rápidos de interfaces web. De idea a diseño funcional en minutos.
+**Para qué lo uso:** prototipos rápidos de interfaces y pequeñas herramientas. De idea a algo que puedes enseñar en minutos.
 
-**Precio:** planes gratuitos limitados / planes de pago desde 10-20 $/mes.
+**Precio:** con tu cuenta de Claude (lo que puedes hacer depende del plan).
 
-Bolt (de StackBlitz) y v0 (de Vercel) generan aplicaciones web completas desde una descripción en texto natural. Le dices "crea un dashboard para trackear mis facturas" y te genera una interfaz funcional con código real que puedes desplegar. Ideal para validar ideas con clientes antes de invertir tiempo en desarrollo. [Guía paso a paso de cómo crear una app con IA](/es/blog/crear-app-con-ia/).
+Con Claude puedes describir en lenguaje natural lo que necesitas — "un panel para seguir mis facturas pendientes" — e ir ajustándolo en la conversación hasta que funcione. Claude Design, también de Anthropic, está pensado para la parte visual: maquetas, pantallas y prototipos que puedes revisar y compartir. Ideal para validar ideas con clientes antes de invertir tiempo en desarrollo. [Guía paso a paso de cómo crear una app con IA](/es/blog/crear-app-con-ia/).
 
 ## Herramientas de investigación y análisis
 
@@ -130,13 +132,13 @@ Si ya usas Notion para gestionar tus proyectos, Notion AI es la extensión natur
 
 ## Herramientas especializadas
 
-### 14. Lovable
+### 14. Langdock
 
-**Para qué lo uso:** crear aplicaciones web completas con IA, más allá de prototipos.
+**Para qué lo uso:** trabajar con datos de clientes usando varios modelos de IA desde un mismo sitio, con alojamiento en la UE.
 
-**Precio:** gratis (limitado) / desde 20 $/mes.
+**Precio:** planes por usuario para empresas y equipos (consulta su web).
 
-Lovable va un paso más allá que Bolt o v0. Genera aplicaciones full-stack con base de datos, autenticación y despliegue incluido. Para freelancers que quieren crear SaaS sencillos o herramientas para clientes sin contratar un equipo de desarrollo, es la opción más completa. La calidad del código generado ha mejorado mucho en los últimos meses.
+Langdock es una plataforma alemana que da acceso a varios modelos (de OpenAI, Anthropic, Google, Mistral y otros) desde una sola interfaz, con alojamiento en la Unión Europea y un enfoque claro en el cumplimiento del RGPD. Si manejas datos personales o información confidencial de clientes, es una opción más sensata que pegar esos datos en la versión de consumo de cualquier chat. Eso sí: la herramienta no te exime de hacer los deberes (contrato de encargo de tratamiento, qué datos subes y quién tiene acceso).
 
 ### 15. Napkin AI
 
@@ -182,8 +184,8 @@ Lo que marca la diferencia es:
 2. **Saber escribir buenos prompts.** La diferencia entre un resultado mediocre y uno excelente está en cómo le pides las cosas a la IA.
 3. **Integrar la IA en tu flujo real.** No como experimento, sino como parte de tu proceso de trabajo diario.
 
-Esas tres cosas son exactamente lo que trabajamos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): tu stack de herramientas de IA, prompts con tu propio trabajo y automatizaciones funcionando en una sola jornada. 15 plazas, comida incluida.
+Y si trabajas con datos de clientes — en una asesoría, una gestoría o el departamento de administración de una empresa — hay una cuarta: **saber qué herramienta puedes usar con esos datos sin meterte en un lío**.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+Eso es lo que trabajamos en el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT, el 28 de noviembre en Anceu Coliving (Ponte Caldelas): IA aplicada al día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa como Langdock, control de plazos y documentos, facturas de proveedores, conciliaciones y automatización de tareas repetitivas. Una jornada de 10:00 a 18:00, 15 plazas, comida incluida.
 
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/)

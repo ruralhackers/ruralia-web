@@ -16,6 +16,8 @@ interface Props {
   robots?: string;
   ogImageAlt?: string;
   skipHreflang?: boolean;
+  /** Explicit URL of this page in the other locale (overrides getAlternateUrl). */
+  alternateUrl?: string;
 }
 
 const {
@@ -33,6 +35,7 @@ const {
   robots,
   ogImageAlt,
   skipHreflang = false,
+  alternateUrl,
 } = Astro.props;
 
 const locale = Astro.currentLocale ?? 'gl';
@@ -42,7 +45,7 @@ const fullOgImage = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astr
 
 // hreflang alternates
 const currentPath = Astro.url.pathname;
-const alternatePath = getAlternateUrl(currentPath, locale);
+const alternatePath = alternateUrl ?? getAlternateUrl(currentPath, locale);
 const glUrl = locale === 'gl' ? canonicalURL : new URL(alternatePath, Astro.site).href;
 const esUrl = locale === 'es' ? canonicalURL : new URL(alternatePath, Astro.site).href;
 ---

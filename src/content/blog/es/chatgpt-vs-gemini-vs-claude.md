@@ -22,6 +22,8 @@ El panorama de la inteligencia artificial en 2026 se ha consolidado alrededor de
 
 Los tres han mejorado brutalmente en el último año. Los tres tienen versiones gratuitas. Y los tres cuestan 20 dólares al mes en su versión premium. Así que la pregunta no es "cuál es mejor" en abstracto, sino **cuál es mejor para lo que tú necesitas**.
 
+Un cuarto nombre que conviene tener en el radar: **Grok**, el asistente de xAI (la empresa de Elon Musk), integrado en X. También tiene versión gratuita y de pago, y destaca por estar muy pegado a la actualidad que circula en X. No lo incluimos en la comparativa detallada porque en nuestro trabajo diario lo usamos menos, pero si ya vives en X merece la pena probarlo.
+
 Vamos a verlo uno por uno.
 
 ## ChatGPT (OpenAI): el más popular
@@ -211,12 +213,10 @@ Es como un fotógrafo profesional. No usa una sola lente para todo. Sabe cuándo
 
 Con la IA pasa lo mismo. Y la diferencia en productividad entre alguien que usa "la IA" (una sola) y alguien que usa **las IAs** (las tres, cada una para lo que mejor hace) es enorme.
 
-## Aprende a dominar las tres en un día
+## Aprende a usarlas con criterio (y con los datos de tus clientes)
 
-Una cosa es leer un artículo comparativo. Otra muy diferente es dedicar una jornada intensiva a aprender a usar ChatGPT, Gemini y Claude de forma práctica con tu propio trabajo.
+Si trabajas en una asesoría, en una gestoría o en el departamento de administración de una empresa, la pregunta no es solo cuál de las tres es mejor: es **dónde acaban los datos de tus clientes** cuando los pegas en un chat.
 
-Eso es lo que hacemos en el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu): entender las fortalezas de cada herramienta, configurar tu entorno de trabajo con las tres, y construir un sistema donde cada tarea va a la IA que mejor la resuelve.
+De eso va el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT: una jornada presencial el 28 de noviembre en Anceu Coliving (Ponte Caldelas) para usar la IA en el día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa. Control de plazos y documentos, facturas de proveedores, conciliaciones y tareas repetitivas. De 10:00 a 18:00, 15 plazas, comida incluida.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
-
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/)

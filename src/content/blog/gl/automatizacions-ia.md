@@ -143,12 +143,12 @@ En 30 minutos tes a túa primeira automatización con IA funcionando.
 - **Empieza simple e vai engadindo complexidade.** Un fluxo simple que funciona sempre é mellor que un complexo que falla ás veces.
 - **Documenta os teus fluxos.** Dentro de tres meses non vas lembrar por que puxeches ese filtro.
 
-## O taller de Produtividade da Rural GPT é automatización
+## Automatizar nunha asesoría ou departamento de administración
 
-No [taller IA e Produtividade da Rural GPT](/talleres-otono-2026/) (31 de outubro, Anceu) dedicamos a xornada a formación práctica de IA aplicada: prompting avanzado, asistentes personalizados, [desenvolvemento con IA](/blog/crear-app-con-ia/) e creación do teu [stack personalizado](/blog/ferramentas-ia-freelancers/). Un día, comida incluída, 15 prazas.
+Fluxos como o da extracción de facturas son ouro nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa. Pero aí hai un matiz que un freelancer pode pasar por alto: cada documento que atravesa o fluxo leva datos de clientes, e iso obriga a pensar en que modelo de IA usas, onde se procesan os datos e que di o RGPD.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+Diso vai o taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT, o 28 de novembro en Anceu Coliving (Ponte Caldelas): automatizar tarefas repetitivas, facturas de provedores, conciliacións e control de prazos e documentos cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)
+Se o teu caso non é unha asesoría, os fluxos deste artigo funcionan igual: empeza polo que máis tempo che quita. E se queres ir un paso máis aló, mira como [crear as túas propias ferramentas con IA](/blog/crear-app-con-ia/) ou que [ferramentas de IA](/blog/ferramentas-ia-freelancers/) encaixan no teu traballo.
 
-As automatizacións con IA non son o futuro. Son o presente. A única pregunta é canto tempo máis vas seguir facendo a man o que unha máquina pode facer por ti en segundos.
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

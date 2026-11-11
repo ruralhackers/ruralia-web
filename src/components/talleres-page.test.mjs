@@ -51,8 +51,10 @@ test("landing exposes the conversion sections and workshop reservation links", a
   assert.match(page, /ogImageWidth=\{1600\}/);
   assert.doesNotMatch(page, /"@type":\s*"FAQPage"/);
   assert.match(data, /seoSubtitle:\s*"Talleres presenciais de IA en Galicia · Outono 2026"/);
-  assert.match(data, /title:\s*"Talleres de IA en Galicia · Produtividade e Asesorías \| Rural GPT"/);
-  assert.match(data, /title:\s*"Talleres de IA en Galicia · Productividad y Asesorías \| Rural GPT"/);
+  assert.match(data, /title:\s*"Taller de IA para Asesorías, Xestorías e Administración · 28 nov \| Rural GPT"/);
+  assert.match(data, /title:\s*"Taller de IA para Asesorías, Gestorías y Administración · 28 nov \| Rural GPT"/);
+  assert.match(page, /getWorkshopsOpenFirst\(campaign\)/);
+  assert.doesNotMatch(data, /Podo cambiar de taller|cambiar de taller/);
 });
 
 test("each workshop has GL and ES landing routes built from the shared data", async () => {

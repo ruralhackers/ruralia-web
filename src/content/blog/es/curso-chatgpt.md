@@ -24,7 +24,7 @@ Esta guía cubre todo lo que necesitas para pasar de "uso ChatGPT de vez en cuan
 - **Errores comunes** que cometen incluso los usuarios avanzados
 - **Alternativas a ChatGPT** y cuándo tiene sentido usar cada una
 
-Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/): Productividad (31 oct, plazas cerradas) e IA para asesorías y gestorías (28 nov, reservas abiertas), una jornada intensiva en Anceu. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
+Si prefieres un formato presencial, echa un vistazo a nuestros [talleres de IA en Galicia](/es/talleres-otono-2026/). El próximo es **IA para Asesorías, Gestorías y Departamentos de Administración** (28 de noviembre, Anceu), una jornada intensiva para usar la IA con datos de clientes cumpliendo el RGPD. Pero si quieres empezar ahora mismo por tu cuenta, sigue leyendo.
 
 ## ChatGPT en 2026: qué ha cambiado
 
@@ -334,18 +334,14 @@ Gemini tiene la ventaja de estar integrado con el ecosistema de Google. Destaca 
 
 La respuesta pragmática: usa las tres. Cada una tiene fortalezas diferentes, y la mayoría de profesionales avanzados combinan varias herramientas según la tarea. ChatGPT sigue siendo el mejor "todoterreno", Claude brilla en escritura y análisis, y Gemini gana en integración con Google y búsqueda.
 
-Estamos preparando una [comparativa detallada de ChatGPT, Gemini y Claude](/es/blog/chatgpt-vs-gemini-vs-claude/) con benchmarks reales y casos de uso específicos. Síguenos para no perdértela.
+Hay una cuarta opción que conviene conocer: **Grok**, el asistente de xAI integrado en X, útil sobre todo si trabajas con lo que se mueve en esa red. Y para el detalle, tenemos una [comparativa de ChatGPT, Gemini y Claude](/es/blog/chatgpt-vs-gemini-vs-claude/) con casos de uso específicos.
 
 ## Siguiente paso: de curso online a práctica presencial
 
 Si has llegado hasta aquí, ya sabes más sobre ChatGPT que el 90% de profesionales. Pero hay una diferencia enorme entre saber y hacer.
 
-El taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) está pensado para eso: prompting avanzado, automatizaciones con [Make y tus herramientas reales](/es/blog/automatizaciones-ia/), y un [stack personalizado](/es/blog/herramientas-ia-freelancers/) funcionando en una sola jornada. 15 plazas, comida incluida.
+Y si trabajas en una asesoría, una gestoría o el departamento de administración de una empresa, hay una pregunta que va antes que cualquier prompt: **qué datos de clientes puedes pegar en ChatGPT y cuáles no**.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+De eso va el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT, el 28 de noviembre en Anceu Coliving (Ponte Caldelas): prompting aplicado al trabajo del despacho, modelos alojados en Europa para cumplir el RGPD y la LOPDGDD, control de plazos y documentos, facturas de proveedores, conciliaciones y automatización de tareas repetitivas. De 10:00 a 18:00, 15 plazas, comida incluida.
 
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Para quién es](/es/para-quien/) · [Preguntas frecuentes](/es/faq/)
-
----
-
-*Este artículo se actualiza regularmente para reflejar los cambios en ChatGPT y sus alternativas. Última actualización: febrero 2026.*
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/) · [Preguntas frecuentes](/es/faq/)

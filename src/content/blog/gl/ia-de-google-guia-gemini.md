@@ -119,7 +119,7 @@ Non imos repetir a [comparativa completa](/blog/chatgpt-vs-gemini-vs-claude/) (l
 | Xeración de imaxes | **ChatGPT** | DALL-E segue sendo superior |
 | Tarefas cotiás xerais | **Calquera** | Os tres son bos |
 
-A resposta honesta: usa os tres. Cada un ten fortalezas diferentes, e a maioría de profesionais produtivos combinan ferramentas segundo a tarefa. Gemini para research e Workspace, ChatGPT para tarefas creativas e imaxes, Claude para análise e redacción complexa.
+A resposta honesta: usa os tres. Cada un ten fortalezas diferentes, e a maioría de profesionais produtivos combinan ferramentas segundo a tarefa. Gemini para research e Workspace, ChatGPT para tarefas creativas e imaxes, Claude para análise e redacción complexa. E se traballas moito con X, Grok (o asistente de xAI) é outra opción xeneralista a ter no radar.
 
 ## Por onde empezar (hoxe, en 15 minutos)
 
@@ -137,8 +137,6 @@ En 15 minutos vas ter unha idea clara de se a IA de Google encaixa no teu fluxo 
 
 ---
 
-No taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu) traballamos con Gemini, ChatGPT e Claude. Configurarás asistentes personalizados (Gems, GPTs, Claude Projects) e ferramentas como NotebookLM nun só día.
+Se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, antes de abrir Gemini con documentos de clientes convén ter claro que podes subir e onde. No taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT (28 de novembro, Anceu Coliving) traballamos precisamente iso: usar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa, control de prazos e documentos e automatización de tarefas repetitivas. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
-
-[Ver programa e reservar](/talleres-otono-2026/) · [Descubre se é para ti](/para-quen/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

@@ -1,9 +1,9 @@
 ---
 title: "Como crear unha app con IA sen saber programar: guía paso a paso"
-description: "Crea a túa primeira aplicación usando IA con Cursor, Bolt e v0. Sen experiencia en programación. Da idea ao prototipo funcional nunha tarde."
+description: "Crea a túa primeira aplicación con IA usando Claude e Claude Design. Sen experiencia en programación: describes o que necesitas, iteras na conversa e nunha tarde tes un prototipo funcional."
 date: "2026-02-18"
 author: "Rural GPT"
-keywords: ["crear app con ia", "crear aplicación intelixencia artificial", "app sen programar", "cursor ai", "bolt ai", "v0 vercel"]
+keywords: ["crear app con ia", "crear aplicación intelixencia artificial", "app sen programar", "claude ia", "claude design", "prototipo con ia"]
 translationKey: "crear-app-con-ia"
 ---
 
@@ -11,148 +11,146 @@ translationKey: "crear-app-con-ia"
 
 Hai dous anos, **crear app con ia** era ciencia ficción. Hoxe é algo que podes facer nunha tarde, sen escribir unha soa liña de código a man.
 
-A revolución non é que a IA "axude" a programar. É que a IA programa por ti. Describes o que queres — en galego ou castelán, coas túas palabras — e a ferramenta xera o código, execútao, móstrache o resultado e déixate iterar ata que quede como necesitas.
+A revolución non é que a IA "axude" a programar. É que a IA programa por ti. Describes o que queres — en galego ou castelán, coas túas palabras — e a ferramenta xera o código, ensínache o resultado e déixate iterar ata que quede como necesitas.
 
-Isto cambia todo para freelancers, consultores e profesionais que ata agora dependían dun desenvolvedor (ou dun orzamento de 5.000 euros) para calquera ferramenta dixital.
+Isto cambia todo para freelancers, consultores e profesionais que ata agora dependían dun desenvolvedor (ou dun orzamento de 5.000 euros) para calquera ferramenta dixital. Non falamos de apps de xoguete: falamos de ferramentas pequenas que resolven un problema real do teu negocio.
 
 O que necesitas para empezar: un portátil, unha idea (aínda que sexa vaga) e unha hora libre. Nada máis.
 
-## As 3 ferramentas que necesitas
+## As ferramentas: Claude e Claude Design
 
-### Cursor AI: o teu IDE con copiloto integrado
+Para empezar non necesitas un catálogo de ferramentas. Con dúas, ambas de Anthropic, cobres case todo o percorrido da idea ao prototipo.
 
-Cursor é un editor de código baseado en VS Code que trae intelixencia artificial integrada de serie. Podes falarlle en linguaxe natural. Díslle "crea un formulario de contacto que envíe os datos a unha base de datos" e Cursor escribe o código por ti.
+### Claude: describes, probas, axustas
 
-**Mellor para:** Proxectos completos onde queres control total. Aplicacións web, APIs, ferramentas internas.
+Claude é un asistente de IA xeral, como ChatGPT ou Gemini, pero especialmente bo escribindo código e seguindo instrucións longas ao pé da letra. Descríbeslle en linguaxe natural a ferramenta que necesitas e constrúecha: unha calculadora, un formulario con lóxica, un pequeno panel. En moitos casos podes ver e probar o resultado directamente na conversa, sen instalar nada.
 
-**Prezo:** Plan gratuíto con 2.000 completions ao mes. Plan Pro a 20 dólares/mes.
+O importante non é o primeiro resultado, senón a conversa: "fai os botóns máis grandes", "engade un campo de IVE", "garda os últimos cálculos". Cada cambio tarda segundos.
 
-### Bolt.new: aplicacións completas no navegador
+**Mellor para:** ferramentas pequenas e prototipos funcionais que necesitas xa.
 
-Bolt é a ferramenta máis rápida para ir de cero a unha aplicación funcional. Non necesitas instalar nada. Abres o navegador, describes o que queres e Bolt xera unha aplicación full-stack completa: frontend, backend, base de datos, todo.
+**Prezo:** plan gratuíto limitado. Plan Pro a uns 20 dólares/mes.
 
-**Mellor para:** Prototipos rápidos, landing pages con funcionalidade, aplicacións sinxelas que necesitas xa.
+### Claude Design: a parte visual
 
-**Prezo:** Plan gratuíto limitado. Plans de pago dende 20 dólares/mes.
+Claude Design é a ferramenta de Anthropic pensada para a parte visual: pantallas, maquetas, prototipos e presentacións que se crean e se axustan conversando con Claude. É útil cando o que queres é ensinar como se verá algo — a un cliente, ao teu socio ou a quen o vaia desenvolver — antes de construílo en serio.
 
-### v0 by Vercel: xerador de compoñentes UI
+**Mellor para:** prototipos visuais, propostas de deseño e material para validar unha idea.
 
-v0 é unha ferramenta de Vercel especializada en xerar compoñentes de interface. Descríbeslle un compoñente e v0 xera o código React con Tailwind CSS, listo para usar.
+**Prezo:** vai coa túa conta de Claude; o que podes facer depende do plan, así que revisa que inclúe o teu.
 
-**Mellor para:** Interfaces de usuario. Se xa tes un proxecto e necesitas compoñentes específicos.
+### E se quero ir máis aló?
 
-**Prezo:** Plan gratuíto con xeracións limitadas. Plan Premium a 20 dólares/mes.
+Cando o prototipo se che quede pequeno e queiras un proxecto con arquivos propios, despregue e máis control, o seguinte paso son ferramentas como **Cursor** (un editor de código con IA integrada) ou **Claude Code** (o asistente de Anthropic que traballa directamente cos arquivos do teu proxecto). Para a túa primeira app non che fan falta.
 
 ### Cal elixir
 
-Se é a túa primeira vez, empeza por **Bolt**. É a curva de aprendizaxe máis suave e os resultados son inmediatos. Cando queiras máis control, pasa a **Cursor**. E usa **v0** como complemento para compoñentes puntuais.
+Se é a túa primeira vez, empeza por **Claude**: describe unha ferramenta pequena e vai axustándoa. Usa **Claude Design** cando o aspecto importe ou teñas que ensinarllo a alguén. E deixa Cursor ou Claude Code para cando queiras converter o prototipo en algo máis serio.
 
-## Tutorial: a túa primeira app con Cursor AI
+E se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, e o que buscas é aplicar a IA ao teu traballo diario con garantías de protección de datos, o [taller IA para Asesorías, Xestorías e Departamentos de Administración](/talleres/ia-asesorias-xestorias/) (28 de novembro, Anceu) está pensado para ti.
 
-Imos construír algo real: un **xestor de tarefas para clientes**. Unha app onde poidas crear proxectos, asignar tarefas e marcalas como completadas.
+## Tutorial: a túa primeira ferramenta con Claude
 
-### Paso 1: instalar Cursor
+Imos construír algo real: unha **calculadora de orzamentos para freelancers**. En vez de pelexar cun Excel cada vez que tes que dar un prezo, unha ferramenta que o calcula por ti.
 
-Vai a [cursor.com](https://cursor.com) e descarga a aplicación. O plan gratuíto é suficiente para este tutorial.
+### Paso 1: define o problema nunha frase
 
-### Paso 2: abrir o chat e describir a túa app
+Antes de abrir nada, escribe que problema resolve a túa app e para quen. "Quero calcular rápido o prezo dun proxecto a partir das horas, a miña tarifa e unha marxe." Se non cabe nunha frase, a idea é demasiado grande para empezar: recórtaa.
 
-Pulsa `Cmd+L` (Mac) ou `Ctrl+L` (Windows/Linux) para abrir o panel de chat. Escribe o teu primeiro prompt:
+### Paso 2: describe a app en linguaxe natural
 
-```
-Quero crear unha aplicación web de xestión de tarefas para freelancers.
-Necesito:
-- Unha páxina principal que mostre todos os meus proxectos
-- Ao facer clic nun proxecto, ver as tarefas asociadas
-- Poder crear proxectos novos con nome e cliente
-- Poder engadir tarefas a cada proxecto con título, descrición e estado (pendente, en progreso, completada)
-- Deseño limpo e moderno, cores neutras
-- Que os datos se garden no navegador (localStorage)
-
-Usa React e Tailwind CSS.
-```
-
-Cursor vai xerar toda a estrutura do proxecto: arquivos, compoñentes, estilos, lóxica.
-
-### Paso 3: revisar e executar
-
-No chat, escribe:
+Abre Claude e escribe algo así:
 
 ```
-Cómo ejecuto esta aplicación en local?
-```
-
-Cursor dáche as instrucións exactas. Normalmente é abrir o terminal e escribir `npm install` e logo `npm run dev`.
-
-### Paso 4: iterar con linguaxe natural
-
-Cando ves o resultado no navegador, podes pedir cambios directamente:
-
-- "Engade un campo de prioridade (alta/media/baixa) ás tarefas"
-- "Cambia os botóns para que sexan máis grandes e de cor negra"
-- "Engade a posibilidade de arquivar proxectos"
-
-Cada cambio xérase en segundos. Non necesitas entender o código.
-
-### Paso 5: despregue (opcional)
-
-Cando esteas satisfeito co resultado, podes despregalo gratuitamente en Vercel ou Netlify. O propio Cursor pódete guiar a través do proceso.
-
-## Tutorial: prototipo rápido con Bolt
-
-Bolt é ideal cando queres resultados en minutos. Aquí vai un exemplo:
-
-### O caso de uso: calculadora de tarifas freelance
-
-Como freelancer, necesitas calcular rapidamente o prezo dun proxecto baseándose en horas, tipo de traballo e marxe. En vez de usar un Excel, imos crear unha ferramenta web.
-
-Vai a [bolt.new](https://bolt.new) e escribe:
-
-```
-Crea unha calculadora de tarifas para freelancers.
+Crea unha calculadora de orzamentos para freelancers.
 O usuario introduce:
 - Horas estimadas do proxecto
-- Tarifa horaria (€/hora)
+- Tarifa por hora (€/hora)
 - Porcentaxe de marxe adicional
 - Tipo de proxecto (web, deseño, consultoría, outro)
 
 A calculadora mostra:
 - Custo base (horas × tarifa)
 - Marxe en euros
-- Prezo total recomendado
-- Prezo por fases (25%, 50%, 25%)
+- Prezo total recomendado, con e sen IVE (21%)
+- Prezo dividido en tres pagamentos (25%, 50%, 25%)
 
-Deseño moderno, cores neutras, responsivo. Garda os últimos 5 cálculos no historial.
+Deseño limpo, cores neutras, que funcione ben no móbil.
+Garda os últimos 5 cálculos nun historial.
 ```
 
-En 30-60 segundos, Bolt xera a aplicación completa. Podes verla funcionar directamente no navegador, compartir o enlace para probar con outros, e exportar o código se queres personalizarla máis.
+Sé específico con **que** ten que facer, non con **como**. Non necesitas saber que tecnoloxía usar: se non lla dis, Claude escolle unha razoable. Se queres afinar esta habilidade, na nosa [guía de prompting](/blog/curso-chatgpt/) tes as claves, e serven para calquera asistente.
+
+### Paso 3: proba o resultado
+
+Claude xera a ferramenta e, normalmente, podes vela e usala na propia conversa. Próbaa como o faría un cliente: mete números raros, deixa campos baleiros, ábrea no móbil.
+
+### Paso 4: itera na conversa
+
+Aquí está a graza. Pide cambios concretos:
+
+- "Se deixo as horas baleiras, mostra un aviso en vez dun erro."
+- "Engade un botón para copiar o resumo do orzamento e pegalo nun email."
+- "Pon o prezo total máis grande e en negra."
+
+Se algo falla, cópialle o erro ou descríbelle o que ves ("ao premer calcular non pasa nada") e pídelle que o arranxe. Cinco ou dez roldas de axustes é o normal.
+
+### Paso 5: dálle forma con Claude Design (opcional)
+
+Se a ferramenta vai vela un cliente ou queres que teña a túa imaxe, leva a idea a Claude Design: describe o estilo que buscas (cores, tipografía, ton) e itera sobre as pantallas ata que te convenzan. Tamén serve para preparar a presentación da idea antes de construír nada.
+
+### Paso 6: comparte ou exporta
+
+Cando esteas contento co resultado, podes compartilo para que outros o proben ou levar o código para aloxalo onde queiras. Se non sabes como publicalo, pregúntallo a Claude: "Cal é a forma máis sinxela de publicar isto gratis?". Guiarate paso a paso.
+
+Unha advertencia importante: mentres probas, **usa datos inventados**. Non pegues datos reais de clientes nun prototipo nin na versión de consumo de ningún chat.
+
+## 5 ideas de apps que podes crear hoxe
+
+Non necesitas unha idea revolucionaria. As mellores apps para empezar son as que resolven problemas cotiáns do teu traballo:
+
+1. **Xerador de facturas.** Formulario con datos do cliente e conceptos, cálculo automático de subtotal, IVE e total, e exportación a PDF.
+2. **Control de vencementos.** Lista de prazos (impostos, renovacións, entregas) con data, responsable e estado, ordenada por urxencia.
+3. **CRM persoal.** Contactos con empresa, notas, última interacción e recordatorio de seguimento.
+4. **Calendario de contidos.** Vista mensual de publicacións con plataforma, data e estado (borrador, programado, publicado).
+5. **Construtor de propostas.** Modelo con resumo, alcance, prazos e prezo, con vista previa e exportación a PDF.
+
+Para calquera delas, o prompt segue o mesmo patrón que no tutorial: que datos entran, que ten que mostrar e como queres que se vexa.
 
 ## Erros frecuentes ao crear apps con IA
 
-**Prompts demasiado vagos.** "Crea unha app de tarefas" dáche algo xenérico. "Crea unha app de tarefas para freelancers onde cada tarefa teña cliente, proxecto, horas estimadas e facturadas, e estado de pagamento" dáche algo útil.
+**Prompts demasiado vagos.** "Crea unha app de tarefas" dáche algo xenérico. "Crea unha app de tarefas para freelancers onde cada tarefa teña cliente, proxecto, horas estimadas e estado de pagamento" dáche algo útil.
 
-**Non iterar.** O primeiro resultado rara vez é o definitivo. A clave é iterar: pide cambios específicos ata conseguir exactamente o que necesitas.
+**Non iterar.** O primeiro resultado rara vez é o definitivo. Pide cambios concretos ata conseguir o que necesitas.
 
-**Intentar construír demasiado dun golpe.** Empieza polo núcleo mínimo que resolve o problema. Engade funcionalidades pouco a pouco.
+**Intentar construír demasiado dun golpe.** Empeza polo núcleo mínimo que resolve o problema. Engade funcionalidades pouco a pouco.
 
-**Ignorar os erros.** Cando algo non funciona, cópialle o erro á IA e pídelle que o arrastre. En 2 de cada 3 casos, resólveo soa.
+**Ignorar os erros.** Cando algo non funciona, cópialle o erro á IA e pídelle que o arranxe. Moitas veces resólveo soa.
 
-**Non facer probas en móbil.** Se a túa aplicación vai usarse en móbil, proba en pantalla pequena desde o primeiro día.
+**Non probar no móbil.** Se a túa ferramenta se vai usar no móbil, próbaa en pantalla pequena desde o primeiro día.
+
+## Limitacións: que NON podes facer (aínda)
+
+Sería irresponsable vendelo como maxia. Crear apps con IA ten límites claros:
+
+- **Lóxica de negocio complexa.** Cálculos financeiros intrincados, fluxos de aprobación con varios niveis ou integracións con sistemas antigos: a IA xera a estrutura, pero os erros de lóxica serán difíciles de detectar sen coñecementos técnicos.
+- **Datos sensibles.** Se a ferramenta vai manexar datos médicos, financeiros ou persoais de clientes, o código xerado necesita unha revisión profesional antes de usarse en serio. E o RGPD segue aplicando aínda que a app a fixeses ti.
+- **Escala.** O que funciona para ti e o teu equipo non ten por que aguantar a miles de usuarios.
+
+A regra xeral: se a ferramenta é para ti ou o teu equipo pequeno, podes facela ti. Se é un produto que vas vender ou un sistema crítico, usa a IA para o prototipo e logo busca a alguén que constrúa a versión de produción. Mesmo así, **o prototipo afórrache diñeiro**: dáslle ao desenvolvedor algo tanxible en vez dun documento de requisitos.
 
 ## O que antes custaba 5.000 EUR, agora cústache unha tarde
 
 Un desenvolvedor freelance en España cobra entre 400 e 800 euros ao día. Un proxecto sinxelo — un panel de xestión, unha ferramenta de cálculo, un formulario con lóxica — pode custar facilmente 2.000-5.000 euros en desenvolvemento tradicional.
 
-Con Cursor, Bolt ou v0, o mesmo proxecto podes telo en funcionamento en 2-4 horas, pagando 20 euros ao mes de suscripción.
+Con Claude, ese mesmo proxecto en versión prototipo podes telo funcionando nunhas horas, cunha subscrición de uns 20 euros ao mes.
 
-Non estamos dicindo que os desenvolvedores van desaparecer. Para aplicacións complexas, con autenticación robusta, escala e integracións avanzadas, aínda necesitarás alguén que saiba. Pero para as ferramentas do día a día do teu negocio — as que antes non podías permitirte — agora podes facelas ti.
+Non estamos dicindo que os desenvolvedores vaian desaparecer. Para aplicacións complexas, con autenticación robusta, escala e integracións avanzadas, seguirás necesitando a alguén que saiba. Pero as ferramentas do día a día do teu negocio — as que antes non podías permitirte — agora podes facelas ti.
 
 ## Os talleres presenciais da Rural GPT
 
-Se traballas nunha asesoría ou xestoría, o 28 de novembro celebramos en Anceu o taller **IA para Asesorías e Xestorías**: unha xornada para integrar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos de IA aloxados en Europa.
+Se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, o 28 de novembro celebramos en Anceu Coliving (Ponte Caldelas) o taller **IA para Asesorías, Xestorías e Departamentos de Administración**: unha xornada para integrar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa.
 
-Non é un taller de desenvolvemento de apps, pero segue a mesma filosofía: non é teoría, é traballo práctico sobre os teus procesos reais, con alguén ao lado que che resolve as dúbidas en tempo real.
+Non é un taller de desenvolvemento de apps, pero segue a mesma filosofía: nada de teoría, traballo práctico sobre os teus procesos reais — control de prazos e documentos, facturas de provedores, conciliacións, tarefas repetitivas — con alguén ao lado que che resolve as dúbidas no momento. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-Se queres mellorar os procesos do teu despacho, evitar os despistes de sempre e deixar de perder tempo en tarefas que non achegan valor, este é o teu momento.
-
-[Ver programa e reservar](/talleres-otono-2026/) · [Descubre se é para ti](/para-quen/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

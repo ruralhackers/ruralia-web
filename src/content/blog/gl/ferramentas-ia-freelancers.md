@@ -39,6 +39,8 @@ Claude é o que mellores textos escribe dos tres. Se necesitas unha proposta de 
 
 A vantaxe de Gemini é que vive dentro das ferramentas que xa usas. [Guía completa de Gemini aquí](/blog/ia-de-google-guia-gemini/).
 
+**E Grok?** O asistente de xAI, integrado en X, é a outra alternativa xeneralista que convén coñecer. Ten versión gratuíta e de pago, e é especialmente útil se traballas moito co que se move en X. No noso día a día usámolo menos que os tres de arriba, pero xoga na mesma liga.
+
 ## Ferramentas para construír sen programar
 
 ### 4. Cursor
@@ -57,13 +59,13 @@ Para freelancers que queren construír ferramentas internas, landing pages ou pr
 
 Claude Code é un asistente de programación en terminal que pode ler, editar e crear arquivos no teu proxecto. É como ter un developer junior moi competente sentado ao teu lado.
 
-### 6. Bolt / v0
+### 6. Claude + Claude Design
 
-**Para que o uso:** prototipos rápidos de interfaces web. De idea a deseño funcional en minutos.
+**Para que o uso:** prototipos rápidos de interfaces e pequenas ferramentas. De idea a algo que podes ensinar en minutos.
 
-**Prezo:** plans gratuítos limitados / plans de pago dende 10-20 $/mes.
+**Prezo:** coa túa conta de Claude (o que podes facer depende do plan).
 
-Bolt e v0 xeran aplicacións web completas desde unha descrición en texto natural. Ideal para validar ideas con clientes antes de investir tempo en desenvolvemento. [Guía paso a paso de como crear unha app con IA](/blog/crear-app-con-ia/).
+Con Claude podes describir en linguaxe natural o que necesitas — "un panel para seguir as miñas facturas pendentes" — e ir axustándoo na conversa ata que funcione. Claude Design, tamén de Anthropic, está pensado para a parte visual: maquetas, pantallas e prototipos que podes revisar e compartir. Ideal para validar ideas con clientes antes de investir tempo en desenvolvemento. [Guía paso a paso de como crear unha app con IA](/blog/crear-app-con-ia/).
 
 ## Ferramentas de investigación e análise
 
@@ -117,7 +119,7 @@ Para deseñadores e creativos freelance, estas ferramentas non substitúen o teu
 
 **Prezo:** gratis (limitado) / dende 9 $/mes.
 
-Make é unha plataforma de automatización visual. A graza é conectalos con APIs de IA: un email chega, a IA clasifícao, extrae os datos e méteoos no teu CRM. [10 fluxos de automatización con IA listos para copiar](/blog/automatizacións-ia/).
+Make é unha plataforma de automatización visual. A graza é conectalos con APIs de IA: un email chega, a IA clasifícao, extrae os datos e méteoos no teu CRM. [10 fluxos de automatización con IA listos para copiar](/blog/automatizacions-ia/).
 
 ### 13. Notion AI
 
@@ -129,13 +131,13 @@ Se xa usas Notion para xestionar os teus proxectos, Notion AI é a extensión na
 
 ## Ferramentas especializadas
 
-### 14. Lovable
+### 14. Langdock
 
-**Para que o uso:** crear aplicacións web completas con IA, máis aló de prototipos.
+**Para que o uso:** traballar con datos de clientes usando varios modelos de IA desde un mesmo sitio, con aloxamento na UE.
 
-**Prezo:** gratis (limitado) / dende 20 $/mes.
+**Prezo:** plans por usuario para empresas e equipos (consulta a súa web).
 
-Lovable vai un paso máis aló que Bolt ou v0. Xera aplicacións full-stack con base de datos, autenticación e despregue incluído.
+Langdock é unha plataforma alemá que dá acceso a varios modelos (de OpenAI, Anthropic, Google, Mistral e outros) desde unha soa interface, con aloxamento na Unión Europea e un enfoque claro no cumprimento do RGPD. Se manexas datos persoais ou información confidencial de clientes, é unha opción máis sensata que pegar eses datos na versión de consumo de calquera chat. Iso si: a ferramenta non te exime de facer os deberes (contrato de encargo de tratamento, que datos subes e quen ten acceso).
 
 ### 15. Napkin AI
 
@@ -179,8 +181,8 @@ O que marca a diferenza é:
 2. **Saber escribir bos prompts.** A diferenza entre un resultado mediocre e un excelente está en como lle pides as cousas á IA.
 3. **Integrar a IA no teu fluxo real.** Non como experimento, senón como parte do teu proceso de traballo diario.
 
-Esas tres cousas son exactamente o que traballamos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): o teu stack de ferramentas de IA, prompts co teu propio traballo e automatizacións funcionando nun só día. 15 prazas, comida incluída.
+E se traballas con datos de clientes — nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa — hai unha cuarta: **saber que ferramenta podes usar con eses datos sen meterte nun lío**.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+Iso é o que traballamos no taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT, o 28 de novembro en Anceu Coliving (Ponte Caldelas): IA aplicada ao día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa como Langdock, control de prazos e documentos, facturas de provedores, conciliacións e automatización de tarefas repetitivas. Unha xornada de 10:00 a 18:00, 15 prazas, comida incluída.
 
-[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

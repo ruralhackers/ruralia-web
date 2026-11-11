@@ -118,7 +118,7 @@ No vamos a repetir la [comparativa completa](/es/blog/chatgpt-vs-gemini-vs-claud
 | Generación de imágenes | **ChatGPT** | DALL-E sigue siendo superior |
 | Tareas cotidianas generales | **Cualquiera** | Los tres son buenos |
 
-La respuesta honesta: usa los tres. Cada uno tiene fortalezas diferentes, y la mayoría de profesionales productivos combinan herramientas según la tarea. Gemini para research y Workspace, ChatGPT para tareas creativas e imágenes, Claude para análisis y redacción compleja.
+La respuesta honesta: usa los tres. Cada uno tiene fortalezas diferentes, y la mayoría de profesionales productivos combinan herramientas según la tarea. Gemini para research y Workspace, ChatGPT para tareas creativas e imágenes, Claude para análisis y redacción compleja. Y si trabajas mucho con X, Grok (el asistente de xAI) es otra opción generalista a tener en el radar.
 
 ## Por dónde empezar (hoy, en 15 minutos)
 
@@ -136,8 +136,6 @@ En 15 minutos vas a tener una idea clara de si la IA de Google encaja en tu fluj
 
 ---
 
-En el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) trabajamos con Gemini, ChatGPT y Claude. Configurarás asistentes personalizados (Gems, GPTs, Claude Projects) y herramientas como NotebookLM en una sola jornada.
+Si trabajas en una asesoría, una gestoría o el departamento de administración de una empresa, antes de abrir Gemini con documentos de clientes conviene tener claro qué puedes subir y dónde. En el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT (28 de noviembre, Anceu Coliving) trabajamos precisamente eso: usar la IA en el día a día del despacho cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa, control de plazos y documentos y automatización de tareas repetitivas. De 10:00 a 18:00, 15 plazas, comida incluida.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
-
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/)

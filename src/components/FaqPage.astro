@@ -57,12 +57,12 @@ const schema = [
   <div class="editorial-page">
     <section class="faq-hero">
       <div class="ed-container">
-        <SectionTag text="Rural GPT · Outono 2026" />
+        <SectionTag text={isGl ? "Rural GPT · Outono 2026" : "Rural GPT · Otoño 2026"} />
         <h1>{campaign.faqHeading}</h1>
         <p>
           {isGl
-            ? "Todo o que necesitas saber antes de reservar un dos talleres."
-            : "Todo lo que necesitas saber antes de reservar uno de los talleres."}
+            ? "Todo o que necesitas saber antes de reservar o taller do 28 de novembro."
+            : "Todo lo que necesitas saber antes de reservar el taller del 28 de noviembre."}
         </p>
       </div>
     </section>

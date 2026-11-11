@@ -2,10 +2,16 @@
 import { useTranslations } from '../i18n/ui';
 import { getAlternateUrl } from '../i18n/routes';
 
+interface Props {
+  /** Explicit other-locale URL; `null` hides the language switcher. */
+  alternateUrl?: string | null;
+}
+
 const locale = Astro.currentLocale ?? 'gl';
 const t = useTranslations(locale);
 const currentPath = Astro.url.pathname;
-const alternatePath = getAlternateUrl(currentPath, locale);
+const { alternateUrl } = Astro.props;
+const alternatePath = alternateUrl === undefined ? getAlternateUrl(currentPath, locale) : alternateUrl;
 
 const nav = [
   { href: t('nav.href.talleres'), label: t('nav.talleres') },
@@ -34,7 +40,9 @@ const nav = [
     }
   </nav>
   <a href={t('nav.href.talleres')} class="header-cta">{t('nav.cta')}</a>
-  <a href={alternatePath} class="header-lang" aria-label={`Cambiar a ${t('nav.lang_switcher')}`}>{t('nav.lang_switcher')}</a>
+  {alternatePath && (
+    <a href={alternatePath} class="header-lang" aria-label={`Cambiar a ${t('nav.lang_switcher')}`}>{t('nav.lang_switcher')}</a>
+  )}
   <button
     class="menu-toggle"
     aria-label={t('nav.open_menu')}
