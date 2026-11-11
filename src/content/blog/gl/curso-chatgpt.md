@@ -13,6 +13,8 @@ Esta é unha guía orientada a profesionais: freelancers, programadores, markete
 
 Todo actualizado a 2026.
 
+Se prefires un formato presencial, bota unha ollada aos nosos [talleres de IA en Galicia](/talleres-otono-2026/). O próximo é **IA para Asesorías, Xestorías e Departamentos de Administración** (28 de novembro, Anceu), unha xornada intensiva para usar a IA con datos de clientes cumprindo o RGPD. Pero se queres empezar agora mesmo pola túa conta, segue lendo.
+
 ## Que vas aprender
 
 - O estado actual de ChatGPT en 2026 e que cambiou respecto hai un ano
@@ -140,7 +142,7 @@ As respostas melloran cando defines o que NON queres:
 
 **Non revisar as respostas.** ChatGPT equivócase. Os datos que dá poden estar desactualizados ou ser inventados. Sempre verifica información crítica.
 
-**Usar sempre a mesma ferramenta.** ChatGPT é excelente para moitas cousas pero non para todas. Para documentos longos e precisión, [Claude é mellor](/blog/chatgpt-vs-gemini-vs-claude/). Para datos actuais e Google Workspace, Gemini gaña.
+**Usar sempre a mesma ferramenta.** ChatGPT é excelente para moitas cousas pero non para todas. Para documentos longos e precisión, [Claude é mellor](/blog/chatgpt-vs-gemini-vs-claude/). Para datos actuais e Google Workspace, Gemini gaña. E se vives en X, Grok (o asistente de xAI) é outra alternativa a ter en conta.
 
 **Non aproveitar a memoria.** Se cada conversa empeza desde cero, estás perdendo un dos maiores activos de ChatGPT.
 
@@ -150,8 +152,8 @@ As respostas melloran cando defines o que NON queres:
 
 Tes agora unha base sólida para usar ChatGPT como un profesional. Pero hai unha diferenza enorme entre ler sobre ferramentas e realmente integralas no teu fluxo de traballo diario.
 
-Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): prompting avanzado co teu propio traballo e ferramentas funcionando nun só día. 15 prazas, comida incluída.
+E se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, hai unha pregunta que vai antes que calquera prompt: **que datos de clientes podes pegar en ChatGPT e cales non**.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+Diso vai o taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT, o 28 de novembro en Anceu Coliving (Ponte Caldelas): prompting aplicado ao traballo do despacho, modelos aloxados en Europa para cumprir o RGPD e a LOPDGDD, control de prazos e documentos, facturas de provedores, conciliacións e automatización de tarefas repetitivas. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-[Ver programa e reservar](/talleres-otono-2026/) · [Para quen é](/para-quen/) · [Preguntas frecuentes](/faq/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/) · [Preguntas frecuentes](/faq/)

@@ -92,14 +92,14 @@ O mesmo aplica a calquera negocio. ¿Canto gastas en software por subscricións?
 
 Agora si.
 
-## Isto é o que practicamos no taller de Produtividade
+## Das túas facturas ás dos teus clientes
 
-No taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu) traballamos con Claude Code: a versión de Claude que traballa directamente cos teus arquivos, a túa carpeta de proxectos, o teu sistema. Sen subir nada a man. Sen copiar e pegar.
+Para esta análise usamos Claude Code: a versión de Claude que traballa directamente cos teus arquivos, a túa carpeta de proxectos, o teu sistema. Sen subir nada a man. Sen copiar e pegar.
 
-O que fixemos aquí con facturas podes facelo ti cos documentos do teu negocio: orzamentos, contratos, historial de clientes, rexistros de vendas. A diferenza entre Claude.ai e Claude Code non é de prezo — é do que podes chegar a facer con el.
+O que fixemos aquí con facturas podes facelo ti cos documentos do teu negocio: orzamentos, contratos, historial de clientes, rexistros de vendas. Non necesitas saber programar. Necesitas saber que pregunta queres responder.
 
-Non necesitas saber programar. Necesitas saber que pregunta queres responder.
+Agora ben: estas eran as facturas do noso propio negocio. Se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, as facturas son dos teus clientes ou dos teus provedores, e aí entran en xogo o RGPD e a LOPDGDD: que ferramenta usas, onde se procesan os datos e quen ten acceso.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+Iso é o que traballamos no taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT, o 28 de novembro en Anceu Coliving (Ponte Caldelas): facturas de provedores, conciliacións, control de prazos e documentos e automatización de tarefas repetitivas, con modelos aloxados en Europa. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

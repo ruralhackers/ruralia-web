@@ -23,6 +23,8 @@ O panorama da intelixencia artificial en 2026 consolidouse ao redor de tres gran
 
 Os tres teñen versións gratuítas. E os tres custan 20 dólares ao mes na súa versión premium.
 
+E un cuarto nome que convén ter no radar: **Grok**, o asistente de xAI (a empresa de Elon Musk), integrado en X. Tamén ten versión gratuíta e de pago, e destaca por estar moi conectado á actualidade que circula en X. Non o incluímos na comparativa detallada porque no noso traballo diario usámolo menos, pero se xa vives en X paga a pena probalo.
+
 ## ChatGPT (OpenAI): o máis popular
 
 ### Fortalezas
@@ -78,7 +80,7 @@ Investigación e fact-checking, usuarios de Google Workspace, análise de docume
 
 ### Mellor para
 
-Documentos longos e complexos, análise detallada, programación, redacción profesional, propostas para clientes. Se te dedicas a escribir [propostas e automatizacións para clientes](/blog/automatizacións-ia/), Claude é probablemente o teu mellor aliado.
+Documentos longos e complexos, análise detallada, programación, redacción profesional, propostas para clientes. Se te dedicas a escribir [propostas e automatizacións para clientes](/blog/automatizacions-ia/), Claude é probablemente o teu mellor aliado.
 
 ## Comparativa directa: táboa resumo
 
@@ -137,10 +139,10 @@ Son uns 55 euros ao mes. Hablemos do que eses 55 euros che dan:
 
 Se es freelance e facturas máis de 1.000 euros ao mes, eses 55 euros amortízanse cunha **soa hora aforrada**. E vas aforrar moito máis que unha hora.
 
-## Aprende a dominar as tres nun día
+## Aprende a usalas con criterio (e cos datos dos teus clientes)
 
-Iso é o que facemos no taller **IA e Produtividade** da Rural GPT (31 de outubro, Anceu): entender as fortalezas de cada ferramenta, configurar o teu contorno de traballo coas tres, e construír un sistema onde cada tarefa vai á IA que mellor a resolve.
+Se traballas nunha asesoría, nunha xestoría ou no departamento de administración dunha empresa, a pregunta non é só cal das tres é mellor: é **onde acaban os datos dos teus clientes** cando os pegas nun chat.
 
-As prazas deste taller xa están pechadas. A reserva que segue aberta é a do taller **IA para Asesorías e Xestorías** do 28 de novembro, en Anceu.
+Diso vai o taller **IA para Asesorías, Xestorías e Departamentos de Administración** da Rural GPT: unha xornada presencial o 28 de novembro en Anceu Coliving (Ponte Caldelas) para usar a IA no día a día do despacho cumprindo o RGPD e a LOPDGDD, con modelos aloxados en Europa. Control de prazos e documentos, facturas de provedores, conciliacións e tarefas repetitivas. De 10:00 a 18:00, 15 prazas, comida incluída.
 
-[Ver programa e reservar](/talleres-otono-2026/) · [Descobre se é para ti](/para-quen/)
+[Ver o taller e reservar](/talleres/ia-asesorias-xestorias/) · [Todos os talleres de outono](/talleres-otono-2026/)

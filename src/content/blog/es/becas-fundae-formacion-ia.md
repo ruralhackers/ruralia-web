@@ -171,6 +171,6 @@ Lo que cuesta 0 euros pero no cambias nada es más caro que lo que cuesta 800 eu
 
 ## Lo que hacemos en Rural GPT
 
-Nuestra Residencia de IA de 3 días (edición junio 2026, agotada) no era bonificable vía FUNDAE — fue una decisión consciente. Este otoño hemos organizado dos talleres sprint de un día sin alojamiento: Productividad (31 oct, plazas cerradas) e IA para asesorías y gestorías (28 nov), que sigue con reservas abiertas: 199 € + IVA, comida incluida.
+Nuestra Residencia de IA de 3 días (edición junio 2026, agotada) no era bonificable vía FUNDAE — fue una decisión consciente. Ahora mismo tenemos abierta la reserva del taller de un día **IA para Asesorías, Gestorías y Departamentos de Administración**, el 28 de noviembre en Anceu Coliving (Ponte Caldelas): cómo usar la IA en el despacho cumpliendo el RGPD y la LOPDGDD, con modelos alojados en Europa, control de plazos y documentos y automatización de tareas repetitivas. De 10:00 a 18:00, 199 € + IVA, 15 plazas, comida incluida.
 
-[Ver los talleres de otoño](/es/talleres-otono-2026/) · [Consulta la edición anterior de la residencia](/es/residencia-ia-galicia/) · [Preguntas frecuentes](/es/faq/)
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/) · [Consulta la edición anterior de la residencia](/es/residencia-ia-galicia/) · [Preguntas frecuentes](/es/faq/)

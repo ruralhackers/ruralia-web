@@ -91,14 +91,14 @@ Lo mismo aplica a cualquier negocio. ¿Cuánto gastas en software por suscripcio
 
 Ahora sí.
 
-## Esto es lo que practicamos en el taller de Productividad
+## De tus facturas a las de tus clientes
 
-En el taller **IA y Productividad** de Rural GPT (31 de octubre, Anceu) trabajamos con Claude Code: la versión de Claude que trabaja directamente con tus archivos, tu carpeta de proyectos, tu sistema. Sin subir nada a mano. Sin copiar y pegar.
+Para este análisis usamos Claude Code: la versión de Claude que trabaja directamente con tus archivos, tu carpeta de proyectos, tu sistema. Sin subir nada a mano. Sin copiar y pegar.
 
-Lo que hemos hecho aquí con facturas lo puedes hacer tú con los documentos de tu negocio: presupuestos, contratos, historial de clientes, registros de ventas. La diferencia entre Claude.ai y Claude Code no es de precio — es de lo que puedes llegar a hacer con él.
+Lo que hemos hecho aquí con facturas lo puedes hacer tú con los documentos de tu negocio: presupuestos, contratos, historial de clientes, registros de ventas. No necesitas saber programar. Necesitas saber qué pregunta quieres responder.
 
-No necesitas saber programar. Necesitas saber qué pregunta quieres responder.
+Ahora bien: estas eran las facturas de nuestro propio negocio. Si trabajas en una asesoría, una gestoría o el departamento de administración de una empresa, las facturas son de tus clientes o de tus proveedores, y ahí entran en juego el RGPD y la LOPDGDD: qué herramienta usas, dónde se procesan los datos y quién tiene acceso.
 
-Las plazas de este taller ya están cerradas. La reserva que sigue abierta es la del taller **IA para Asesorías y Gestorías** del 28 de noviembre, en Anceu.
+Eso es lo que trabajamos en el taller **IA para Asesorías, Gestorías y Departamentos de Administración** de Rural GPT, el 28 de noviembre en Anceu Coliving (Ponte Caldelas): facturas de proveedores, conciliaciones, control de plazos y documentos y automatización de tareas repetitivas, con modelos alojados en Europa. De 10:00 a 18:00, 15 plazas, comida incluida.
 
-[Ver programa y reservar](/es/talleres-otono-2026/) · [Descubre si es para ti](/es/para-quien/)
+[Ver el taller y reservar](/es/talleres/ia-asesorias-gestorias/) · [Todos los talleres de otoño](/es/talleres-otono-2026/)

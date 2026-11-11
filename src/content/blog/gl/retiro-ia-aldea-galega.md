@@ -43,9 +43,9 @@ Pero tamén por razóns prácticas:
 
 Non vas escoitar charlas. Vas construír cousas.
 
-- **Día 1:** [Prompting avanzado](/blog/curso-chatgpt/) e escoller a [ferramenta correcta](/blog/chatgpt-vs-gemini-vs-claude/) (ChatGPT, Claude, Gemini) para cada tarefa real.
+- **Día 1:** [Prompting avanzado](/blog/curso-chatgpt/) e escoller a [ferramenta correcta](/blog/chatgpt-vs-gemini-vs-claude/) (ChatGPT, Claude, Gemini, Grok) para cada tarefa real.
 - **Día 2:** Asistentes e [ferramentas de IA](/blog/ferramentas-ia-freelancers/): GPTs custom, Claude Projects, Claude Code, Cursor. Configura IAs que traballan para ti.
-- **Día 3:** [Construír con IA](/blog/crear-app-con-ia/) usando Cursor, Bolt e v0. De idea a prototipo nunha tarde.
+- **Día 3:** [Construír con IA](/blog/crear-app-con-ia/) usando Claude, Claude Design e Cursor. De idea a prototipo nunha tarde.
 - **Día 4:** Montar o teu stack personalizado de IA. O que vas usar o luns cando volvas a casa.
 
 ## Para quen é isto
@@ -54,6 +54,6 @@ Para xente que se busca a vida con tecnoloxía: freelancers, webmasters, indie h
 
 Non fai falta saber programar. Si fai falta ter ganas de cacharrear.
 
-A primeira edición da Residencia IA (xuño 2026) esgotou as 12 prazas. Este outono organizamos dous talleres sprint dun día: Produtividade (31 out, prazas pechadas) e IA para asesorías e xestorías (28 nov), que segue con reservas abertas.
+A primeira edición da Residencia IA (xuño 2026) esgotou as 12 prazas. Agora mesmo, a próxima cita con reservas abertas é o taller dun día **IA para Asesorías, Xestorías e Departamentos de Administración** (28 de novembro, Anceu Coliving): pensado para despachos e equipos de administración que queren usar a IA cumprindo o RGPD.
 
 [Ver os talleres de outono](/talleres-otono-2026/) · [Consulta a edición anterior](/residencia-ia-galicia/)
