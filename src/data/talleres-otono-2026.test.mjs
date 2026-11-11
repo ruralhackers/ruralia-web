@@ -94,7 +94,18 @@ test("open workshop is listed first and targets admin departments too", () => {
     const [first, last] = getWorkshopsOpenFirst(campaign);
     assert.equal(first.id, "web");
     assert.equal(last.id, "productivity");
-    assert.match(first.title, /Departamentos de Administración/);
+    assert.equal(first.title, "IA para datos sensibles");
+    assert.match(first.kicker, /administración/);
+    assert.match(first.dateLabel, /10:00–18:00/);
+    assert.match(first.eventName, /^IA para datos sensibles: asesorías/);
     assert.ok(first.audience.some((item) => /[Dd]epartamentos de administración/.test(item)));
+  }
+});
+
+test("the ChatGPT FAQ is on the open landing and the general FAQ", () => {
+  for (const campaign of Object.values(talleresOtono2026)) {
+    const open = campaign.workshops.find((w) => !w.closed);
+    assert.ok(getWorkshopFaq(campaign, open).some((item) => /ChatGPT/.test(item.question)));
+    assert.ok(campaign.faq.some((item) => /ChatGPT/.test(item.question)));
   }
 });

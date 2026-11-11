@@ -1,6 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getTalleresCampaign, type Locale } from "../data/talleres-otono-2026";
+import {
+  getTalleresCampaign,
+  getTalleresPath,
+  getWorkshopPath,
+  type Locale,
+} from "../data/talleres-otono-2026";
 import "../styles/editorial.css";
 import SectionTag from "./ui/SectionTag.astro";
 import CtaBand from "./ui/CtaBand.astro";
@@ -12,9 +17,9 @@ interface Props {
 const { locale } = Astro.props;
 const isGl = locale === "gl";
 const campaign = getTalleresCampaign(locale);
-const landingUrl = isGl
-  ? "/talleres-otono-2026/"
-  : "/es/talleres-otono-2026/";
+// CTA: ficha del taller con plazas abiertas (o el listado si no hay ninguno).
+const openWorkshop = campaign.workshops.find((workshop) => !workshop.closed);
+const landingUrl = openWorkshop ? getWorkshopPath(locale, openWorkshop) : getTalleresPath(locale);
 
 const schema = [
   {

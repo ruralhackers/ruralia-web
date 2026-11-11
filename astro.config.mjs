@@ -25,6 +25,13 @@ export default defineConfig({
     // Índices de las landings individuales de talleres
     '/talleres/': { status: 302, destination: '/talleres-otono-2026/' },
     '/es/talleres/': { status: 302, destination: '/es/talleres-otono-2026/' },
+    // Antigua landing del taller de web (ahora taller de asesorías / datos sensibles)
+    '/es/talleres/web-producto-digital/': { status: 301, destination: '/es/talleres/ia-asesorias-gestorias/' },
+    '/talleres/web-producto-digital/': { status: 301, destination: '/talleres/ia-asesorias-xestorias/' },
+    // El gallego vive en la raíz
+    '/gl/': { status: 301, destination: '/' },
+    // robots.txt apunta a sitemap-index.xml; /sitemap.xml por compatibilidad
+    '/sitemap.xml': { status: 301, destination: '/sitemap-index.xml' },
   },
   integrations: [
     sitemap({

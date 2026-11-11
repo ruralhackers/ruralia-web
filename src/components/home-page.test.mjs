@@ -18,8 +18,9 @@ test("home routes use one localized shared component", async () => {
 test("new home is a brand hub that links to the workshop landing", async () => {
   const home = await read("components/HomePage.astro");
 
-  assert.match(home, /data-hero-line1/);
-  assert.match(home, /prefers-reduced-motion/);
+  assert.match(home, /heroTitle: "IA para datos sensibles"/);
+  assert.match(home, /name: "Langdock"/);
+  assert.match(home, /toolsDataNote/);
   assert.match(home, /getWorkshopsOpenFirst\(campaign\)/);
   assert.match(home, /talleres-otono-2026/);
   assert.match(home, /sara-testimonial\.webp/);

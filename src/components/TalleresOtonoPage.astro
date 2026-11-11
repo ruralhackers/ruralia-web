@@ -27,6 +27,11 @@ const canonicalPath = isGl
 // CTA final: apunta al primer taller con plazas abiertas (o a la sección de reservas).
 const workshops = getWorkshopsOpenFirst(campaign);
 const openWorkshop = workshops.find((workshop) => !workshop.closed);
+const openWorkshops = workshops.filter((workshop) => !workshop.closed);
+const pastWorkshops = workshops.filter((workshop) => workshop.closed);
+// Orden de la página: talleres abiertos → bloque de reserva → talleres ya celebrados.
+const RESERVATIONS = "reservas" as const;
+const pageBlocks = [...openWorkshops, RESERVATIONS, ...pastWorkshops];
 const finalCta = openWorkshop
   ? { href: openWorkshop.stripeUrl, label: openWorkshop.cta, external: true }
   : { href: "#reservas", label: isGl ? "Ver prezos" : "Ver precios", external: false };
@@ -39,7 +44,8 @@ const imageSrcset = (name: string) =>
     .join(", ");
 
 const schema = [
-  ...campaign.workshops.map((workshop) =>
+  // Solo talleres abiertos: los ya celebrados no se marcan como Event.
+  ...openWorkshops.map((workshop) =>
     buildWorkshopEvent(workshop, locale, `https://ruralgpt.gal${getWorkshopPath(locale, workshop)}`),
   ),
   {
@@ -68,9 +74,9 @@ const schema = [
   description={campaign.seo.description}
   keywords={campaign.seo.keywords}
   schema={schema}
-  ogImage="/images/talleres-otono-2026/entorno-anceu.webp"
-  ogImageWidth={1600}
-  ogImageHeight={1067}
+  ogImage="/images/talleres-otono-2026/entorno-anceu-og.webp"
+  ogImageWidth={1200}
+  ogImageHeight={630}
   ogImageAlt={campaign.venue.imageAlt}
 >
   <div class="editorial-page">
@@ -123,11 +129,47 @@ const schema = [
     </section>
 
     {
-      workshops.map((workshop, index) => (
-        <article id={workshop.id} class:list={["workshop", { alternate: index % 2 }]}>
+      pageBlocks.map((workshop, index) => workshop === RESERVATIONS ? (
+          <section id="reservas" class="ed-section reservation-section">
+            <div class="ed-container">
+              <SectionTag text={isGl ? "Reserva" : "Reserva"} />
+              <h2 class="ed-heading">
+                {isGl ? "Reserva a túa praza." : "Reserva tu plaza."}
+              </h2>
+              <p class="tax-warning">
+                {isGl
+                  ? "Os prezos indicados non inclúen o IVA."
+                  : "Los precios indicados no incluyen el IVA."}
+              </p>
+              <div class="price-grid">
+                {
+                  openWorkshops.map((workshop) => (
+                    <PriceCard
+                      eyebrow={workshop.eyebrow}
+                      title={workshop.title}
+                      date={workshop.dateLabel}
+                      priceLabel={workshop.priceLabel}
+                      taxNote={isGl ? "IVA non incluído" : "IVA no incluido"}
+                      href={workshop.stripeUrl}
+                      cta={workshop.cta}
+                    >
+                      <p>{workshop.result}</p>
+                    </PriceCard>
+                  ))
+                }
+              </div>
+            </div>
+          </section>
+      ) : (
+        <article id={workshop.id} class:list={["workshop", { alternate: index % 2, past: workshop.closed }]}>
           <header class="workshop-head">
-            <p class="workshop-number">{workshop.eyebrow}</p>
+            {workshop.closed ? (
+              <p class="workshop-badge">{campaign.closedLabel}</p>
+            ) : (
+              <p class="workshop-number">{workshop.eyebrow}</p>
+            )}
             <p class="workshop-date">{workshop.dateShort}</p>
+            {workshop.kicker && <p class="workshop-kicker">{workshop.kicker}</p>}
             <h2>{workshop.title}</h2>
             <p class="workshop-hook">{workshop.hook}</p>
             <p class="workshop-description">{workshop.description}</p>
@@ -156,39 +198,6 @@ const schema = [
         </article>
       ))
     }
-
-    <section id="reservas" class="ed-section reservation-section">
-      <div class="ed-container">
-        <SectionTag text={isGl ? "Reserva" : "Reserva"} />
-        <h2 class="ed-heading">
-          {isGl ? "Reserva a túa praza." : "Reserva tu plaza."}
-        </h2>
-        <p class="tax-warning">
-          {isGl
-            ? "Os prezos indicados non inclúen o IVA."
-            : "Los precios indicados no incluyen el IVA."}
-        </p>
-        <div class="price-grid">
-          {
-            workshops.map((workshop) => (
-              <PriceCard
-                eyebrow={workshop.eyebrow}
-                title={workshop.title}
-                date={workshop.dateLabel}
-                priceLabel={workshop.priceLabel}
-                taxNote={isGl ? "IVA non incluído" : "IVA no incluido"}
-                href={workshop.stripeUrl}
-                cta={workshop.cta}
-                closed={workshop.closed}
-                closedLabel={campaign.closedLabel}
-              >
-                <p>{workshop.result}</p>
-              </PriceCard>
-            ))
-          }
-        </div>
-      </div>
-    </section>
 
     <EditorialSplit id="inclue" reverse tone="soft">
       <SectionTag text={isGl ? "A xornada" : "La jornada"} />
@@ -520,6 +529,31 @@ const schema = [
 
   .workshop.alternate {
     background: var(--editorial-soft);
+  }
+
+  .workshop-badge {
+    display: inline-block;
+    margin: 0;
+    padding: 0.45rem 0.8rem;
+    background: var(--editorial-ink);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .workshop.past .workshop-date,
+  .workshop.past h2 {
+    opacity: 0.6;
+  }
+
+  .workshop-kicker {
+    margin: 1.25rem 0 0;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .workshop-head,

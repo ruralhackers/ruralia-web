@@ -14,3 +14,9 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+
+# 404 en castellano para rutas /es/ (regla no forzada: solo se aplica si no existe el fichero)
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404/"
+  status = 404
